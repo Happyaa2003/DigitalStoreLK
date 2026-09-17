@@ -159,7 +159,8 @@
           "GLOBAL": "$50.00"
         },
         "description": "5X power tier with extended reasoning limits",
-        "activation": "Own Email Activation"
+        "activation": "Own Email Activation",
+        "image": "/assets/products/chatgpt-pro-5x.png"
       },
       {
         "id": "chatgpt-pro-20x",
@@ -170,7 +171,8 @@
           "GLOBAL": "$100.00"
         },
         "description": "Maximum power tier with unlimited o1 reasoning compute",
-        "activation": "Own Email Activation"
+        "activation": "Own Email Activation",
+        "image": "/assets/products/chatgpt-pro-20x.png"
       }
     ],
     "activation": "Own Email Activation",
@@ -180,8 +182,8 @@
       "Dedicated compute allocation",
       "Own Email Activation"
     ],
-    "image": "/assets/products/chatgpt-pro.svg",
-    "badge": "ULTIMATE COMPUTE",
+    "image": "/assets/products/chatgpt-pro-5x.png",
+    "badge": "NEW AI TOOL",
     "featured": true,
     "available": true,
     "order": 4
@@ -202,7 +204,8 @@
           "GLOBAL": "Contact for Price"
         },
         "description": "1-year annual plan — contact on WhatsApp or Telegram for current pricing",
-        "activation": "Own Email Activation"
+        "activation": "Own Email Activation",
+        "image": "/assets/products/chatgpt-plus.png"
       }
     ],
     "activation": "Own Email Activation",
@@ -212,7 +215,7 @@
       "DALL-E 3 Image Generation",
       "Browse, Analyze & Custom GPTs"
     ],
-    "image": "/assets/products/chatgpt-plus.svg",
+    "image": "/assets/products/chatgpt-plus.png",
     "badge": "INQUIRE",
     "featured": false,
     "available": true,
@@ -302,7 +305,8 @@
           "LK": "LKR 19,500/=",
           "GLOBAL": "$59.09"
         },
-        "description": "xAI Grok with live X real-time access and reasoning"
+        "description": "xAI Grok with live X real-time access and reasoning",
+        "image": "/assets/products/supergrok.png"
       },
       {
         "id": "supergrok-heavy",
@@ -312,7 +316,8 @@
           "LK": "LKR 57,500/=",
           "GLOBAL": "$174.24"
         },
-        "description": "Maximum compute tier for intensive workflows"
+        "description": "Maximum compute tier for intensive workflows",
+        "image": "/assets/products/supergrok.png"
       }
     ],
     "activation": "Configured on your account",
@@ -322,8 +327,8 @@
       "Image understanding & generation",
       "Fast turnaround delivery"
     ],
-    "image": "/assets/products/supergrok.svg",
-    "badge": "xAI POWER",
+    "image": "/assets/products/supergrok.png",
+    "badge": "NEW AI TOOL",
     "featured": false,
     "available": true,
     "order": 7
@@ -398,7 +403,7 @@
       "Private account access"
     ],
     "image": "/assets/products/udemy-1month-private-acc.png",
-    "badge": "LEARNING",
+    "badge": "BEST VALUE",
     "featured": false,
     "available": true,
     "order": 9
@@ -462,7 +467,7 @@
       "Instant official coupon code"
     ],
     "image": "/assets/products/n8n-starter-for-12-months-coupen-code.png",
-    "badge": "AUTOMATION",
+    "badge": "BEST VALUE",
     "featured": false,
     "available": true,
     "order": 11

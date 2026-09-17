@@ -10,7 +10,7 @@ import DiscountBadge from './DiscountBadge';
 interface ProductCardProps {
   product: Product;
   region: PricingRegion;
-  onViewDetails: (product: Product) => void;
+  onViewDetails: (product: Product, planIndex?: number) => void;
   variant?: 'default' | 'featured' | 'compact';
 }
 
@@ -33,12 +33,22 @@ const categoryLabels: Record<string, string> = {
 };
 
 const badgeStyle: Record<string, string> = {
-  POPULAR: 'badge-popular',
-  'HOT DEAL': 'badge-hot',
-  NEW: 'badge-new',
-  'BEST VALUE': 'badge-best',
-  LIMITED: 'badge-limited',
+  POPULAR: 'bg-blue-600 text-white shadow-sm shadow-blue-500/30',
+  'HOT DEAL': 'bg-gradient-to-r from-red-500 to-rose-600 text-white shadow-sm shadow-red-500/30',
+  NEW: 'bg-emerald-600 text-white shadow-sm shadow-emerald-500/30',
+  'BEST VALUE': 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-sm shadow-emerald-500/30',
+  'NEW AI TOOL': 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-sm shadow-purple-500/30',
+  'GAMING SALE': 'bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-sm shadow-green-500/30',
+  'BEST FOR DEVS': 'bg-gradient-to-r from-sky-600 to-blue-600 text-white shadow-sm shadow-sky-500/30',
+  LIMITED: 'bg-amber-500 text-white shadow-sm shadow-amber-500/30',
+  LEARNING: 'bg-blue-600 text-white shadow-sm shadow-blue-500/30',
+  AUTOMATION: 'bg-rose-600 text-white shadow-sm shadow-rose-500/30',
+  'xAI POWER': 'bg-gradient-to-r from-gray-800 to-black text-white border border-white/20',
+  'ULTIMATE COMPUTE': 'bg-gradient-to-r from-emerald-700 to-teal-800 text-white',
+  INQUIRE: 'bg-gradient-to-r from-teal-600 to-emerald-600 text-white shadow-sm shadow-emerald-500/30',
 };
+
+const whiteBgProductIds = new Set(['udemy-personal', 'n8n-starter', 'coursera-plus']);
 
 export default function ProductCard({ product, region, onViewDetails, variant = 'default' }: ProductCardProps) {
   const [selectedPlanIndex, setSelectedPlanIndex] = useState(0);
@@ -53,6 +63,7 @@ export default function ProductCard({ product, region, onViewDetails, variant = 
   const hasNormalPrice = !!normalPrice && normalPrice !== currentPrice;
   const hasMultiplePlans = product.plans.length > 1;
 
+  const isWhiteBg = whiteBgProductIds.has(product.id);
   const currentImage = selectedPlan?.image || product.image;
   const whatsappLink = createWhatsAppLink(product, selectedPlan, region);
   const telegramLink = createTelegramLink(product, selectedPlan, region);
@@ -68,14 +79,28 @@ export default function ProductCard({ product, region, onViewDetails, variant = 
         variant === 'featured' && 'shadow-md',
       )}
     >
-      {/* Product image - 1:1 ratio */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 aspect-square w-full">
+      {/* Product image - 1:1 ratio with object-contain to prevent cropping */}
+      <div
+        onClick={() => onViewDetails(product, selectedPlanIndex)}
+        className={cn(
+          'relative overflow-hidden aspect-square w-full cursor-pointer flex items-center justify-center',
+          isWhiteBg ? 'bg-white' : 'bg-slate-950'
+        )}
+      >
         <img
           key={currentImage}
           src={currentImage}
           alt={`${product.name} - ${selectedPlan.name}`}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-contain p-0.5 transition-transform duration-300 group-hover:scale-[1.02]"
           loading="lazy"
+          onLoad={(e) => {
+            e.currentTarget.style.display = 'block';
+            const parent = e.currentTarget.parentElement;
+            if (parent) {
+              const fallback = parent.querySelector('.img-fallback') as HTMLElement | null;
+              if (fallback) fallback.style.display = 'none';
+            }
+          }}
           onError={(e) => {
             e.currentTarget.style.display = 'none';
             const parent = e.currentTarget.parentElement;
@@ -92,18 +117,18 @@ export default function ProductCard({ product, region, onViewDetails, variant = 
           {product.name.substring(0, 2).toUpperCase()}
         </div>
 
-        {/* Discount badge */}
+        {/* Discount badge - located at top-right corner */}
         {hasDiscount && (
-          <div className="absolute top-3 left-3">
+          <div className="absolute top-3 right-3 z-10">
             <DiscountBadge label={discount!.label!} />
           </div>
         )}
 
-        {/* Product badge */}
+        {/* Product badge - located at top-right corner */}
         {product.badge && !hasDiscount && (
           <div className={cn(
-            'absolute top-3 left-3 px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wide',
-            badgeStyle[product.badge] ?? 'bg-gray-800 text-white'
+            'absolute top-3 right-3 z-10 px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wide backdrop-blur-md shadow-md',
+            badgeStyle[product.badge] ?? 'bg-gray-900/90 text-white border border-white/10'
           )}>
             {product.badge}
           </div>
@@ -138,7 +163,12 @@ export default function ProductCard({ product, region, onViewDetails, variant = 
         </div>
 
         {/* Name */}
-        <h3 className="text-base font-bold text-gray-900 mb-1.5 leading-tight">{product.name}</h3>
+        <h3
+          onClick={() => onViewDetails(product, selectedPlanIndex)}
+          className="text-base font-bold text-gray-900 mb-1.5 leading-tight cursor-pointer hover:text-blue-600 transition-colors"
+        >
+          {product.name}
+        </h3>
 
         {/* Short description */}
         <p className="text-sm text-gray-500 leading-relaxed mb-4 flex-1 line-clamp-2">
@@ -192,7 +222,7 @@ export default function ProductCard({ product, region, onViewDetails, variant = 
         <div className="flex items-center gap-1.5 mt-auto pt-2">
           <button
             id={`view-${product.id}`}
-            onClick={() => onViewDetails(product)}
+            onClick={() => onViewDetails(product, selectedPlanIndex)}
             className="btn-secondary flex-1 !py-2.5 !px-2 !text-xs font-semibold group justify-center"
             aria-label={`View details for ${product.name}`}
           >

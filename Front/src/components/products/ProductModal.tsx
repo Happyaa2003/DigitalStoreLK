@@ -10,6 +10,7 @@ import DiscountBadge from './DiscountBadge';
 interface ProductModalProps {
   product: Product | null;
   region: PricingRegion;
+  initialPlanIndex?: number;
   onClose: () => void;
 }
 
@@ -22,12 +23,12 @@ const categoryLabels: Record<string, string> = {
   wallet: 'PS Wallet',
 };
 
-export default function ProductModal({ product, region, onClose }: ProductModalProps) {
-  const [selectedPlanIndex, setSelectedPlanIndex] = useState(0);
+export default function ProductModal({ product, region, initialPlanIndex = 0, onClose }: ProductModalProps) {
+  const [selectedPlanIndex, setSelectedPlanIndex] = useState(initialPlanIndex);
 
   useEffect(() => {
-    setSelectedPlanIndex(0);
-  }, [product?.id]);
+    setSelectedPlanIndex(initialPlanIndex);
+  }, [product?.id, initialPlanIndex]);
 
   useEffect(() => {
     if (product) {

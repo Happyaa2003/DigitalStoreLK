@@ -8,6 +8,7 @@ import { createWhatsAppLink } from '@/utils/whatsapp';
 import { usePricingStore } from '@/stores/pricingStore';
 import ProductModal from '../products/ProductModal';
 import DiscountBadge from '../products/DiscountBadge';
+import { cn } from '@/utils/cn';
 
 const products = productsData as Product[];
 const featured = products.filter((p) => p.featured && p.available !== false).slice(0, 5);
@@ -106,6 +107,7 @@ function FeaturedSmallCard({ product, region, onView, delay = 0 }: { product: Pr
   const plan = product.plans[0];
   const price = getPrice(plan.price, region);
   const hasDiscount = plan.discount?.enabled && plan.discount.label;
+  const isWhiteBg = ['udemy-personal', 'n8n-starter', 'coursera-plus'].includes(product.id);
 
   return (
     <motion.div
@@ -115,16 +117,19 @@ function FeaturedSmallCard({ product, region, onView, delay = 0 }: { product: Pr
       transition={{ duration: 0.4, delay }}
       className="group relative flex flex-col bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
     >
-      {/* Image - 1:1 ratio */}
-      <div className="relative aspect-square w-full bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+      {/* Image - 1:1 ratio with object-contain */}
+      <div className={cn(
+        "relative aspect-square w-full overflow-hidden flex items-center justify-center cursor-pointer",
+        isWhiteBg ? "bg-white" : "bg-slate-950"
+      )} onClick={onView}>
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-contain p-0.5 group-hover:scale-[1.02] transition-transform duration-300"
           onError={(e) => { e.currentTarget.style.display = 'none'; }}
         />
         {hasDiscount && (
-          <div className="absolute top-3 left-3">
+          <div className="absolute top-3 right-3 z-10">
             <DiscountBadge label={plan.discount!.label!} />
           </div>
         )}

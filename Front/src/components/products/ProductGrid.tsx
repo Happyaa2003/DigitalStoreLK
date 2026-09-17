@@ -43,6 +43,7 @@ export default function ProductGrid({
   const [category, setCategory] = useState(initialCategory);
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc'>('featured');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [selectedPlanIndex, setSelectedPlanIndex] = useState<number>(0);
   const { region } = usePricingStore();
 
   const filtered = useMemo(() => {
@@ -77,8 +78,9 @@ export default function ProductGrid({
     return result;
   }, [query, category, sortBy, region, limit]);
 
-  const handleViewDetails = useCallback((product: Product) => {
+  const handleViewDetails = useCallback((product: Product, planIndex = 0) => {
     setSelectedProduct(product);
+    setSelectedPlanIndex(planIndex);
   }, []);
 
   return (
@@ -216,6 +218,7 @@ export default function ProductGrid({
       <ProductModal
         product={selectedProduct}
         region={region}
+        initialPlanIndex={selectedPlanIndex}
         onClose={() => setSelectedProduct(null)}
       />
     </>
