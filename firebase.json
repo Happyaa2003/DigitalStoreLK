@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "digitalstorelk",
     "public": "Front/dist",
     "ignore": [
       "firebase.json",

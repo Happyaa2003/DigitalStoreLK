@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "digitalstorelk-plans"
+  },
+  "targets": {
+    "digitalstorelk-plans": {
+      "hosting": {
+        "digitalstorelk": [
+          "digitalstorelk"
+        ]
+      }
+    }
   }
 }
