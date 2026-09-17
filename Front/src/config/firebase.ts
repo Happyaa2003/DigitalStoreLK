@@ -1,15 +1,15 @@
 import { initializeApp, getApps, getApp } from 'firebase/app';
 import { getAnalytics, isSupported } from 'firebase/analytics';
 
-// DigitalStoreLK Firebase Configuration
+// DigitalStoreLK Firebase Configuration (digitalstorelk-plans)
 export const firebaseConfig = {
-  apiKey: "AIzaSyDkRXOXQZfUGmRCkeNA-4afLywIAgwhiWE",
-  authDomain: "digitalstorelk-web.firebaseapp.com",
-  projectId: "digitalstorelk-web",
-  storageBucket: "digitalstorelk-web.firebasestorage.app",
-  messagingSenderId: "254891102600",
-  appId: "1:254891102600:web:93523fbc3d6979eaad6a3d",
-  measurementId: "G-KKQX97QXY8"
+  apiKey: "AIzaSyDkNu2NOhUTb6PQU2Vvk1I226FvNz70JKU",
+  authDomain: "digitalstorelk-plans.firebaseapp.com",
+  projectId: "digitalstorelk-plans",
+  storageBucket: "digitalstorelk-plans.firebasestorage.app",
+  messagingSenderId: "502095391265",
+  appId: "1:502095391265:web:ea21bf7bafc2557159d160",
+  measurementId: "G-77DP5KGVJ2"
 };
 
 // Initialize Firebase (singleton pattern prevents duplicate initializations)
