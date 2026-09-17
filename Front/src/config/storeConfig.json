@@ -1,0 +1,98 @@
+{
+  "shopName": "DigitalStoreLK",
+  "tagline": "Smart Tools. Premium Access. Better You.",
+  "logo": "/assets/brand/LOGO.png",
+  "brandLockup": "/assets/brand/digitalstorelk-brand-lockup.svg",
+  "favicon": "/favicon.png",
+  "usdToLkr": 330,
+  "whatsappNumber": "+94 72 151 0654",
+  "whatsappUrl": "https://wa.me/94721510654",
+  "telegramUsername": "DigitalStoreLK",
+  "telegramUrl": "https://t.me/DigitalStoreLK",
+  "facebookUrl": "https://www.facebook.com/DigitalStoreLK",
+  "defaultRegion": "LK",
+  "announcementBar": {
+    "enabled": true,
+    "text": "🔥 Selected Digital Products — Special Deals — Fast Delivery  •  🤖 AI Subscriptions  •  🎮 Gaming Products  •  💻 Developer Tools  •  📚 Learning Platforms",
+    "link": null
+  },
+  "payments": {
+    "bankTransfer": {
+      "enabled": true,
+      "icon": "/assets/payments/bank-building-icon.svg",
+      "bankName": "Your Bank Name",
+      "accountName": "Your Account Name",
+      "accountNumber": "Your Account Number",
+      "branch": "Your Branch",
+      "instructions": "After transferring, send your payment receipt via WhatsApp or Telegram along with your order details."
+    },
+    "binance": {
+      "enabled": true,
+      "icon": "/assets/payments/binance-logo-icon.svg",
+      "walletAddress": "Your Binance Pay ID or Wallet Address",
+      "network": "BNB Smart Chain (BEP20) or Binance Pay",
+      "instructions": "After payment, send the transaction ID via WhatsApp or Telegram along with your order details."
+    }
+  },
+  "faq": [
+    {
+      "id": "faq-1",
+      "question": "What products do you offer?",
+      "answer": "DigitalStoreLK offers a wide range of digital products including AI subscriptions (Google AI Pro, Claude, ChatGPT, Cursor, SuperGrok), gaming products (GTA 6 for PS5 & Xbox), PlayStation wallet top-ups, and learning platform subscriptions (Coursera Plus, Udemy)."
+    },
+    {
+      "id": "faq-2",
+      "question": "How can I order?",
+      "answer": "Simply click the 'Order Now' or 'Chat on WhatsApp' button on any product, and you'll be connected to us on WhatsApp. Send us your order details and we'll guide you through the process."
+    },
+    {
+      "id": "faq-3",
+      "question": "How does WhatsApp ordering work?",
+      "answer": "Click any order button and it will open WhatsApp with a pre-filled message about the product you're interested in. Just send it and our team will respond promptly with pricing, availability and payment instructions."
+    },
+    {
+      "id": "faq-4",
+      "question": "How does Sri Lanka / Global pricing work?",
+      "answer": "We offer two pricing regions: Sri Lanka (LKR) for local customers and Global (USD) for international customers. Use the pricing toggle at the top of the page to switch between regions. Prices are set individually per product."
+    },
+    {
+      "id": "faq-5",
+      "question": "What payment methods are available?",
+      "answer": "We accept Bank Transfer (local Sri Lanka bank accounts) and Binance (cryptocurrency). After completing payment, send us your receipt or transaction ID via WhatsApp to confirm your order."
+    },
+    {
+      "id": "faq-6",
+      "question": "How do I receive a redeem key?",
+      "answer": "After payment confirmation, your redeem key will be sent directly via WhatsApp. Keys are typically delivered promptly after payment is verified."
+    },
+    {
+      "id": "faq-7",
+      "question": "What is Own Email Activation?",
+      "answer": "Own Email Activation means the subscription is set up and activated using your own email address or account. This gives you full personal ownership of the subscription on your account."
+    },
+    {
+      "id": "faq-8",
+      "question": "Can I request a specific game?",
+      "answer": "Yes! Contact us on WhatsApp with the game title you're looking for. For PS Wallet top-ups, simply tell us the game you want to purchase and we'll provide the appropriate wallet balance redeem key."
+    },
+    {
+      "id": "faq-9",
+      "question": "How does PS Wallet purchase work?",
+      "answer": "For PS Wallet: (1) Contact us with the game name you want. (2) We provide a PlayStation wallet balance redeem key. (3) You redeem the key on your PSN account. (4) You purchase the game yourself from the PlayStation Store. Discounts of up to 40% off standard PSN prices apply."
+    },
+    {
+      "id": "faq-10",
+      "question": "How quickly will I receive my product?",
+      "answer": "We aim to deliver digital products promptly after payment confirmation. Response times may vary, but we strive for fast turnaround. Contact us on WhatsApp for the most up-to-date availability information."
+    }
+  ],
+  "seo": {
+    "title": "DigitalStoreLK | AI Tools, Gaming, Courses & Digital Products",
+    "description": "DigitalStoreLK offers premium digital products including AI subscriptions, gaming products, developer tools, learning subscriptions and PS wallet top-ups. Fast delivery via WhatsApp.",
+    "ogImage": "/assets/brand/og-image.png"
+  },
+  "footer": {
+    "disclaimer": "DigitalStoreLK is an independent digital product reseller. Product availability and pricing are subject to change. Platform terms and conditions apply. Activation methods and features are as described per product listing.",
+    "copyright": "© 2026 DigitalStoreLK. All rights reserved."
+  }
+}

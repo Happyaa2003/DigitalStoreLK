@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E1B4B" />
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="50%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <circle cx="1000" cy="150" r="350" fill="#4F46E5" fill-opacity="0.15" filter="blur(80px)" />
+  <circle cx="200" cy="500" r="300" fill="#06B6D4" fill-opacity="0.12" filter="blur(80px)" />
+
+  <!-- Logo Mark -->
+  <g transform="translate(100, 120)">
+    <rect width="80" height="80" rx="24" fill="url(#brandGrad)" />
+    <path d="M44 18L24 44H40L36 62L56 36H40L44 18Z" fill="white" />
+    
+    <text x="110" y="55" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="46" font-weight="900" fill="#FFFFFF" letter-spacing="-1">
+      DIGITAL<tspan fill="#4F46E5">STORE</tspan><tspan fill="#06B6D4">LK</tspan>
+    </text>
+  </g>
+
+  <!-- Main Headline -->
+  <g transform="translate(100, 270)">
+    <text x="0" y="0" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="54" font-weight="900" fill="#FFFFFF" letter-spacing="-1.5">
+      Smart Tools. Premium Access. Better You.
+    </text>
+    <text x="0" y="65" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="24" font-weight="500" fill="#94A3B8">
+      AI Subscriptions • Developer Tools • Gaming • PS Wallet Keys • Online Learning
+    </text>
+  </g>
+
+  <!-- Highlights -->
+  <g transform="translate(100, 430)">
+    <rect x="0" y="0" width="280" height="70" rx="16" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1.5" />
+    <text x="30" y="44" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="20" font-weight="700" fill="#E2E8F0">
+      ⚡ Instant WhatsApp Delivery
+    </text>
+
+    <rect x="310" y="0" width="280" height="70" rx="16" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1.5" />
+    <text x="340" y="44" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="20" font-weight="700" fill="#E2E8F0">
+      🇱🇰 LKR &amp; 🌍 USD Pricing
+    </text>
+
+    <rect x="620" y="0" width="280" height="70" rx="16" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1.5" />
+    <text x="650" y="44" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="20" font-weight="700" fill="#E2E8F0">
+      🔒 Bank &amp; Binance Pay
+    </text>
+  </g>
+</svg>

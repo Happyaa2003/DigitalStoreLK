@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B24" />
+      <stop offset="100%" stop-color="#2D0A24" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#00439C" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EC4899" />
+      <stop offset="100%" stop-color="#00439C" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)" />
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="700" cy="80" r="240" fill="url(#glowGrad)" filter="blur(40px)" />
+  <circle cx="100" cy="380" r="180" fill="url(#glowGrad)" filter="blur(50px)" />
+
+  <!-- Grid overlay -->
+  <g opacity="0.06" stroke="#FFFFFF" stroke-width="1">
+    <line x1="0" y1="75" x2="800" y2="75" />
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="225" x2="800" y2="225" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="375" x2="800" y2="375" />
+    <line x1="160" y1="0" x2="160" y2="450" />
+    <line x1="320" y1="0" x2="320" y2="450" />
+    <line x1="480" y1="0" x2="480" y2="450" />
+    <line x1="640" y1="0" x2="640" y2="450" />
+  </g>
+
+  <!-- Central Card Display -->
+  <g transform="translate(60, 50)">
+    <!-- Badge -->
+    <rect x="0" y="0" width="180" height="32" rx="16" fill="#EC4899" fill-opacity="0.2" stroke="#F43F5E" stroke-opacity="0.4" stroke-width="1.5" />
+    <text x="90" y="20" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="11" font-weight="800" fill="#F43F5E" text-anchor="middle" letter-spacing="1.5">
+      PLAYSTATION 5
+    </text>
+
+    <!-- Icon Floating -->
+    <g transform="translate(540, 40)">
+      <circle cx="50" cy="50" r="54" fill="#EC4899" fill-opacity="0.15" stroke="#F43F5E" stroke-opacity="0.3" stroke-width="2" />
+      <text x="50" y="66" font-size="52" text-anchor="middle">🎮</text>
+    </g>
+
+    <!-- Title -->
+    <text x="0" y="125" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="44" font-weight="900" fill="#FFFFFF" letter-spacing="-1">
+      GTA 6 — PS5
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="175" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="18" font-weight="500" fill="#94A3B8">
+      Next-Gen Vice City • Pre-order Edition
+    </text>
+
+    <!-- Visual divider bar -->
+    <rect x="0" y="220" width="120" height="4" rx="2" fill="url(#btnGrad)" />
+
+    <!-- Feature tags -->
+    <g transform="translate(0, 255)">
+      <rect x="0" y="0" width="140" height="36" rx="8" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1" />
+      <text x="70" y="23" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="13" font-weight="600" fill="#E2E8F0" text-anchor="middle">
+        ✓ Verified Store
+      </text>
+
+      <rect x="155" y="0" width="140" height="36" rx="8" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1" />
+      <text x="225" y="23" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="13" font-weight="600" fill="#E2E8F0" text-anchor="middle">
+        ⚡ Fast Delivery
+      </text>
+
+      <rect x="310" y="0" width="160" height="36" rx="8" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1" />
+      <text x="390" y="23" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="13" font-weight="600" fill="#E2E8F0" text-anchor="middle">
+        🔒 100% Genuine
+      </text>
+    </g>
+  </g>
+</svg>

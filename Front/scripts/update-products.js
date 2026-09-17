@@ -1,0 +1,677 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const products = [
+  {
+    id: 'google-ai-pro',
+    name: 'Google AI Pro',
+    category: 'ai',
+    shortDescription: "Google's most advanced AI model for personal or team use with 18-month duration.",
+    description: "Google AI Pro gives you direct access to Google's most advanced AI capabilities. Choose between an individual plan for personal use or an Admin Panel plan that can be shared with up to 5 members.",
+    plans: [
+      {
+        id: 'google-ai-pro-normal',
+        name: 'Normal',
+        duration: '18 Months',
+        price: { LK: 'LKR 490/=', GLOBAL: '$1.48' },
+        description: 'Not sharable — individual use only',
+        activation: 'Existing Account'
+      },
+      {
+        id: 'google-ai-pro-admin',
+        name: 'Admin Panel',
+        duration: '18 Months',
+        price: { LK: 'LKR 1,790/=', GLOBAL: '$5.42' },
+        description: 'Sharable with up to 5 members',
+        activation: 'Admin Account'
+      }
+    ],
+    activation: 'Configured on your existing account',
+    features: [
+      "Google's most advanced AI model",
+      '18-month subscription',
+      'Admin panel option for team sharing (5 members)',
+      'Fast delivery & activation'
+    ],
+    image: '/assets/products/google-ai-pro-18-months.png',
+    badge: 'POPULAR',
+    featured: true,
+    available: true,
+    order: 1
+  },
+  {
+    id: 'claude-max',
+    name: 'Claude Max',
+    category: 'ai',
+    shortDescription: "Anthropic's premium AI assistant with extended 5X and 20X usage limits on Own Email.",
+    description: "Claude Max gives you high-volume access to Anthropic's Claude AI with significantly expanded usage limits. Own Email Activation gives you 100% private ownership.",
+    plans: [
+      {
+        id: 'claude-max-5x-1m',
+        name: '5X — 1 Month',
+        duration: '1 Month',
+        price: { LK: 'LKR 16,500/=', GLOBAL: '$50.00' },
+        description: '5× usage limits — ideal for regular power users',
+        activation: 'Own Email Activation',
+        image: '/assets/products/claude-max-5x-1-month.png'
+      },
+      {
+        id: 'claude-max-20x-1m',
+        name: '20X — 1 Month',
+        duration: '1 Month',
+        price: { LK: 'LKR 33,000/=', GLOBAL: '$100.00' },
+        description: '20× usage limits — for intensive professional development',
+        activation: 'Own Email Activation',
+        image: '/assets/products/claude-max-20x-1-month.png'
+      },
+      {
+        id: 'claude-max-5x-1y',
+        name: '5X — 1 Year',
+        duration: '1 Year',
+        price: { LK: 'Contact for Price', GLOBAL: 'Contact for Price' },
+        description: 'Annual 5X subscription — contact on WhatsApp/Telegram for rate',
+        activation: 'Own Email Activation',
+        image: '/assets/products/claude-max-5x-1-year.png'
+      },
+      {
+        id: 'claude-max-20x-1y',
+        name: '20X — 1 Year',
+        duration: '1 Year',
+        price: { LK: 'Contact for Price', GLOBAL: 'Contact for Price' },
+        description: 'Annual 20X enterprise-grade tier — contact for rate',
+        activation: 'Own Email Activation',
+        image: '/assets/products/claude-max-20x-1-year.png'
+      }
+    ],
+    activation: 'Own Email Activation',
+    features: [
+      'Claude 3.5 Sonnet & Opus priority access',
+      '5X or 20X official usage capacity',
+      'Own Email Activation',
+      'Projects & Artifacts support'
+    ],
+    image: '/assets/products/claude-max-5x-1-month.png',
+    badge: 'HOT DEAL',
+    featured: true,
+    available: true,
+    order: 2
+  },
+  {
+    id: 'claude-pro',
+    name: 'Claude Pro',
+    category: 'ai',
+    shortDescription: "Anthropic's Claude Pro 1-year subscription with Sonnet, Opus and Project Artifacts.",
+    description: "Claude Pro provides dedicated access to Anthropic's Claude AI models with extended messaging limits, project knowledge bases, and document analysis.",
+    plans: [
+      {
+        id: 'claude-pro-1y',
+        name: '1 Year',
+        duration: '1 Year',
+        price: { LK: 'LKR 40,000/=', GLOBAL: '$121.21' },
+        description: '1 full year of Claude Pro subscription on your own account',
+        activation: 'Own Email Activation'
+      }
+    ],
+    activation: 'Own Email Activation',
+    features: [
+      'Full 1-year official access',
+      'Own Email Activation',
+      'Claude 3.5 Sonnet & Claude 3 Opus',
+      'Create and manage Project Artifacts'
+    ],
+    image: '/assets/products/claude-pro-1-year.png',
+    badge: 'ANNUAL PLAN',
+    featured: true,
+    available: true,
+    order: 3
+  },
+  {
+    id: 'chatgpt-pro',
+    name: 'ChatGPT Pro',
+    category: 'ai',
+    shortDescription: "OpenAI's highest compute tier with unlimited o1 reasoning and priority compute.",
+    description: "ChatGPT Pro gives you full access to OpenAI's flagship models with unlimited access to the OpenAI o1 reasoning model and highest compute allocation.",
+    plans: [
+      {
+        id: 'chatgpt-pro-5x',
+        name: '5X — 1 Month',
+        duration: '1 Month',
+        price: { LK: 'LKR 16,500/=', GLOBAL: '$50.00' },
+        description: '5X power tier with extended reasoning limits',
+        activation: 'Own Email Activation'
+      },
+      {
+        id: 'chatgpt-pro-20x',
+        name: '20X — 1 Month',
+        duration: '1 Month',
+        price: { LK: 'LKR 33,000/=', GLOBAL: '$100.00' },
+        description: 'Maximum power tier with unlimited o1 reasoning compute',
+        activation: 'Own Email Activation'
+      }
+    ],
+    activation: 'Own Email Activation',
+    features: [
+      'Unlimited o1 reasoning model',
+      'Advanced Voice Mode & Canvas',
+      'Dedicated compute allocation',
+      'Own Email Activation'
+    ],
+    image: '/assets/products/chatgpt-pro.svg',
+    badge: 'ULTIMATE COMPUTE',
+    featured: true,
+    available: true,
+    order: 4
+  },
+  {
+    id: 'chatgpt-plus',
+    name: 'ChatGPT Plus',
+    category: 'ai',
+    shortDescription: 'OpenAI GPT-4o, DALL-E 3 image generation, browsing, and custom GPTs.',
+    description: 'ChatGPT Plus provides faster response times, priority access to new features including GPT-4o, Advanced Data Analysis, Canvas, and Custom GPTs.',
+    plans: [
+      {
+        id: 'chatgpt-plus-1y',
+        name: '1 Year',
+        duration: '1 Year',
+        price: { LK: 'Contact for Price', GLOBAL: 'Contact for Price' },
+        description: '1-year annual plan — contact on WhatsApp or Telegram for current pricing',
+        activation: 'Own Email Activation'
+      }
+    ],
+    activation: 'Own Email Activation',
+    features: [
+      'GPT-4o & GPT-4o mini models',
+      'Advanced Voice Mode',
+      'DALL-E 3 Image Generation',
+      'Browse, Analyze & Custom GPTs'
+    ],
+    image: '/assets/products/chatgpt-plus.svg',
+    badge: 'INQUIRE',
+    featured: false,
+    available: true,
+    order: 5
+  },
+  {
+    id: 'cursor',
+    name: 'Cursor',
+    category: 'developer',
+    shortDescription: 'The AI-first code editor built for engineers with Claude 3.5 & GPT-4o integration.',
+    description: 'Cursor is the premier AI code editor designed for pair programming with Claude 3.5 Sonnet and GPT-4o. Features multi-file editing, codebase indexing, and instant smart edits.',
+    plans: [
+      {
+        id: 'cursor-pro-1m',
+        name: 'Cursor Pro',
+        duration: '1 Month',
+        price: { LK: 'LKR 3,800/=', GLOBAL: '$11.52' },
+        description: 'Unlimited completions, 500 fast requests/mo',
+        activation: 'Own Email Activation',
+        image: '/assets/products/cursor-pro-1-month.png'
+      },
+      {
+        id: 'cursor-pro-plus-1m',
+        name: 'Cursor Pro+',
+        duration: '1 Month',
+        price: { LK: 'LKR 11,700/=', GLOBAL: '$35.45' },
+        description: 'Extended request capacity for heavy development',
+        activation: 'Own Email Activation',
+        image: '/assets/products/cursor-pro-1-month.png'
+      },
+      {
+        id: 'cursor-ultra-1m',
+        name: 'Cursor Ultra',
+        duration: '1 Month',
+        price: { LK: 'LKR 39,000/=', GLOBAL: '$118.18' },
+        description: 'Maximum tier with highest fast-request volume',
+        activation: 'Own Email Activation',
+        image: '/assets/products/cursor-pro-1-month.png'
+      },
+      {
+        id: 'cursor-pro-1y',
+        name: 'Cursor Pro — 1 Year',
+        duration: '1 Year',
+        price: { LK: 'Contact for Price', GLOBAL: 'Contact for Price' },
+        description: 'Annual Pro plan — contact for exclusive pricing',
+        activation: 'Own Email Activation',
+        image: '/assets/products/cursor-pro-1-year.png'
+      }
+    ],
+    activation: 'Own Email Activation',
+    features: [
+      'Claude 3.5 Sonnet & GPT-4o models',
+      'Multi-file Agentic edits',
+      'Local codebase indexing & semantic search',
+      'Own Email Activation'
+    ],
+    image: '/assets/products/cursor-pro-1-month.png',
+    badge: 'BEST FOR DEVS',
+    featured: true,
+    available: true,
+    order: 6
+  },
+  {
+    id: 'supergrok',
+    name: 'SuperGrok',
+    category: 'ai',
+    shortDescription: "xAI's uncensored intelligence model with real-time X platform data integration.",
+    description: "SuperGrok gives you access to xAI's cutting-edge AI assistant with real-time news access, unfiltered conversational reasoning, and high token throughput.",
+    plans: [
+      {
+        id: 'supergrok-plus',
+        name: 'SuperGrok Plus',
+        duration: '1 Month',
+        price: { LK: 'LKR 19,500/=', GLOBAL: '$59.09' },
+        description: 'xAI Grok with live X real-time access and reasoning'
+      },
+      {
+        id: 'supergrok-heavy',
+        name: 'SuperGrok Heavy',
+        duration: '1 Month',
+        price: { LK: 'LKR 57,500/=', GLOBAL: '$174.24' },
+        description: 'Maximum compute tier for intensive workflows'
+      }
+    ],
+    activation: 'Configured on your account',
+    features: [
+      'Real-time information from X platform',
+      'Advanced deep reasoning mode',
+      'Image understanding & generation',
+      'Fast turnaround delivery'
+    ],
+    image: '/assets/products/supergrok.svg',
+    badge: 'xAI POWER',
+    featured: false,
+    available: true,
+    order: 7
+  },
+  {
+    id: 'coursera-plus',
+    name: 'Coursera Plus',
+    category: 'education',
+    shortDescription: 'Unlimited access to 7,000+ world-class courses, specializations & certificates.',
+    description: 'Coursera Plus provides full unlimited learning access to top accredited courses, professional certificates from Google, IBM, Meta, and leading global universities.',
+    plans: [
+      {
+        id: 'coursera-own-email-1y',
+        name: 'Own Email — 1 Year',
+        duration: '1 Year',
+        price: { LK: 'LKR 1,500/=', GLOBAL: '$4.55' },
+        description: 'Activated on your own personal email address',
+        activation: 'Own Email Activation'
+      },
+      {
+        id: 'coursera-ready-made-1y',
+        name: 'Ready-Made — 1 Year',
+        duration: '1 Year',
+        price: { LK: 'LKR 1,500/=', GLOBAL: '$4.55' },
+        description: 'Pre-configured ready-to-learn account delivered instantly',
+        activation: 'Ready-Made Account'
+      }
+    ],
+    activation: 'Own Email or Ready-Made Account',
+    features: [
+      '7,000+ courses and specializations',
+      'Earn accredited certificates in your name',
+      'Google, Meta, IBM professional certificates',
+      '12-month full access'
+    ],
+    image: '/assets/products/coursera-1-year.png',
+    badge: 'BEST VALUE',
+    featured: true,
+    available: true,
+    order: 8
+  },
+  {
+    id: 'udemy-personal',
+    name: 'Udemy Personal Plan',
+    category: 'education',
+    shortDescription: '11,000+ top-rated courses across tech, business, coding, design, and marketing.',
+    description: 'Access 11,000+ of the highest-rated courses on Udemy across development, cloud, IT certifications, design, and business with your own private account.',
+    plans: [
+      {
+        id: 'udemy-private-1m',
+        name: '1 Month — Private Account',
+        duration: '1 Month',
+        price: { LK: 'LKR 3,000/=', GLOBAL: '$9.09' },
+        description: '100% private account with personal course progress',
+        activation: 'Private Account'
+      }
+    ],
+    activation: 'Private Account',
+    features: [
+      '11,000+ top-rated video courses',
+      'Personal learning path & certificates',
+      'High-demand tech & business topics',
+      'Private account access'
+    ],
+    image: '/assets/products/udemy-1month-private-acc.png',
+    badge: 'LEARNING',
+    featured: false,
+    available: true,
+    order: 9
+  },
+  {
+    id: 'lovable-pro-lite',
+    name: 'Lovable Pro Lite',
+    category: 'developer',
+    shortDescription: 'Full-stack AI app generation tool — build real React & Node apps in minutes.',
+    description: 'Lovable is the state-of-the-art AI software engineer that creates full-stack web applications from natural language prompts. Redeemable coupon code provided directly.',
+    plans: [
+      {
+        id: 'lovable-1m-code',
+        name: '1 Month',
+        duration: '1 Month',
+        price: { LK: 'LKR 4,900/=', GLOBAL: '$14.85' },
+        description: 'Official 1-month coupon code for Lovable Pro Lite',
+        activation: 'Coupon Code'
+      }
+    ],
+    activation: 'Coupon Code',
+    features: [
+      'Full-stack AI app generator',
+      'GitHub integration & deployment',
+      'Fast coupon code delivery via WhatsApp/Telegram',
+      '100% genuine official code'
+    ],
+    image: '/assets/products/lovable-1-mon-code.png',
+    badge: 'NEW AI TOOL',
+    featured: true,
+    available: true,
+    order: 10
+  },
+  {
+    id: 'n8n-starter',
+    name: 'n8n Starter',
+    category: 'developer',
+    shortDescription: 'Workflow automation platform — connect APIs, AI agents & databases with ease.',
+    description: 'n8n is the powerful open workflow automation platform. Build AI agents, automate business operations, and integrate hundreds of services with a 12-month starter coupon code.',
+    plans: [
+      {
+        id: 'n8n-12m-code',
+        name: '12 Months',
+        duration: '12 Months',
+        price: { LK: 'LKR 15,000/=', GLOBAL: '$45.45' },
+        description: '12 months cloud starter plan coupon code',
+        activation: 'Coupon Code'
+      }
+    ],
+    activation: 'Coupon Code',
+    features: [
+      '12-month full cloud starter plan',
+      'AI agent building capabilities',
+      'Hundreds of pre-built integrations',
+      'Instant official coupon code'
+    ],
+    image: '/assets/products/n8n-starter-for-12-months-coupen-code.png',
+    badge: 'AUTOMATION',
+    featured: false,
+    available: true,
+    order: 11
+  },
+  {
+    id: 'xbox-game-pass-ultimate',
+    name: 'Xbox Game Pass Ultimate',
+    category: 'gaming',
+    shortDescription: 'Hundreds of high-quality games on console & PC, EA Play, and online multiplayer.',
+    description: 'Xbox Game Pass Ultimate gives you access to day-one releases, hundreds of top console & PC games, EA Play membership, exclusive discounts, and cloud gaming.',
+    plans: [
+      {
+        id: 'xbx-1m',
+        name: '1 Month',
+        duration: '1 Month',
+        price: { LK: 'LKR 5,000/=', GLOBAL: '$15.15' },
+        description: 'Xbox & PC all support',
+        image: '/assets/products/xbxo-game-pass-unlimited-1-mon-all-support.png'
+      },
+      {
+        id: 'xbx-2m',
+        name: '2 Months',
+        duration: '2 Months',
+        price: { LK: 'LKR 8,000/=', GLOBAL: '$24.24' },
+        description: 'Xbox & PC all support',
+        image: '/assets/products/xbxo-game-pass-unlimited-2-mon-all-support.png'
+      },
+      {
+        id: 'xbx-4m-std',
+        name: '4 Months',
+        duration: '4 Months',
+        price: { LK: 'LKR 13,000/=', GLOBAL: '$39.39' },
+        description: 'Xbox & PC all support',
+        image: '/assets/products/xbxo-game-pass-unlimited-4-mon-all-support.png'
+      },
+      {
+        id: 'xbx-6m',
+        name: '6 Months',
+        duration: '6 Months',
+        price: { LK: 'LKR 18,000/=', GLOBAL: '$54.55' },
+        description: 'Xbox & PC all support',
+        image: '/assets/products/xbxo-game-pass-unlimited-6-mon-all-support.png'
+      },
+      {
+        id: 'xbx-4m-tier2',
+        name: '4 Months — Tier 2',
+        duration: '4 Months',
+        price: { LK: 'LKR 22,500/=', GLOBAL: '$68.18' },
+        description: 'Dedicated plan / special support',
+        image: '/assets/products/xbxo-game-pass-unlimited-4-mon-all-support.png'
+      },
+      {
+        id: 'xbx-8m',
+        name: '8 Months',
+        duration: '8 Months',
+        price: { LK: 'Contact for Price', GLOBAL: 'Contact for Price' },
+        description: 'Xbox & PC all support — contact for price',
+        image: '/assets/products/xbxo-game-pass-unlimited-8-mon-all-support.png'
+      },
+      {
+        id: 'xbx-1y-pc',
+        name: '1 Year Shared (PC Only)',
+        duration: '1 Year',
+        price: { LK: 'Contact for Price', GLOBAL: 'Contact for Price' },
+        description: 'PC only shared account — contact for price',
+        image: '/assets/products/xbxo-game-pass-unlimited1-year-shared-pc-only.png'
+      }
+    ],
+    activation: 'Account Setup / Key',
+    features: [
+      'Console, PC & Cloud gaming',
+      'Day-one blockbuster titles',
+      'Includes EA Play membership',
+      'Online multiplayer included'
+    ],
+    image: '/assets/products/xbxo-game-pass-unlimited-1-mon-all-support.png',
+    badge: 'GAMING SALE',
+    featured: true,
+    available: true,
+    order: 12
+  },
+  {
+    id: 'gta6-ps5',
+    name: 'GTA 6 — PS5',
+    category: 'gaming',
+    shortDescription: 'Next-generation Vice City for PlayStation 5. Pre-order now for guaranteed access.',
+    description: 'Grand Theft Auto VI takes players to the state of Leonida, home to the neon-soaked streets of Vice City. Pre-order your PS5 copy now.',
+    plans: [
+      {
+        id: 'gta6-ps5-std',
+        name: 'Standard Edition',
+        price: { LK: 'LKR 16,500/=', GLOBAL: '$50.00' },
+        description: 'PS5 Standard Edition digital license'
+      },
+      {
+        id: 'gta6-ps5-unlimited',
+        name: 'Unlimited Edition',
+        price: { LK: 'LKR 24,000/=', GLOBAL: '$72.73' },
+        description: 'PS5 Unlimited / Deluxe Edition with bonus perks'
+      }
+    ],
+    activation: 'Delivered to your PSN account',
+    features: [
+      'Next-generation graphics on PS5',
+      'DualSense haptic feedback support',
+      'Pre-order bonus content',
+      'Guaranteed delivery'
+    ],
+    image: '/assets/products/gta6-ps5.png',
+    badge: 'PRE-ORDER',
+    featured: true,
+    available: true,
+    order: 13
+  },
+  {
+    id: 'gta6-xbox',
+    name: 'GTA 6 — Xbox Series X|S',
+    category: 'gaming',
+    shortDescription: 'Next-generation Vice City optimized for Xbox Series X|S with 4K HDR Ray Tracing.',
+    description: 'Grand Theft Auto VI on Xbox Series X|S delivers groundbreaking visual fidelity and open-world immersion across Vice City and beyond.',
+    plans: [
+      {
+        id: 'gta6-xbox-std',
+        name: 'Standard Edition',
+        price: { LK: 'LKR 16,500/=', GLOBAL: '$50.00' },
+        description: 'Xbox Series X|S Standard Edition digital license'
+      },
+      {
+        id: 'gta6-xbox-unlimited',
+        name: 'Unlimited Edition',
+        price: { LK: 'LKR 21,500/=', GLOBAL: '$65.15' },
+        description: 'Xbox Series X|S Unlimited Edition'
+      }
+    ],
+    activation: 'Delivered to your Xbox account',
+    features: [
+      'Optimized for Xbox Series X|S',
+      'Ray tracing and fast load times',
+      'Pre-order bonus content',
+      'Guaranteed delivery'
+    ],
+    image: '/assets/products/gta6-xbox.png',
+    badge: 'PRE-ORDER',
+    featured: false,
+    available: true,
+    order: 14
+  },
+  {
+    id: 'windows-11-pro',
+    name: 'Windows 11 Pro',
+    category: 'developer',
+    shortDescription: '100% Genuine Retail Product Key for Windows 11 Professional. Lifetime activation.',
+    description: 'Official genuine product key for Windows 11 Pro. Supports 32/64 bit, all languages, and lifetime permanent online activation for 1 PC.',
+    plans: [
+      {
+        id: 'win11-pro-lifetime',
+        name: 'Retail Key',
+        duration: 'Lifetime',
+        price: { LK: '~LKR 495/=', GLOBAL: '$1.50' },
+        description: '100% Genuine Retail Key — Online Activation',
+        activation: 'Product Key'
+      }
+    ],
+    activation: 'Instant Product Key via WhatsApp/Telegram',
+    features: [
+      '100% Genuine Microsoft Retail Key',
+      'Permanent lifetime activation for 1 PC',
+      'Direct online activation via Windows Settings',
+      'All security updates and features enabled'
+    ],
+    image: '/assets/products/win-11-pro.png',
+    badge: 'GENUINE KEY',
+    featured: true,
+    available: true,
+    order: 15
+  },
+  {
+    id: 'windows-10-pro',
+    name: 'Windows 10 Pro',
+    category: 'developer',
+    shortDescription: '100% Genuine Retail Product Key for Windows 10 Professional. Lifetime activation.',
+    description: 'Official genuine product key for Windows 10 Pro. Lifetime permanent online activation for 1 PC with free upgrade eligibility to Windows 11.',
+    plans: [
+      {
+        id: 'win10-pro-lifetime',
+        name: 'Retail Key',
+        duration: 'Lifetime',
+        price: { LK: '~LKR 495/=', GLOBAL: '$1.50' },
+        description: '100% Genuine Retail Key — Online Activation',
+        activation: 'Product Key'
+      }
+    ],
+    activation: 'Instant Product Key via WhatsApp/Telegram',
+    features: [
+      '100% Genuine Microsoft Retail Key',
+      'Permanent lifetime activation',
+      'Direct online activation',
+      'Upgrade path to Windows 11 Pro'
+    ],
+    image: '/assets/products/win10pro.png',
+    badge: 'GENUINE KEY',
+    featured: false,
+    available: true,
+    order: 16
+  },
+  {
+    id: 'office-2024-ltsc',
+    name: 'Office 2024 LTSC Pro Plus',
+    category: 'developer',
+    shortDescription: 'Microsoft Office 2024 LTSC Professional Plus Genuine Key. Word, Excel, PowerPoint.',
+    description: 'Official lifetime genuine license for Microsoft Office 2024 LTSC Professional Plus. Includes Word, Excel, PowerPoint, Outlook, Access, and OneNote.',
+    plans: [
+      {
+        id: 'office-2024-lifetime',
+        name: 'Lifetime Key',
+        duration: 'Lifetime',
+        price: { LK: '~LKR 495/=', GLOBAL: '$1.50' },
+        description: 'Lifetime permanent activation for 1 PC',
+        activation: 'Product Key'
+      }
+    ],
+    activation: 'Instant Product Key via WhatsApp/Telegram',
+    features: [
+      'Latest Office 2024 LTSC release',
+      'Word, Excel, PowerPoint, Outlook & Access',
+      'Permanent offline & online license',
+      'Direct Microsoft activation'
+    ],
+    image: '/assets/products/office-2024.png',
+    badge: 'OFFICE 2024',
+    featured: true,
+    available: true,
+    order: 17
+  },
+  {
+    id: 'ps-wallet-balance',
+    name: 'PS Wallet Balance',
+    category: 'wallet',
+    shortDescription: 'PlayStation wallet balance top-ups & redeem keys with up to 40% discount savings.',
+    description: 'Get PlayStation Store wallet top-up redeem keys at discounts of up to 40% off standard PlayStation Network store prices. Specify the game or denomination you want on WhatsApp or Telegram.',
+    plans: [
+      {
+        id: 'ps-wallet-balance-key',
+        name: 'Wallet Redeem Key',
+        duration: 'Instant Key',
+        price: { LK: 'Contact for Price', GLOBAL: 'Contact for Price' },
+        description: 'Contact us with the game title or denomination — discounts of up to 40% off',
+        activation: 'PSN Redeem Key'
+      }
+    ],
+    activation: 'Redeem code provided directly on WhatsApp/Telegram',
+    features: [
+      'Up to 40% discount on standard PSN prices',
+      'Works on all PlayStation 4 and 5 consoles',
+      'Redeem directly into your PlayStation Store balance',
+      'Request any game title or balance denomination'
+    ],
+    image: '/assets/products/ps-wallet.png',
+    badge: 'UP TO 40% OFF',
+    featured: true,
+    available: true,
+    order: 18
+  }
+];
+
+const target = path.resolve(__dirname, '../src/data/products.json');
+fs.writeFileSync(target, JSON.stringify(products, null, 2), 'utf8');
+console.log(`✓ Updated products.json with ${products.length} products`);

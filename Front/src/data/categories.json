@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ai",
+    "slug": "ai",
+    "name": "AI & Productivity",
+    "description": "Supercharge your work with cutting-edge AI tools and productivity subscriptions.",
+    "icon": "Sparkles",
+    "accentFrom": "#6366f1",
+    "accentTo": "#06b6d4",
+    "textColor": "#6366f1",
+    "order": 1
+  },
+  {
+    "id": "gaming",
+    "slug": "gaming",
+    "name": "Gaming",
+    "description": "Latest PS5, Xbox games and console wallet top-ups at great prices.",
+    "icon": "Gamepad2",
+    "accentFrom": "#a855f7",
+    "accentTo": "#f97316",
+    "textColor": "#a855f7",
+    "order": 2
+  },
+  {
+    "id": "developer",
+    "slug": "developer",
+    "name": "Developer Tools",
+    "description": "Professional tools for engineers, developers and technical creators.",
+    "icon": "Code2",
+    "accentFrom": "#3b82f6",
+    "accentTo": "#6366f1",
+    "textColor": "#3b82f6",
+    "order": 3
+  },
+  {
+    "id": "education",
+    "slug": "education",
+    "name": "Education",
+    "description": "Learn from world-class platforms with premium course subscriptions.",
+    "icon": "GraduationCap",
+    "accentFrom": "#0ea5e9",
+    "accentTo": "#14b8a6",
+    "textColor": "#0ea5e9",
+    "order": 4
+  },
+  {
+    "id": "subscriptions",
+    "slug": "subscriptions",
+    "name": "Subscriptions",
+    "description": "Premium digital subscriptions for entertainment, creativity and more.",
+    "icon": "Star",
+    "accentFrom": "#f59e0b",
+    "accentTo": "#ef4444",
+    "textColor": "#f59e0b",
+    "order": 5
+  },
+  {
+    "id": "wallet",
+    "slug": "wallet",
+    "name": "PS Wallet",
+    "description": "PlayStation wallet top-ups and redeem keys at up to 40% off.",
+    "icon": "Wallet",
+    "accentFrom": "#10b981",
+    "accentTo": "#3b82f6",
+    "textColor": "#10b981",
+    "order": 6
+  }
+]
