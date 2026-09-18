@@ -13,6 +13,7 @@ const navLinks = [
   { label: 'Gaming', to: '/category/gaming' },
   { label: 'Developer', to: '/category/developer' },
   { label: 'Education', to: '/category/education' },
+  { label: 'Subscriptions', to: '/category/subscriptions' },
   { label: 'PS Wallet', to: '/category/wallet' },
   { label: 'Deals', to: '/products' },
 ];

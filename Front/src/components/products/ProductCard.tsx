@@ -46,6 +46,11 @@ const badgeStyle: Record<string, string> = {
   'xAI POWER': 'bg-gradient-to-r from-gray-800 to-black text-white border border-white/20',
   'ULTIMATE COMPUTE': 'bg-gradient-to-r from-emerald-700 to-teal-800 text-white',
   INQUIRE: 'bg-gradient-to-r from-teal-600 to-emerald-600 text-white shadow-sm shadow-emerald-500/30',
+  'SERVER 2025': 'bg-gradient-to-r from-blue-700 to-indigo-800 text-white shadow-sm shadow-blue-500/30',
+  '4K UHD': 'bg-gradient-to-r from-red-600 to-rose-700 text-white shadow-sm shadow-red-500/30',
+  'CREATOR PICK': 'bg-gradient-to-r from-pink-600 to-rose-600 text-white shadow-sm shadow-pink-500/30',
+  'CAREER BOOST': 'bg-gradient-to-r from-sky-600 to-blue-700 text-white shadow-sm shadow-blue-500/30',
+  '5 DEVICES + 1TB': 'bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow-sm shadow-orange-500/30',
 };
 
 const whiteBgProductIds = new Set(['udemy-personal', 'n8n-starter', 'coursera-plus']);

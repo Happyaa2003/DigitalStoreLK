@@ -4,7 +4,7 @@ import storeConfig from '@/config/storeConfig.json';
 
 export default function WhatsAppButton() {
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 z-[999] flex flex-col items-end gap-2.5 sm:gap-3 pointer-events-auto">
       {/* Telegram Floating Button */}
       <motion.a
         href={getTelegramChatLink()}

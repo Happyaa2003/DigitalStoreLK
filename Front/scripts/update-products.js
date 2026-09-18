@@ -142,7 +142,8 @@ const products = [
         duration: '1 Month',
         price: { LK: 'LKR 16,500/=', GLOBAL: '$50.00' },
         description: '5X power tier with extended reasoning limits',
-        activation: 'Own Email Activation'
+        activation: 'Own Email Activation',
+        image: '/assets/products/chatgpt-pro-5x.png'
       },
       {
         id: 'chatgpt-pro-20x',
@@ -150,7 +151,8 @@ const products = [
         duration: '1 Month',
         price: { LK: 'LKR 33,000/=', GLOBAL: '$100.00' },
         description: 'Maximum power tier with unlimited o1 reasoning compute',
-        activation: 'Own Email Activation'
+        activation: 'Own Email Activation',
+        image: '/assets/products/chatgpt-pro-20x.png'
       }
     ],
     activation: 'Own Email Activation',
@@ -160,7 +162,7 @@ const products = [
       'Dedicated compute allocation',
       'Own Email Activation'
     ],
-    image: '/assets/products/chatgpt-pro.svg',
+    image: '/assets/products/chatgpt-pro-5x.png',
     badge: 'ULTIMATE COMPUTE',
     featured: true,
     available: true,
@@ -177,8 +179,8 @@ const products = [
         id: 'chatgpt-plus-1y',
         name: '1 Year',
         duration: '1 Year',
-        price: { LK: 'Contact for Price', GLOBAL: 'Contact for Price' },
-        description: '1-year annual plan — contact on WhatsApp or Telegram for current pricing',
+        price: { LK: 'LKR 40,000/=', GLOBAL: '$121.21' },
+        description: '1-Year OpenAI ChatGPT Plus subscription with Own Email Activation',
         activation: 'Own Email Activation'
       }
     ],
@@ -189,9 +191,9 @@ const products = [
       'DALL-E 3 Image Generation',
       'Browse, Analyze & Custom GPTs'
     ],
-    image: '/assets/products/chatgpt-plus.svg',
-    badge: 'INQUIRE',
-    featured: false,
+    image: '/assets/products/chatgpt-plus.png',
+    badge: '1 YEAR',
+    featured: true,
     available: true,
     order: 5
   },
@@ -281,7 +283,7 @@ const products = [
       'Image understanding & generation',
       'Fast turnaround delivery'
     ],
-    image: '/assets/products/supergrok.svg',
+    image: '/assets/products/supergrok.png',
     badge: 'xAI POWER',
     featured: false,
     available: true,
@@ -669,6 +671,223 @@ const products = [
     featured: true,
     available: true,
     order: 18
+  },
+  {
+    id: 'canva-pro',
+    name: 'Canva Pro',
+    category: 'subscriptions',
+    shortDescription: '100% Private Original Pro & Business account with full email access & 30-day guarantee.',
+    description: 'Get full access to Canva Pro and Business features on a 100% private account with full email access. Not an education account — original genuine Pro access. Invite other users to your team and design without limits.',
+    plans: [
+      {
+        id: 'canva-pro-private',
+        name: 'Private Account',
+        duration: '30 Days',
+        price: { LK: 'LKR 500/=', GLOBAL: '$1.52' },
+        normalPrice: { LK: 'LKR 990/=', GLOBAL: '$3.00' },
+        discount: { enabled: true, label: '49% OFF' },
+        description: '100% Private Original Pro & Business account with full email access & invite support',
+        activation: 'Private Account Details'
+      }
+    ],
+    activation: 'Private Account with Full Email Access',
+    features: [
+      '100% Private Account (Original Pro & Business, Not Edu)',
+      'Full Email Access included',
+      'Invite other users to your team',
+      'Unlimited folders & 450M+ premium templates',
+      '80M+ premium elements, photos, graphics & videos',
+      '4,000+ premium fonts & custom font upload',
+      'One-click Background Remover & Magic Resize to any format',
+      'Access premium animations & brand kits',
+      'Full guarantee & warranty for 30 days'
+    ],
+    image: '/assets/products/canva-pro.png',
+    badge: 'HOT DEAL',
+    featured: true,
+    available: true,
+    order: 19
+  },
+  {
+    id: 'windows-server-2025-datacenter',
+    name: 'Windows Server 2025 Datacenter',
+    category: 'developer',
+    shortDescription: 'Genuine Windows Server 2025 Datacenter product key. Lifetime one-time activation.',
+    description: 'Official genuine Microsoft Windows Server 2025 Datacenter product key for enterprise environments and virtualization. One-time purchase with permanent lifetime activation. Includes detailed step-by-step activation guide for the Microsoft Product Activation Portal.',
+    plans: [
+      {
+        id: 'win-server-2025-key',
+        name: 'Datacenter Edition',
+        duration: 'Lifetime',
+        price: { LK: 'LKR 990/=', GLOBAL: '$3.00' },
+        description: '100% Genuine product key with lifetime activation for enterprise & virtualization',
+        activation: 'Product Key'
+      }
+    ],
+    activation: 'Instant Product Key + Microsoft Activation Portal Manual',
+    features: [
+      '100% Genuine Windows Server 2025 Datacenter key',
+      'Format: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX',
+      'One-time purchase — permanent lifetime activation',
+      'Official download available directly from Microsoft',
+      'Designed for enterprise environments, containers & virtualization',
+      'Online activation via Microsoft official portal (no phone call needed)',
+      'Evaluation (Trial) to Full version conversion supported'
+    ],
+    image: '/assets/products/windows-server-2025.png',
+    badge: 'SERVER 2025',
+    featured: true,
+    available: true,
+    order: 20
+  },
+  {
+    id: 'linkedin-premium',
+    name: 'LinkedIn Premium',
+    category: 'subscriptions',
+    shortDescription: '3 Months of LinkedIn Premium via direct redeem link for eligible accounts (4+ weeks old).',
+    description: 'Unlock 3 months of LinkedIn Premium Career features directly on your personal account. Access LinkedIn Learning, InMail credits, see who viewed your profile, and competitive applicant insights. Requires an eligible account (4+ weeks old, no premium in past 12 months).',
+    plans: [
+      {
+        id: 'linkedin-premium-3m',
+        name: '3 Months Activation',
+        duration: '3 Months',
+        price: { LK: 'LKR 500/=', GLOBAL: '$1.52' },
+        description: 'Direct redeem link for eligible accounts (4+ weeks old with no active/recent trial)',
+        activation: 'Redeem Link'
+      }
+    ],
+    activation: 'Official Redeem Link via WhatsApp/Telegram',
+    features: [
+      '3 Months LinkedIn Premium Career & Business access',
+      'Full access to 16,000+ LinkedIn Learning video courses',
+      'See who viewed your profile & browse privately',
+      'Direct InMail messages to recruiters & industry leaders',
+      'Competitive insights on job applicants & salary stats',
+      'Instant redeem link delivery upon payment verification'
+    ],
+    notes: [
+      'Your existing LinkedIn account must be at least 4 weeks old to qualify',
+      'Not valid if you used paid premium in the last 12 months or previously redeemed any trial/offer',
+      'A valid card is required by LinkedIn for verification during checkout'
+    ],
+    image: '/assets/products/linkedin-premium.png',
+    badge: 'CAREER BOOST',
+    featured: true,
+    available: true,
+    order: 21
+  },
+  {
+    id: 'netflix-premium-4k',
+    name: 'Netflix Premium 4K UHD',
+    category: 'subscriptions',
+    shortDescription: 'Official Netflix (NFLX) 4K UHD + HDR streaming. Available as Shared Account or Private Profile.',
+    description: 'Stream thousands of movies, TV shows, and award-winning originals in breathtaking 4K Ultra HD and HDR with Dolby Atmos support. Choose between an ultra-affordable Shared Account or your own dedicated Private Profile.',
+    plans: [
+      {
+        id: 'netflix-4k-shared-1m',
+        name: 'Shared Account — 1 Month',
+        duration: '1 Month',
+        price: { LK: 'LKR 690/=', GLOBAL: '$2.09' },
+        description: 'Shared account access with Email, Password & Login Link. 4K Ultra HD streaming.',
+        activation: 'Email:Password:LoginLink'
+      },
+      {
+        id: 'netflix-4k-private-profile-1m',
+        name: 'Private Profile — 1 Month',
+        duration: '1 Month',
+        price: { LK: 'LKR 1,600/=', GLOBAL: '$4.85' },
+        description: 'Shared account with your own dedicated Private Profile assigned to you. 4K UHD streaming.',
+        activation: 'Email:Password + Private Profile'
+      }
+    ],
+    activation: 'Login Credentials + MFA Bypass Login Link',
+    features: [
+      'Official 4K Ultra HD and HDR streaming quality',
+      'Ad-free unlimited movies, series, documentaries & anime',
+      'Supported on Smart TVs, PCs, Laptops, Android phones/tablets & TV boxes',
+      'Instant Login Link provided to bypass MFA/security checks',
+      'Fast delivery (usually within 10 minutes when online)',
+      'Full 30-day warranty and seller assistance'
+    ],
+    notes: [
+      'Do not change account password or account settings',
+      'Login Links expire after 1 hour — message us on WhatsApp anytime for an instant fresh link',
+      'For Private Profile plan: your profile is private to you, please do not edit other profiles'
+    ],
+    image: '/assets/products/netflix.png',
+    badge: '4K UHD',
+    featured: true,
+    available: true,
+    order: 22
+  },
+  {
+    id: 'capcut-pro',
+    name: 'CapCut Pro Team',
+    category: 'subscriptions',
+    shortDescription: 'CapCut Pro Team 1-month personal access. Watermark-free 4K export & full VIP assets.',
+    description: 'Supercharge your video editing with CapCut Pro Team personal access for 1 month. Perfect for content creators, TikTokers, YouTubers, and video editors who need professional AI tools, watermark-free 4K export, and premium visual effects.',
+    plans: [
+      {
+        id: 'capcut-pro-team-1m',
+        name: '1-Month Personal Access',
+        duration: '1 Month',
+        price: { LK: 'LKR 990/=', GLOBAL: '$3.00' },
+        description: 'CapCut Pro Team access for personal use. 100% No Automatic Renewal. Full warranty.',
+        activation: 'Team Invite / Account Access'
+      }
+    ],
+    activation: 'Team Invitation / Personal Access Details',
+    features: [
+      'CapCut Pro Team 1-Month Personal Access',
+      'Watermark-free export in up to 4K 60fps',
+      'Full access to VIP premium templates, effects & transitions',
+      'Thousands of premium fonts, stickers, audio & motion graphics',
+      'AI video tools: Auto captions, background removal & voice enhancer',
+      '100% No Automatic Renewal — pay only for what you use',
+      'Full replacement warranty throughout active period'
+    ],
+    notes: [
+      'Provides CapCut Pro Team access for personal use',
+      'Simultaneous use across multiple devices at once is prohibited to avoid login restrictions',
+      'Login limit warranty valid for 1 week; full warranty if revoked during active period'
+    ],
+    image: '/assets/products/capcut.png',
+    badge: 'CREATOR PICK',
+    featured: true,
+    available: true,
+    order: 23
+  },
+  {
+    id: 'office-365-plus',
+    name: 'Microsoft Office 365 Plus',
+    category: 'developer',
+    shortDescription: 'Microsoft 365 Plus 1 Year+ subscription with 1TB OneDrive & 5 devices support.',
+    description: 'Complete Microsoft 365 Plus subscription for 1 Year+. Includes 1TB OneDrive cloud storage and simultaneous installation on up to 5 devices (Windows, Mac, Android, iOS). Comes with Word, Excel, PowerPoint, OneNote, Forms, and cloud sync.',
+    plans: [
+      {
+        id: 'office-365-plus-1y',
+        name: '1 Year+ (5 Devices)',
+        duration: '1 Year+',
+        price: { LK: 'LKR 1,000/=', GLOBAL: '$3.03' },
+        description: 'Ready-to-use private account with 1TB OneDrive and 5 device support',
+        activation: 'Login Email & Password'
+      }
+    ],
+    activation: 'Instant Account Login Details (Email : Password)',
+    features: [
+      '1 Year+ official Microsoft 365 subscription',
+      '1TB secure OneDrive cloud storage',
+      'Install and activate on up to 5 devices simultaneously',
+      'Full desktop apps: Word, Excel, PowerPoint, OneNote, Forms',
+      'Compatible with Windows PC, macOS, Android & iOS',
+      'Instant digital delivery with private & secure account',
+      'Regular Microsoft feature updates & cloud security'
+    ],
+    image: '/assets/products/office-365-1-year.png',
+    badge: '5 DEVICES + 1TB',
+    featured: true,
+    available: true,
+    order: 24
   }
 ];
 

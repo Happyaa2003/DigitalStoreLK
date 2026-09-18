@@ -17,6 +17,7 @@ const categoryFilters = [
   { id: 'gaming', label: 'Gaming' },
   { id: 'developer', label: 'Developer' },
   { id: 'education', label: 'Education' },
+  { id: 'subscriptions', label: 'Subscriptions' },
   { id: 'wallet', label: 'PS Wallet' },
 ];
 
