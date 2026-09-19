@@ -52,9 +52,10 @@ const badgeStyle: Record<string, string> = {
   'CAREER BOOST': 'bg-gradient-to-r from-sky-600 to-blue-700 text-white shadow-sm shadow-blue-500/30',
   '5 DEVICES + 1TB': 'bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow-sm shadow-orange-500/30',
   '46+ APPS': 'bg-gradient-to-r from-blue-600 to-teal-600 text-white shadow-sm shadow-teal-500/30',
+  'ALL APPS': 'bg-gradient-to-r from-red-600 via-rose-600 to-pink-600 text-white shadow-sm shadow-rose-500/30',
 };
 
-const whiteBgProductIds = new Set(['udemy-personal', 'n8n-starter', 'coursera-plus']);
+const whiteBgProductIds = new Set(['udemy-personal', 'n8n-starter', 'coursera-plus', 'adobe-creative-cloud-all-apps']);
 
 export default function ProductCard({ product, region, onViewDetails, variant = 'default' }: ProductCardProps) {
   const defaultPlanIndex = Math.max(0, product.plans.findIndex((p) => p.available !== false));

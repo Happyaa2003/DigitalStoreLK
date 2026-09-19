@@ -300,7 +300,7 @@ const products = [
         id: 'coursera-ready-made-1y',
         name: 'Ready-Made — 1 Year',
         duration: '1 Year',
-        price: { LK: 'LKR 2,000/=', GLOBAL: '$6.06' },
+        price: { LK: 'LKR 5,000/=', GLOBAL: '$15.15' },
         description: 'Pre-configured ready-to-learn account delivered instantly (In Stock)',
         activation: 'Ready-Made Account',
         available: true
@@ -309,7 +309,7 @@ const products = [
         id: 'coursera-own-email-1y',
         name: 'Own Email — 1 Year',
         duration: '1 Year',
-        price: { LK: 'LKR 2,500/=', GLOBAL: '$7.58' },
+        price: { LK: 'LKR 5,500/=', GLOBAL: '$16.67' },
         description: 'Activated on your own personal email address (Currently Out of Stock)',
         activation: 'Own Email Activation',
         available: false
@@ -971,6 +971,48 @@ const products = [
     featured: true,
     available: true,
     order: 25
+  },
+  {
+    id: 'adobe-creative-cloud-all-apps',
+    name: 'Adobe Creative Cloud All Apps',
+    category: 'subscriptions',
+    shortDescription: 'Adobe Creative Cloud All Apps 4-month access. All premium apps, regular updates, Adobe Express & 4,000 monthly generative AI credits.',
+    description: 'Get 4 months of unrestricted access to Adobe Creative Cloud. This includes all premium apps (Photoshop, Illustrator, Premiere Pro, After Effects, etc.), regular updates, Adobe Express, and 4,000 monthly generative AI credits.',
+    plans: [
+      {
+        id: 'adobe-cc-all-apps-4m',
+        name: '4-Month Access (Activation Link)',
+        duration: '4 Months',
+        price: { LK: 'LKR 4,400/=', GLOBAL: '$13.33' },
+        description: '4 Months unrestricted Adobe CC All Apps access with 4,000 monthly AI credits & one-time activation link.',
+        activation: 'One-Time Activation Link + Video Guide'
+      }
+    ],
+    activation: 'One-Time Activation Link + Step-by-Step Video Guide',
+    features: [
+      '4 months of unrestricted access to Adobe Creative Cloud',
+      'Includes all premium apps (Photoshop, Illustrator, Premiere Pro, After Effects, etc.)',
+      'Regular updates included throughout the subscription period',
+      'Adobe Express included with premium assets and templates',
+      '4,000 monthly generative AI credits (Adobe Firefly)',
+      'Multi-device support: Windows & macOS compatible (up to 2 devices)',
+      'Cloud storage included',
+      'One-time-use activation link and step-by-step video tutorial provided',
+      'Strict 14-day warranty guarantee'
+    ],
+    notes: [
+      'A Fresh Email: You must use a brand-new email address with zero previous Adobe history (no past accounts, trials, or subscriptions).',
+      'A Payment Method for Verification: Adobe requires a card or PayPal on file to activate. You will not be charged (the subscription is pre-paid).',
+      'Tip: We highly recommend using virtual cards like Revolut. You can use them for verification and delete them after one month.',
+      'Matching Location: The country you select during checkout must match your current IP address and the billing country of your card/PayPal.',
+      'HOW TO ACTIVATE (Do-It-Yourself): Open the link in an Incognito / Private window. Do not click the link until you are ready (it only works once and will expire if you close out early). Follow the provided video tutorial step-by-step. On the payment page, choose your country of residence before filling in your payment information.',
+      'WARRANTY & REFUND POLICY: The subscription is for 4 months, and we provide a strict 14-day guarantee. Post-activation issues beyond this period are not covered.'
+    ],
+    image: '/assets/products/adobe-creative-cloud.png',
+    badge: 'ALL APPS',
+    featured: true,
+    available: true,
+    order: 26
   }
 ];
 

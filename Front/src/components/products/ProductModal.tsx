@@ -23,6 +23,8 @@ const categoryLabels: Record<string, string> = {
   wallet: 'PS Wallet',
 };
 
+const whiteBgProductIds = new Set(['udemy-personal', 'n8n-starter', 'coursera-plus', 'adobe-creative-cloud-all-apps']);
+
 export default function ProductModal({ product, region, initialPlanIndex = 0, onClose }: ProductModalProps) {
   const [selectedPlanIndex, setSelectedPlanIndex] = useState(initialPlanIndex);
 
@@ -51,15 +53,16 @@ export default function ProductModal({ product, region, initialPlanIndex = 0, on
   if (!product) return null;
 
   const selectedPlan: ProductPlan = product.plans[selectedPlanIndex] ?? product.plans[0];
-  const isPlanAvailable = selectedPlan.available !== false;
-  const currentPrice = getPrice(selectedPlan.price, region);
-  const normalPrice = getPrice(selectedPlan.normalPrice ?? selectedPlan.discount?.normalPrice, region);
-  const discount = selectedPlan.discount;
+  const isPlanAvailable = selectedPlan?.available !== false;
+  const currentPrice = getPrice(selectedPlan?.price, region);
+  const normalPrice = getPrice(selectedPlan?.normalPrice ?? selectedPlan?.discount?.normalPrice, region);
+  const discount = selectedPlan?.discount;
   const hasDiscount = discount?.enabled && discount.label;
   const hasNormalPrice = !!normalPrice && normalPrice !== currentPrice;
   const currentImage = selectedPlan?.image || product.image;
   const whatsappLink = createWhatsAppLink(product, selectedPlan, region);
   const telegramLink = createTelegramLink(product, selectedPlan, region);
+  const isWhiteBg = whiteBgProductIds.has(product.id);
 
   return (
     <AnimatePresence>
@@ -101,7 +104,10 @@ export default function ProductModal({ product, region, initialPlanIndex = 0, on
             </button>
 
             {/* Header image - 1:1 friendly container */}
-            <div className="relative flex-shrink-0 w-full bg-slate-950 flex items-center justify-center overflow-hidden max-h-64 sm:max-h-80">
+            <div className={cn(
+              "relative flex-shrink-0 w-full flex items-center justify-center overflow-hidden max-h-64 sm:max-h-80",
+              isWhiteBg ? "bg-white" : "bg-slate-950"
+            )}>
               <img
                 key={currentImage}
                 src={currentImage}

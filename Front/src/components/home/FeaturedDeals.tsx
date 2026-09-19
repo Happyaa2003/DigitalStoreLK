@@ -107,7 +107,7 @@ function FeaturedSmallCard({ product, region, onView, delay = 0 }: { product: Pr
   const plan = product.plans.find((p) => p.available !== false) ?? product.plans[0];
   const price = getPrice(plan.price, region);
   const hasDiscount = plan.discount?.enabled && plan.discount.label;
-  const isWhiteBg = ['udemy-personal', 'n8n-starter', 'coursera-plus'].includes(product.id);
+  const isWhiteBg = ['udemy-personal', 'n8n-starter', 'coursera-plus', 'adobe-creative-cloud-all-apps'].includes(product.id);
 
   return (
     <motion.div
