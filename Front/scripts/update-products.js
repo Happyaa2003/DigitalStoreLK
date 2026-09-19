@@ -782,24 +782,56 @@ const products = [
     id: 'netflix-premium-4k',
     name: 'Netflix Premium 4K UHD',
     category: 'subscriptions',
-    shortDescription: 'Official Netflix (NFLX) 4K UHD + HDR streaming. Available as Shared Account or Private Profile.',
-    description: 'Stream thousands of movies, TV shows, and award-winning originals in breathtaking 4K Ultra HD and HDR with Dolby Atmos support. Choose between an ultra-affordable Shared Account or your own dedicated Private Profile.',
+    shortDescription: 'Official Netflix (NFLX) 4K UHD + HDR streaming. 1-Device & 2-Device connectable plans available.',
+    description: 'Stream thousands of movies, TV shows, and award-winning originals in breathtaking 4K Ultra HD and HDR with Dolby Atmos support. Choose between 1 Device Connectable and 2 Devices Connectable options across 1, 3, 6, and 12-month durations. 4-Device connectable accounts also available on request.',
     plans: [
       {
-        id: 'netflix-4k-shared-1m',
-        name: 'Shared Account — 1 Month',
+        id: 'netflix-4k-1device-1m',
+        name: '1 Device — 1 Month',
         duration: '1 Month',
-        price: { LK: 'LKR 690/=', GLOBAL: '$2.09' },
-        description: 'Shared account access with Email, Password & Login Link. 4K Ultra HD streaming.',
+        price: { LK: 'LKR 700/=', GLOBAL: '$2.12' },
+        description: '1 Device connectable. 4K Ultra HD streaming with instant login credentials.',
         activation: 'Email:Password:LoginLink'
       },
       {
-        id: 'netflix-4k-private-profile-1m',
-        name: 'Private Profile — 1 Month',
+        id: 'netflix-4k-2devices-1m',
+        name: '2 Devices — 1 Month',
         duration: '1 Month',
-        price: { LK: 'LKR 1,600/=', GLOBAL: '$4.85' },
-        description: 'Shared account with your own dedicated Private Profile assigned to you. 4K UHD streaming.',
-        activation: 'Email:Password + Private Profile'
+        price: { LK: 'LKR 1,500/=', GLOBAL: '$4.55' },
+        description: '2 Devices connectable simultaneously. 4K Ultra HD streaming.',
+        activation: 'Email:Password:LoginLink'
+      },
+      {
+        id: 'netflix-4k-2devices-3m',
+        name: '2 Devices — 3 Months',
+        duration: '3 Months',
+        price: { LK: 'LKR 3,000/=', GLOBAL: '$9.09' },
+        description: '2 Devices connectable simultaneously. 3 Months 4K Ultra HD streaming.',
+        activation: 'Email:Password:LoginLink'
+      },
+      {
+        id: 'netflix-4k-2devices-6m',
+        name: '2 Devices — 6 Months',
+        duration: '6 Months',
+        price: { LK: 'LKR 5,500/=', GLOBAL: '$16.67' },
+        description: '2 Devices connectable simultaneously. 6 Months 4K Ultra HD streaming.',
+        activation: 'Email:Password:LoginLink'
+      },
+      {
+        id: 'netflix-4k-2devices-12m',
+        name: '2 Devices — 12 Months',
+        duration: '12 Months',
+        price: { LK: 'LKR 10,000/=', GLOBAL: '$30.30' },
+        description: '2 Devices connectable simultaneously. 12 Months (1 Year) 4K Ultra HD streaming.',
+        activation: 'Email:Password:LoginLink'
+      },
+      {
+        id: 'netflix-4k-4devices',
+        name: '4 Devices — Contact Us',
+        duration: 'Custom',
+        price: { LK: 'Contact for Price', GLOBAL: 'Contact for Price' },
+        description: '4-Device connectable premium account also available. Contact us for pricing & instant activation.',
+        activation: 'Contact on WhatsApp'
       }
     ],
     activation: 'Login Credentials + MFA Bypass Login Link',
@@ -807,14 +839,17 @@ const products = [
       'Official 4K Ultra HD and HDR streaming quality',
       'Ad-free unlimited movies, series, documentaries & anime',
       'Supported on Smart TVs, PCs, Laptops, Android phones/tablets & TV boxes',
+      '1 Device and 2 Devices connectable plans available',
+      '4-Device connectable premium accounts also available (contact us)',
       'Instant Login Link provided to bypass MFA/security checks',
       'Fast delivery (usually within 10 minutes when online)',
-      'Full 30-day warranty and seller assistance'
+      'Full warranty and seller assistance throughout the subscription period'
     ],
     notes: [
       'Do not change account password or account settings',
       'Login Links expire after 1 hour — message us on WhatsApp anytime for an instant fresh link',
-      'For Private Profile plan: your profile is private to you, please do not edit other profiles'
+      'Connect only up to the permitted number of devices according to your plan',
+      '4-Device connectable premium accounts are also available — contact us on WhatsApp'
     ],
     image: '/assets/products/netflix.png',
     badge: '4K UHD',
