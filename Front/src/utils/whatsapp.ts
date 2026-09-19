@@ -20,6 +20,7 @@ function buildOrderMessage(product: Product, plan?: ProductPlan, region: Pricing
     return `Hi DigitalStoreLK, I would like to inquire about restock / availability for:\n\n📦 Product: ${product.name}\n📋 Plan: ${planName}${duration}\n\nPlease let me know when this plan will be available again or if alternatives are recommended.`;
   }
 
+  const price = getPrice(selectedPlan?.price, region);
   const pricePart = price && price !== 'Contact for Price' ? ` for ${price}` : ' (Price Inquiry)';
 
   return `Hi DigitalStoreLK, I would like to order:\n\n📦 Product: ${product.name}\n📋 Plan: ${planName}${duration}\n💰 Price: ${pricePart}\n\nPlease let me know how to proceed with payment and activation.`;

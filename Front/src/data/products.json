@@ -345,8 +345,9 @@
           "LK": "LKR 1,500/=",
           "GLOBAL": "$4.55"
         },
-        "description": "Activated on your own personal email address",
-        "activation": "Own Email Activation"
+        "description": "Activated on your own personal email address (Currently Out of Stock)",
+        "activation": "Own Email Activation",
+        "available": false
       },
       {
         "id": "coursera-ready-made-1y",
@@ -356,8 +357,9 @@
           "LK": "LKR 1,500/=",
           "GLOBAL": "$4.55"
         },
-        "description": "Pre-configured ready-to-learn account delivered instantly",
-        "activation": "Ready-Made Account"
+        "description": "Pre-configured ready-to-learn account delivered instantly (In Stock)",
+        "activation": "Ready-Made Account",
+        "available": true
       }
     ],
     "activation": "Own Email or Ready-Made Account",
