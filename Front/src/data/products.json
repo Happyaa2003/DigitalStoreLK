@@ -338,28 +338,28 @@
     "description": "Coursera Plus provides full unlimited learning access to top accredited courses, professional certificates from Google, IBM, Meta, and leading global universities.",
     "plans": [
       {
-        "id": "coursera-own-email-1y",
-        "name": "Own Email — 1 Year",
-        "duration": "1 Year",
-        "price": {
-          "LK": "LKR 1,500/=",
-          "GLOBAL": "$4.55"
-        },
-        "description": "Activated on your own personal email address (Currently Out of Stock)",
-        "activation": "Own Email Activation",
-        "available": false
-      },
-      {
         "id": "coursera-ready-made-1y",
         "name": "Ready-Made — 1 Year",
         "duration": "1 Year",
         "price": {
-          "LK": "LKR 1,500/=",
-          "GLOBAL": "$4.55"
+          "LK": "LKR 2,000/=",
+          "GLOBAL": "$6.06"
         },
         "description": "Pre-configured ready-to-learn account delivered instantly (In Stock)",
         "activation": "Ready-Made Account",
         "available": true
+      },
+      {
+        "id": "coursera-own-email-1y",
+        "name": "Own Email — 1 Year",
+        "duration": "1 Year",
+        "price": {
+          "LK": "LKR 2,500/=",
+          "GLOBAL": "$7.58"
+        },
+        "description": "Activated on your own personal email address (Currently Out of Stock)",
+        "activation": "Own Email Activation",
+        "available": false
       }
     ],
     "activation": "Own Email or Ready-Made Account",
