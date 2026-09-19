@@ -676,23 +676,23 @@ const products = [
     id: 'canva-pro',
     name: 'Canva Pro',
     category: 'subscriptions',
-    shortDescription: '100% Private Original Pro & Business account with full email access & 30-day guarantee.',
-    description: 'Get full access to Canva Pro and Business features on a 100% private account with full email access. Not an education account — original genuine Pro access. Invite other users to your team and design without limits.',
+    shortDescription: '100% Private Original Pro & Business account (1 Year) with full email access.',
+    description: 'Get full access to Canva Pro and Business features on a 100% private account with full email access for 1 Year. Not an education account — original genuine Pro access. Invite other users to your team and design without limits.',
     plans: [
       {
-        id: 'canva-pro-private',
-        name: 'Private Account',
-        duration: '30 Days',
+        id: 'canva-pro-private-1y',
+        name: 'Private Account — 1 Year',
+        duration: '1 Year',
         price: { LK: 'LKR 500/=', GLOBAL: '$1.52' },
         normalPrice: { LK: 'LKR 990/=', GLOBAL: '$3.00' },
         discount: { enabled: true, label: '49% OFF' },
-        description: '100% Private Original Pro & Business account with full email access & invite support',
+        description: '1-Year 100% Private Original Pro & Business account with full email access & invite support',
         activation: 'Private Account Details'
       }
     ],
     activation: 'Private Account with Full Email Access',
     features: [
-      '100% Private Account (Original Pro & Business, Not Edu)',
+      '1 Year 100% Private Account (Original Pro & Business, Not Edu)',
       'Full Email Access included',
       'Invite other users to your team',
       'Unlimited folders & 450M+ premium templates',
@@ -700,10 +700,10 @@ const products = [
       '4,000+ premium fonts & custom font upload',
       'One-click Background Remover & Magic Resize to any format',
       'Access premium animations & brand kits',
-      'Full guarantee & warranty for 30 days'
+      'Full 1-Year Pro subscription access & warranty'
     ],
     image: '/assets/products/canva-pro.png',
-    badge: 'HOT DEAL',
+    badge: '1 YEAR',
     featured: true,
     available: true,
     order: 19
