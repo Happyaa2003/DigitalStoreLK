@@ -14,7 +14,7 @@ const products = productsData as Product[];
 const featured = products.filter((p) => p.featured && p.available !== false).slice(0, 5);
 
 function FeaturedLargeCard({ product, region, onView }: { product: Product; region: PricingRegion; onView: () => void }) {
-  const plan = product.plans[0];
+  const plan = product.plans.find((p) => p.available !== false) ?? product.plans[0];
   const price = getPrice(plan.price, region);
   const normalPrice = getPrice(plan.normalPrice ?? plan.discount?.normalPrice, region);
   const hasDiscount = plan.discount?.enabled && plan.discount.label;
@@ -104,7 +104,7 @@ function FeaturedLargeCard({ product, region, onView }: { product: Product; regi
 }
 
 function FeaturedSmallCard({ product, region, onView, delay = 0 }: { product: Product; region: PricingRegion; onView: () => void; delay?: number }) {
-  const plan = product.plans[0];
+  const plan = product.plans.find((p) => p.available !== false) ?? product.plans[0];
   const price = getPrice(plan.price, region);
   const hasDiscount = plan.discount?.enabled && plan.discount.label;
   const isWhiteBg = ['udemy-personal', 'n8n-starter', 'coursera-plus'].includes(product.id);

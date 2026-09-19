@@ -301,16 +301,18 @@ const products = [
         name: 'Own Email — 1 Year',
         duration: '1 Year',
         price: { LK: 'LKR 1,500/=', GLOBAL: '$4.55' },
-        description: 'Activated on your own personal email address',
-        activation: 'Own Email Activation'
+        description: 'Activated on your own personal email address (Currently Out of Stock)',
+        activation: 'Own Email Activation',
+        available: false
       },
       {
         id: 'coursera-ready-made-1y',
         name: 'Ready-Made — 1 Year',
         duration: '1 Year',
         price: { LK: 'LKR 1,500/=', GLOBAL: '$4.55' },
-        description: 'Pre-configured ready-to-learn account delivered instantly',
-        activation: 'Ready-Made Account'
+        description: 'Pre-configured ready-to-learn account delivered instantly (In Stock)',
+        activation: 'Ready-Made Account',
+        available: true
       }
     ],
     activation: 'Own Email or Ready-Made Account',
@@ -888,6 +890,52 @@ const products = [
     featured: true,
     available: true,
     order: 24
+  },
+  {
+    id: 'autodesk-all-apps',
+    name: 'Autodesk (46+ Products)',
+    category: 'developer',
+    shortDescription: 'Official private Autodesk access on your own email. 46+ apps including AutoCAD, Revit, Maya, 3ds Max & Fusion 360.',
+    description: 'Get official private access to the entire Autodesk software collection with 46+ professional engineering and 3D design applications. Activated directly on your personal Autodesk email address with 100% full ownership. Includes AutoCAD, Revit, 3ds Max, Maya, Fusion 360, Inventor, Navisworks, Twinmotion, and more with multi-version access (2024–2027).',
+    plans: [
+      {
+        id: 'autodesk-1y',
+        name: '1 Year Access',
+        duration: '1 Year',
+        price: { LK: 'LKR 1,500/=', GLOBAL: '$4.55' },
+        description: '1-Year official private Autodesk access for 46+ apps activated on your personal email',
+        activation: 'Own Email Activation'
+      },
+      {
+        id: 'autodesk-3y',
+        name: '3 Years Access',
+        duration: '3 Years',
+        price: { LK: 'LKR 4,000/=', GLOBAL: '$12.12' },
+        description: '3-Year extended official private Autodesk access for 46+ apps activated on your personal email',
+        activation: 'Own Email Activation'
+      }
+    ],
+    activation: 'Own Email Activation (Send your registered Autodesk email)',
+    features: [
+      'Access to 46+ official Autodesk applications',
+      'Includes AutoCAD, Revit, 3ds Max, Maya, Fusion 360, Inventor, Navisworks & Twinmotion',
+      'Activated on YOUR email — 100% full ownership & control',
+      'Windows & macOS compatible',
+      'Versions 2024–2025–2026–2027 supported',
+      'Global access with official downloads directly from Autodesk',
+      'One-time payment — no monthly fees or recurring charges',
+      'Instant delivery within 5 minutes'
+    ],
+    notes: [
+      'Please make sure the email you provide has a registered Autodesk account',
+      'After ordering, send your Autodesk email address via WhatsApp or Telegram',
+      'Activation takes just 5 minutes with zero configuration needed'
+    ],
+    image: '/assets/products/autodesk.png',
+    badge: '46+ APPS',
+    featured: true,
+    available: true,
+    order: 25
   }
 ];
 

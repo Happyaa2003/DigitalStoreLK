@@ -24,6 +24,7 @@ export interface ProductPlan {
   activation?: string;
   badge?: string;
   image?: string;
+  available?: boolean;
 }
 
 export interface Product {

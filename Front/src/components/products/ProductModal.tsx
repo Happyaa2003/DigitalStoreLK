@@ -51,6 +51,7 @@ export default function ProductModal({ product, region, initialPlanIndex = 0, on
   if (!product) return null;
 
   const selectedPlan: ProductPlan = product.plans[selectedPlanIndex] ?? product.plans[0];
+  const isPlanAvailable = selectedPlan.available !== false;
   const currentPrice = getPrice(selectedPlan.price, region);
   const normalPrice = getPrice(selectedPlan.normalPrice ?? selectedPlan.discount?.normalPrice, region);
   const discount = selectedPlan.discount;
@@ -138,27 +139,41 @@ export default function ProductModal({ product, region, initialPlanIndex = 0, on
                       Select Plan
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {product.plans.map((plan, idx) => (
-                        <button
-                          key={plan.id}
-                          id={`modal-plan-${plan.id}`}
-                          onClick={() => setSelectedPlanIndex(idx)}
-                          className={cn(
-                            'flex-1 min-w-[120px] px-4 py-3 rounded-xl border-2 text-sm font-semibold transition-all duration-200 text-left',
-                            selectedPlanIndex === idx
-                              ? 'border-blue-500 bg-blue-50 text-blue-700'
-                              : 'border-gray-200 text-gray-600 hover:border-blue-300 hover:bg-blue-50/50'
-                          )}
-                        >
-                          <div className="font-bold mb-0.5">{plan.name}</div>
-                          {plan.duration && (
-                            <div className="text-[11px] opacity-70 font-normal">{plan.duration}</div>
-                          )}
-                          {plan.description && (
-                            <div className="text-[11px] opacity-60 font-normal mt-0.5 line-clamp-1">{plan.description}</div>
-                          )}
-                        </button>
-                      ))}
+                      {product.plans.map((plan, idx) => {
+                        const isPlanOutOfStock = plan.available === false;
+                        return (
+                          <button
+                            key={plan.id}
+                            id={`modal-plan-${plan.id}`}
+                            onClick={() => setSelectedPlanIndex(idx)}
+                            className={cn(
+                              'flex-1 min-w-[120px] px-4 py-3 rounded-xl border-2 text-sm font-semibold transition-all duration-200 text-left',
+                              selectedPlanIndex === idx
+                                ? isPlanOutOfStock
+                                  ? 'border-rose-500 bg-rose-50 text-rose-700'
+                                  : 'border-blue-500 bg-blue-50 text-blue-700'
+                                : isPlanOutOfStock
+                                  ? 'border-rose-200 text-rose-600/80 bg-rose-50/40 hover:border-rose-300'
+                                  : 'border-gray-200 text-gray-600 hover:border-blue-300 hover:bg-blue-50/50'
+                            )}
+                          >
+                            <div className="flex items-center justify-between gap-1 mb-0.5">
+                              <span className="font-bold">{plan.name}</span>
+                              {isPlanOutOfStock && (
+                                <span className="text-[10px] uppercase font-bold text-rose-600 bg-rose-100 px-1.5 py-0.5 rounded">
+                                  Out of Stock
+                                </span>
+                              )}
+                            </div>
+                            {plan.duration && (
+                              <div className="text-[11px] opacity-70 font-normal">{plan.duration}</div>
+                            )}
+                            {plan.description && (
+                              <div className="text-[11px] opacity-60 font-normal mt-0.5 line-clamp-1">{plan.description}</div>
+                            )}
+                          </button>
+                        );
+                      })}
                     </div>
                   </div>
                 )}
@@ -200,13 +215,18 @@ export default function ProductModal({ product, region, initialPlanIndex = 0, on
                     <div className="text-[10px] text-blue-500 font-bold uppercase tracking-wider mb-1">
                       {region === 'LK' ? '🇱🇰 Sri Lanka Price' : '🌍 Global Price'}
                     </div>
-                    <div className="flex items-end gap-2">
-                      <span className="text-2xl font-black text-gray-900">
+                    <div className="flex items-center gap-2">
+                      <span className={cn('text-2xl font-black text-gray-900', !isPlanAvailable && 'text-gray-400 line-through')}>
                         {currentPrice || 'Contact for price'}
                       </span>
                       {hasNormalPrice && (
                         <span className="text-base font-medium text-gray-400 line-through mb-0.5">
                           {normalPrice}
+                        </span>
+                      )}
+                      {!isPlanAvailable && (
+                        <span className="ml-2 px-2.5 py-1 rounded-full text-xs font-bold uppercase bg-rose-100 text-rose-700 border border-rose-200">
+                          Out of Stock
                         </span>
                       )}
                     </div>
@@ -257,28 +277,45 @@ export default function ProductModal({ product, region, initialPlanIndex = 0, on
             {/* Sticky CTA footer */}
             <div className="flex-shrink-0 p-5 border-t border-gray-100 bg-white">
               {product.available !== false ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <a
-                    href={whatsappLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    id={`modal-order-${product.id}-whatsapp`}
-                    className="flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md shadow-emerald-600/20 transition-all active:scale-98"
-                  >
-                    <img src="/assets/brand/whatsapp-color-icon.svg" alt="WhatsApp" className="w-5 h-5 object-contain" />
-                    <span>Order via WhatsApp</span>
-                  </a>
-                  <a
-                    href={telegramLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    id={`modal-order-${product.id}-telegram`}
-                    className="flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm shadow-md shadow-sky-500/20 transition-all active:scale-98"
-                  >
-                    <img src="/assets/brand/telegram-icon.svg" alt="Telegram" className="w-5 h-5 object-contain" />
-                    <span>Order via Telegram</span>
-                  </a>
-                </div>
+                isPlanAvailable ? (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <a
+                      href={whatsappLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      id={`modal-order-${product.id}-whatsapp`}
+                      className="flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md shadow-emerald-600/20 transition-all active:scale-98"
+                    >
+                      <img src="/assets/brand/whatsapp-color-icon.svg" alt="WhatsApp" className="w-5 h-5 object-contain" />
+                      <span>Order via WhatsApp</span>
+                    </a>
+                    <a
+                      href={telegramLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      id={`modal-order-${product.id}-telegram`}
+                      className="flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm shadow-md shadow-sky-500/20 transition-all active:scale-98"
+                    >
+                      <img src="/assets/brand/telegram-icon.svg" alt="Telegram" className="w-5 h-5 object-contain" />
+                      <span>Order via Telegram</span>
+                    </a>
+                  </div>
+                ) : (
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-3.5 bg-rose-50 rounded-2xl border border-rose-100">
+                    <div className="text-xs text-rose-700 text-center sm:text-left">
+                      <span className="font-bold">This plan is currently out of stock.</span> Inquire for restock updates or choose an available plan.
+                    </div>
+                    <a
+                      href={whatsappLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-shrink-0 flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white text-gray-700 hover:text-emerald-700 font-bold text-xs border border-gray-200 shadow-sm transition-all"
+                    >
+                      <img src="/assets/brand/whatsapp-color-icon.svg" alt="WhatsApp" className="w-4 h-4 object-contain" />
+                      <span>Inquire Restock</span>
+                    </a>
+                  </div>
+                )
               ) : (
                 <div className="text-center text-sm text-gray-500 py-2">
                   This product is currently unavailable. Contact us on WhatsApp or Telegram for alternatives.

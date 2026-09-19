@@ -16,7 +16,9 @@ function buildOrderMessage(product: Product, plan?: ProductPlan, region: Pricing
   const selectedPlan = plan ?? product.plans[0];
   const planName = selectedPlan?.name ?? '';
   const duration = selectedPlan?.duration ? ` (${selectedPlan.duration})` : '';
-  const price = getPrice(selectedPlan?.price, region);
+  if (selectedPlan?.available === false) {
+    return `Hi DigitalStoreLK, I would like to inquire about restock / availability for:\n\n📦 Product: ${product.name}\n📋 Plan: ${planName}${duration}\n\nPlease let me know when this plan will be available again or if alternatives are recommended.`;
+  }
 
   const pricePart = price && price !== 'Contact for Price' ? ` for ${price}` : ' (Price Inquiry)';
 

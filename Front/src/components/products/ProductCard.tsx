@@ -51,13 +51,16 @@ const badgeStyle: Record<string, string> = {
   'CREATOR PICK': 'bg-gradient-to-r from-pink-600 to-rose-600 text-white shadow-sm shadow-pink-500/30',
   'CAREER BOOST': 'bg-gradient-to-r from-sky-600 to-blue-700 text-white shadow-sm shadow-blue-500/30',
   '5 DEVICES + 1TB': 'bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow-sm shadow-orange-500/30',
+  '46+ APPS': 'bg-gradient-to-r from-blue-600 to-teal-600 text-white shadow-sm shadow-teal-500/30',
 };
 
 const whiteBgProductIds = new Set(['udemy-personal', 'n8n-starter', 'coursera-plus']);
 
 export default function ProductCard({ product, region, onViewDetails, variant = 'default' }: ProductCardProps) {
-  const [selectedPlanIndex, setSelectedPlanIndex] = useState(0);
+  const defaultPlanIndex = Math.max(0, product.plans.findIndex((p) => p.available !== false));
+  const [selectedPlanIndex, setSelectedPlanIndex] = useState(defaultPlanIndex);
   const selectedPlan: ProductPlan = product.plans[selectedPlanIndex] ?? product.plans[0];
+  const isPlanAvailable = selectedPlan.available !== false;
 
   const currentPrice = getPrice(selectedPlan.price, region);
   const normalPrice = getPrice(selectedPlan.normalPrice ?? selectedPlan.discount?.normalPrice, region);
@@ -183,35 +186,55 @@ export default function ProductCard({ product, region, onViewDetails, variant = 
         {/* Plan selector — only show if multiple plans */}
         {hasMultiplePlans && (
           <div className="flex flex-wrap gap-1.5 mb-4">
-            {product.plans.map((plan, idx) => (
-              <button
-                key={plan.id}
-                id={`plan-${plan.id}`}
-                onClick={() => setSelectedPlanIndex(idx)}
-                className={cn(
-                  'px-2.5 py-1 rounded-lg text-[11px] font-semibold border transition-all duration-200',
-                  selectedPlanIndex === idx
-                    ? 'bg-blue-600 text-white border-blue-600'
-                    : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-blue-300 hover:text-blue-600'
-                )}
-              >
-                {plan.name}
-              </button>
-            ))}
+            {product.plans.map((plan, idx) => {
+              const isPlanOutOfStock = plan.available === false;
+              return (
+                <button
+                  key={plan.id}
+                  id={`plan-${plan.id}`}
+                  onClick={() => setSelectedPlanIndex(idx)}
+                  className={cn(
+                    'px-2.5 py-1 rounded-lg text-[11px] font-semibold border transition-all duration-200 flex items-center gap-1',
+                    selectedPlanIndex === idx
+                      ? isPlanOutOfStock
+                        ? 'bg-rose-600 text-white border-rose-600'
+                        : 'bg-blue-600 text-white border-blue-600'
+                      : isPlanOutOfStock
+                        ? 'bg-rose-50 text-rose-600/90 border-rose-200 hover:border-rose-300'
+                        : 'bg-gray-50 text-gray-600 border-gray-200 hover:border-blue-300 hover:text-blue-600'
+                  )}
+                >
+                  <span>{plan.name}</span>
+                  {isPlanOutOfStock && (
+                    <span className={cn(
+                      'text-[9px] font-bold uppercase px-1 py-0.2 rounded',
+                      selectedPlanIndex === idx ? 'bg-black/20 text-white' : 'bg-rose-100 text-rose-700'
+                    )}>
+                      Out of Stock
+                    </span>
+                  )}
+                </button>
+              );
+            })}
           </div>
         )}
 
         {/* Price */}
-        <div className="flex items-end gap-2.5 mb-4">
+        <div className="flex items-center gap-2 mb-4">
           {currentPrice ? (
             <>
-              <span className="price-display">{currentPrice}</span>
+              <span className={cn('price-display', !isPlanAvailable && 'text-gray-400 line-through')}>{currentPrice}</span>
               {hasNormalPrice && (
                 <span className="price-original mb-0.5">{normalPrice}</span>
               )}
             </>
           ) : (
             <span className="text-sm text-gray-400 italic">Contact for pricing</span>
+          )}
+          {!isPlanAvailable && (
+            <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-rose-100 text-rose-700 border border-rose-200">
+              Out of Stock
+            </span>
           )}
         </div>
 
@@ -235,31 +258,46 @@ export default function ProductCard({ product, region, onViewDetails, variant = 
             <span>Details</span>
           </button>
           {product.available !== false && (
-            <>
+            isPlanAvailable ? (
+              <>
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id={`order-wa-${product.id}`}
+                  className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-sm shadow-emerald-600/20 active:scale-95 flex-1"
+                  aria-label={`Order ${product.name} via WhatsApp`}
+                  title="Order via WhatsApp"
+                >
+                  <img src="/assets/brand/whatsapp-color-icon.svg" alt="WhatsApp" className="w-3.5 h-3.5 object-contain" />
+                  <span>Order</span>
+                </a>
+                <a
+                  href={telegramLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id={`order-tg-${product.id}`}
+                  className="flex items-center justify-center p-2.5 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-600 border border-sky-200 transition-all hover:scale-105 active:scale-95 flex-shrink-0"
+                  aria-label={`Order ${product.name} via Telegram`}
+                  title="Order via Telegram"
+                >
+                  <img src="/assets/brand/telegram-icon.svg" alt="Telegram" className="w-4 h-4 object-contain" />
+                </a>
+              </>
+            ) : (
               <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 id={`order-wa-${product.id}`}
-                className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-sm shadow-emerald-600/20 active:scale-95 flex-1"
-                aria-label={`Order ${product.name} via WhatsApp`}
-                title="Order via WhatsApp"
+                className="flex items-center justify-center gap-1.5 px-2.5 py-2.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-semibold transition-all border border-gray-200 flex-1"
+                aria-label={`Inquire about ${product.name} restock via WhatsApp`}
+                title="Inquire about restock via WhatsApp"
               >
-                <img src="/assets/brand/whatsapp-color-icon.svg" alt="WhatsApp" className="w-3.5 h-3.5 object-contain" />
-                <span>Order</span>
+                <img src="/assets/brand/whatsapp-color-icon.svg" alt="WhatsApp" className="w-3.5 h-3.5 object-contain opacity-70" />
+                <span>Inquire</span>
               </a>
-              <a
-                href={telegramLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                id={`order-tg-${product.id}`}
-                className="flex items-center justify-center p-2.5 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-600 border border-sky-200 transition-all hover:scale-105 active:scale-95 flex-shrink-0"
-                aria-label={`Order ${product.name} via Telegram`}
-                title="Order via Telegram"
-              >
-                <img src="/assets/brand/telegram-icon.svg" alt="Telegram" className="w-4 h-4 object-contain" />
-              </a>
-            </>
+            )
           )}
         </div>
       </div>
