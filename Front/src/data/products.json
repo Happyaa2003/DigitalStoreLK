@@ -342,8 +342,8 @@
         "name": "Ready-Made — 1 Year",
         "duration": "1 Year",
         "price": {
-          "LK": "LKR 4,000/=",
-          "GLOBAL": "$12.12"
+          "LK": "LKR 2,500/=",
+          "GLOBAL": "$7.58"
         },
         "description": "Pre-configured ready-to-learn account delivered instantly (In Stock)",
         "activation": "Ready-Made Account",
@@ -354,8 +354,8 @@
         "name": "Own Email — 1 Year",
         "duration": "1 Year",
         "price": {
-          "LK": "LKR 5,000/=",
-          "GLOBAL": "$15.15"
+          "LK": "LKR 3,500/=",
+          "GLOBAL": "$10.61"
         },
         "description": "Activated on your own personal email address (Currently Out of Stock)",
         "activation": "Own Email Activation",
