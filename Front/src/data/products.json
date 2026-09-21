@@ -3,38 +3,27 @@
     "id": "google-ai-pro",
     "name": "Google AI Pro",
     "category": "ai",
-    "shortDescription": "Google's most advanced AI model for personal or team use with 18-month duration.",
-    "description": "Google AI Pro gives you direct access to Google's most advanced AI capabilities. Choose between an individual plan for personal use or an Admin Panel plan that can be shared with up to 5 members.",
+    "shortDescription": "Google's most advanced AI model with Admin Panel access valid until End of October.",
+    "description": "Google AI Pro gives you direct access to Google's most advanced AI capabilities. Full Admin Panel plan valid until End of October, sharable with up to 5 members.",
     "plans": [
-      {
-        "id": "google-ai-pro-normal",
-        "name": "Normal",
-        "duration": "18 Months",
-        "price": {
-          "LK": "LKR 490/=",
-          "GLOBAL": "$1.48"
-        },
-        "description": "Not sharable — individual use only",
-        "activation": "Existing Account"
-      },
       {
         "id": "google-ai-pro-admin",
         "name": "Admin Panel",
-        "duration": "18 Months",
+        "duration": "End of October",
         "price": {
-          "LK": "LKR 1,790/=",
-          "GLOBAL": "$5.42"
+          "LK": "LKR 650/=",
+          "GLOBAL": "$1.97"
         },
-        "description": "Sharable with up to 5 members",
+        "description": "Admin Panel access valid until End of October (Sharable with up to 5 members)",
         "activation": "Admin Account"
       }
     ],
-    "activation": "Configured on your existing account",
+    "activation": "Admin Account Setup",
     "features": [
       "Google's most advanced AI model",
-      "18-month subscription",
-      "Admin panel option for team sharing (5 members)",
-      "Fast delivery & activation"
+      "Valid until End of October",
+      "Admin panel for team sharing (up to 5 members)",
+      "Fast delivery & instant activation"
     ],
     "image": "/assets/products/google-ai-pro-18-months.png",
     "badge": "POPULAR",
