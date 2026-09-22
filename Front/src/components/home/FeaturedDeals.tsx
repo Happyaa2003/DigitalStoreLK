@@ -133,6 +133,13 @@ function FeaturedSmallCard({ product, region, onView, delay = 0 }: { product: Pr
             <DiscountBadge label={plan.discount!.label!} />
           </div>
         )}
+        {product.badge && !hasDiscount && (
+          <div className="absolute top-3 left-3 z-10">
+            <span className="px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-gradient-to-r from-amber-500 via-orange-500 to-rose-600 text-white shadow-sm">
+              {product.badge}
+            </span>
+          </div>
+        )}
       </div>
 
       <div className="p-4 flex flex-col flex-1">

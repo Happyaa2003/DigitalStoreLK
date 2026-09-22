@@ -38,6 +38,7 @@ const badgeStyle: Record<string, string> = {
   NEW: 'bg-emerald-600 text-white shadow-sm shadow-emerald-500/30',
   'BEST VALUE': 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-sm shadow-emerald-500/30',
   'NEW AI TOOL': 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-sm shadow-purple-500/30',
+  'SPECIAL OFFER': 'bg-gradient-to-r from-amber-500 via-orange-500 to-rose-600 text-white shadow-sm shadow-orange-500/30 font-extrabold animate-pulse',
   'GAMING SALE': 'bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-sm shadow-green-500/30',
   'BEST FOR DEVS': 'bg-gradient-to-r from-sky-600 to-blue-600 text-white shadow-sm shadow-sky-500/30',
   LIMITED: 'bg-amber-500 text-white shadow-sm shadow-amber-500/30',
