@@ -3,10 +3,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, X, Copy, CheckCheck } from 'lucide-react';
 import storeConfig from '@/config/storeConfig.json';
 
-function PaymentModal({ type, onClose }: { type: 'bank' | 'binance'; onClose: () => void }) {
+function PaymentModal({ type, onClose }: { type: 'bank' | 'binance' | 'paypal'; onClose: () => void }) {
   const [copied, setCopied] = useState('');
-  const config = type === 'bank' ? storeConfig.payments.bankTransfer : storeConfig.payments.binance;
   const isBank = type === 'bank';
+  const isBinance = type === 'binance';
+  const isPaypal = type === 'paypal';
+
+  const config = isBank 
+    ? storeConfig.payments.bankTransfer 
+    : isBinance 
+      ? storeConfig.payments.binance 
+      : storeConfig.payments.paypal;
 
   const copyText = (text: string, key: string) => {
     navigator.clipboard.writeText(text).then(() => {
@@ -17,6 +24,31 @@ function PaymentModal({ type, onClose }: { type: 'bank' | 'binance'; onClose: ()
 
   const bankConfig = storeConfig.payments.bankTransfer;
   const binanceConfig = storeConfig.payments.binance;
+  const paypalConfig = storeConfig.payments.paypal;
+
+  const getHeaderBg = () => {
+    if (isBank) return 'bg-gradient-to-br from-blue-600 to-indigo-700';
+    if (isBinance) return 'bg-gradient-to-br from-yellow-500 to-orange-600';
+    return 'bg-gradient-to-br from-[#003087] via-[#00457C] to-[#0079C1]';
+  };
+
+  const getHeaderIcon = () => {
+    if (isBank) return '/assets/payments/bank-building-icon.svg';
+    if (isBinance) return '/assets/payments/binance-logo-icon.svg';
+    return '/assets/payments/paypal-logo-icon.svg';
+  };
+
+  const getHeaderTitle = () => {
+    if (isBank) return 'Bank Transfer';
+    if (isBinance) return 'Binance Payment';
+    return 'PayPal Payment';
+  };
+
+  const getHeaderSubtitle = () => {
+    if (isBank) return 'Local bank transfer payment details';
+    if (isBinance) return 'Cryptocurrency payment details';
+    return 'International payment via PayPal';
+  };
 
   return (
     <AnimatePresence>
@@ -40,7 +72,7 @@ function PaymentModal({ type, onClose }: { type: 'bank' | 'binance'; onClose: ()
           className="relative w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden"
         >
           {/* Header */}
-          <div className={`p-6 ${isBank ? 'bg-gradient-to-br from-blue-600 to-indigo-700' : 'bg-gradient-to-br from-yellow-500 to-orange-600'}`}>
+          <div className={`p-6 ${getHeaderBg()}`}>
             <button
               onClick={onClose}
               className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors"
@@ -51,23 +83,23 @@ function PaymentModal({ type, onClose }: { type: 'bank' | 'binance'; onClose: ()
             <div className="flex items-center gap-3 mb-2">
               <div className="w-10 h-10 rounded-xl bg-white/20 p-2 flex items-center justify-center">
                 <img
-                  src={isBank ? '/assets/payments/bank-building-icon.svg' : '/assets/payments/binance-logo-icon.svg'}
-                  alt={isBank ? 'Bank' : 'Binance'}
+                  src={getHeaderIcon()}
+                  alt={getHeaderTitle()}
                   className="w-full h-full object-contain filter brightness-0 invert"
                 />
               </div>
               <h2 className="text-xl font-bold text-white">
-                {isBank ? 'Bank Transfer' : 'Binance Payment'}
+                {getHeaderTitle()}
               </h2>
             </div>
-            <p className="text-white/70 text-sm">
-              {isBank ? 'Local bank transfer payment details' : 'Cryptocurrency payment details'}
+            <p className="text-white/80 text-sm">
+              {getHeaderSubtitle()}
             </p>
           </div>
 
           {/* Content */}
           <div className="p-6 space-y-4">
-            {isBank ? (
+            {isBank && (
               <>
                 {[
                   { label: 'Bank Name', value: bankConfig.bankName, key: 'bank' },
@@ -90,7 +122,9 @@ function PaymentModal({ type, onClose }: { type: 'bank' | 'binance'; onClose: ()
                   </div>
                 ))}
               </>
-            ) : (
+            )}
+
+            {isBinance && (
               <>
                 {binanceConfig.walletAddress && (
                   <div className="p-3.5 bg-gray-50 rounded-xl border border-gray-100">
@@ -116,11 +150,43 @@ function PaymentModal({ type, onClose }: { type: 'bank' | 'binance'; onClose: ()
               </>
             )}
 
+            {isPaypal && paypalConfig && (
+              <>
+                {paypalConfig.email && (
+                  <div className="p-4 bg-blue-50/70 rounded-2xl border border-blue-100">
+                    <div className="text-xs text-blue-700 font-semibold mb-1">PayPal Email / Account</div>
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="text-sm font-extrabold text-gray-900 break-all select-all font-mono">
+                        {paypalConfig.email}
+                      </div>
+                      <button
+                        onClick={() => copyText(paypalConfig.email!, 'paypal-email')}
+                        className="flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-blue-200 text-xs font-bold text-blue-700 hover:bg-blue-50 transition-colors shadow-sm"
+                        aria-label="Copy PayPal email"
+                      >
+                        {copied === 'paypal-email' ? (
+                          <>
+                            <CheckCheck size={13} className="text-green-600" />
+                            <span>Copied</span>
+                          </>
+                        ) : (
+                          <>
+                            <Copy size={13} />
+                            <span>Copy</span>
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
+
             {/* Instructions */}
-            {config.instructions && (
+            {config?.instructions && (
               <div className="p-4 bg-amber-50 border border-amber-100 rounded-xl">
                 <div className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-1.5">Instructions</div>
-                <p className="text-sm text-amber-700 leading-relaxed">{config.instructions}</p>
+                <p className="text-sm text-amber-800 leading-relaxed">{config.instructions}</p>
               </div>
             )}
           </div>
@@ -131,10 +197,11 @@ function PaymentModal({ type, onClose }: { type: 'bank' | 'binance'; onClose: ()
 }
 
 export default function PaymentSection() {
-  const [activeModal, setActiveModal] = useState<'bank' | 'binance' | null>(null);
+  const [activeModal, setActiveModal] = useState<'bank' | 'binance' | 'paypal' | null>(null);
 
   const bankEnabled = storeConfig.payments.bankTransfer.enabled;
   const binanceEnabled = storeConfig.payments.binance.enabled;
+  const paypalEnabled = storeConfig.payments.paypal?.enabled ?? true;
 
   return (
     <>
@@ -148,33 +215,35 @@ export default function PaymentSection() {
           >
             <div className="section-label mb-3">Payments</div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
-              Easy Payment Options
+              Easy &amp; Secure Payment Options
             </h2>
             <p className="text-gray-500 max-w-lg mx-auto">
-              Choose from local bank transfer or Binance — both are fast and secure.
+              Choose from local bank transfer, PayPal, or Binance — all processed quickly and securely.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {/* Bank Transfer */}
             {bankEnabled && (
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="group p-7 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center"
+                className="group p-7 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center flex flex-col justify-between"
               >
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 p-3.5 flex items-center justify-center shadow-lg mb-5 group-hover:scale-110 transition-transform duration-300">
-                  <img
-                    src="/assets/payments/bank-building-icon.svg"
-                    alt="Bank Transfer"
-                    className="w-full h-full object-contain filter brightness-0 invert"
-                  />
+                <div>
+                  <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 p-3.5 flex items-center justify-center shadow-lg mb-5 group-hover:scale-110 transition-transform duration-300">
+                    <img
+                      src="/assets/payments/bank-building-icon.svg"
+                      alt="Bank Transfer"
+                      className="w-full h-full object-contain filter brightness-0 invert"
+                    />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Bank Transfer</h3>
+                  <p className="text-sm text-gray-500 mb-5">
+                    Direct transfer to our local Sampath Bank account in Sri Lanka.
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Bank Transfer</h3>
-                <p className="text-sm text-gray-500 mb-5">
-                  Direct bank transfer to our local Sri Lankan bank account. Simple and reliable.
-                </p>
                 <button
                   id="view-bank-details"
                   onClick={() => setActiveModal('bank')}
@@ -186,25 +255,61 @@ export default function PaymentSection() {
               </motion.div>
             )}
 
+            {/* PayPal */}
+            {paypalEnabled && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="group p-7 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-[#003087] via-[#00457C] to-[#0079C1] p-3.5 flex items-center justify-center shadow-lg mb-5 group-hover:scale-110 transition-transform duration-300">
+                    <img
+                      src="/assets/payments/paypal-logo-icon.svg"
+                      alt="PayPal"
+                      className="w-full h-full object-contain filter brightness-0 invert"
+                    />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">PayPal</h3>
+                  <p className="text-sm text-gray-500 mb-5">
+                    Fast &amp; secure international payments to our verified PayPal account.
+                  </p>
+                </div>
+                <button
+                  id="view-paypal-details"
+                  onClick={() => setActiveModal('paypal')}
+                  className="btn-secondary w-full justify-center group"
+                >
+                  <Eye size={15} />
+                  View Payment Details
+                </button>
+              </motion.div>
+            )}
+
             {/* Binance */}
             {binanceEnabled && (
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="group p-7 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center"
+                transition={{ delay: 0.2 }}
+                className="group p-7 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center flex flex-col justify-between"
               >
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-[#F3BA2F] p-3 flex items-center justify-center shadow-lg mb-5 group-hover:scale-110 transition-transform duration-300">
-                  <img
-                    src="/assets/payments/binance-logo-icon.svg"
-                    alt="Binance"
-                    className="w-full h-full object-contain filter brightness-0 invert"
-                  />
+                <div>
+                  <div className="w-16 h-16 mx-auto rounded-2xl bg-[#F3BA2F] p-3 flex items-center justify-center shadow-lg mb-5 group-hover:scale-110 transition-transform duration-300">
+                    <img
+                      src="/assets/payments/binance-logo-icon.svg"
+                      alt="Binance"
+                      className="w-full h-full object-contain filter brightness-0 invert"
+                    />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Binance Pay</h3>
+                  <p className="text-sm text-gray-500 mb-5">
+                    Pay with cryptocurrency via Binance Pay ID or direct BEP20 wallet transfer.
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Binance Pay</h3>
-                <p className="text-sm text-gray-500 mb-5">
-                  Pay with cryptocurrency via Binance Pay ID or direct BEP20 wallet transfer.
-                </p>
                 <button
                   id="view-binance-details"
                   onClick={() => setActiveModal('binance')}
@@ -225,3 +330,4 @@ export default function PaymentSection() {
     </>
   );
 }
+

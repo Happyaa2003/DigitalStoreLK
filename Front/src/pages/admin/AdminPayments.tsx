@@ -33,6 +33,16 @@ export default function AdminPayments() {
     }));
   };
 
+  const updatePayPal = (field: string, value: string | boolean) => {
+    setConfig((prev) => ({
+      ...prev,
+      payments: {
+        ...prev.payments,
+        paypal: { ...(prev.payments.paypal ?? { enabled: true, email: '', instructions: '' }), [field]: value },
+      },
+    }));
+  };
+
   const handleSave = async () => {
     setStatus('saving');
     try {
@@ -59,6 +69,11 @@ export default function AdminPayments() {
 
   const bankConfig = config.payments.bankTransfer;
   const binanceConfig = config.payments.binance;
+  const paypalConfig = config.payments.paypal ?? {
+    enabled: true,
+    email: '',
+    instructions: '',
+  };
 
   return (
     <div>
@@ -192,6 +207,47 @@ export default function AdminPayments() {
                 onChange={(e) => updateBinance('instructions', e.target.value)}
                 className="w-full px-3.5 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-blue-400 resize-none"
                 placeholder="Instructions shown to customers after selecting Binance"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* PayPal */}
+        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 md:col-span-2 lg:col-span-1">
+          <div className="flex items-center justify-between mb-5 pb-3 border-b border-gray-100">
+            <h2 className="text-sm font-bold text-gray-700 uppercase tracking-wider">🅿️ PayPal</h2>
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                id="paypal-enabled"
+                type="checkbox"
+                checked={paypalConfig.enabled}
+                onChange={(e) => updatePayPal('enabled', e.target.checked)}
+                className="w-4 h-4 rounded accent-blue-600"
+              />
+              <span className="text-xs font-semibold text-gray-600">Enabled</span>
+            </label>
+          </div>
+          <div className="space-y-3">
+            <div>
+              <label htmlFor="paypal-email" className="block text-xs font-semibold text-gray-500 mb-1">PayPal Email / Account</label>
+              <input
+                id="paypal-email"
+                type="email"
+                value={paypalConfig.email ?? ''}
+                onChange={(e) => updatePayPal('email', e.target.value)}
+                className="w-full px-3.5 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-blue-400 font-mono"
+                placeholder="e.g. mihisarakaumadith@gmail.com"
+              />
+            </div>
+            <div>
+              <label htmlFor="paypal-instructions" className="block text-xs font-semibold text-gray-500 mb-1">Instructions</label>
+              <textarea
+                id="paypal-instructions"
+                rows={3}
+                value={paypalConfig.instructions ?? ''}
+                onChange={(e) => updatePayPal('instructions', e.target.value)}
+                className="w-full px-3.5 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-blue-400 resize-none"
+                placeholder="Instructions shown to customers after selecting PayPal"
               />
             </div>
           </div>

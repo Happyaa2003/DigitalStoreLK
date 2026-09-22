@@ -76,9 +76,17 @@ export interface BinanceConfig {
   icon?: string;
 }
 
+export interface PayPalConfig {
+  enabled: boolean;
+  email?: string;
+  instructions?: string;
+  icon?: string;
+}
+
 export interface PaymentsConfig {
   bankTransfer: BankTransferConfig;
   binance: BinanceConfig;
+  paypal?: PayPalConfig;
 }
 
 export interface FAQItem {

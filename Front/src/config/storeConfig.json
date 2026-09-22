@@ -20,11 +20,11 @@
     "bankTransfer": {
       "enabled": true,
       "icon": "/assets/payments/bank-building-icon.svg",
-      "bankName": "Your Bank Name",
-      "accountName": "Your Account Name",
-      "accountNumber": "Your Account Number",
-      "branch": "Your Branch",
-      "instructions": "After transferring, send your payment receipt via WhatsApp or Telegram along with your order details."
+      "bankName": "Sampath Bank",
+      "accountName": "M.K. MAJUWANAGAMAGE",
+      "accountNumber": "108752245696",
+      "branch": "Pannipitiya",
+      "instructions": "After transferring, send your payment receipt via WhatsApp (+94 72 151 0654) or Telegram (@DigitalStoreLK) along with your order details."
     },
     "binance": {
       "enabled": true,
@@ -32,6 +32,12 @@
       "walletAddress": "Your Binance Pay ID or Wallet Address",
       "network": "BNB Smart Chain (BEP20) or Binance Pay",
       "instructions": "After payment, send the transaction ID via WhatsApp or Telegram along with your order details."
+    },
+    "paypal": {
+      "enabled": true,
+      "icon": "/assets/payments/paypal-logo-icon.svg",
+      "email": "mihisarakaumadith@gmail.com",
+      "instructions": "Send payment via PayPal to mihisarakaumadith@gmail.com, then share your transaction confirmation via WhatsApp (+94 72 151 0654) or Telegram (@DigitalStoreLK)."
     }
   },
   "faq": [
@@ -58,7 +64,7 @@
     {
       "id": "faq-5",
       "question": "What payment methods are available?",
-      "answer": "We accept Bank Transfer (local Sri Lanka bank accounts) and Binance (cryptocurrency). After completing payment, send us your receipt or transaction ID via WhatsApp to confirm your order."
+      "answer": "We accept Bank Transfer (Sampath Bank / local Sri Lanka bank accounts), PayPal (international payments), and Binance (cryptocurrency). After completing payment, send us your receipt or transaction ID via WhatsApp to confirm your order."
     },
     {
       "id": "faq-6",
