@@ -54,6 +54,8 @@ const badgeStyle: Record<string, string> = {
   '5 DEVICES + 1TB': 'bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow-sm shadow-orange-500/30',
   '46+ APPS': 'bg-gradient-to-r from-blue-600 to-teal-600 text-white shadow-sm shadow-teal-500/30',
   'ALL APPS': 'bg-gradient-to-r from-red-600 via-rose-600 to-pink-600 text-white shadow-sm shadow-rose-500/30',
+  'LAST 12 ACCOUNTS': 'bg-gradient-to-r from-amber-500 via-orange-500 to-rose-600 text-white shadow-sm shadow-orange-500/30 font-extrabold animate-pulse',
+  'LAST 12 ACC': 'bg-gradient-to-r from-amber-500 via-orange-500 to-rose-600 text-white shadow-sm shadow-orange-500/30 font-extrabold animate-pulse',
 };
 
 const whiteBgProductIds = new Set(['udemy-personal', 'n8n-starter', 'coursera-plus', 'adobe-creative-cloud-all-apps']);

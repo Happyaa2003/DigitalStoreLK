@@ -374,10 +374,10 @@
         "name": "Ready-Made — 1 Year",
         "duration": "1 Year",
         "price": {
-          "LK": "LKR 2,500/=",
-          "GLOBAL": "$7.58"
+          "LK": "LKR 3,900/=",
+          "GLOBAL": "$11.82"
         },
-        "description": "Pre-configured ready-to-learn account delivered instantly (In Stock)",
+        "description": "Pre-configured ready-to-learn account delivered instantly (In Stock — Last 12 Accounts)",
         "activation": "Ready-Made Account",
         "available": true
       },
@@ -386,8 +386,8 @@
         "name": "Own Email — 1 Year",
         "duration": "1 Year",
         "price": {
-          "LK": "LKR 3,500/=",
-          "GLOBAL": "$10.61"
+          "LK": "LKR 4,900/=",
+          "GLOBAL": "$14.85"
         },
         "description": "Activated on your own personal email address (Currently Out of Stock)",
         "activation": "Own Email Activation",
@@ -402,7 +402,7 @@
       "12-month full access"
     ],
     "image": "/assets/products/coursera-1-year.png",
-    "badge": "BEST VALUE",
+    "badge": "LAST 12 ACCOUNTS",
     "featured": true,
     "available": true,
     "order": 8

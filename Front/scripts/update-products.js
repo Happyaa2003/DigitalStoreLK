@@ -300,8 +300,8 @@ const products = [
         id: 'coursera-ready-made-1y',
         name: 'Ready-Made — 1 Year',
         duration: '1 Year',
-        price: { LK: 'LKR 5,000/=', GLOBAL: '$15.15' },
-        description: 'Pre-configured ready-to-learn account delivered instantly (In Stock)',
+        price: { LK: 'LKR 3,900/=', GLOBAL: '$11.82' },
+        description: 'Pre-configured ready-to-learn account delivered instantly (In Stock — Last 12 Accounts)',
         activation: 'Ready-Made Account',
         available: true
       },
@@ -309,7 +309,7 @@ const products = [
         id: 'coursera-own-email-1y',
         name: 'Own Email — 1 Year',
         duration: '1 Year',
-        price: { LK: 'LKR 5,500/=', GLOBAL: '$16.67' },
+        price: { LK: 'LKR 4,900/=', GLOBAL: '$14.85' },
         description: 'Activated on your own personal email address (Currently Out of Stock)',
         activation: 'Own Email Activation',
         available: false
@@ -323,7 +323,7 @@ const products = [
       '12-month full access'
     ],
     image: '/assets/products/coursera-1-year.png',
-    badge: 'BEST VALUE',
+    badge: 'LAST 12 ACCOUNTS',
     featured: true,
     available: true,
     order: 8
