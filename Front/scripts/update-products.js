@@ -10,32 +10,24 @@ const products = [
     id: 'google-ai-pro',
     name: 'Google AI Pro',
     category: 'ai',
-    shortDescription: "Google's most advanced AI model for personal or team use with 18-month duration.",
-    description: "Google AI Pro gives you direct access to Google's most advanced AI capabilities. Choose between an individual plan for personal use or an Admin Panel plan that can be shared with up to 5 members.",
+    shortDescription: "Google's most advanced AI model with 18-month subscription access.",
+    description: "Google AI Pro gives you direct access to Google's most advanced AI capabilities for 18 months.",
     plans: [
       {
-        id: 'google-ai-pro-normal',
-        name: 'Normal',
+        id: 'google-ai-pro-18m',
+        name: '18 Months',
         duration: '18 Months',
-        price: { LK: 'LKR 490/=', GLOBAL: '$1.48' },
-        description: 'Not sharable — individual use only',
-        activation: 'Existing Account'
-      },
-      {
-        id: 'google-ai-pro-admin',
-        name: 'Admin Panel',
-        duration: '18 Months',
-        price: { LK: 'LKR 1,790/=', GLOBAL: '$5.42' },
-        description: 'Sharable with up to 5 members',
-        activation: 'Admin Account'
+        price: { LK: 'LKR 1,000/=', GLOBAL: '$3.03' },
+        description: "Full access to Google's most advanced AI model for 18 Months",
+        activation: 'Account Activation'
       }
     ],
-    activation: 'Configured on your existing account',
+    activation: 'Account Activation',
     features: [
       "Google's most advanced AI model",
       '18-month subscription',
-      'Admin panel option for team sharing (5 members)',
-      'Fast delivery & activation'
+      'Fast delivery & instant activation',
+      'Priority customer support'
     ],
     image: '/assets/products/google-ai-pro-18-months.png',
     badge: 'POPULAR',

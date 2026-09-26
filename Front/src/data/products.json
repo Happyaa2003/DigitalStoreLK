@@ -3,27 +3,27 @@
     "id": "google-ai-pro",
     "name": "Google AI Pro",
     "category": "ai",
-    "shortDescription": "Google's most advanced AI model with Admin Panel access valid until End of October.",
-    "description": "Google AI Pro gives you direct access to Google's most advanced AI capabilities. Full Admin Panel plan valid until End of October, sharable with up to 5 members.",
+    "shortDescription": "Google's most advanced AI model with 18-month subscription access.",
+    "description": "Google AI Pro gives you direct access to Google's most advanced AI capabilities for 18 months.",
     "plans": [
       {
-        "id": "google-ai-pro-admin",
-        "name": "Admin Panel",
-        "duration": "End of October",
+        "id": "google-ai-pro-18m",
+        "name": "18 Months",
+        "duration": "18 Months",
         "price": {
-          "LK": "LKR 650/=",
-          "GLOBAL": "$1.97"
+          "LK": "LKR 1,000/=",
+          "GLOBAL": "$3.03"
         },
-        "description": "Admin Panel access valid until End of October (Sharable with up to 5 members)",
-        "activation": "Admin Account"
+        "description": "Full access to Google's most advanced AI model for 18 Months",
+        "activation": "Account Activation"
       }
     ],
-    "activation": "Admin Account Setup",
+    "activation": "Account Activation",
     "features": [
       "Google's most advanced AI model",
-      "Valid until End of October",
-      "Admin panel for team sharing (up to 5 members)",
-      "Fast delivery & instant activation"
+      "18-month subscription",
+      "Fast delivery & instant activation",
+      "Priority customer support"
     ],
     "image": "/assets/products/google-ai-pro-18-months.png",
     "badge": "POPULAR",
