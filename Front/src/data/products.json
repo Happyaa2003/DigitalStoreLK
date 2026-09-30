@@ -32,49 +32,6 @@
     "order": 1
   },
   {
-    "id": "xbox-game-pass-ultimate-3-months",
-    "name": "Xbox Game Pass Ultimate — 3 Months",
-    "category": "gaming",
-    "shortDescription": "Private access account with EA Play, Ubisoft+, Activision titles & Cloud Gaming for 3 Months.",
-    "description": "🎮 Xbox Game Pass Ultimate — 3 Months Special Offer! Access a huge library of top console & PC games, day-one releases, EA Play, Ubisoft+ & Activision titles, online multiplayer, and Cloud Gaming.",
-    "plans": [
-      {
-        "id": "xbx-3m-special-offer",
-        "name": "3 Months Special Offer",
-        "duration": "3 Months",
-        "price": {
-          "LK": "LKR 4,990/=",
-          "GLOBAL": "$15.12"
-        },
-        "description": "Private access account with EA Play, Ubisoft+ & Cloud Gaming",
-        "activation": "Private Access Account",
-        "image": "/assets/products/gamepass-3-months.png"
-      }
-    ],
-    "activation": "Private Access Account",
-    "features": [
-      "Private access account",
-      "Xbox Game Pass Ultimate (3 Months)",
-      "Access to a huge library of games",
-      "EA Play, Ubisoft+ & Activision titles included",
-      "Online multiplayer support",
-      "Cloud Gaming access*",
-      "Game Pass perks & benefits"
-    ],
-    "notes": [
-      "🔐 How It Works: Login details will be provided after payment. Use the provided account to access the games. Do not change the account details or share the account.",
-      "⚠️ Important: This is an account-based/shared-access service — not personal ownership of the Xbox account.",
-      "Console users may experience restrictions when another user is playing the same game.",
-      "Cloud Gaming availability can be limited when another user is actively using the account.",
-      "Multiplayer availability may vary by game. Please understand these limitations before purchasing. Purchase at your own risk."
-    ],
-    "image": "/assets/products/gamepass-3-months.png",
-    "badge": "SPECIAL OFFER",
-    "featured": true,
-    "available": true,
-    "order": 2
-  },
-  {
     "id": "claude-max",
     "name": "Claude Max",
     "category": "ai",
@@ -374,10 +331,10 @@
         "name": "Ready-Made — 1 Year",
         "duration": "1 Year",
         "price": {
-          "LK": "LKR 3,900/=",
-          "GLOBAL": "$11.82"
+          "LK": "LKR 2,000/=",
+          "GLOBAL": "$6.06"
         },
-        "description": "Pre-configured ready-to-learn account delivered instantly (In Stock — Last 12 Accounts)",
+        "description": "Pre-configured ready-to-learn account delivered instantly (1-Month Warranty)",
         "activation": "Ready-Made Account",
         "available": true
       },
@@ -399,7 +356,11 @@
       "7,000+ courses and specializations",
       "Earn accredited certificates in your name",
       "Google, Meta, IBM professional certificates",
-      "12-month full access"
+      "12-month full access",
+      "1-Month replacement warranty guarantee"
+    ],
+    "notes": [
+      "1-Month replacement warranty included from the date of activation."
     ],
     "image": "/assets/products/coursera-1-year.png",
     "badge": "LAST 12 ACCOUNTS",
@@ -531,18 +492,6 @@
         },
         "description": "Xbox & PC all support",
         "image": "/assets/products/xbxo-game-pass-unlimited-2-mon-all-support.png"
-      },
-      {
-        "id": "xbx-3m-special",
-        "name": "3 Months (Special Offer 🔥)",
-        "duration": "3 Months",
-        "price": {
-          "LK": "LKR 4,990/=",
-          "GLOBAL": "$15.12"
-        },
-        "description": "Special Offer: Private access account with EA Play & Cloud Gaming",
-        "activation": "Private Access Account",
-        "image": "/assets/products/gamepass-3-months.png"
       },
       {
         "id": "xbx-4m-std",

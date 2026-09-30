@@ -292,8 +292,8 @@ const products = [
         id: 'coursera-ready-made-1y',
         name: 'Ready-Made — 1 Year',
         duration: '1 Year',
-        price: { LK: 'LKR 3,900/=', GLOBAL: '$11.82' },
-        description: 'Pre-configured ready-to-learn account delivered instantly (In Stock — Last 12 Accounts)',
+        price: { LK: 'LKR 2,000/=', GLOBAL: '$6.06' },
+        description: 'Pre-configured ready-to-learn account delivered instantly (1-Month Warranty)',
         activation: 'Ready-Made Account',
         available: true
       },
@@ -312,7 +312,11 @@ const products = [
       '7,000+ courses and specializations',
       'Earn accredited certificates in your name',
       'Google, Meta, IBM professional certificates',
-      '12-month full access'
+      '12-month full access',
+      '1-Month replacement warranty guarantee'
+    ],
+    notes: [
+      '1-Month replacement warranty included from the date of activation.'
     ],
     image: '/assets/products/coursera-1-year.png',
     badge: 'LAST 12 ACCOUNTS',
