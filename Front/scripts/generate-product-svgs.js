@@ -155,6 +155,18 @@ const products = [
     accent: '#38BDF8',
     icon: '💳',
   },
+  {
+    filename: 'linkedin-premium.svg',
+    title: 'LinkedIn Premium',
+    subtitle: 'Career & Business • Own Account Activation',
+    badge: 'CAREER BOOST',
+    primaryColor: '#0A66C2',
+    secondaryColor: '#004182',
+    bgStart: '#041427',
+    bgEnd: '#0A2540',
+    accent: '#38BDF8',
+    icon: '💼',
+  },
 ];
 
 for (const p of products) {

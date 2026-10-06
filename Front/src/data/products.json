@@ -327,14 +327,26 @@
     "description": "Coursera Plus provides full unlimited learning access to top accredited courses, professional certificates from Google, IBM, Meta, and leading global universities.",
     "plans": [
       {
-        "id": "coursera-ready-made-1y",
-        "name": "Ready-Made — 1 Year",
-        "duration": "1 Year",
+        "id": "coursera-ready-made-3m",
+        "name": "Ready-Made — 3 Months Warranty",
+        "duration": "1 Year (3M Warranty)",
         "price": {
-          "LK": "LKR 2,000/=",
-          "GLOBAL": "$6.06"
+          "LK": "LKR 2,500/=",
+          "GLOBAL": "$7.58"
         },
-        "description": "Pre-configured ready-to-learn account delivered instantly (1-Month Warranty)",
+        "description": "Pre-configured ready-to-learn account delivered instantly with 3 Months Warranty",
+        "activation": "Ready-Made Account",
+        "available": true
+      },
+      {
+        "id": "coursera-ready-made-12m",
+        "name": "Ready-Made — 12 Months Warranty",
+        "duration": "1 Year (12M Warranty)",
+        "price": {
+          "LK": "LKR 3,200/=",
+          "GLOBAL": "$9.70"
+        },
+        "description": "Pre-configured ready-to-learn account delivered instantly with 12 Months (1 Year) Warranty",
         "activation": "Ready-Made Account",
         "available": true
       },
@@ -356,11 +368,12 @@
       "7,000+ courses and specializations",
       "Earn accredited certificates in your name",
       "Google, Meta, IBM professional certificates",
-      "12-month full access",
-      "1-Month replacement warranty guarantee"
+      "12-month full unlimited learning access",
+      "Warranty options: 3-Month Warranty (LKR 2,500/=) or 12-Month Warranty (LKR 3,200/=)"
     ],
     "notes": [
-      "1-Month replacement warranty included from the date of activation."
+      "Ready-Made Account pricing: LKR 2,500/= (3 Months Warranty) | LKR 3,200/= (12 Months Warranty).",
+      "Replacement warranty guarantee covered during the selected warranty duration from date of delivery."
     ],
     "image": "/assets/products/coursera-1-year.png",
     "badge": "LAST 12 ACCOUNTS",
@@ -852,34 +865,55 @@
     "id": "linkedin-premium",
     "name": "LinkedIn Premium",
     "category": "subscriptions",
-    "shortDescription": "3 Months of LinkedIn Premium via direct redeem link for eligible accounts (4+ weeks old).",
-    "description": "Unlock 3 months of LinkedIn Premium Career features directly on your personal account. Access LinkedIn Learning, InMail credits, see who viewed your profile, and competitive applicant insights. Requires an eligible account (4+ weeks old, no premium in past 12 months).",
+    "shortDescription": "🚀 Take your professional profile to the next level with LinkedIn Premium on your own account.",
+    "description": "Take your professional profile to the next level with LinkedIn Premium! Activated directly on your own personal LinkedIn account — no shared account. Works on Mobile & Desktop with fast activation & priority support.",
     "plans": [
       {
         "id": "linkedin-premium-3m",
-        "name": "3 Months Activation",
+        "name": "Own Account — 3 Months",
         "duration": "3 Months",
         "price": {
           "LK": "LKR 500/=",
           "GLOBAL": "$1.52"
         },
-        "description": "Direct redeem link for eligible accounts (4+ weeks old with no active/recent trial)",
-        "activation": "Redeem Link"
+        "description": "3 Months LinkedIn Premium activated on your own personal account (Subject to eligibility conditions)",
+        "activation": "Own Account Activation",
+        "available": true
+      },
+      {
+        "id": "linkedin-premium-12m",
+        "name": "Own Account — 12 Months",
+        "duration": "12 Months",
+        "price": {
+          "LK": "LKR 35,000/=",
+          "GLOBAL": "$106.06"
+        },
+        "description": "12 Months (1 Year) full LinkedIn Premium upgrade activated directly on your own personal account",
+        "activation": "Own Account Activation",
+        "available": true
       }
     ],
-    "activation": "Official Redeem Link via WhatsApp/Telegram",
+    "activation": "Own Account Activation (No Shared Account)",
     "features": [
-      "3 Months LinkedIn Premium Career & Business access",
-      "Full access to 16,000+ LinkedIn Learning video courses",
-      "See who viewed your profile & browse privately",
-      "Direct InMail messages to recruiters & industry leaders",
-      "Competitive insights on job applicants & salary stats",
-      "Instant redeem link delivery upon payment verification"
+      "💼 More job opportunities & advanced job search",
+      "👀 See who viewed your profile",
+      "💬 InMail messaging to connect with professionals & recruiters",
+      "📊 Premium profile & career insights",
+      "🎓 LinkedIn Learning access (16,000+ courses)",
+      "🤝 Advanced networking tools",
+      "⭐ Premium profile features and exclusive insights",
+      "🔐 100% Own Account Activation — no shared account",
+      "📱 Works on Mobile & Desktop",
+      "⚡ Fast activation & priority support"
     ],
     "notes": [
-      "Your existing LinkedIn account must be at least 4 weeks old to qualify",
-      "Not valid if you used paid premium in the last 12 months or previously redeemed any trial/offer",
-      "A valid card is required by LinkedIn for verification during checkout"
+      "🔐 OWN ACCOUNT ACTIVATION: Your LinkedIn Premium is activated directly on your own LinkedIn account — no shared account.",
+      "📱 Works on Mobile & Desktop | ⚡ Fast activation & priority support.",
+      "⚠️ STRICT ELIGIBILITY CONDITIONS for activation links:",
+      "1. New accounts = not working (Account must be active & established)",
+      "2. If you used paid premium in the last 12 months = not working",
+      "3. If you used any offers or trials before = not working",
+      "Note: Any reason from above will make promo/redeem links not work on your account."
     ],
     "image": "/assets/products/linkedin-premium.png",
     "badge": "CAREER BOOST",
