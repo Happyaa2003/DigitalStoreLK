@@ -5,6 +5,7 @@ import type { Product, ProductPlan, PricingRegion } from '@/types';
 import { getPrice } from '@/utils/pricing';
 import { createWhatsAppLink, createTelegramLink } from '@/utils/whatsapp';
 import { cn } from '@/utils/cn';
+import { getAssetUrl } from '@/utils/assets';
 import DiscountBadge from './DiscountBadge';
 
 interface ProductCardProps {
@@ -76,7 +77,7 @@ export default function ProductCard({ product, region, onViewDetails, variant = 
   const hasMultiplePlans = product.plans.length > 1;
 
   const isWhiteBg = whiteBgProductIds.has(product.id);
-  const currentImage = selectedPlan?.image || product.image;
+  const currentImage = getAssetUrl(selectedPlan?.image || product.image);
   const whatsappLink = createWhatsAppLink(product, selectedPlan, region);
   const telegramLink = createTelegramLink(product, selectedPlan, region);
 

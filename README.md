@@ -114,6 +114,28 @@ npx wrangler pages deploy dist --project-name=digitalstorelk
 
 ---
 
+## 🚀 Deploying to GitHub Pages (Automatic via GitHub Actions)
+
+The public static storefront can be hosted directly on GitHub Pages at `https://Happyaa2003.github.io/DigitalStoreLK/`.
+
+### 1. Enable GitHub Pages in your Repository Settings
+1. Go to your repository on GitHub: **`https://github.com/Happyaa2003/DigitalStoreLK`**
+2. Click **Settings** (tab at the top).
+3. In the left sidebar, click **Pages** (under the "Code and automation" section).
+4. Under **Build and deployment > Source**, select **GitHub Actions** from the dropdown menu (instead of "Deploy from a branch").
+
+### 2. Push to GitHub
+Every time you push commits to the `main` branch, the GitHub Actions workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) will automatically:
+- Install dependencies
+- Build the Vite + React storefront with the correct base path (`/DigitalStoreLK/`)
+- Generate `404.html` SPA fallback for direct route navigation
+- Deploy the production bundle to GitHub Pages
+
+Once deployed, visit your live store at:
+👉 **`https://Happyaa2003.github.io/DigitalStoreLK/`**
+
+---
+
 ## 📁 Project Structure
 
 ```

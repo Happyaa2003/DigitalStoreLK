@@ -45,7 +45,7 @@ function PublicLayout() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         {/* Admin login — no layout wrapper */}
         <Route path="/admin/login" element={<AdminLoginPage />} />

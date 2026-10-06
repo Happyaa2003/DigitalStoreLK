@@ -6,6 +6,7 @@ import storeConfig from '@/config/storeConfig.json';
 import { usePricingStore } from '@/stores/pricingStore';
 import { getWhatsAppChatLink, getTelegramChatLink } from '@/utils/whatsapp';
 import { cn } from '@/utils/cn';
+import { getAssetUrl } from '@/utils/assets';
 
 const navLinks = [
   { label: 'Home', to: '/' },
@@ -53,7 +54,7 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex-shrink-0 flex items-center gap-2.5" aria-label="DigitalStoreLK Home">
             <img
-              src={storeConfig.logo}
+              src={getAssetUrl(storeConfig.logo)}
               alt={storeConfig.shopName}
               className={cn(
                 'object-contain rounded-xl transition-all duration-300 shadow-sm border border-gray-100/50',
@@ -203,7 +204,7 @@ export default function Header() {
               <div className="flex items-center justify-between p-4 border-b border-gray-100">
                 <Link to="/" onClick={() => setMobileOpen(false)}>
                   <img
-                    src={storeConfig.logo}
+                    src={getAssetUrl(storeConfig.logo)}
                     alt={storeConfig.shopName}
                     className="h-8 object-contain"
                     onError={(e) => {

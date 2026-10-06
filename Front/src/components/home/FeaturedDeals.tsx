@@ -9,6 +9,7 @@ import { usePricingStore } from '@/stores/pricingStore';
 import ProductModal from '../products/ProductModal';
 import DiscountBadge from '../products/DiscountBadge';
 import { cn } from '@/utils/cn';
+import { getAssetUrl } from '@/utils/assets';
 
 const products = productsData as Product[];
 const featured = products.filter((p) => p.featured && p.available !== false).slice(0, 5);
@@ -30,7 +31,7 @@ function FeaturedLargeCard({ product, region, onView }: { product: Product; regi
     >
       {/* Background image */}
       <img
-        src={product.image}
+        src={getAssetUrl(product.image)}
         alt={product.name}
         className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-500 group-hover:scale-105 transition-transform"
         onError={(e) => { e.currentTarget.style.display = 'none'; }}
@@ -123,7 +124,7 @@ function FeaturedSmallCard({ product, region, onView, delay = 0 }: { product: Pr
         isWhiteBg ? "bg-white" : "bg-slate-950"
       )} onClick={onView}>
         <img
-          src={product.image}
+          src={getAssetUrl(product.image)}
           alt={product.name}
           className="w-full h-full object-contain p-0.5 group-hover:scale-[1.02] transition-transform duration-300"
           onError={(e) => { e.currentTarget.style.display = 'none'; }}

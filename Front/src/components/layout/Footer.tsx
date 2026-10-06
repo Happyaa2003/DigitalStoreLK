@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ExternalLink, ChevronRight } from 'lucide-react';
 import storeConfig from '@/config/storeConfig.json';
 import { getWhatsAppChatLink, getTelegramChatLink } from '@/utils/whatsapp';
+import { getAssetUrl } from '@/utils/assets';
 
 const footerCategories = [
   { label: 'AI & Productivity', to: '/category/ai' },
@@ -29,7 +30,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link to="/" aria-label="DigitalStoreLK Home" className="flex items-center gap-3 mb-4">
               <img
-                src={storeConfig.logo}
+                src={getAssetUrl(storeConfig.logo)}
                 alt={storeConfig.shopName}
                 className="h-10 w-10 object-contain rounded-xl"
                 onError={(e) => {

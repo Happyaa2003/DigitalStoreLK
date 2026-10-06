@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, X, Copy, CheckCheck } from 'lucide-react';
 import storeConfig from '@/config/storeConfig.json';
+import { getAssetUrl } from '@/utils/assets';
 
 function PaymentModal({ type, onClose }: { type: 'bank' | 'binance' | 'paypal'; onClose: () => void }) {
   const [copied, setCopied] = useState('');
@@ -33,9 +34,9 @@ function PaymentModal({ type, onClose }: { type: 'bank' | 'binance' | 'paypal'; 
   };
 
   const getHeaderIcon = () => {
-    if (isBank) return '/assets/payments/bank-building-icon.svg';
-    if (isBinance) return '/assets/payments/binance-logo-icon.svg';
-    return '/assets/payments/paypal-logo-icon.svg';
+    if (isBank) return getAssetUrl('/assets/payments/bank-building-icon.svg');
+    if (isBinance) return getAssetUrl('/assets/payments/binance-logo-icon.svg');
+    return getAssetUrl('/assets/payments/paypal-logo-icon.svg');
   };
 
   const getHeaderTitle = () => {
@@ -234,7 +235,7 @@ export default function PaymentSection() {
                 <div>
                   <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 p-3.5 flex items-center justify-center shadow-lg mb-5 group-hover:scale-110 transition-transform duration-300">
                     <img
-                      src="/assets/payments/bank-building-icon.svg"
+                      src={getAssetUrl('/assets/payments/bank-building-icon.svg')}
                       alt="Bank Transfer"
                       className="w-full h-full object-contain filter brightness-0 invert"
                     />
@@ -267,7 +268,7 @@ export default function PaymentSection() {
                 <div>
                   <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-[#003087] via-[#00457C] to-[#0079C1] p-3.5 flex items-center justify-center shadow-lg mb-5 group-hover:scale-110 transition-transform duration-300">
                     <img
-                      src="/assets/payments/paypal-logo-icon.svg"
+                      src={getAssetUrl('/assets/payments/paypal-logo-icon.svg')}
                       alt="PayPal"
                       className="w-full h-full object-contain filter brightness-0 invert"
                     />
@@ -300,7 +301,7 @@ export default function PaymentSection() {
                 <div>
                   <div className="w-16 h-16 mx-auto rounded-2xl bg-[#F3BA2F] p-3 flex items-center justify-center shadow-lg mb-5 group-hover:scale-110 transition-transform duration-300">
                     <img
-                      src="/assets/payments/binance-logo-icon.svg"
+                      src={getAssetUrl('/assets/payments/binance-logo-icon.svg')}
                       alt="Binance"
                       className="w-full h-full object-contain filter brightness-0 invert"
                     />

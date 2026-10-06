@@ -6,6 +6,7 @@ import productsData from '@/data/products.json';
 import type { Product, ProductPlan } from '@/types';
 import { useAdminStore } from '@/stores/adminStore';
 import { cn } from '@/utils/cn';
+import { getAssetUrl } from '@/utils/assets';
 
 const products = productsData as Product[];
 
@@ -532,7 +533,7 @@ export default function AdminProductEditor() {
               <div className="h-24 bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
                 {form.image ? (
                   <img
-                    src={form.image}
+                    src={getAssetUrl(form.image)}
                     alt="Preview"
                     className="h-full w-full object-cover"
                     onError={(e) => { e.currentTarget.style.display = 'none'; }}

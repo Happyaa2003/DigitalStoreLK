@@ -1,0 +1,59 @@
+name: Deploy Storefront to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: Front/package-lock.json
+
+      - name: Setup GitHub Pages configuration
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: Front
+
+      - name: Build storefront
+        run: npm run build
+        working-directory: Front
+        env:
+          VITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}/
+
+      - name: Create 404.html fallback for client-side SPA routing
+        run: cp Front/dist/index.html Front/dist/404.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: Front/dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

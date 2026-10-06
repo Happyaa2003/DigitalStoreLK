@@ -5,6 +5,7 @@ import { Plus, Search, Edit2, Star, Eye, EyeOff } from 'lucide-react';
 import productsData from '@/data/products.json';
 import type { Product } from '@/types';
 import { cn } from '@/utils/cn';
+import { getAssetUrl } from '@/utils/assets';
 
 const initialProducts = productsData as Product[];
 
@@ -94,7 +95,7 @@ export default function AdminProducts() {
                     <div className="flex items-center gap-3">
                       <div className="w-9 h-9 rounded-xl bg-gray-100 overflow-hidden flex-shrink-0">
                         <img
-                          src={product.image}
+                          src={getAssetUrl(product.image)}
                           alt={product.name}
                           className="w-full h-full object-cover"
                           onError={(e) => { e.currentTarget.style.display = 'none'; }}
