@@ -3,6 +3,8 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Shield, HeadphonesIcon, Sparkles, Gamepad2, Code2, GraduationCap } from 'lucide-react';
 import { getWhatsAppChatLink, getTelegramChatLink } from '@/utils/whatsapp';
+import { getAssetUrl } from '@/utils/assets';
+import { WhatsAppIcon, WhatsAppColorIcon, TelegramIcon } from '@/components/common/BrandIcons';
 
 const floatingCards = [
   {
@@ -133,7 +135,7 @@ export default function Hero() {
                 id="hero-whatsapp-cta"
                 className="flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg shadow-emerald-600/20 transition-all active:scale-95"
               >
-                <img src="/assets/brand/whatsapp-color-icon.svg" alt="WhatsApp" className="w-5 h-5 object-contain" />
+                <WhatsAppIcon className="w-5 h-5 fill-white flex-shrink-0" />
                 <span>WhatsApp</span>
               </a>
               <a
@@ -143,7 +145,7 @@ export default function Hero() {
                 id="hero-telegram-cta"
                 className="flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm shadow-lg shadow-sky-500/20 transition-all active:scale-95"
               >
-                <img src="/assets/brand/telegram-icon.svg" alt="Telegram" className="w-5 h-5 object-contain" />
+                <TelegramIcon className="w-5 h-5 flex-shrink-0" />
                 <span>Telegram</span>
               </a>
             </motion.div>
@@ -181,11 +183,11 @@ export default function Hero() {
               {/* Brand Lockup banner from user Accerts */}
               <div className="w-full bg-slate-950 p-4 rounded-2xl mb-4 shadow-inner border border-white/10">
                 <img
-                  src="/assets/brand/digitalstorelk-brand-lockup.svg"
+                  src={getAssetUrl('/assets/brand/digitalstorelk-brand-lockup.svg')}
                   alt="DigitalStoreLK Brand Lockup"
                   className="w-full h-24 object-contain"
                   onError={(e) => {
-                    e.currentTarget.src = '/assets/brand/LOGO.png';
+                    e.currentTarget.src = getAssetUrl('/assets/brand/LOGO.png');
                   }}
                 />
               </div>
@@ -206,7 +208,7 @@ export default function Hero() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 text-xs font-semibold text-emerald-600 hover:text-emerald-700 transition-colors"
                 >
-                  <img src="/assets/brand/whatsapp-color-icon.svg" alt="WhatsApp" className="w-4 h-4" />
+                  <WhatsAppColorIcon className="w-4 h-4 flex-shrink-0" />
                   +94 72 151 0654
                 </a>
                 <span className="text-gray-300">•</span>
@@ -216,7 +218,7 @@ export default function Hero() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-700 transition-colors"
                 >
-                  <img src="/assets/brand/telegram-icon.svg" alt="Telegram" className="w-4 h-4" />
+                  <TelegramIcon className="w-4 h-4 flex-shrink-0" />
                   @DigitalStoreLK
                 </a>
               </div>

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { getWhatsAppChatLink, getTelegramChatLink } from '@/utils/whatsapp';
 import storeConfig from '@/config/storeConfig.json';
+import { WhatsAppColorIcon, TelegramIcon } from '@/components/common/BrandIcons';
 
 export default function WhatsAppButton() {
   return (
@@ -20,7 +21,7 @@ export default function WhatsAppButton() {
         className="flex items-center gap-2 px-3 py-2.5 rounded-2xl bg-sky-500 text-white shadow-xl shadow-sky-500/20 hover:bg-sky-600 transition-all font-bold text-xs"
         title={`Chat on Telegram — @${storeConfig.telegramUsername}`}
       >
-        <img src="/assets/brand/telegram-icon.svg" alt="Telegram" className="w-5 h-5 object-contain" />
+        <TelegramIcon className="w-5 h-5 flex-shrink-0" />
         <span className="hidden sm:inline">Telegram</span>
       </motion.a>
 
@@ -39,7 +40,7 @@ export default function WhatsAppButton() {
         className="relative flex items-center gap-2 px-4 py-3 rounded-2xl bg-gradient-to-br from-emerald-500 to-green-600 text-white shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/35 transition-all font-bold text-xs"
         title={`Chat on WhatsApp — ${storeConfig.whatsappNumber}`}
       >
-        <img src="/assets/brand/whatsapp-color-icon.svg" alt="WhatsApp" className="w-6 h-6 object-contain" />
+        <WhatsAppColorIcon className="w-6 h-6 flex-shrink-0" />
         <span className="hidden sm:inline">WhatsApp</span>
         {/* Pulse ping ring */}
         <span className="absolute inset-0 rounded-2xl bg-emerald-400 animate-ping opacity-25 pointer-events-none" />

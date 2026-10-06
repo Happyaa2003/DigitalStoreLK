@@ -1,15 +1,13 @@
 import { useState, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, ChevronDown } from 'lucide-react';
-import productsData from '@/data/products.json';
 import type { Product } from '@/types';
 import { getPrice, parsePriceNumeric } from '@/utils/pricing';
 import { usePricingStore } from '@/stores/pricingStore';
+import { useProductStore } from '@/stores/productStore';
 import { cn } from '@/utils/cn';
 import ProductCard from './ProductCard';
 import ProductModal from './ProductModal';
-
-const products = productsData as Product[];
 
 const categoryFilters = [
   { id: 'all', label: 'All Products' },
@@ -46,6 +44,7 @@ export default function ProductGrid({
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedPlanIndex, setSelectedPlanIndex] = useState<number>(0);
   const { region } = usePricingStore();
+  const { products } = useProductStore();
 
   const filtered = useMemo(() => {
     let result = products.filter((p) => {

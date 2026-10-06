@@ -2,13 +2,11 @@ import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Save, ArrowLeft, CheckCircle, AlertCircle, Loader2, Plus, Trash2, Eye } from 'lucide-react';
-import productsData from '@/data/products.json';
 import type { Product, ProductPlan } from '@/types';
 import { useAdminStore } from '@/stores/adminStore';
+import { useProductStore } from '@/stores/productStore';
 import { cn } from '@/utils/cn';
 import { getAssetUrl } from '@/utils/assets';
-
-const products = productsData as Product[];
 
 type PublishStatus = 'idle' | 'saving' | 'uploading' | 'publishing' | 'success' | 'error';
 
@@ -43,6 +41,7 @@ const emptyProduct: Product = {
 export default function AdminProductEditor() {
   const { id } = useParams<{ id: string }>();
   const isNew = !id || id === 'new';
+  const { products } = useProductStore();
   const existing = !isNew ? products.find((p) => p.id === id) : null;
   const navigate = useNavigate();
   const { token } = useAdminStore();

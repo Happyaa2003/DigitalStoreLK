@@ -1,18 +1,15 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, MessageCircle, Star, Clock } from 'lucide-react';
-import productsData from '@/data/products.json';
 import type { Product, PricingRegion } from '@/types';
 import { getPrice } from '@/utils/pricing';
 import { createWhatsAppLink } from '@/utils/whatsapp';
 import { usePricingStore } from '@/stores/pricingStore';
+import { useProductStore } from '@/stores/productStore';
 import ProductModal from '../products/ProductModal';
 import DiscountBadge from '../products/DiscountBadge';
 import { cn } from '@/utils/cn';
 import { getAssetUrl } from '@/utils/assets';
-
-const products = productsData as Product[];
-const featured = products.filter((p) => p.featured && p.available !== false).slice(0, 5);
 
 function FeaturedLargeCard({ product, region, onView }: { product: Product; region: PricingRegion; onView: () => void }) {
   const plan = product.plans.find((p) => p.available !== false) ?? product.plans[0];
@@ -173,8 +170,10 @@ function FeaturedSmallCard({ product, region, onView, delay = 0 }: { product: Pr
 
 export default function FeaturedDeals() {
   const { region } = usePricingStore();
+  const { products } = useProductStore();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
+  const featured = products.filter((p) => p.featured && p.available !== false).slice(0, 5);
   if (featured.length === 0) return null;
 
   const [mainProduct, ...rest] = featured;

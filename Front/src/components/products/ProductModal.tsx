@@ -6,6 +6,7 @@ import { getPrice } from '@/utils/pricing';
 import { createWhatsAppLink, createTelegramLink } from '@/utils/whatsapp';
 import { cn } from '@/utils/cn';
 import { getAssetUrl } from '@/utils/assets';
+import { WhatsAppIcon, WhatsAppColorIcon, TelegramIcon } from '@/components/common/BrandIcons';
 import DiscountBadge from './DiscountBadge';
 
 interface ProductModalProps {
@@ -293,7 +294,7 @@ export default function ProductModal({ product, region, initialPlanIndex = 0, on
                       id={`modal-order-${product.id}-whatsapp`}
                       className="flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md shadow-emerald-600/20 transition-all active:scale-98"
                     >
-                      <img src="/assets/brand/whatsapp-color-icon.svg" alt="WhatsApp" className="w-5 h-5 object-contain" />
+                      <WhatsAppIcon className="w-5 h-5 fill-white flex-shrink-0" />
                       <span>Order via WhatsApp</span>
                     </a>
                     <a
@@ -303,7 +304,7 @@ export default function ProductModal({ product, region, initialPlanIndex = 0, on
                       id={`modal-order-${product.id}-telegram`}
                       className="flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm shadow-md shadow-sky-500/20 transition-all active:scale-98"
                     >
-                      <img src="/assets/brand/telegram-icon.svg" alt="Telegram" className="w-5 h-5 object-contain" />
+                      <TelegramIcon className="w-5 h-5 flex-shrink-0" />
                       <span>Order via Telegram</span>
                     </a>
                   </div>
@@ -318,7 +319,7 @@ export default function ProductModal({ product, region, initialPlanIndex = 0, on
                       rel="noopener noreferrer"
                       className="flex-shrink-0 flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white text-gray-700 hover:text-emerald-700 font-bold text-xs border border-gray-200 shadow-sm transition-all"
                     >
-                      <img src="/assets/brand/whatsapp-color-icon.svg" alt="WhatsApp" className="w-4 h-4 object-contain" />
+                      <WhatsAppColorIcon className="w-4 h-4 flex-shrink-0" />
                       <span>Inquire Restock</span>
                     </a>
                   </div>

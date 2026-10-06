@@ -6,6 +6,7 @@ import { getPrice } from '@/utils/pricing';
 import { createWhatsAppLink, createTelegramLink } from '@/utils/whatsapp';
 import { cn } from '@/utils/cn';
 import { getAssetUrl } from '@/utils/assets';
+import { WhatsAppIcon, TelegramIcon } from '@/components/common/BrandIcons';
 import DiscountBadge from './DiscountBadge';
 
 interface ProductCardProps {
@@ -274,7 +275,7 @@ export default function ProductCard({ product, region, onViewDetails, variant = 
                   aria-label={`Order ${product.name} via WhatsApp`}
                   title="Order via WhatsApp"
                 >
-                  <img src="/assets/brand/whatsapp-color-icon.svg" alt="WhatsApp" className="w-3.5 h-3.5 object-contain" />
+                  <WhatsAppIcon className="w-3.5 h-3.5 fill-white flex-shrink-0" />
                   <span>Order</span>
                 </a>
                 <a
@@ -286,7 +287,7 @@ export default function ProductCard({ product, region, onViewDetails, variant = 
                   aria-label={`Order ${product.name} via Telegram`}
                   title="Order via Telegram"
                 >
-                  <img src="/assets/brand/telegram-icon.svg" alt="Telegram" className="w-4 h-4 object-contain" />
+                  <TelegramIcon className="w-4 h-4 flex-shrink-0" />
                 </a>
               </>
             ) : (
@@ -299,7 +300,7 @@ export default function ProductCard({ product, region, onViewDetails, variant = 
                 aria-label={`Inquire about ${product.name} restock via WhatsApp`}
                 title="Inquire about restock via WhatsApp"
               >
-                <img src="/assets/brand/whatsapp-color-icon.svg" alt="WhatsApp" className="w-3.5 h-3.5 object-contain opacity-70" />
+                <WhatsAppIcon className="w-3.5 h-3.5 fill-gray-500 opacity-80 flex-shrink-0" />
                 <span>Inquire</span>
               </a>
             )

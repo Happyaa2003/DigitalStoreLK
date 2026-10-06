@@ -1,18 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Plus, Search, Edit2, Star, Eye, EyeOff } from 'lucide-react';
-import productsData from '@/data/products.json';
 import type { Product } from '@/types';
 import { cn } from '@/utils/cn';
 import { getAssetUrl } from '@/utils/assets';
-
-const initialProducts = productsData as Product[];
+import { useProductStore } from '@/stores/productStore';
 
 export default function AdminProducts() {
-  const [products, setProducts] = useState<Product[]>(initialProducts);
+  const { products: storeProducts } = useProductStore();
+  const [products, setProducts] = useState<Product[]>(storeProducts);
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('all');
+
+  useEffect(() => {
+    setProducts(storeProducts);
+  }, [storeProducts]);
 
   const filtered = products.filter((p) => {
     const matchSearch = p.name.toLowerCase().includes(search.toLowerCase()) ||

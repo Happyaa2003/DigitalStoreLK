@@ -3,6 +3,7 @@ import { ExternalLink, ChevronRight } from 'lucide-react';
 import storeConfig from '@/config/storeConfig.json';
 import { getWhatsAppChatLink, getTelegramChatLink } from '@/utils/whatsapp';
 import { getAssetUrl } from '@/utils/assets';
+import { WhatsAppIcon, WhatsAppColorIcon, TelegramIcon } from '@/components/common/BrandIcons';
 
 const footerCategories = [
   { label: 'AI & Productivity', to: '/category/ai' },
@@ -53,7 +54,7 @@ export default function Footer() {
                 aria-label="WhatsApp"
                 title="Chat on WhatsApp"
               >
-                <img src="/assets/brand/whatsapp-color-icon.svg" alt="WhatsApp" className="w-5 h-5 object-contain" />
+                <WhatsAppColorIcon className="w-5 h-5 flex-shrink-0" />
               </a>
               <a
                 href={getTelegramChatLink()}
@@ -63,7 +64,7 @@ export default function Footer() {
                 aria-label="Telegram"
                 title="Chat on Telegram"
               >
-                <img src="/assets/brand/telegram-icon.svg" alt="Telegram" className="w-5 h-5 object-contain" />
+                <TelegramIcon className="w-5 h-5 flex-shrink-0" />
               </a>
               {storeConfig.facebookUrl && (
                 <a
@@ -129,7 +130,7 @@ export default function Footer() {
                 id="footer-whatsapp-cta"
                 className="btn-whatsapp !text-xs !py-2.5 !px-3 w-full justify-center"
               >
-                <img src="/assets/brand/whatsapp-color-icon.svg" alt="WhatsApp" className="w-4 h-4 object-contain" />
+                <WhatsAppIcon className="w-4 h-4 fill-white flex-shrink-0" />
                 <span>Chat on WhatsApp</span>
               </a>
               <a
@@ -139,7 +140,7 @@ export default function Footer() {
                 id="footer-telegram-cta"
                 className="flex items-center justify-center gap-2 w-full py-2.5 px-3 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-sm shadow-sky-500/20"
               >
-                <img src="/assets/brand/telegram-icon.svg" alt="Telegram" className="w-4 h-4 object-contain" />
+                <TelegramIcon className="w-4 h-4 flex-shrink-0" />
                 <span>Chat on Telegram</span>
               </a>
             </div>
@@ -152,11 +153,11 @@ export default function Footer() {
               <div className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold mb-2">Accepted Payments</div>
               <div className="flex flex-wrap gap-2">
                 <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-gray-300 text-xs">
-                  <img src="/assets/payments/bank-building-icon.svg" alt="Bank" className="w-4 h-4 object-contain filter brightness-0 invert" />
+                  <img src={getAssetUrl('/assets/payments/bank-building-icon.svg')} alt="Bank" className="w-4 h-4 object-contain filter brightness-0 invert" />
                   <span>Bank Transfer</span>
                 </div>
                 <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-gray-300 text-xs">
-                  <img src="/assets/payments/binance-logo-icon.svg" alt="Binance" className="w-4 h-4 object-contain filter brightness-0 invert" />
+                  <img src={getAssetUrl('/assets/payments/binance-logo-icon.svg')} alt="Binance" className="w-4 h-4 object-contain filter brightness-0 invert" />
                   <span>Binance Pay</span>
                 </div>
               </div>

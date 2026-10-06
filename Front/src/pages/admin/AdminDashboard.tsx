@@ -1,45 +1,45 @@
 import { motion } from 'framer-motion';
 import { Package, CheckCircle, Star, LayoutGrid, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import productsData from '@/data/products.json';
 import categoriesData from '@/data/categories.json';
-import type { Product, Category } from '@/types';
+import type { Category } from '@/types';
+import { useProductStore } from '@/stores/productStore';
 
-const products = productsData as Product[];
 const categories = categoriesData as Category[];
 
-const stats = [
-  {
-    label: 'Total Products',
-    value: products.length,
-    icon: Package,
-    color: 'from-blue-500 to-indigo-600',
-    to: '/admin/products',
-  },
-  {
-    label: 'Active Products',
-    value: products.filter((p) => p.available !== false).length,
-    icon: CheckCircle,
-    color: 'from-green-500 to-emerald-600',
-    to: '/admin/products',
-  },
-  {
-    label: 'Featured Products',
-    value: products.filter((p) => p.featured).length,
-    icon: Star,
-    color: 'from-yellow-500 to-orange-500',
-    to: '/admin/products',
-  },
-  {
-    label: 'Categories',
-    value: categories.length,
-    icon: LayoutGrid,
-    color: 'from-purple-500 to-violet-600',
-    to: '/admin/settings',
-  },
-];
-
 export default function AdminDashboard() {
+  const { products } = useProductStore();
+
+  const stats = [
+    {
+      label: 'Total Products',
+      value: products.length,
+      icon: Package,
+      color: 'from-blue-500 to-indigo-600',
+      to: '/admin/products',
+    },
+    {
+      label: 'Active Products',
+      value: products.filter((p) => p.available !== false).length,
+      icon: CheckCircle,
+      color: 'from-green-500 to-emerald-600',
+      to: '/admin/products',
+    },
+    {
+      label: 'Featured Products',
+      value: products.filter((p) => p.featured).length,
+      icon: Star,
+      color: 'from-yellow-500 to-orange-500',
+      to: '/admin/products',
+    },
+    {
+      label: 'Categories',
+      value: categories.length,
+      icon: LayoutGrid,
+      color: 'from-purple-500 to-violet-600',
+      to: '/admin/settings',
+    },
+  ];
   return (
     <div>
       <div className="mb-7">
