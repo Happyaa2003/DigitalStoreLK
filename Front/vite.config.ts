@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
 export default defineConfig(({ mode }) => {
-  const basePath = process.env.VITE_BASE_PATH || (mode === 'production' ? '/DigitalStoreLK/' : '/')
+  const basePath = process.env.VITE_BASE_PATH || '/'
   return {
     base: basePath,
     plugins: [
