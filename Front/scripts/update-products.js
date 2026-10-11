@@ -17,7 +17,7 @@ const products = [
         id: 'google-ai-pro-18m',
         name: '18 Months',
         duration: '18 Months',
-        price: { LK: 'LKR 1,000/=', GLOBAL: '$3.03' },
+        price: { LK: 'LKR 890/=', GLOBAL: '$2.70' },
         description: "Full access to Google's most advanced AI model for 18 Months",
         activation: 'Account Activation'
       }
@@ -633,7 +633,7 @@ const products = [
         id: 'office-2024-lifetime',
         name: 'Lifetime Key',
         duration: 'Lifetime',
-        price: { LK: '~LKR 495/=', GLOBAL: '$1.50' },
+        price: { LK: 'LKR 790/=', GLOBAL: '$2.40' },
         description: 'Lifetime permanent activation for 1 PC',
         activation: 'Product Key'
       }
