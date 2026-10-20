@@ -50,12 +50,12 @@ export default function ProductGrid({
     let result = products.filter((p) => {
       const matchesCategory = category === 'all' || p.category === category;
       const q = query.toLowerCase().trim();
-      const matchesQuery = !q || (
+      const matchesQuery =
+        !q ||
         p.name.toLowerCase().includes(q) ||
         p.shortDescription.toLowerCase().includes(q) ||
         p.category.toLowerCase().includes(q) ||
-        p.plans.some((pl) => pl.name.toLowerCase().includes(q))
-      );
+        p.plans.some((pl) => pl.name.toLowerCase().includes(q));
       return matchesCategory && matchesQuery && p.available !== false;
     });
 
@@ -76,7 +76,7 @@ export default function ProductGrid({
 
     if (limit) return result.slice(0, limit);
     return result;
-  }, [query, category, sortBy, region, limit]);
+  }, [query, category, sortBy, region, limit, products]);
 
   const handleViewDetails = useCallback((product: Product, planIndex = 0) => {
     setSelectedProduct(product);
@@ -85,44 +85,38 @@ export default function ProductGrid({
 
   return (
     <>
-      <div>
+      <div className="py-6">
         {showHeading && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-10"
-          >
-            <div className="section-label mb-3">Product Catalog</div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
-              Explore DigitalStoreLK
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-2">
+              All Digital Products
             </h2>
-            <p className="text-gray-500 max-w-lg mx-auto">
-              Find the perfect digital product for your needs.
+            <p className="text-slate-500 dark:text-slate-400 text-sm max-w-lg mx-auto">
+              Find the perfect subscription, license, or digital tool for your workflow.
             </p>
-          </motion.div>
+          </div>
         )}
 
         {showFilters && (
-          <div className="mb-8 space-y-4">
+          <div className="mb-6 space-y-4">
             {/* Search */}
             <div className="relative max-w-xl mx-auto">
               <Search
                 size={18}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
+                className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"
               />
               <input
                 id="product-search"
                 type="text"
-                placeholder="Search AI tools, games, courses, subscriptions…"
+                placeholder="Search products, AI tools, licenses, subscriptions…"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="w-full pl-12 pr-10 py-3.5 bg-white border border-gray-200 rounded-2xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all shadow-sm"
+                className="w-full pl-12 pr-10 py-3 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-white/10 transition-all"
               />
               {query && (
                 <button
                   onClick={() => setQuery('')}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-white"
                   aria-label="Clear search"
                 >
                   <X size={16} />
@@ -140,10 +134,10 @@ export default function ProductGrid({
                     id={`filter-${cat.id}`}
                     onClick={() => setCategory(cat.id)}
                     className={cn(
-                      'px-4 py-2 rounded-xl text-sm font-semibold border transition-all duration-200',
+                      'px-3.5 py-1.5 rounded-full text-xs font-bold border transition-all duration-200',
                       category === cat.id
                         ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
-                        : 'bg-white text-gray-600 border-gray-200 hover:border-blue-300 hover:text-blue-600'
+                        : 'bg-white dark:bg-white/5 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-white/10 hover:border-blue-400 hover:text-blue-600 dark:hover:text-white'
                     )}
                   >
                     {cat.label}
@@ -157,13 +151,15 @@ export default function ProductGrid({
                   id="product-sort"
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-                  className="appearance-none pl-4 pr-9 py-2 bg-white border border-gray-200 rounded-xl text-sm font-medium text-gray-700 focus:outline-none focus:border-blue-400 cursor-pointer"
+                  className="appearance-none pl-3.5 pr-8 py-1.5 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 focus:outline-none focus:border-blue-500 cursor-pointer"
                 >
                   {sortOptions.map((opt) => (
-                    <option key={opt.id} value={opt.id}>{opt.label}</option>
+                    <option key={opt.id} value={opt.id} className="dark:bg-[#0c1527] dark:text-white">
+                      {opt.label}
+                    </option>
                   ))}
                 </select>
-                <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
               </div>
             </div>
           </div>
@@ -171,7 +167,7 @@ export default function ProductGrid({
 
         {/* Results count */}
         {showFilters && (
-          <div className="mb-5 text-sm text-gray-400">
+          <div className="mb-4 text-xs font-semibold text-slate-400">
             {filtered.length} product{filtered.length !== 1 ? 's' : ''} found
           </div>
         )}
@@ -181,13 +177,12 @@ export default function ProductGrid({
           {filtered.length > 0 ? (
             <motion.div
               layout
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4"
             >
               {filtered.map((product) => (
                 <ProductCard
                   key={product.id}
                   product={product}
-                  region={region}
                   onViewDetails={handleViewDetails}
                 />
               ))}
@@ -196,16 +191,16 @@ export default function ProductGrid({
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-center py-20"
+              className="text-center py-16"
             >
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">No products found</h3>
-              <p className="text-gray-500 text-sm mb-4">
-                Try adjusting your search or filter.
+              <div className="text-5xl mb-3">🔍</div>
+              <h3 className="text-base font-bold text-slate-800 dark:text-white mb-1">No products found</h3>
+              <p className="text-slate-400 text-xs mb-4">
+                Try adjusting your search query or filter.
               </p>
               <button
                 onClick={() => { setQuery(''); setCategory('all'); }}
-                className="btn-secondary !text-sm"
+                className="px-4 py-2 bg-blue-600 text-white rounded-full text-xs font-bold shadow-sm"
               >
                 Clear Filters
               </button>
@@ -215,12 +210,14 @@ export default function ProductGrid({
       </div>
 
       {/* Product Modal */}
-      <ProductModal
-        product={selectedProduct}
-        region={region}
-        initialPlanIndex={selectedPlanIndex}
-        onClose={() => setSelectedProduct(null)}
-      />
+      {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          isOpen={!!selectedProduct}
+          initialPlanIndex={selectedPlanIndex}
+          onClose={() => setSelectedProduct(null)}
+        />
+      )}
     </>
   );
 }

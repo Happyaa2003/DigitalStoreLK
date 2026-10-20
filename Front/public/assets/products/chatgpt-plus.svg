@@ -1,82 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#091512" />
-      <stop offset="100%" stop-color="#0F261E" />
+    <linearGradient id="gptBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#02140d"/>
+      <stop offset="50%" stop-color="#042017"/>
+      <stop offset="100%" stop-color="#010c08"/>
     </linearGradient>
-    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#10A37F" stop-opacity="0.35" />
-      <stop offset="100%" stop-color="#059669" stop-opacity="0" />
+    <radialGradient id="gptNeon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10a37f" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#0d8265" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#02140d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gptBadgeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#19c37d"/>
+      <stop offset="100%" stop-color="#0a6949"/>
     </linearGradient>
-    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#10A37F" />
-      <stop offset="100%" stop-color="#059669" />
-    </linearGradient>
+    <filter id="gptGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="#10a37f" flood-opacity="0.7"/>
+    </filter>
   </defs>
-
   <!-- Background -->
-  <rect width="800" height="450" fill="url(#bgGrad)" />
-
-  <!-- Ambient Glow Orbs -->
-  <circle cx="700" cy="80" r="240" fill="url(#glowGrad)" filter="blur(40px)" />
-  <circle cx="100" cy="380" r="180" fill="url(#glowGrad)" filter="blur(50px)" />
-
-  <!-- Grid overlay -->
-  <g opacity="0.06" stroke="#FFFFFF" stroke-width="1">
-    <line x1="0" y1="75" x2="800" y2="75" />
-    <line x1="0" y1="150" x2="800" y2="150" />
-    <line x1="0" y1="225" x2="800" y2="225" />
-    <line x1="0" y1="300" x2="800" y2="300" />
-    <line x1="0" y1="375" x2="800" y2="375" />
-    <line x1="160" y1="0" x2="160" y2="450" />
-    <line x1="320" y1="0" x2="320" y2="450" />
-    <line x1="480" y1="0" x2="480" y2="450" />
-    <line x1="640" y1="0" x2="640" y2="450" />
-  </g>
-
-  <!-- Central Card Display -->
-  <g transform="translate(60, 50)">
-    <!-- Badge -->
-    <rect x="0" y="0" width="180" height="32" rx="16" fill="#10A37F" fill-opacity="0.2" stroke="#34D399" stroke-opacity="0.4" stroke-width="1.5" />
-    <text x="90" y="20" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="11" font-weight="800" fill="#34D399" text-anchor="middle" letter-spacing="1.5">
-      OPENAI
-    </text>
-
-    <!-- Icon Floating -->
-    <g transform="translate(540, 40)">
-      <circle cx="50" cy="50" r="54" fill="#10A37F" fill-opacity="0.15" stroke="#34D399" stroke-opacity="0.3" stroke-width="2" />
-      <text x="50" y="66" font-size="52" text-anchor="middle">🤖</text>
-    </g>
-
-    <!-- Title -->
-    <text x="0" y="125" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="44" font-weight="900" fill="#FFFFFF" letter-spacing="-1">
-      ChatGPT Plus
-    </text>
-
-    <!-- Subtitle -->
-    <text x="0" y="175" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="18" font-weight="500" fill="#94A3B8">
-      GPT-4o, Canvas, Voice Mode & DALL-E
-    </text>
-
-    <!-- Visual divider bar -->
-    <rect x="0" y="220" width="120" height="4" rx="2" fill="url(#btnGrad)" />
-
-    <!-- Feature tags -->
-    <g transform="translate(0, 255)">
-      <rect x="0" y="0" width="140" height="36" rx="8" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1" />
-      <text x="70" y="23" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="13" font-weight="600" fill="#E2E8F0" text-anchor="middle">
-        ✓ Verified Store
-      </text>
-
-      <rect x="155" y="0" width="140" height="36" rx="8" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1" />
-      <text x="225" y="23" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="13" font-weight="600" fill="#E2E8F0" text-anchor="middle">
-        ⚡ Fast Delivery
-      </text>
-
-      <rect x="310" y="0" width="160" height="36" rx="8" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1" />
-      <text x="390" y="23" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="13" font-weight="600" fill="#E2E8F0" text-anchor="middle">
-        🔒 100% Genuine
-      </text>
+  <rect width="400" height="400" fill="url(#gptBg)"/>
+  <!-- Glowing Aura Rings -->
+  <circle cx="200" cy="200" r="160" fill="url(#gptNeon)"/>
+  <circle cx="200" cy="200" r="125" fill="none" stroke="#10a37f" stroke-width="1.5" stroke-opacity="0.3"/>
+  <circle cx="200" cy="200" r="170" fill="none" stroke="#10a37f" stroke-width="1" stroke-opacity="0.15" stroke-dasharray="4 6"/>
+  
+  <!-- 3D Rounded Badge -->
+  <g filter="url(#gptGlow)">
+    <rect x="135" y="135" width="130" height="130" rx="36" fill="url(#gptBadgeGrad)" stroke="#6ee7b7" stroke-width="2" stroke-opacity="0.5"/>
+    <!-- ChatGPT Spiral Emblem -->
+    <g transform="translate(155, 155) scale(0.9)" fill="none" stroke="#ffffff" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M52.6 15.8a25 25 0 0 0-38.3 8.3 25 25 0 0 0-9.2 27.5 25 25 0 0 0 17 34.6 25 25 0 0 0 38.3-8.3 25 25 0 0 0 9.2-27.5 25 25 0 0 0-17-34.6z"/>
+      <path d="M52.6 15.8L35.8 45M22.1 86.2l16.8-29.2M5.1 51.6l33.6 0M99.9 51.6l-33.6 0M21.3 24.1l16.8 29.2M83.7 79.1L66.9 49.9"/>
     </g>
   </g>
 </svg>

@@ -1,5 +1,266 @@
 [
   {
+    "id": "chatgpt-plus",
+    "name": "ChatGPT Plus",
+    "category": "ai",
+    "shortDescription": "OpenAI GPT-4o, DALL-E 3 image generation, browsing, and custom GPTs.",
+    "description": "ChatGPT Plus provides faster response times, priority access to new features including GPT-4o, Advanced Data Analysis, Canvas, and Custom GPTs.",
+    "plans": [
+      {
+        "id": "chatgpt-plus-1m",
+        "name": "1 Month",
+        "duration": "1 Month",
+        "price": {
+          "LK": "LKR 3,200/=",
+          "GLOBAL": "$9.70"
+        },
+        "description": "1-Month ChatGPT Plus subscription with Private Account access",
+        "activation": "Private Account",
+        "image": "/assets/products/chat-gpt-plus.png"
+      },
+      {
+        "id": "chatgpt-plus-1y",
+        "name": "1 Year",
+        "duration": "1 Year",
+        "price": {
+          "LK": "LKR 40,000/=",
+          "GLOBAL": "$121.21"
+        },
+        "description": "1-Year OpenAI ChatGPT Plus subscription with Own Email Activation",
+        "activation": "Own Email Activation",
+        "image": "/assets/products/chat-gpt-plus.png"
+      }
+    ],
+    "activation": "Own Email Activation",
+    "features": [
+      "GPT-4o & GPT-4o mini models",
+      "Advanced Voice Mode",
+      "DALL-E 3 Image Generation",
+      "Browse, Analyze & Custom GPTs"
+    ],
+    "image": "/assets/products/chat-gpt-plus.png",
+    "badge": "Most Popular",
+    "featured": true,
+    "available": true,
+    "order": 1
+  },
+  {
+    "id": "windows-11-pro",
+    "name": "Windows 11 Pro",
+    "category": "developer",
+    "shortDescription": "100% Genuine Retail Product Key for Windows 11 Professional. Lifetime activation.",
+    "description": "Official genuine product key for Windows 11 Pro. Supports 32/64 bit, all languages, and lifetime permanent online activation for 1 PC.",
+    "plans": [
+      {
+        "id": "win-11-pro-license",
+        "name": "1 License",
+        "duration": "Lifetime Use",
+        "price": {
+          "LK": "LKR 500/=",
+          "GLOBAL": "$1.50"
+        },
+        "description": "100% Genuine Microsoft Retail Activation Key for 1 PC",
+        "activation": "Original License",
+        "image": "/assets/products/win-11-pro.png"
+      }
+    ],
+    "activation": "Instant Product Key via WhatsApp/Telegram",
+    "features": [
+      "100% Genuine Microsoft Retail Key",
+      "Permanent lifetime activation for 1 PC",
+      "Direct online activation via Windows Settings",
+      "All security updates and features enabled"
+    ],
+    "image": "/assets/products/win-11-pro.png",
+    "badge": "Best Value",
+    "featured": true,
+    "available": true,
+    "order": 2
+  },
+  {
+    "id": "coursera-plus",
+    "name": "Coursera Plus",
+    "category": "education",
+    "shortDescription": "Unlimited access to 7,000+ world-class courses, specializations & certificates.",
+    "description": "Coursera Plus provides full unlimited learning access to top accredited courses, professional certificates from Google, IBM, Meta, and leading global universities.",
+    "plans": [
+      {
+        "id": "coursera-plus-12m",
+        "name": "12 Months",
+        "duration": "12 Months",
+        "price": {
+          "LK": "LKR 1,200/=",
+          "GLOBAL": "$3.60"
+        },
+        "description": "Coursera Plus 12-Month access with unlimited certificate courses",
+        "activation": "Account Activation",
+        "image": "/assets/products/coursera-1-year.png"
+      },
+      {
+        "id": "coursera-ready-made-3m",
+        "name": "Ready-Made — 3 Months Warranty",
+        "duration": "1 Year (3M Warranty)",
+        "price": {
+          "LK": "LKR 2,500/=",
+          "GLOBAL": "$7.58"
+        },
+        "description": "Pre-configured ready-to-learn account delivered instantly with 3 Months Warranty",
+        "activation": "Ready-Made Account",
+        "available": true,
+        "image": "/assets/products/coursera-1-year.png"
+      },
+      {
+        "id": "coursera-ready-made-12m",
+        "name": "Ready-Made — 12 Months Warranty",
+        "duration": "1 Year (12M Warranty)",
+        "price": {
+          "LK": "LKR 3,200/=",
+          "GLOBAL": "$9.70"
+        },
+        "description": "Pre-configured ready-to-learn account delivered instantly with 12 Months (1 Year) Warranty",
+        "activation": "Ready-Made Account",
+        "available": true,
+        "image": "/assets/products/coursera-1-year.png"
+      },
+      {
+        "id": "coursera-own-email-1y",
+        "name": "Own Email — 1 Year",
+        "duration": "1 Year",
+        "price": {
+          "LK": "LKR 4,900/=",
+          "GLOBAL": "$14.85"
+        },
+        "description": "Activated on your own personal email address (Currently Out of Stock)",
+        "activation": "Own Email Activation",
+        "available": false,
+        "image": "/assets/products/coursera-1-year.png"
+      }
+    ],
+    "activation": "Own Email or Ready-Made Account",
+    "features": [
+      "7,000+ courses and specializations",
+      "Earn accredited certificates in your name",
+      "Google, Meta, IBM professional certificates",
+      "12-month full unlimited learning access",
+      "Warranty options: 3-Month Warranty (LKR 2,500/=) or 12-Month Warranty (LKR 3,200/=)"
+    ],
+    "notes": [
+      "Ready-Made Account pricing: LKR 2,500/= (3 Months Warranty) | LKR 3,200/= (12 Months Warranty).",
+      "Replacement warranty guarantee covered during the selected warranty duration from date of delivery."
+    ],
+    "image": "/assets/products/coursera-1-year.png",
+    "badge": "Popular",
+    "featured": true,
+    "available": true,
+    "order": 3
+  },
+  {
+    "id": "adobe-creative-cloud-all-apps",
+    "name": "Adobe Creative Cloud",
+    "category": "subscriptions",
+    "shortDescription": "Adobe Creative Cloud All Apps 4-month access. All premium apps, regular updates, Adobe Express & 4,000 monthly generative AI credits.",
+    "description": "Get 4 months of unrestricted access to Adobe Creative Cloud. This includes all premium apps (Photoshop, Illustrator, Premiere Pro, After Effects, etc.), regular updates, Adobe Express, and 4,000 monthly generative AI credits.",
+    "plans": [
+      {
+        "id": "adobe-cc-1m",
+        "name": "1 Month",
+        "duration": "1 Month",
+        "price": {
+          "LK": "LKR 2,500/=",
+          "GLOBAL": "$7.50"
+        },
+        "description": "Full Adobe Creative Cloud All Apps access for 1 Month",
+        "activation": "All Apps Access",
+        "image": "/assets/products/adobe-creative-cloud.png"
+      },
+      {
+        "id": "adobe-cc-all-apps-4m",
+        "name": "4-Month Access (Activation Link)",
+        "duration": "4 Months",
+        "price": {
+          "LK": "LKR 4,400/=",
+          "GLOBAL": "$13.33"
+        },
+        "description": "4 Months unrestricted Adobe CC All Apps access with 4,000 monthly AI credits & one-time activation link.",
+        "activation": "One-Time Activation Link + Video Guide",
+        "image": "/assets/products/adobe-creative-cloud.png"
+      }
+    ],
+    "activation": "One-Time Activation Link + Step-by-Step Video Guide",
+    "features": [
+      "4 months of unrestricted access to Adobe Creative Cloud",
+      "Includes all premium apps (Photoshop, Illustrator, Premiere Pro, After Effects, etc.)",
+      "Regular updates included throughout the subscription period",
+      "Adobe Express included with premium assets and templates",
+      "4,000 monthly generative AI credits (Adobe Firefly)",
+      "Multi-device support: Windows & macOS compatible (up to 2 devices)",
+      "Cloud storage included",
+      "One-time-use activation link and step-by-step video tutorial provided",
+      "Strict 14-day warranty guarantee"
+    ],
+    "notes": [
+      "A Fresh Email: You must use a brand-new email address with zero previous Adobe history (no past accounts, trials, or subscriptions).",
+      "A Payment Method for Verification: Adobe requires a card or PayPal on file to activate. You will not be charged (the subscription is pre-paid).",
+      "Tip: We highly recommend using virtual cards like Revolut. You can use them for verification and delete them after one month.",
+      "Matching Location: The country you select during checkout must match your current IP address and the billing country of your card/PayPal.",
+      "HOW TO ACTIVATE (Do-It-Yourself): Open the link in an Incognito / Private window. Do not click the link until you are ready (it only works once and will expire if you close out early). Follow the provided video tutorial step-by-step. On the payment page, choose your country of residence before filling in your payment information.",
+      "WARRANTY & REFUND POLICY: The subscription is for 4 months, and we provide a strict 14-day guarantee. Post-activation issues beyond this period are not covered."
+    ],
+    "image": "/assets/products/adobe-creative-cloud.png",
+    "badge": "Popular",
+    "featured": true,
+    "available": true,
+    "order": 4
+  },
+  {
+    "id": "office-365-plus",
+    "name": "Microsoft 365 Family",
+    "category": "developer",
+    "shortDescription": "Microsoft 365 Plus 1 Year+ subscription with 1TB OneDrive & 5 devices support.",
+    "description": "Complete Microsoft 365 Plus subscription for 1 Year+. Includes 1TB OneDrive cloud storage and simultaneous installation on up to 5 devices (Windows, Mac, Android, iOS). Comes with Word, Excel, PowerPoint, OneNote, Forms, and cloud sync.",
+    "plans": [
+      {
+        "id": "m365-family-1y",
+        "name": "1 Year",
+        "duration": "1 Year",
+        "price": {
+          "LK": "LKR 6,500/=",
+          "GLOBAL": "$19.70"
+        },
+        "description": "Microsoft 365 Family plan for 5 Devices on 1 Account",
+        "activation": "5 Devices • 1 Account",
+        "image": "/assets/products/office-365-1-year.png"
+      },
+      {
+        "id": "office-365-plus-1y",
+        "name": "1 Year+ (5 Devices)",
+        "duration": "1 Year+",
+        "price": {
+          "LK": "LKR 1,000/=",
+          "GLOBAL": "$3.03"
+        },
+        "description": "Ready-to-use private account with 1TB OneDrive and 5 device support",
+        "activation": "Login Email & Password",
+        "image": "/assets/products/office-365-1-year.png"
+      }
+    ],
+    "activation": "Instant Account Login Details (Email : Password)",
+    "features": [
+      "1 Year+ official Microsoft 365 subscription",
+      "1TB secure OneDrive cloud storage",
+      "Install and activate on up to 5 devices simultaneously",
+      "Full desktop apps: Word, Excel, PowerPoint, OneNote, Forms",
+      "Compatible with Windows PC, macOS, Android & iOS",
+      "Instant digital delivery with private & secure account",
+      "Regular Microsoft feature updates & cloud security"
+    ],
+    "image": "/assets/products/office-365-1-year.png",
+    "badge": "New",
+    "featured": true,
+    "available": true,
+    "order": 5
+  },
+  {
     "id": "google-ai-pro",
     "name": "Google AI Pro",
     "category": "ai",
@@ -11,11 +272,12 @@
         "name": "18 Months",
         "duration": "18 Months",
         "price": {
-          "LK": "LKR 890/=",
-          "GLOBAL": "$2.70"
+          "LK": "LKR 790/=",
+          "GLOBAL": "$2.40"
         },
-        "description": "Full access to Google's most advanced AI model for 18 Months",
-        "activation": "Account Activation"
+        "description": "18 Months access with Gemini, 2TB Storage, and Veo 3.1 access",
+        "activation": "STB Storage + Gemini",
+        "image": "/assets/products/google-ai-pro-18-months.png"
       }
     ],
     "activation": "Account Activation",
@@ -26,10 +288,10 @@
       "Priority customer support"
     ],
     "image": "/assets/products/google-ai-pro-18-months.png",
-    "badge": "POPULAR",
+    "badge": "New",
     "featured": true,
     "available": true,
-    "order": 1
+    "order": 6
   },
   {
     "id": "claude-max",
@@ -98,7 +360,7 @@
     "badge": "HOT DEAL",
     "featured": true,
     "available": true,
-    "order": 2
+    "order": 12
   },
   {
     "id": "claude-pro",
@@ -116,7 +378,8 @@
           "GLOBAL": "$121.21"
         },
         "description": "1 full year of Claude Pro subscription on your own account",
-        "activation": "Own Email Activation"
+        "activation": "Own Email Activation",
+        "image": "/assets/products/claude-pro-1-year.png"
       }
     ],
     "activation": "Own Email Activation",
@@ -130,7 +393,7 @@
     "badge": "ANNUAL PLAN",
     "featured": true,
     "available": true,
-    "order": 3
+    "order": 13
   },
   {
     "id": "chatgpt-pro",
@@ -175,39 +438,7 @@
     "badge": "ULTIMATE COMPUTE",
     "featured": true,
     "available": true,
-    "order": 4
-  },
-  {
-    "id": "chatgpt-plus",
-    "name": "ChatGPT Plus",
-    "category": "ai",
-    "shortDescription": "OpenAI GPT-4o, DALL-E 3 image generation, browsing, and custom GPTs.",
-    "description": "ChatGPT Plus provides faster response times, priority access to new features including GPT-4o, Advanced Data Analysis, Canvas, and Custom GPTs.",
-    "plans": [
-      {
-        "id": "chatgpt-plus-1y",
-        "name": "1 Year",
-        "duration": "1 Year",
-        "price": {
-          "LK": "LKR 40,000/=",
-          "GLOBAL": "$121.21"
-        },
-        "description": "1-Year OpenAI ChatGPT Plus subscription with Own Email Activation",
-        "activation": "Own Email Activation"
-      }
-    ],
-    "activation": "Own Email Activation",
-    "features": [
-      "GPT-4o & GPT-4o mini models",
-      "Advanced Voice Mode",
-      "DALL-E 3 Image Generation",
-      "Browse, Analyze & Custom GPTs"
-    ],
-    "image": "/assets/products/chatgpt-plus.png",
-    "badge": "1 YEAR",
-    "featured": true,
-    "available": true,
-    "order": 5
+    "order": 14
   },
   {
     "id": "cursor",
@@ -276,7 +507,7 @@
     "badge": "BEST FOR DEVS",
     "featured": true,
     "available": true,
-    "order": 6
+    "order": 16
   },
   {
     "id": "supergrok",
@@ -293,7 +524,8 @@
           "LK": "LKR 19,500/=",
           "GLOBAL": "$59.09"
         },
-        "description": "xAI Grok with live X real-time access and reasoning"
+        "description": "xAI Grok with live X real-time access and reasoning",
+        "image": "/assets/products/supergrok.png"
       },
       {
         "id": "supergrok-heavy",
@@ -303,7 +535,8 @@
           "LK": "LKR 57,500/=",
           "GLOBAL": "$174.24"
         },
-        "description": "Maximum compute tier for intensive workflows"
+        "description": "Maximum compute tier for intensive workflows",
+        "image": "/assets/products/supergrok.png"
       }
     ],
     "activation": "Configured on your account",
@@ -317,69 +550,7 @@
     "badge": "xAI POWER",
     "featured": false,
     "available": true,
-    "order": 7
-  },
-  {
-    "id": "coursera-plus",
-    "name": "Coursera Plus",
-    "category": "education",
-    "shortDescription": "Unlimited access to 7,000+ world-class courses, specializations & certificates.",
-    "description": "Coursera Plus provides full unlimited learning access to top accredited courses, professional certificates from Google, IBM, Meta, and leading global universities.",
-    "plans": [
-      {
-        "id": "coursera-ready-made-3m",
-        "name": "Ready-Made — 3 Months Warranty",
-        "duration": "1 Year (3M Warranty)",
-        "price": {
-          "LK": "LKR 2,500/=",
-          "GLOBAL": "$7.58"
-        },
-        "description": "Pre-configured ready-to-learn account delivered instantly with 3 Months Warranty",
-        "activation": "Ready-Made Account",
-        "available": true
-      },
-      {
-        "id": "coursera-ready-made-12m",
-        "name": "Ready-Made — 12 Months Warranty",
-        "duration": "1 Year (12M Warranty)",
-        "price": {
-          "LK": "LKR 3,200/=",
-          "GLOBAL": "$9.70"
-        },
-        "description": "Pre-configured ready-to-learn account delivered instantly with 12 Months (1 Year) Warranty",
-        "activation": "Ready-Made Account",
-        "available": true
-      },
-      {
-        "id": "coursera-own-email-1y",
-        "name": "Own Email — 1 Year",
-        "duration": "1 Year",
-        "price": {
-          "LK": "LKR 4,900/=",
-          "GLOBAL": "$14.85"
-        },
-        "description": "Activated on your own personal email address (Currently Out of Stock)",
-        "activation": "Own Email Activation",
-        "available": false
-      }
-    ],
-    "activation": "Own Email or Ready-Made Account",
-    "features": [
-      "7,000+ courses and specializations",
-      "Earn accredited certificates in your name",
-      "Google, Meta, IBM professional certificates",
-      "12-month full unlimited learning access",
-      "Warranty options: 3-Month Warranty (LKR 2,500/=) or 12-Month Warranty (LKR 3,200/=)"
-    ],
-    "notes": [
-      "Ready-Made Account pricing: LKR 2,500/= (3 Months Warranty) | LKR 3,200/= (12 Months Warranty).",
-      "Replacement warranty guarantee covered during the selected warranty duration from date of delivery."
-    ],
-    "image": "/assets/products/coursera-1-year.png",
-    "badge": "LAST 12 ACCOUNTS",
-    "featured": true,
-    "available": true,
-    "order": 8
+    "order": 17
   },
   {
     "id": "udemy-personal",
@@ -397,7 +568,8 @@
           "GLOBAL": "$9.09"
         },
         "description": "100% private account with personal course progress",
-        "activation": "Private Account"
+        "activation": "Private Account",
+        "image": "/assets/products/udemy-1month-private-acc.png"
       }
     ],
     "activation": "Private Account",
@@ -411,7 +583,7 @@
     "badge": "LEARNING",
     "featured": false,
     "available": true,
-    "order": 9
+    "order": 19
   },
   {
     "id": "lovable-pro-lite",
@@ -429,7 +601,8 @@
           "GLOBAL": "$14.85"
         },
         "description": "Official 1-month coupon code for Lovable Pro Lite",
-        "activation": "Coupon Code"
+        "activation": "Coupon Code",
+        "image": "/assets/products/lovable-1-mon-code.png"
       }
     ],
     "activation": "Coupon Code",
@@ -443,7 +616,7 @@
     "badge": "NEW AI TOOL",
     "featured": true,
     "available": true,
-    "order": 10
+    "order": 20
   },
   {
     "id": "n8n-starter",
@@ -461,7 +634,8 @@
           "GLOBAL": "$45.45"
         },
         "description": "12 months cloud starter plan coupon code",
-        "activation": "Coupon Code"
+        "activation": "Coupon Code",
+        "image": "/assets/products/n8n-starter-for-12-months-coupen-code.png"
       }
     ],
     "activation": "Coupon Code",
@@ -475,7 +649,7 @@
     "badge": "AUTOMATION",
     "featured": false,
     "available": true,
-    "order": 11
+    "order": 21
   },
   {
     "id": "xbox-game-pass-ultimate",
@@ -573,7 +747,7 @@
     "badge": "GAMING SALE",
     "featured": true,
     "available": true,
-    "order": 12
+    "order": 22
   },
   {
     "id": "gta6-ps5",
@@ -589,7 +763,8 @@
           "LK": "LKR 16,500/=",
           "GLOBAL": "$50.00"
         },
-        "description": "PS5 Standard Edition digital license"
+        "description": "PS5 Standard Edition digital license",
+        "image": "/assets/products/gta6-ps5.png"
       },
       {
         "id": "gta6-ps5-unlimited",
@@ -598,7 +773,8 @@
           "LK": "LKR 24,000/=",
           "GLOBAL": "$72.73"
         },
-        "description": "PS5 Unlimited / Deluxe Edition with bonus perks"
+        "description": "PS5 Unlimited / Deluxe Edition with bonus perks",
+        "image": "/assets/products/gta6-ps5.png"
       }
     ],
     "activation": "Delivered to your PSN account",
@@ -612,7 +788,7 @@
     "badge": "PRE-ORDER",
     "featured": true,
     "available": true,
-    "order": 13
+    "order": 23
   },
   {
     "id": "gta6-xbox",
@@ -628,7 +804,8 @@
           "LK": "LKR 16,500/=",
           "GLOBAL": "$50.00"
         },
-        "description": "Xbox Series X|S Standard Edition digital license"
+        "description": "Xbox Series X|S Standard Edition digital license",
+        "image": "/assets/products/gta6-xbox.png"
       },
       {
         "id": "gta6-xbox-unlimited",
@@ -637,7 +814,8 @@
           "LK": "LKR 21,500/=",
           "GLOBAL": "$65.15"
         },
-        "description": "Xbox Series X|S Unlimited Edition"
+        "description": "Xbox Series X|S Unlimited Edition",
+        "image": "/assets/products/gta6-xbox.png"
       }
     ],
     "activation": "Delivered to your Xbox account",
@@ -651,39 +829,7 @@
     "badge": "PRE-ORDER",
     "featured": false,
     "available": true,
-    "order": 14
-  },
-  {
-    "id": "windows-11-pro",
-    "name": "Windows 11 Pro",
-    "category": "developer",
-    "shortDescription": "100% Genuine Retail Product Key for Windows 11 Professional. Lifetime activation.",
-    "description": "Official genuine product key for Windows 11 Pro. Supports 32/64 bit, all languages, and lifetime permanent online activation for 1 PC.",
-    "plans": [
-      {
-        "id": "win11-pro-lifetime",
-        "name": "Retail Key",
-        "duration": "Lifetime",
-        "price": {
-          "LK": "~LKR 495/=",
-          "GLOBAL": "$1.50"
-        },
-        "description": "100% Genuine Retail Key — Online Activation",
-        "activation": "Product Key"
-      }
-    ],
-    "activation": "Instant Product Key via WhatsApp/Telegram",
-    "features": [
-      "100% Genuine Microsoft Retail Key",
-      "Permanent lifetime activation for 1 PC",
-      "Direct online activation via Windows Settings",
-      "All security updates and features enabled"
-    ],
-    "image": "/assets/products/win-11-pro.png",
-    "badge": "GENUINE KEY",
-    "featured": true,
-    "available": true,
-    "order": 15
+    "order": 24
   },
   {
     "id": "windows-10-pro",
@@ -701,7 +847,8 @@
           "GLOBAL": "$1.50"
         },
         "description": "100% Genuine Retail Key — Online Activation",
-        "activation": "Product Key"
+        "activation": "Product Key",
+        "image": "/assets/products/win10pro.png"
       }
     ],
     "activation": "Instant Product Key via WhatsApp/Telegram",
@@ -715,7 +862,7 @@
     "badge": "GENUINE KEY",
     "featured": false,
     "available": true,
-    "order": 16
+    "order": 26
   },
   {
     "id": "office-2024-ltsc",
@@ -733,7 +880,8 @@
           "GLOBAL": "$2.40"
         },
         "description": "Lifetime permanent activation for 1 PC",
-        "activation": "Product Key"
+        "activation": "Product Key",
+        "image": "/assets/products/office_2024.png"
       }
     ],
     "activation": "Instant Product Key via WhatsApp/Telegram",
@@ -743,11 +891,11 @@
       "Permanent offline & online license",
       "Direct Microsoft activation"
     ],
-    "image": "/assets/products/office-2024.png",
+    "image": "/assets/products/office_2024.png",
     "badge": "OFFICE 2024",
     "featured": true,
     "available": true,
-    "order": 17
+    "order": 27
   },
   {
     "id": "ps-wallet-balance",
@@ -765,7 +913,8 @@
           "GLOBAL": "Contact for Price"
         },
         "description": "Contact us with the game title or denomination — discounts of up to 40% off",
-        "activation": "PSN Redeem Key"
+        "activation": "PSN Redeem Key",
+        "image": "/assets/products/ps-wallet.png"
       }
     ],
     "activation": "Redeem code provided directly on WhatsApp/Telegram",
@@ -779,7 +928,7 @@
     "badge": "UP TO 40% OFF",
     "featured": true,
     "available": true,
-    "order": 18
+    "order": 28
   },
   {
     "id": "canva-pro",
@@ -805,7 +954,8 @@
           "label": "49% OFF"
         },
         "description": "1-Year 100% Private Original Pro & Business account with full email access & invite support",
-        "activation": "Private Account Details"
+        "activation": "Private Account Details",
+        "image": "/assets/products/canva-pro.png"
       }
     ],
     "activation": "Private Account with Full Email Access",
@@ -824,7 +974,7 @@
     "badge": "1 YEAR",
     "featured": true,
     "available": true,
-    "order": 19
+    "order": 29
   },
   {
     "id": "windows-server-2025-datacenter",
@@ -842,7 +992,8 @@
           "GLOBAL": "$3.00"
         },
         "description": "100% Genuine product key with lifetime activation for enterprise & virtualization",
-        "activation": "Product Key"
+        "activation": "Product Key",
+        "image": "/assets/products/windows-server-2025.png"
       }
     ],
     "activation": "Instant Product Key + Microsoft Activation Portal Manual",
@@ -859,7 +1010,7 @@
     "badge": "SERVER 2025",
     "featured": true,
     "available": true,
-    "order": 20
+    "order": 30
   },
   {
     "id": "linkedin-premium",
@@ -878,7 +1029,8 @@
         },
         "description": "3 Months LinkedIn Premium activated on your own personal account (Subject to eligibility conditions)",
         "activation": "Own Account Activation",
-        "available": true
+        "available": true,
+        "image": "/assets/products/linkedin-premium-career-boost.png"
       },
       {
         "id": "linkedin-premium-12m",
@@ -890,7 +1042,8 @@
         },
         "description": "12 Months (1 Year) full LinkedIn Premium upgrade activated directly on your own personal account",
         "activation": "Own Account Activation",
-        "available": true
+        "available": true,
+        "image": "/assets/products/linkedin-premium-career-boost.png"
       }
     ],
     "activation": "Own Account Activation (No Shared Account)",
@@ -915,11 +1068,11 @@
       "3. If you used any offers or trials before = not working",
       "Note: Any reason from above will make promo/redeem links not work on your account."
     ],
-    "image": "/assets/products/linkedin-premium.png",
+    "image": "/assets/products/linkedin-premium-career-boost.png",
     "badge": "CAREER BOOST",
     "featured": true,
     "available": true,
-    "order": 21
+    "order": 31
   },
   {
     "id": "netflix-premium-4k",
@@ -937,7 +1090,8 @@
           "GLOBAL": "$2.12"
         },
         "description": "1 Device connectable. 4K Ultra HD streaming with instant login credentials.",
-        "activation": "Email:Password:LoginLink"
+        "activation": "Email:Password:LoginLink",
+        "image": "/assets/products/netflix.png"
       },
       {
         "id": "netflix-4k-2devices-1m",
@@ -948,7 +1102,8 @@
           "GLOBAL": "$4.55"
         },
         "description": "2 Devices connectable simultaneously. 4K Ultra HD streaming.",
-        "activation": "Email:Password:LoginLink"
+        "activation": "Email:Password:LoginLink",
+        "image": "/assets/products/netflix.png"
       },
       {
         "id": "netflix-4k-2devices-3m",
@@ -959,7 +1114,8 @@
           "GLOBAL": "$9.09"
         },
         "description": "2 Devices connectable simultaneously. 3 Months 4K Ultra HD streaming.",
-        "activation": "Email:Password:LoginLink"
+        "activation": "Email:Password:LoginLink",
+        "image": "/assets/products/netflix.png"
       },
       {
         "id": "netflix-4k-2devices-6m",
@@ -970,7 +1126,8 @@
           "GLOBAL": "$16.67"
         },
         "description": "2 Devices connectable simultaneously. 6 Months 4K Ultra HD streaming.",
-        "activation": "Email:Password:LoginLink"
+        "activation": "Email:Password:LoginLink",
+        "image": "/assets/products/netflix.png"
       },
       {
         "id": "netflix-4k-2devices-12m",
@@ -981,7 +1138,8 @@
           "GLOBAL": "$30.30"
         },
         "description": "2 Devices connectable simultaneously. 12 Months (1 Year) 4K Ultra HD streaming.",
-        "activation": "Email:Password:LoginLink"
+        "activation": "Email:Password:LoginLink",
+        "image": "/assets/products/netflix.png"
       },
       {
         "id": "netflix-4k-4devices",
@@ -992,7 +1150,8 @@
           "GLOBAL": "Contact for Price"
         },
         "description": "4-Device connectable premium account also available. Contact us for pricing & instant activation.",
-        "activation": "Contact on WhatsApp"
+        "activation": "Contact on WhatsApp",
+        "image": "/assets/products/netflix.png"
       }
     ],
     "activation": "Login Credentials + MFA Bypass Login Link",
@@ -1016,7 +1175,7 @@
     "badge": "4K UHD",
     "featured": true,
     "available": true,
-    "order": 22
+    "order": 32
   },
   {
     "id": "capcut-pro",
@@ -1034,7 +1193,8 @@
           "GLOBAL": "$3.00"
         },
         "description": "CapCut Pro Team access for personal use. 100% No Automatic Renewal. Full warranty.",
-        "activation": "Team Invite / Account Access"
+        "activation": "Team Invite / Account Access",
+        "image": "/assets/products/capcut.png"
       }
     ],
     "activation": "Team Invitation / Personal Access Details",
@@ -1056,42 +1216,7 @@
     "badge": "CREATOR PICK",
     "featured": true,
     "available": true,
-    "order": 23
-  },
-  {
-    "id": "office-365-plus",
-    "name": "Microsoft Office 365 Plus",
-    "category": "developer",
-    "shortDescription": "Microsoft 365 Plus 1 Year+ subscription with 1TB OneDrive & 5 devices support.",
-    "description": "Complete Microsoft 365 Plus subscription for 1 Year+. Includes 1TB OneDrive cloud storage and simultaneous installation on up to 5 devices (Windows, Mac, Android, iOS). Comes with Word, Excel, PowerPoint, OneNote, Forms, and cloud sync.",
-    "plans": [
-      {
-        "id": "office-365-plus-1y",
-        "name": "1 Year+ (5 Devices)",
-        "duration": "1 Year+",
-        "price": {
-          "LK": "LKR 1,000/=",
-          "GLOBAL": "$3.03"
-        },
-        "description": "Ready-to-use private account with 1TB OneDrive and 5 device support",
-        "activation": "Login Email & Password"
-      }
-    ],
-    "activation": "Instant Account Login Details (Email : Password)",
-    "features": [
-      "1 Year+ official Microsoft 365 subscription",
-      "1TB secure OneDrive cloud storage",
-      "Install and activate on up to 5 devices simultaneously",
-      "Full desktop apps: Word, Excel, PowerPoint, OneNote, Forms",
-      "Compatible with Windows PC, macOS, Android & iOS",
-      "Instant digital delivery with private & secure account",
-      "Regular Microsoft feature updates & cloud security"
-    ],
-    "image": "/assets/products/office-365-1-year.png",
-    "badge": "5 DEVICES + 1TB",
-    "featured": true,
-    "available": true,
-    "order": 24
+    "order": 33
   },
   {
     "id": "autodesk-all-apps",
@@ -1109,7 +1234,8 @@
           "GLOBAL": "$4.55"
         },
         "description": "1-Year official private Autodesk access for 46+ apps activated on your personal email",
-        "activation": "Own Email Activation"
+        "activation": "Own Email Activation",
+        "image": "/assets/products/autodesk.png"
       },
       {
         "id": "autodesk-3y",
@@ -1120,7 +1246,8 @@
           "GLOBAL": "$12.12"
         },
         "description": "3-Year extended official private Autodesk access for 46+ apps activated on your personal email",
-        "activation": "Own Email Activation"
+        "activation": "Own Email Activation",
+        "image": "/assets/products/autodesk.png"
       }
     ],
     "activation": "Own Email Activation (Send your registered Autodesk email)",
@@ -1143,51 +1270,6 @@
     "badge": "46+ APPS",
     "featured": true,
     "available": true,
-    "order": 25
-  },
-  {
-    "id": "adobe-creative-cloud-all-apps",
-    "name": "Adobe Creative Cloud All Apps",
-    "category": "subscriptions",
-    "shortDescription": "Adobe Creative Cloud All Apps 4-month access. All premium apps, regular updates, Adobe Express & 4,000 monthly generative AI credits.",
-    "description": "Get 4 months of unrestricted access to Adobe Creative Cloud. This includes all premium apps (Photoshop, Illustrator, Premiere Pro, After Effects, etc.), regular updates, Adobe Express, and 4,000 monthly generative AI credits.",
-    "plans": [
-      {
-        "id": "adobe-cc-all-apps-4m",
-        "name": "4-Month Access (Activation Link)",
-        "duration": "4 Months",
-        "price": {
-          "LK": "LKR 4,400/=",
-          "GLOBAL": "$13.33"
-        },
-        "description": "4 Months unrestricted Adobe CC All Apps access with 4,000 monthly AI credits & one-time activation link.",
-        "activation": "One-Time Activation Link + Video Guide"
-      }
-    ],
-    "activation": "One-Time Activation Link + Step-by-Step Video Guide",
-    "features": [
-      "4 months of unrestricted access to Adobe Creative Cloud",
-      "Includes all premium apps (Photoshop, Illustrator, Premiere Pro, After Effects, etc.)",
-      "Regular updates included throughout the subscription period",
-      "Adobe Express included with premium assets and templates",
-      "4,000 monthly generative AI credits (Adobe Firefly)",
-      "Multi-device support: Windows & macOS compatible (up to 2 devices)",
-      "Cloud storage included",
-      "One-time-use activation link and step-by-step video tutorial provided",
-      "Strict 14-day warranty guarantee"
-    ],
-    "notes": [
-      "A Fresh Email: You must use a brand-new email address with zero previous Adobe history (no past accounts, trials, or subscriptions).",
-      "A Payment Method for Verification: Adobe requires a card or PayPal on file to activate. You will not be charged (the subscription is pre-paid).",
-      "Tip: We highly recommend using virtual cards like Revolut. You can use them for verification and delete them after one month.",
-      "Matching Location: The country you select during checkout must match your current IP address and the billing country of your card/PayPal.",
-      "HOW TO ACTIVATE (Do-It-Yourself): Open the link in an Incognito / Private window. Do not click the link until you are ready (it only works once and will expire if you close out early). Follow the provided video tutorial step-by-step. On the payment page, choose your country of residence before filling in your payment information.",
-      "WARRANTY & REFUND POLICY: The subscription is for 4 months, and we provide a strict 14-day guarantee. Post-activation issues beyond this period are not covered."
-    ],
-    "image": "/assets/products/adobe-creative-cloud.png",
-    "badge": "ALL APPS",
-    "featured": true,
-    "available": true,
-    "order": 26
+    "order": 35
   }
 ]

@@ -38,7 +38,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="section-pad bg-gray-50">
+    <section className="section-pad" style={{ background: '#080f1d' }}>
       <div className="container-main">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ export default function HowItWorks() {
           className="text-center mb-14"
         >
           <div className="section-label mb-3">Simple Process</div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
             How It Works
           </h2>
           <p className="text-gray-500 max-w-lg mx-auto">
@@ -69,14 +69,14 @@ export default function HowItWorks() {
               className="flex flex-col items-center text-center"
             >
               {/* Icon circle */}
-              <div className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-xl ${step.glow} mb-5 z-10`}>
+              <div className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-xl mb-5 z-10`}>
                 <step.icon size={26} className="text-white" />
-                <div className="absolute -top-2.5 -right-2.5 w-7 h-7 rounded-lg bg-white border-2 border-gray-100 flex items-center justify-center">
+                <div className="absolute -top-2.5 -right-2.5 w-7 h-7 rounded-lg bg-[#0d1a2e] border border-white/10 flex items-center justify-center">
                   <span className="text-[10px] font-black text-gray-400">{step.number}</span>
                 </div>
               </div>
 
-              <h3 className="text-base font-bold text-gray-900 mb-2">{step.title}</h3>
+              <h3 className="text-base font-bold text-white mb-2">{step.title}</h3>
               <p className="text-sm text-gray-500 leading-relaxed max-w-[220px]">{step.description}</p>
             </motion.div>
           ))}

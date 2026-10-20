@@ -1,28 +1,44 @@
 import { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Menu, X, Send } from 'lucide-react';
+import { 
+  Home, 
+  Grid3X3, 
+  LayoutGrid, 
+  User, 
+  Mail, 
+  Search, 
+  ShoppingCart, 
+  ChevronDown, 
+  Menu, 
+  X 
+} from 'lucide-react';
 import storeConfig from '@/config/storeConfig.json';
-import { usePricingStore } from '@/stores/pricingStore';
-import { getWhatsAppChatLink, getTelegramChatLink } from '@/utils/whatsapp';
+import { useCartStore } from '@/stores/cartStore';
 import { cn } from '@/utils/cn';
 import { getAssetUrl } from '@/utils/assets';
 
-const navLinks = [
-  { label: 'Home', to: '/' },
-  { label: 'AI Tools', to: '/category/ai' },
+const categoryDropdown = [
+  { label: 'AI & Productivity', to: '/category/ai' },
+  { label: 'Microsoft', to: '/category/developer' },
+  { label: 'Design & Creative', to: '/category/subscriptions' },
   { label: 'Gaming', to: '/category/gaming' },
-  { label: 'Developer', to: '/category/developer' },
-  { label: 'Education', to: '/category/education' },
-  { label: 'Subscriptions', to: '/category/subscriptions' },
-  { label: 'PS Wallet', to: '/category/wallet' },
-  { label: 'Deals', to: '/products' },
+  { label: 'Learning & Courses', to: '/category/education' },
+  { label: 'Security & VPN', to: '/category/wallet' },
+  { label: 'Software & Tools', to: '/category/developer' },
+  { label: 'Entertainment', to: '/category/subscriptions' },
+  { label: 'Others', to: '/products' },
 ];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { region, setRegion } = usePricingStore();
+  const [catOpen, setCatOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const { totalCount, openCart } = useCartStore();
+  const navigate = useNavigate();
+
+  const cartCount = totalCount();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -30,280 +46,265 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/products?q=${encodeURIComponent(searchQuery.trim())}`);
+      setMobileOpen(false);
     }
-    return () => { document.body.style.overflow = ''; };
-  }, [mobileOpen]);
+  };
 
   return (
     <>
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-          scrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100'
-            : 'bg-white/80 backdrop-blur-sm'
+          'sticky top-0 left-0 right-0 z-40 transition-all duration-200',
+          'bg-white/95 dark:bg-[#070e1c]/95 backdrop-blur-md border-b border-slate-200/80 dark:border-white/10',
+          scrolled ? 'shadow-md' : ''
         )}
-        style={{ height: scrolled ? 'var(--header-height-scrolled)' : 'var(--header-height)' }}
       >
-        <div className="container-main h-full flex items-center justify-between gap-4">
-          {/* Logo */}
-          <Link to="/" className="flex-shrink-0 flex items-center gap-2.5" aria-label="DigitalStoreLK Home">
+        <div className={cn("container-main flex items-center justify-between gap-3 sm:gap-6 transition-all", scrolled ? "py-2.5" : "py-3.5")}>
+          {/* 1. Brand Logo & Tagline */}
+          <Link to="/" className="flex items-center gap-2.5 flex-shrink-0" aria-label="DigitalStoreLK">
             <img
               src={getAssetUrl(storeConfig.logo)}
               alt={storeConfig.shopName}
-              className={cn(
-                'object-contain rounded-xl transition-all duration-300 shadow-sm border border-gray-100/50',
-                scrolled ? 'h-9 w-9' : 'h-11 w-11'
-              )}
+              className="h-9 w-9 object-contain rounded-xl"
               onError={(e) => {
-                const t = e.currentTarget;
-                t.style.display = 'none';
-                const sibling = t.nextElementSibling as HTMLElement | null;
-                if (sibling) sibling.style.display = 'flex';
+                e.currentTarget.style.display = 'none';
               }}
             />
-            {/* Brand Text */}
             <div className="flex flex-col">
-              <span className="font-extrabold text-base sm:text-lg leading-tight tracking-tight text-gray-900">
-                DigitalStore<span className="text-blue-600">LK</span>
+              <span className="font-extrabold text-[17px] leading-tight tracking-tight text-slate-900 dark:text-white flex items-center">
+                DigitalStore<span className="text-blue-600 dark:text-blue-400">LK</span>
               </span>
-              <span className="text-[10px] text-gray-400 font-semibold tracking-wider uppercase hidden sm:inline">
-                Smart Tools • Premium
+              <span className="text-[10px] text-slate-500 dark:text-slate-400 font-medium tracking-tight">
+                Your Digital Needs, Our Priority
               </span>
             </div>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav aria-label="Main Navigation" className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.to}
-                to={link.to}
-                end={link.to === '/'}
-                className={({ isActive }) =>
-                  cn(
-                    'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200',
-                    isActive
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                  )
-                }
-              >
-                {link.label}
-              </NavLink>
-            ))}
-          </nav>
+          {/* 2. Middle Navigation (Desktop) */}
+          <nav aria-label="Main Navigation" className="hidden lg:flex items-center gap-1.5">
+            {/* Home (Active Blue Pill) */}
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) =>
+                cn(
+                  'flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold transition-all',
+                  isActive
+                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
+                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
+                )
+              }
+            >
+              <Home size={14} />
+              Home
+            </NavLink>
 
-          {/* Right side */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Pricing Switcher */}
-            <div className="hidden sm:flex items-center gap-1 p-1 bg-gray-100 rounded-xl">
+            {/* All Products */}
+            <NavLink
+              to="/products"
+              className={({ isActive }) =>
+                cn(
+                  'flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all',
+                  isActive
+                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
+                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
+                )
+              }
+            >
+              <LayoutGrid size={14} />
+              All Products
+            </NavLink>
+
+            {/* Categories Dropdown */}
+            <div className="relative" onMouseLeave={() => setCatOpen(false)}>
               <button
-                id="pricing-lk"
-                onClick={() => setRegion('LK')}
+                onClick={() => setCatOpen(!catOpen)}
+                onMouseEnter={() => setCatOpen(true)}
                 className={cn(
-                  'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200',
-                  region === 'LK'
-                    ? 'bg-white shadow-sm text-blue-600'
-                    : 'text-gray-500 hover:text-gray-700'
+                  'flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all',
+                  catOpen
+                    ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-white/5'
+                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
                 )}
-                aria-pressed={region === 'LK'}
               >
-                🇱🇰 <span className="hidden md:inline">Sri Lanka</span>
+                <Grid3X3 size={14} />
+                Categories
+                <ChevronDown size={13} className={cn('transition-transform duration-200', catOpen && 'rotate-180')} />
               </button>
-              <button
-                id="pricing-global"
-                onClick={() => setRegion('GLOBAL')}
-                className={cn(
-                  'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200',
-                  region === 'GLOBAL'
-                    ? 'bg-white shadow-sm text-blue-600'
-                    : 'text-gray-500 hover:text-gray-700'
+
+              <AnimatePresence>
+                {catOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute top-full left-0 mt-1 w-52 bg-white dark:bg-[#0c1527] border border-slate-200 dark:border-white/10 rounded-2xl shadow-xl shadow-black/15 p-1.5 z-50"
+                  >
+                    {categoryDropdown.map((cat) => (
+                      <Link
+                        key={cat.label}
+                        to={cat.to}
+                        onClick={() => setCatOpen(false)}
+                        className="flex items-center px-3 py-2 rounded-xl text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-blue-600/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      >
+                        {cat.label}
+                      </Link>
+                    ))}
+                  </motion.div>
                 )}
-                aria-pressed={region === 'GLOBAL'}
-              >
-                🌍 <span className="hidden md:inline">Global</span>
-              </button>
+              </AnimatePresence>
             </div>
 
-            {/* Telegram CTA */}
-            <a
-              href={getTelegramChatLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              id="header-telegram-cta"
-              className="hidden lg:flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-sm shadow-sky-500/20 active:scale-95"
-              title="Chat on Telegram"
+            {/* About */}
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                cn(
+                  'flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all',
+                  isActive
+                    ? 'bg-blue-600 text-white'
+                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
+                )
+              }
             >
-              <Send size={14} />
-              <span>Telegram</span>
-            </a>
+              <User size={14} />
+              About
+            </NavLink>
 
-            {/* WhatsApp CTA */}
-            <a
-              href={getWhatsAppChatLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              id="header-whatsapp-cta"
-              className="hidden sm:flex items-center gap-2 btn-whatsapp !py-2 !px-4 !text-sm"
+            {/* Contact */}
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                cn(
+                  'flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all',
+                  isActive
+                    ? 'bg-blue-600 text-white'
+                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
+                )
+              }
             >
-              <MessageCircle size={16} />
-              <span className="hidden md:inline">WhatsApp</span>
-            </a>
+              <Mail size={14} />
+              Contact
+            </NavLink>
+          </nav>
 
-            {/* Mobile menu toggle */}
+          {/* 3. Right Controls: Search, Cart, Theme Toggle */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Search Pill Input */}
+            <form onSubmit={handleSearchSubmit} className="relative hidden md:block">
+              <input
+                type="text"
+                placeholder="Search products..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-44 lg:w-56 pl-8 pr-3.5 py-1.5 rounded-full text-xs bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500 transition-all"
+              />
+              <Search
+                size={14}
+                className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"
+              />
+            </form>
+
+            {/* Cart Button with Count Badge */}
             <button
-              id="mobile-menu-toggle"
-              className="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors"
-              onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-              aria-expanded={mobileOpen}
+              onClick={openCart}
+              className="relative p-2 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
+              aria-label="View shopping cart"
             >
-              <AnimatePresence mode="wait" initial={false}>
-                <motion.div
-                  key={mobileOpen ? 'close' : 'open'}
-                  initial={{ opacity: 0, rotate: -90 }}
-                  animate={{ opacity: 1, rotate: 0 }}
-                  exit={{ opacity: 0, rotate: 90 }}
-                  transition={{ duration: 0.15 }}
-                >
-                  {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-                </motion.div>
-              </AnimatePresence>
+              <ShoppingCart size={19} />
+              <span className="absolute -top-0.5 -right-0.5 min-w-[17px] h-[17px] px-1 rounded-full bg-blue-600 text-white text-[10px] font-extrabold flex items-center justify-center shadow-sm">
+                {cartCount}
+              </span>
+            </button>
+
+
+
+            {/* Mobile Hamburger */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="lg:hidden p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5"
+              aria-label="Open mobile menu"
+            >
+              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
-      </header>
 
-      {/* Mobile Navigation Drawer */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <>
-            {/* Backdrop */}
+        {/* Mobile Navigation Drawer */}
+        <AnimatePresence>
+          {mobileOpen && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm lg:hidden"
-              onClick={() => setMobileOpen(false)}
-            />
-            {/* Drawer */}
-            <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-              className="fixed top-0 right-0 bottom-0 z-50 w-72 bg-white shadow-2xl lg:hidden flex flex-col"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden border-t border-slate-200 dark:border-white/10 bg-white dark:bg-[#070e1c] px-4 py-4 space-y-3"
             >
-              <div className="flex items-center justify-between p-4 border-b border-gray-100">
-                <Link to="/" onClick={() => setMobileOpen(false)}>
-                  <img
-                    src={getAssetUrl(storeConfig.logo)}
-                    alt={storeConfig.shopName}
-                    className="h-8 object-contain"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
-                </Link>
-                <button
+              <form onSubmit={handleSearchSubmit} className="relative">
+                <input
+                  type="text"
+                  placeholder="Search products..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-8 pr-3 py-2 rounded-xl text-sm bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-blue-500"
+                />
+                <Search size={15} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400" />
+              </form>
+
+              <div className="grid grid-cols-2 gap-2 pt-1">
+                <Link
+                  to="/"
                   onClick={() => setMobileOpen(false)}
-                  className="p-2 rounded-lg hover:bg-gray-100 text-gray-500"
-                  aria-label="Close menu"
+                  className="flex items-center gap-2 p-2.5 rounded-xl bg-blue-50 dark:bg-white/5 text-blue-600 dark:text-blue-400 text-xs font-bold"
                 >
-                  <X size={20} />
-                </button>
+                  <Home size={16} /> Home
+                </Link>
+                <Link
+                  to="/products"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 text-slate-700 dark:text-slate-200 text-xs font-bold"
+                >
+                  <LayoutGrid size={16} /> All Products
+                </Link>
+                <Link
+                  to="/contact"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 text-slate-700 dark:text-slate-200 text-xs font-bold"
+                >
+                  <User size={16} /> About
+                </Link>
+                <Link
+                  to="/contact"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 dark:bg-white/5 text-slate-700 dark:text-slate-200 text-xs font-bold"
+                >
+                  <Mail size={16} /> Contact
+                </Link>
               </div>
 
-              {/* Pricing switcher mobile */}
-              <div className="flex items-center gap-2 p-4 border-b border-gray-100">
-                <span className="text-xs text-gray-500 font-medium">Pricing:</span>
-                <div className="flex items-center gap-1 p-1 bg-gray-100 rounded-xl">
-                  <button
-                    onClick={() => setRegion('LK')}
-                    className={cn(
-                      'flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all',
-                      region === 'LK' ? 'bg-white shadow-sm text-blue-600' : 'text-gray-500'
-                    )}
-                  >
-                    🇱🇰 Sri Lanka
-                  </button>
-                  <button
-                    onClick={() => setRegion('GLOBAL')}
-                    className={cn(
-                      'flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all',
-                      region === 'GLOBAL' ? 'bg-white shadow-sm text-blue-600' : 'text-gray-500'
-                    )}
-                  >
-                    🌍 Global
-                  </button>
+              <div className="pt-2 border-t border-slate-100 dark:border-white/5">
+                <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Categories</p>
+                <div className="grid grid-cols-2 gap-1.5 text-xs">
+                  {categoryDropdown.map((c) => (
+                    <Link
+                      key={c.label}
+                      to={c.to}
+                      onClick={() => setMobileOpen(false)}
+                      className="text-slate-600 dark:text-slate-300 hover:text-blue-600 py-1"
+                    >
+                      {c.label}
+                    </Link>
+                  ))}
                 </div>
               </div>
-
-              {/* Navigation links */}
-              <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
-                {navLinks.map((link, i) => (
-                  <motion.div
-                    key={link.to}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.05 }}
-                  >
-                    <NavLink
-                      to={link.to}
-                      end={link.to === '/'}
-                      onClick={() => setMobileOpen(false)}
-                      className={({ isActive }) =>
-                        cn(
-                          'flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all',
-                          isActive
-                            ? 'bg-blue-50 text-blue-600'
-                            : 'text-gray-700 hover:bg-gray-50'
-                        )
-                      }
-                    >
-                      {link.label}
-                    </NavLink>
-                  </motion.div>
-                ))}
-              </nav>
-
-              {/* Mobile Contact CTAs */}
-              <div className="p-4 border-t border-gray-100 space-y-2">
-                <a
-                  href={getWhatsAppChatLink()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-whatsapp w-full justify-center !py-3"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  <MessageCircle size={18} />
-                  Chat on WhatsApp
-                </a>
-                <a
-                  href={getTelegramChatLink()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-sm font-bold shadow-md shadow-sky-500/20 transition-all"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  <Send size={16} />
-                  Chat on Telegram
-                </a>
-              </div>
             </motion.div>
-          </>
-        )}
-      </AnimatePresence>
-
-      {/* Spacer to push content below fixed header */}
-      <div style={{ height: 'var(--header-height)' }} />
+          )}
+        </AnimatePresence>
+      </header>
     </>
   );
 }

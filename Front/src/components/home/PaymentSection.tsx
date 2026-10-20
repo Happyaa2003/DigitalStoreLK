@@ -206,7 +206,7 @@ export default function PaymentSection() {
 
   return (
     <>
-      <section className="section-pad bg-gray-50">
+      <section className="section-pad" style={{ background: '#080f1d' }}>
         <div className="container-main">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -215,7 +215,7 @@ export default function PaymentSection() {
             className="text-center mb-12"
           >
             <div className="section-label mb-3">Payments</div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
               Easy &amp; Secure Payment Options
             </h2>
             <p className="text-gray-500 max-w-lg mx-auto">
@@ -230,7 +230,7 @@ export default function PaymentSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="group p-7 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center flex flex-col justify-between"
+                className="group p-7 rounded-3xl border border-white/8 bg-white/4 hover:bg-white/6 hover:border-blue-500/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center flex flex-col justify-between"
               >
                 <div>
                   <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 p-3.5 flex items-center justify-center shadow-lg mb-5 group-hover:scale-110 transition-transform duration-300">
@@ -240,7 +240,7 @@ export default function PaymentSection() {
                       className="w-full h-full object-contain filter brightness-0 invert"
                     />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Bank Transfer</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">Bank Transfer</h3>
                   <p className="text-sm text-gray-500 mb-5">
                     Direct transfer to our local Sampath Bank account in Sri Lanka.
                   </p>
@@ -263,7 +263,7 @@ export default function PaymentSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="group p-7 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center flex flex-col justify-between"
+                className="group p-7 rounded-3xl border border-white/8 bg-white/4 hover:bg-white/6 hover:border-blue-500/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center flex flex-col justify-between"
               >
                 <div>
                   <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-[#003087] via-[#00457C] to-[#0079C1] p-3.5 flex items-center justify-center shadow-lg mb-5 group-hover:scale-110 transition-transform duration-300">
@@ -273,7 +273,7 @@ export default function PaymentSection() {
                       className="w-full h-full object-contain filter brightness-0 invert"
                     />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">PayPal</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">PayPal</h3>
                   <p className="text-sm text-gray-500 mb-5">
                     Fast &amp; secure international payments to our verified PayPal account.
                   </p>
@@ -296,7 +296,7 @@ export default function PaymentSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="group p-7 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center flex flex-col justify-between"
+                className="group p-7 rounded-3xl border border-white/8 bg-white/4 hover:bg-white/6 hover:border-yellow-500/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center flex flex-col justify-between"
               >
                 <div>
                   <div className="w-16 h-16 mx-auto rounded-2xl bg-[#F3BA2F] p-3 flex items-center justify-center shadow-lg mb-5 group-hover:scale-110 transition-transform duration-300">
@@ -306,7 +306,7 @@ export default function PaymentSection() {
                       className="w-full h-full object-contain filter brightness-0 invert"
                     />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Binance Pay</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">Binance Pay</h3>
                   <p className="text-sm text-gray-500 mb-5">
                     Pay with cryptocurrency via Binance Pay ID or direct BEP20 wallet transfer.
                   </p>

@@ -1,34 +1,33 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, CheckCircle, Clock, Zap, ChevronRight } from 'lucide-react';
-import type { Product, ProductPlan, PricingRegion } from '@/types';
+import { X, CheckCircle, ShoppingCart } from 'lucide-react';
+import type { Product, Plan, PricingRegion } from '@/types';
 import { getPrice } from '@/utils/pricing';
 import { createWhatsAppLink, createTelegramLink } from '@/utils/whatsapp';
+import { usePricingStore } from '@/stores/pricingStore';
+import { useCartStore } from '@/stores/cartStore';
 import { cn } from '@/utils/cn';
 import { getAssetUrl } from '@/utils/assets';
-import { WhatsAppIcon, WhatsAppColorIcon, TelegramIcon } from '@/components/common/BrandIcons';
-import DiscountBadge from './DiscountBadge';
+import { WhatsAppIcon, TelegramIcon } from '@/components/common/BrandIcons';
 
 interface ProductModalProps {
   product: Product | null;
-  region: PricingRegion;
+  region?: PricingRegion;
   initialPlanIndex?: number;
+  isOpen?: boolean;
   onClose: () => void;
 }
 
-const categoryLabels: Record<string, string> = {
-  ai: 'AI & Productivity',
-  gaming: 'Gaming',
-  developer: 'Developer Tools',
-  education: 'Education',
-  subscriptions: 'Subscriptions',
-  wallet: 'PS Wallet',
-};
-
-const whiteBgProductIds = new Set(['udemy-personal', 'n8n-starter', 'coursera-plus', 'adobe-creative-cloud-all-apps']);
-
-export default function ProductModal({ product, region, initialPlanIndex = 0, onClose }: ProductModalProps) {
+export default function ProductModal({
+  product,
+  region: propRegion,
+  initialPlanIndex = 0,
+  onClose,
+}: ProductModalProps) {
   const [selectedPlanIndex, setSelectedPlanIndex] = useState(initialPlanIndex);
+  const { region: storeRegion } = usePricingStore();
+  const { addItem } = useCartStore();
+  const region = propRegion || storeRegion;
 
   useEffect(() => {
     setSelectedPlanIndex(initialPlanIndex);
@@ -40,7 +39,9 @@ export default function ProductModal({ product, region, initialPlanIndex = 0, on
     } else {
       document.body.style.overflow = '';
     }
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [product]);
 
   // Close on Escape
@@ -54,17 +55,15 @@ export default function ProductModal({ product, region, initialPlanIndex = 0, on
 
   if (!product) return null;
 
-  const selectedPlan: ProductPlan = product.plans[selectedPlanIndex] ?? product.plans[0];
-  const isPlanAvailable = selectedPlan?.available !== false;
+  const selectedPlan: Plan = product.plans[selectedPlanIndex] ?? product.plans[0];
   const currentPrice = getPrice(selectedPlan?.price, region);
-  const normalPrice = getPrice(selectedPlan?.normalPrice ?? selectedPlan?.discount?.normalPrice, region);
-  const discount = selectedPlan?.discount;
-  const hasDiscount = discount?.enabled && discount.label;
-  const hasNormalPrice = !!normalPrice && normalPrice !== currentPrice;
   const currentImage = getAssetUrl(selectedPlan?.image || product.image);
   const whatsappLink = createWhatsAppLink(product, selectedPlan, region);
   const telegramLink = createTelegramLink(product, selectedPlan, region);
-  const isWhiteBg = whiteBgProductIds.has(product.id);
+
+  const handleAddToCart = () => {
+    addItem(product, selectedPlan, 1);
+  };
 
   return (
     <AnimatePresence>
@@ -83,7 +82,7 @@ export default function ProductModal({ product, region, initialPlanIndex = 0, on
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             onClick={onClose}
           />
 
@@ -93,242 +92,141 @@ export default function ProductModal({ product, region, initialPlanIndex = 0, on
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 40, scale: 0.97 }}
             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-            className="relative w-full sm:max-w-2xl max-h-[90vh] sm:max-h-[85vh] bg-white sm:rounded-3xl rounded-t-3xl overflow-hidden flex flex-col shadow-2xl"
+            className="relative w-full sm:max-w-xl max-h-[90vh] sm:max-h-[85vh] bg-white dark:bg-[#0c1527] text-slate-900 dark:text-white sm:rounded-3xl rounded-t-3xl overflow-hidden flex flex-col shadow-2xl border border-slate-200 dark:border-white/10"
           >
             {/* Close button */}
             <button
               onClick={onClose}
               id="product-modal-close"
-              className="absolute top-4 right-4 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white/90 backdrop-blur-sm shadow-md text-gray-500 hover:text-gray-900 hover:bg-white transition-all"
+              className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-white/10 text-slate-500 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all"
               aria-label="Close product details"
             >
               <X size={18} />
             </button>
 
-            {/* Header image - 1:1 friendly container */}
-            <div className={cn(
-              "relative flex-shrink-0 w-full flex items-center justify-center overflow-hidden max-h-64 sm:max-h-80",
-              isWhiteBg ? "bg-white" : "bg-slate-950"
-            )}>
-              <img
-                key={currentImage}
-                src={currentImage}
-                alt={`${product.name} - ${selectedPlan.name}`}
-                className="w-full h-full object-contain max-h-64 sm:max-h-80"
-                onError={(e) => { e.currentTarget.style.display = 'none'; }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-              {hasDiscount && (
-                <div className="absolute top-4 left-4">
-                  <DiscountBadge label={discount!.label!} />
-                </div>
-              )}
-              {/* Category chip */}
-              <div className="absolute bottom-4 left-4">
-                <span className="text-xs font-semibold text-white bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                  {categoryLabels[product.category] ?? product.category}
+            {/* Header image preview — 1:1 Aspect Ratio */}
+            <div className="relative flex-shrink-0 w-full flex items-center justify-center bg-slate-50 dark:bg-black/30 p-4 sm:p-5 border-b border-slate-100 dark:border-white/10">
+              <div className="w-40 h-40 sm:w-48 sm:h-48 aspect-square rounded-2xl overflow-hidden bg-slate-900/5 dark:bg-black/40 border border-slate-200/60 dark:border-white/10 shadow-inner flex items-center justify-center p-2">
+                <img
+                  src={currentImage}
+                  alt={product.name}
+                  className="w-full h-full object-contain filter drop-shadow-md"
+                />
+              </div>
+            </div>
+
+            {/* Scrollable details body */}
+            <div className="flex-1 overflow-y-auto p-5 sm:p-6 space-y-5">
+              <div>
+                <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 uppercase tracking-wider mb-2">
+                  {product.category}
                 </span>
+                <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white leading-tight">
+                  {product.name}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+                  {product.description || product.shortDescription}
+                </p>
               </div>
-            </div>
 
-            {/* Scrollable content */}
-            <div className="flex-1 overflow-y-auto">
-              <div className="p-6 sm:p-7">
-                {/* Name */}
-                <h2 className="text-2xl font-extrabold text-gray-900 mb-2">{product.name}</h2>
-                {product.description && (
-                  <p className="text-gray-500 text-sm leading-relaxed mb-5">{product.description}</p>
-                )}
-
-                {/* Plan selector */}
-                {product.plans.length > 1 && (
-                  <div className="mb-5">
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2.5">
-                      Select Plan
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {product.plans.map((plan, idx) => {
-                        const isPlanOutOfStock = plan.available === false;
-                        return (
-                          <button
-                            key={plan.id}
-                            id={`modal-plan-${plan.id}`}
-                            onClick={() => setSelectedPlanIndex(idx)}
-                            className={cn(
-                              'flex-1 min-w-[120px] px-4 py-3 rounded-xl border-2 text-sm font-semibold transition-all duration-200 text-left',
-                              selectedPlanIndex === idx
-                                ? isPlanOutOfStock
-                                  ? 'border-rose-500 bg-rose-50 text-rose-700'
-                                  : 'border-blue-500 bg-blue-50 text-blue-700'
-                                : isPlanOutOfStock
-                                  ? 'border-rose-200 text-rose-600/80 bg-rose-50/40 hover:border-rose-300'
-                                  : 'border-gray-200 text-gray-600 hover:border-blue-300 hover:bg-blue-50/50'
-                            )}
-                          >
-                            <div className="flex items-center justify-between gap-1 mb-0.5">
-                              <span className="font-bold">{plan.name}</span>
-                              {isPlanOutOfStock && (
-                                <span className="text-[10px] uppercase font-bold text-rose-600 bg-rose-100 px-1.5 py-0.5 rounded">
-                                  Out of Stock
-                                </span>
-                              )}
-                            </div>
-                            {plan.duration && (
-                              <div className="text-[11px] opacity-70 font-normal">{plan.duration}</div>
-                            )}
-                            {plan.description && (
-                              <div className="text-[11px] opacity-60 font-normal mt-0.5 line-clamp-1">{plan.description}</div>
-                            )}
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-
-                {/* Single plan description */}
-                {product.plans.length === 1 && selectedPlan.description && (
-                  <div className="mb-4 px-4 py-3 bg-blue-50 rounded-xl border border-blue-100">
-                    <p className="text-sm text-blue-700">{selectedPlan.description}</p>
-                  </div>
-                )}
-
-                {/* Duration + activation row */}
-                <div className="grid grid-cols-2 gap-3 mb-5">
-                  {selectedPlan.duration && (
-                    <div className="flex items-center gap-2.5 px-4 py-3 bg-gray-50 rounded-xl">
-                      <Clock size={16} className="text-gray-400 flex-shrink-0" />
-                      <div>
-                        <div className="text-[10px] text-gray-400 font-medium uppercase tracking-wide">Duration</div>
-                        <div className="text-sm font-semibold text-gray-800">{selectedPlan.duration}</div>
-                      </div>
-                    </div>
-                  )}
-                  {(selectedPlan.activation ?? product.activation) && (
-                    <div className="flex items-center gap-2.5 px-4 py-3 bg-gray-50 rounded-xl">
-                      <Zap size={16} className="text-yellow-500 flex-shrink-0" />
-                      <div>
-                        <div className="text-[10px] text-gray-400 font-medium uppercase tracking-wide">Activation</div>
-                        <div className="text-sm font-semibold text-gray-800 leading-tight">
-                          {selectedPlan.activation ?? product.activation}
+              {/* Plans selection (if more than 1) */}
+              {product.plans.length > 1 && (
+                <div>
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">
+                    Select Plan
+                  </p>
+                  <div className="grid grid-cols-2 gap-2">
+                    {product.plans.map((plan, idx) => (
+                      <button
+                        key={plan.id}
+                        onClick={() => setSelectedPlanIndex(idx)}
+                        className={cn(
+                          'p-3 rounded-2xl border text-left transition-all',
+                          selectedPlanIndex === idx
+                            ? 'border-blue-600 bg-blue-50/50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-300 shadow-sm'
+                            : 'border-slate-200 dark:border-white/10 hover:border-slate-300 text-slate-700 dark:text-slate-300'
+                        )}
+                      >
+                        <div className="font-extrabold text-xs">{plan.name}</div>
+                        <div className="text-[11px] font-bold mt-1 text-slate-900 dark:text-white">
+                          {getPrice(plan.price, region)}
                         </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                {/* Price */}
-                <div className="flex items-end gap-3 mb-5 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100">
-                  <div>
-                    <div className="text-[10px] text-blue-500 font-bold uppercase tracking-wider mb-1">
-                      {region === 'LK' ? '🇱🇰 Sri Lanka Price' : '🌍 Global Price'}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className={cn('text-2xl font-black text-gray-900', !isPlanAvailable && 'text-gray-400 line-through')}>
-                        {currentPrice || 'Contact for price'}
-                      </span>
-                      {hasNormalPrice && (
-                        <span className="text-base font-medium text-gray-400 line-through mb-0.5">
-                          {normalPrice}
-                        </span>
-                      )}
-                      {!isPlanAvailable && (
-                        <span className="ml-2 px-2.5 py-1 rounded-full text-xs font-bold uppercase bg-rose-100 text-rose-700 border border-rose-200">
-                          Out of Stock
-                        </span>
-                      )}
-                    </div>
-                    {hasDiscount && (
-                      <div className="text-xs text-green-600 font-semibold mt-1">
-                        🎉 {discount!.label} applied
-                      </div>
-                    )}
+                      </button>
+                    ))}
                   </div>
-                </div>
-
-                {/* Features */}
-                {product.features && product.features.length > 0 && (
-                  <div className="mb-5">
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                      What's Included
-                    </p>
-                    <ul className="space-y-2">
-                      {product.features.map((feature, i) => (
-                        <li key={i} className="flex items-start gap-2.5 text-sm text-gray-700">
-                          <CheckCircle size={15} className="text-green-500 flex-shrink-0 mt-0.5" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {/* Notes */}
-                {product.notes && product.notes.length > 0 && (
-                  <div className="mb-5 px-4 py-4 bg-amber-50 rounded-xl border border-amber-100">
-                    <p className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-2">
-                      Important Notes
-                    </p>
-                    <ul className="space-y-1.5">
-                      {product.notes.map((note, i) => (
-                        <li key={i} className="flex items-start gap-2 text-xs text-amber-700">
-                          <ChevronRight size={12} className="flex-shrink-0 mt-0.5" />
-                          {note}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Sticky CTA footer */}
-            <div className="flex-shrink-0 p-5 border-t border-gray-100 bg-white">
-              {product.available !== false ? (
-                isPlanAvailable ? (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <a
-                      href={whatsappLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      id={`modal-order-${product.id}-whatsapp`}
-                      className="flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md shadow-emerald-600/20 transition-all active:scale-98"
-                    >
-                      <WhatsAppIcon className="w-5 h-5 fill-white flex-shrink-0" />
-                      <span>Order via WhatsApp</span>
-                    </a>
-                    <a
-                      href={telegramLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      id={`modal-order-${product.id}-telegram`}
-                      className="flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-2xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm shadow-md shadow-sky-500/20 transition-all active:scale-98"
-                    >
-                      <TelegramIcon className="w-5 h-5 flex-shrink-0" />
-                      <span>Order via Telegram</span>
-                    </a>
-                  </div>
-                ) : (
-                  <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-3.5 bg-rose-50 rounded-2xl border border-rose-100">
-                    <div className="text-xs text-rose-700 text-center sm:text-left">
-                      <span className="font-bold">This plan is currently out of stock.</span> Inquire for restock updates or choose an available plan.
-                    </div>
-                    <a
-                      href={whatsappLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-shrink-0 flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white text-gray-700 hover:text-emerald-700 font-bold text-xs border border-gray-200 shadow-sm transition-all"
-                    >
-                      <WhatsAppColorIcon className="w-4 h-4 flex-shrink-0" />
-                      <span>Inquire Restock</span>
-                    </a>
-                  </div>
-                )
-              ) : (
-                <div className="text-center text-sm text-gray-500 py-2">
-                  This product is currently unavailable. Contact us on WhatsApp or Telegram for alternatives.
                 </div>
               )}
+
+              {/* Price & Activation Info Box */}
+              <div className="p-4 rounded-2xl bg-slate-50 dark:bg-black/30 border border-slate-200/80 dark:border-white/10 flex items-center justify-between">
+                <div>
+                  <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">
+                    Price
+                  </span>
+                  <div className="text-xl font-black text-slate-900 dark:text-white">
+                    {currentPrice}
+                  </div>
+                </div>
+
+                {selectedPlan.activation && (
+                  <div className="text-right">
+                    <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">
+                      Activation
+                    </span>
+                    <div className="text-xs font-bold text-blue-600 dark:text-blue-400">
+                      {selectedPlan.activation}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Features list */}
+              {product.features && product.features.length > 0 && (
+                <div>
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+                    What's Included
+                  </p>
+                  <ul className="space-y-2">
+                    {product.features.map((feat, i) => (
+                      <li key={i} className="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
+                        <CheckCircle size={14} className="text-emerald-500 mt-0.5 flex-shrink-0" />
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            {/* Action buttons footer */}
+            <div className="p-4 sm:p-5 border-t border-slate-200 dark:border-white/10 bg-slate-50/50 dark:bg-[#070e1c] flex flex-col sm:flex-row gap-2.5">
+              <button
+                onClick={handleAddToCart}
+                className="flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-200 text-white dark:text-slate-900 font-extrabold text-xs shadow-sm transition-all"
+              >
+                <ShoppingCart size={15} />
+                <span>Add to Cart</span>
+              </button>
+
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs shadow-md shadow-emerald-600/20 transition-all"
+              >
+                <WhatsAppIcon className="w-4 h-4 fill-white flex-shrink-0" />
+                <span>Order on WhatsApp</span>
+              </a>
+
+              <a
+                href={telegramLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs shadow-md shadow-blue-600/20 transition-all"
+              >
+                <TelegramIcon className="w-4 h-4 fill-white flex-shrink-0" />
+                <span>Order on Telegram</span>
+              </a>
             </div>
           </motion.div>
         </motion.div>

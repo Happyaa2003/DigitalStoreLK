@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="adBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a0010"/>
+      <stop offset="50%" stop-color="#0a0515"/>
+      <stop offset="100%" stop-color="#030208"/>
+    </linearGradient>
+    <radialGradient id="adRadial" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e11d48" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#9333ea" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0a0515" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="adGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff0000"/>
+      <stop offset="25%" stop-color="#ff6600"/>
+      <stop offset="50%" stop-color="#ff00aa"/>
+      <stop offset="75%" stop-color="#aa00ff"/>
+      <stop offset="100%" stop-color="#00c8ff"/>
+    </linearGradient>
+    <filter id="adGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#ff00aa" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#adBg)"/>
+  <circle cx="200" cy="200" r="160" fill="url(#adRadial)"/>
+
+  <!-- 3D Adobe Infinity Ribbon -->
+  <g filter="url(#adGlow)" transform="translate(130, 130) scale(1.15)">
+    <!-- Outer thick ribbon loop -->
+    <path d="M60 15 C30 15, 10 38, 10 60 C10 82, 30 105, 60 105 C90 105, 110 82, 110 60 C110 38, 90 15, 60 15 Z" fill="none" stroke="url(#adGrad)" stroke-width="26" stroke-linecap="round"/>
+    <!-- Inner cutouts for infinity loop depth -->
+    <path d="M40 38 C50 28, 70 28, 80 38 C90 48, 90 72, 80 82 C70 92, 50 92, 40 82 C30 72, 30 48, 40 38 Z" fill="#ffffff" fill-opacity="0.95"/>
+    <circle cx="60" cy="60" r="18" fill="#0a0515"/>
+  </g>
+</svg>

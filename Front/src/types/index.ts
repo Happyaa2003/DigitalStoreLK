@@ -27,6 +27,8 @@ export interface ProductPlan {
   available?: boolean;
 }
 
+export type Plan = ProductPlan;
+
 export interface Product {
   id: string;
   name: string;

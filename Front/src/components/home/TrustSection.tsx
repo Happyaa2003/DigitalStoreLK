@@ -42,7 +42,7 @@ const reasons = [
 
 export default function TrustSection() {
   return (
-    <section className="section-pad bg-white">
+    <section className="section-pad" style={{ background: '#0a1020' }}>
       <div className="container-main">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ export default function TrustSection() {
           className="text-center mb-12"
         >
           <div className="section-label mb-3">Why Choose Us</div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
             Why DigitalStoreLK?
           </h2>
           <p className="text-gray-500 max-w-lg mx-auto">
@@ -67,13 +67,13 @@ export default function TrustSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.07 }}
-              className="group flex gap-5 p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-md hover:border-gray-200 transition-all duration-300"
+              className="group flex gap-5 p-6 rounded-2xl border border-white/6 bg-white/3 hover:bg-white/5 hover:border-blue-500/20 transition-all duration-300"
             >
               <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${reason.color} flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300`}>
                 <reason.icon size={22} className="text-white" />
               </div>
               <div>
-                <h3 className="text-base font-bold text-gray-900 mb-1.5">{reason.title}</h3>
+                <h3 className="text-base font-bold text-white mb-1.5">{reason.title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">{reason.description}</p>
               </div>
             </motion.div>

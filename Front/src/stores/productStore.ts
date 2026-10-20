@@ -4,8 +4,8 @@ import type { Product } from '@/types';
 
 const GITHUB_RAW_URL =
   'https://raw.githubusercontent.com/Happyaa2003/DigitalStoreLK/main/Front/src/data/products.json';
-const CACHE_KEY = 'digitalstorelk-cached-products';
-const CACHE_TIME_KEY = 'digitalstorelk-cached-products-time';
+const CACHE_KEY = 'digitalstorelk-cached-products-v3';
+const CACHE_TIME_KEY = 'digitalstorelk-cached-products-time-v3';
 
 // 1. Initial cached products from localStorage or bundled default
 function getInitialProducts(): Product[] {
@@ -59,6 +59,13 @@ export const useProductStore = create<ProductStore>((set, get) => ({
 
       const data = await res.json();
       if (Array.isArray(data) && data.length > 0) {
+        // Only accept remote data if it has the updated SVG assets
+        const hasNewAssets = data.some((p: Product) => p.image && p.image.endsWith('.svg'));
+        if (!hasNewAssets) {
+          set({ isLoading: false });
+          return;
+        }
+
         set({
           products: data as Product[],
           isLoading: false,

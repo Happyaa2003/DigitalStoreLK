@@ -23,6 +23,8 @@ import AdminBranding from '@/pages/admin/AdminBranding';
 import AdminPayments from '@/pages/admin/AdminPayments';
 import AdminMedia from '@/pages/admin/AdminMedia';
 
+import CartDrawer from '@/components/cart/CartDrawer';
+
 function PublicLayout() {
   return (
     <>
@@ -38,6 +40,7 @@ function PublicLayout() {
         </Routes>
       </main>
       <Footer />
+      <CartDrawer />
       <WhatsAppButton />
     </>
   );
