@@ -18,7 +18,7 @@ export default defineConfig(() => {
     },
     server: {
       watch: {
-        ignored: ['**/Products/**', '**/Accerts/**', '**/.git/**'],
+        ignored: ['**/Products/**', '**/Accerts/**', '**/public/assets/**', '**/.git/**'],
       },
     },
   }

@@ -42,8 +42,8 @@ export default function Hero() {
             loading="eager"
           />
 
-          {/* Action Buttons overlaid on top of the image in the exact space below the 3 value bullets */}
-          <div className="absolute left-[5.4%] bottom-[10%] sm:bottom-[13%] md:bottom-[15%] lg:bottom-[17%] flex items-center gap-1.5 sm:gap-3 md:gap-4 z-20">
+          {/* Action Buttons overlaid on top of the image — positioned lower to avoid overlapping text above */}
+          <div className="absolute left-[5.4%] bottom-[3%] sm:bottom-[4%] md:bottom-[5%] lg:bottom-[6%] flex items-center gap-1.5 sm:gap-3 md:gap-4 z-20">
             {/* Primary CTA: Browse Products */}
             <a
               href="#trending-products"
