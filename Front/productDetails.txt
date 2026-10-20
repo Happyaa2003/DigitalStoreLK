@@ -15,30 +15,39 @@ No.  Product Name                    Category            Starting Price (LK / GL
 --------------------------------------------------------------------------------
 1.   ChatGPT Plus                    AI & Productivity   LKR 3,200/= | $9.70
 2.   Windows 11 Pro                  Developer Tools     LKR 500/= | $1.50
-3.   Coursera Plus                   Education           LKR 1,200/= | $3.60
+3.   Coursera Plus                   Education           LKR 490/= | $1.48
 4.   Adobe Creative Cloud            Subscriptions       LKR 2,500/= | $7.50
 5.   Microsoft 365 Family            Developer Tools     LKR 6,500/= | $19.70
-6.   Google AI Pro                   AI & Productivity   LKR 790/= | $2.40
+6.   Google Gemini AI Pro            AI & Productivity   LKR 790/= | $2.40
 7.   Claude Max                      AI & Productivity   LKR 16,500/= | $50.00
 8.   Claude Pro                      AI & Productivity   LKR 40,000/= | $121.21
 9.   ChatGPT Pro                     AI & Productivity   LKR 16,500/= | $50.00
 10.  Cursor                          Developer Tools     LKR 3,800/= | $11.52
 11.  SuperGrok                       AI & Productivity   LKR 19,500/= | $59.09
-12.  Udemy Personal Plan             Education           LKR 3,000/= | $9.09
+12.  Udemy Personal Plan             Education           LKR 1,500/= | $4.55
 13.  Lovable Pro Lite                Developer Tools     LKR 4,900/= | $14.85
-14.  n8n Starter                     Developer Tools     LKR 15,000/= | $45.45
+14.  n8n Starter                     Developer Tools     LKR 5,900/= | $17.88
 15.  Xbox Game Pass Ultimate         Gaming              LKR 5,000/= | $15.15
 16.  GTA 6 — PS5                     Gaming              LKR 16,500/= | $50.00
 17.  GTA 6 — Xbox Series X|S         Gaming              LKR 16,500/= | $50.00
 18.  Windows 10 Pro                  Developer Tools     ~LKR 495/= | $1.50
 19.  Office 2024 LTSC Pro Plus       Developer Tools     LKR 790/= | $2.40
 20.  PS Wallet Balance               PS Wallet           Contact for Price | Contact for Price
-21.  Canva Pro                       Subscriptions       LKR 500/= | $1.52
+21.  Canva Pro                       Subscriptions       LKR 300/= | $0.91
 22.  Windows Server 2025 Datacenter  Developer Tools     LKR 990/= | $3.00
-23.  LinkedIn Premium                Subscriptions       LKR 500/= | $1.52
-24.  Netflix Premium 4K UHD          Subscriptions       LKR 700/= | $2.12
-25.  CapCut Pro Team                 Subscriptions       LKR 990/= | $3.00
-26.  Autodesk (46+ Products)         Developer Tools     LKR 1,500/= | $4.55
+23.  LinkedIn Premium Career & Busi  Subscriptions       LKR 790/= | $2.40
+24.  Netflix Premium 4K UHD          Subscriptions       LKR 990/= | $3.00
+25.  CapCut Pro Team                 Subscriptions       LKR 700/= | $2.12
+26.  Autodesk (46+ Products)         Developer Tools     LKR 2,900/= | $8.79
+27.  Apple TV+                       Subscriptions       LKR 3,900/= | $11.82
+28.  Adobe Express Premium           Subscriptions       LKR 990/= | $3.00
+29.  Amazon Prime Video              Subscriptions       LKR 490/= | $1.48
+30.  HBO Max Premium (Max)           Subscriptions       LKR 990/= | $3.00
+31.  Duolingo Super (Premium)        Education           LKR 990/= | $3.00
+32.  NordVPN Premium                 PS Wallet           LKR 1,390/= | $4.21
+33.  Perplexity Pro AI               AI & Productivity   LKR 2,500/= | $7.58
+34.  Steam Gaming Account (Random G  Gaming              LKR 990/= | $3.00
+35.  ChatGPT K12 Plus+ (Study Buddy  Education           LKR 1,500/= | $4.55
 
 
 ================================================================================
@@ -164,39 +173,31 @@ Full Description:
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: 12 Months (Plan ID: coursera-plus-12m)
-  Duration:             12 Months
-  Sri Lanka Price:      LKR 1,200/=
-  Global Price:         $3.60
-  Plan Activation:      Account Activation
-  Plan Description:     Coursera Plus 12-Month access with unlimited certificate courses
+  Plan 1: Ready-Made — 1 Month (Plan ID: coursera-readymade-1m)
+  Duration:             1 Month
+  Sri Lanka Price:      LKR 490/=
+  Global Price:         $1.48
+  Plan Activation:      Ready-Made Account
+  Plan Availability:    Available
+  Plan Description:     Pre-configured ready-to-learn account delivered instantly with 1-Month full access
   Plan Specific Image:  /assets/products/coursera-1-year.png
   ----------------------------------------------------------------------------
-  Plan 2: Ready-Made — 3 Months Warranty (Plan ID: coursera-ready-made-3m)
-  Duration:             1 Year (3M Warranty)
+  Plan 2: Ready-Made — 12 Months (Plan ID: coursera-readymade-12m)
+  Duration:             12 Months
   Sri Lanka Price:      LKR 2,500/=
   Global Price:         $7.58
   Plan Activation:      Ready-Made Account
   Plan Availability:    Available
-  Plan Description:     Pre-configured ready-to-learn account delivered instantly with 3 Months Warranty
+  Plan Description:     Pre-configured ready-to-learn account delivered instantly with 12 Months warranty
   Plan Specific Image:  /assets/products/coursera-1-year.png
   ----------------------------------------------------------------------------
-  Plan 3: Ready-Made — 12 Months Warranty (Plan ID: coursera-ready-made-12m)
-  Duration:             1 Year (12M Warranty)
-  Sri Lanka Price:      LKR 3,200/=
-  Global Price:         $9.70
-  Plan Activation:      Ready-Made Account
-  Plan Availability:    Available
-  Plan Description:     Pre-configured ready-to-learn account delivered instantly with 12 Months (1 Year) Warranty
-  Plan Specific Image:  /assets/products/coursera-1-year.png
-  ----------------------------------------------------------------------------
-  Plan 4: Own Email — 1 Year (Plan ID: coursera-own-email-1y)
+  Plan 3: Own Email Activation — 1 Year (Plan ID: coursera-own-email-1y)
   Duration:             1 Year
-  Sri Lanka Price:      LKR 4,900/=
-  Global Price:         $14.85
+  Sri Lanka Price:      LKR 5,000/=
+  Global Price:         $15.15
   Plan Activation:      Own Email Activation
-  Plan Availability:    Unavailable
-  Plan Description:     Activated on your own personal email address (Currently Out of Stock)
+  Plan Availability:    Available
+  Plan Description:     Activated directly on your own personal email address with full certificates in your name
   Plan Specific Image:  /assets/products/coursera-1-year.png
   ----------------------------------------------------------------------------
 
@@ -317,7 +318,7 @@ Key Features & Inclusions:
 
 
 ################################################################################
-PRODUCT #6: GOOGLE AI PRO
+PRODUCT #6: GOOGLE GEMINI AI PRO
 ################################################################################
 Product ID:           google-ai-pro
 Category:             AI & Productivity (ai)
@@ -336,7 +337,7 @@ Full Description:
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: 18 Months (Plan ID: google-ai-pro-18m)
+  Plan 1: 18 Months Access (Plan ID: google-ai-pro-18m)
   Duration:             18 Months
   Sri Lanka Price:      LKR 790/=
   Global Price:         $2.40
@@ -616,10 +617,11 @@ AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
   Plan 1: 1 Month — Private Account (Plan ID: udemy-private-1m)
   Duration:             1 Month
-  Sri Lanka Price:      LKR 3,000/=
-  Global Price:         $9.09
+  Sri Lanka Price:      LKR 1,500/=
+  Global Price:         $4.55
   Plan Activation:      Private Account
-  Plan Description:     100% private account with personal course progress
+  Plan Availability:    Available
+  Plan Description:     100% private account with personal course progress across 11,000+ top courses
   Plan Specific Image:  /assets/products/udemy-1month-private-acc.png
   ----------------------------------------------------------------------------
 
@@ -650,12 +652,13 @@ Full Description:
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: 1 Month (Plan ID: lovable-1m-code)
-  Duration:             1 Month
+  Plan 1: 12 Months Access (Plan ID: lovable-12m-code)
+  Duration:             12 Months
   Sri Lanka Price:      LKR 4,900/=
   Global Price:         $14.85
   Plan Activation:      Coupon Code
-  Plan Description:     Official 1-month coupon code for Lovable Pro Lite
+  Plan Availability:    Available
+  Plan Description:     Official 12-month access code for Lovable Pro Lite full-stack AI builder
   Plan Specific Image:  /assets/products/lovable-1-mon-code.png
   ----------------------------------------------------------------------------
 
@@ -686,12 +689,13 @@ Full Description:
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: 12 Months (Plan ID: n8n-12m-code)
+  Plan 1: 12 Months Access (Plan ID: n8n-12m-code)
   Duration:             12 Months
-  Sri Lanka Price:      LKR 15,000/=
-  Global Price:         $45.45
+  Sri Lanka Price:      LKR 5,900/=
+  Global Price:         $17.88
   Plan Activation:      Coupon Code
-  Plan Description:     12 months cloud starter plan coupon code
+  Plan Availability:    Available
+  Plan Description:     12 Months n8n Starter cloud workflow automation plan coupon code
   Plan Specific Image:  /assets/products/n8n-starter-for-12-months-coupen-code.png
   ----------------------------------------------------------------------------
 
@@ -987,14 +991,22 @@ Full Description:
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: Private Account — 1 Year (Plan ID: canva-pro-private-1y)
+  Plan 1: Own Email Activation — 1 Year (Plan ID: canva-pro-own-email-1y)
   Duration:             1 Year
-  Sri Lanka Price:      LKR 500/=
-  Global Price:         $1.52
-  Original/Normal Price: LK LKR 990/= | GLOBAL $3.00
-  Discount Offer:       49% OFF
-  Plan Activation:      Private Account Details
-  Plan Description:     1-Year 100% Private Original Pro & Business account with full email access & invite support
+  Sri Lanka Price:      LKR 300/=
+  Global Price:         $0.91
+  Plan Activation:      Own Email Activation
+  Plan Availability:    Available
+  Plan Description:     Canva Pro 1 Year activated directly on your own personal email address
+  Plan Specific Image:  /assets/products/canva-pro.png
+  ----------------------------------------------------------------------------
+  Plan 2: Admin Panel (500 Members) — 1 Year (Plan ID: canva-pro-admin-panel-500m-1y)
+  Duration:             1 Year
+  Sri Lanka Price:      LKR 1,500/=
+  Global Price:         $4.55
+  Plan Activation:      Admin Panel Access
+  Plan Availability:    Available
+  Plan Description:     Canva Pro full Admin Panel access for 1 Year — invite and manage up to 500 team members
   Plan Specific Image:  /assets/products/canva-pro.png
   ----------------------------------------------------------------------------
 
@@ -1050,7 +1062,7 @@ Key Features & Inclusions:
 
 
 ################################################################################
-PRODUCT #23: LINKEDIN PREMIUM
+PRODUCT #23: LINKEDIN PREMIUM CAREER & BUSINESS
 ################################################################################
 Product ID:           linkedin-premium
 Category:             Subscriptions (subscriptions)
@@ -1069,23 +1081,32 @@ Full Description:
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: Own Account — 3 Months (Plan ID: linkedin-premium-3m)
+  Plan 1: Own Account — 3 Months (Plan ID: linkedin-own-3m)
   Duration:             3 Months
-  Sri Lanka Price:      LKR 500/=
-  Global Price:         $1.52
+  Sri Lanka Price:      LKR 790/=
+  Global Price:         $2.40
   Plan Activation:      Own Account Activation
   Plan Availability:    Available
-  Plan Description:     3 Months LinkedIn Premium activated on your own personal account (Subject to eligibility conditions)
+  Plan Description:     3 Months LinkedIn Premium activated directly on your own personal LinkedIn account
   Plan Specific Image:  /assets/products/linkedin-premium-career-boost.png
   ----------------------------------------------------------------------------
-  Plan 2: Own Account — 12 Months (Plan ID: linkedin-premium-12m)
-  Duration:             12 Months
-  Sri Lanka Price:      LKR 35,000/=
-  Global Price:         $106.06
+  Plan 2: Own Account Career — 1 Year (Plan ID: linkedin-own-career-1y)
+  Duration:             1 Year
+  Sri Lanka Price:      LKR 9,500/=
+  Global Price:         $28.79
   Plan Activation:      Own Account Activation
   Plan Availability:    Available
-  Plan Description:     12 Months (1 Year) full LinkedIn Premium upgrade activated directly on your own personal account
-  Plan Specific Image:  /assets/products/linkedin-premium-career-boost.png
+  Plan Description:     1 Year LinkedIn Premium Career plan activated directly on your own personal account
+  Plan Specific Image:  /assets/products/linkedin-premium.png
+  ----------------------------------------------------------------------------
+  Plan 3: Own Account Business — 1 Year (Plan ID: linkedin-own-business-1y)
+  Duration:             1 Year
+  Sri Lanka Price:      LKR 15,500/=
+  Global Price:         $46.97
+  Plan Activation:      Own Account Activation
+  Plan Availability:    Available
+  Plan Description:     1 Year LinkedIn Premium Business plan activated directly on your own personal account with unlimited browsing & business insights
+  Plan Specific Image:  /assets/products/linkedin-premium.png
   ----------------------------------------------------------------------------
 
 Key Features & Inclusions:
@@ -1130,12 +1151,12 @@ Full Description:
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: 1 Device — 1 Month (Plan ID: netflix-4k-1device-1m)
+  Plan 1: 1 Profile — 1 Month (Plan ID: netflix-4k-1device-1m)
   Duration:             1 Month
-  Sri Lanka Price:      LKR 700/=
-  Global Price:         $2.12
+  Sri Lanka Price:      LKR 990/=
+  Global Price:         $3.00
   Plan Activation:      Email:Password:LoginLink
-  Plan Description:     1 Device connectable. 4K Ultra HD streaming with instant login credentials.
+  Plan Description:     1 Profile (1 Device) 4K Ultra HD streaming with instant login credentials.
   Plan Specific Image:  /assets/products/netflix.png
   ----------------------------------------------------------------------------
   Plan 2: 2 Devices — 1 Month (Plan ID: netflix-4k-2devices-1m)
@@ -1205,7 +1226,7 @@ Badge / Tag:          CREATOR PICK
 Status:               AVAILABLE IN STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        33
-Image Asset:          /assets/products/capcut.png
+Image Asset:          /assets/products/capcut-pro-bigger-creativity.png
 Activation Type:      Team Invitation / Personal Access Details
 
 Short Description:
@@ -1216,13 +1237,32 @@ Full Description:
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: 1-Month Personal Access (Plan ID: capcut-pro-team-1m)
+  Plan 1: 1 Month — Private Account (Plan ID: capcut-private-1m)
   Duration:             1 Month
-  Sri Lanka Price:      LKR 990/=
-  Global Price:         $3.00
-  Plan Activation:      Team Invite / Account Access
-  Plan Description:     CapCut Pro Team access for personal use. 100% No Automatic Renewal. Full warranty.
-  Plan Specific Image:  /assets/products/capcut.png
+  Sri Lanka Price:      LKR 700/=
+  Global Price:         $2.12
+  Plan Activation:      Private Account
+  Plan Availability:    Available
+  Plan Description:     CapCut Pro 1-Month private account. Watermark-free 4K export & full VIP assets.
+  Plan Specific Image:  /assets/products/capcut-pro-bigger-creativity.png
+  ----------------------------------------------------------------------------
+  Plan 2: 6 Months — Private Account (Plan ID: capcut-private-6m)
+  Duration:             6 Months
+  Sri Lanka Price:      LKR 4,000/=
+  Global Price:         $12.12
+  Plan Activation:      Private Account
+  Plan Availability:    Available
+  Plan Description:     CapCut Pro 6-Month private account. Full VIP effects, 4K export & AI video tools.
+  Plan Specific Image:  /assets/products/capcut-pro-bigger-creativity.png
+  ----------------------------------------------------------------------------
+  Plan 3: 12 Months — Private Account (Plan ID: capcut-private-12m)
+  Duration:             12 Months
+  Sri Lanka Price:      LKR 8,000/=
+  Global Price:         $24.24
+  Plan Activation:      Private Account
+  Plan Availability:    Available
+  Plan Description:     CapCut Pro 12-Month (1 Year) private account with full warranty throughout active period.
+  Plan Specific Image:  /assets/products/capcut-pro-bigger-creativity.png
   ----------------------------------------------------------------------------
 
 Key Features & Inclusions:
@@ -1260,20 +1300,22 @@ Full Description:
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: 1 Year Access (Plan ID: autodesk-1y)
+  Plan 1: 3 Years Access (34 Apps) (Plan ID: autodesk-3y-34apps)
+  Duration:             3 Years
+  Sri Lanka Price:      LKR 2,900/=
+  Global Price:         $8.79
+  Plan Activation:      Own Email Activation
+  Plan Availability:    Available
+  Plan Description:     3-Year official private Autodesk access for 34 apps activated directly on your personal email
+  Plan Specific Image:  /assets/products/autodesk.png
+  ----------------------------------------------------------------------------
+  Plan 2: 1 Year Access (Plan ID: autodesk-1y)
   Duration:             1 Year
   Sri Lanka Price:      LKR 1,500/=
   Global Price:         $4.55
   Plan Activation:      Own Email Activation
+  Plan Availability:    Available
   Plan Description:     1-Year official private Autodesk access for 46+ apps activated on your personal email
-  Plan Specific Image:  /assets/products/autodesk.png
-  ----------------------------------------------------------------------------
-  Plan 2: 3 Years Access (Plan ID: autodesk-3y)
-  Duration:             3 Years
-  Sri Lanka Price:      LKR 4,000/=
-  Global Price:         $12.12
-  Plan Activation:      Own Email Activation
-  Plan Description:     3-Year extended official private Autodesk access for 46+ apps activated on your personal email
   Plan Specific Image:  /assets/products/autodesk.png
   ----------------------------------------------------------------------------
 
@@ -1291,6 +1333,357 @@ Important Notes, Instructions & Warranty Policies:
   * Please make sure the email you provide has a registered Autodesk account
   * After ordering, send your Autodesk email address via WhatsApp or Telegram
   * Activation takes just 5 minutes with zero configuration needed
+
+
+################################################################################
+PRODUCT #27: APPLE TV+
+################################################################################
+Product ID:           apple-tv
+Category:             Subscriptions (subscriptions)
+Badge / Tag:          STREAMING
+Status:               AVAILABLE IN STOCK
+Featured:             Yes (Homepage Featured)
+Display Order:        36
+Image Asset:          /assets/products/apple-tv-streaming-experience.png
+Activation Type:      Own Apple ID Activation
+
+Short Description:
+  Apple TV+ 12-Month full streaming access on your own account. Award-winning Apple Originals in 4K HDR.
+
+Full Description:
+  Stream award-winning Apple Originals, blockbuster movies, hit series, documentaries, and live sports in stunning 4K HDR with spatial audio on Apple TV+. Activated directly on your own personal Apple ID.
+
+AVAILABLE PLANS & PRICING:
+  ----------------------------------------------------------------------------
+  Plan 1: Own Account Activation — 12 Months (Plan ID: apple-tv-own-12m)
+  Duration:             12 Months
+  Sri Lanka Price:      LKR 3,900/=
+  Global Price:         $11.82
+  Plan Activation:      Own Account Activation
+  Plan Availability:    Available
+  Plan Description:     12-Month Apple TV+ subscription activated directly on your own personal Apple ID account.
+  Plan Specific Image:  /assets/products/apple-tv-streaming-experience.png
+  ----------------------------------------------------------------------------
+
+Key Features & Inclusions:
+  • Apple Originals, Emmy-winning series & hit movies
+  • 4K HDR streaming with Dolby Vision & Dolby Atmos
+  • 12-Month full subscription on your own Apple ID
+  • Watch on Apple TV app, Smart TVs, iPhone, iPad, Mac & PC
+  • Family Sharing support & offline downloads
+
+
+################################################################################
+PRODUCT #28: ADOBE EXPRESS PREMIUM
+################################################################################
+Product ID:           adobe-express
+Category:             Subscriptions (subscriptions)
+Badge / Tag:          CREATIVE
+Status:               AVAILABLE IN STOCK
+Featured:             Yes (Homepage Featured)
+Display Order:        37
+Image Asset:          /assets/products/adobe-express-creative-studio-banner.png
+Activation Type:      Account Activation
+
+Short Description:
+  Create stunning social graphics, flyers, videos & animations with Adobe Express Premium 12 Months.
+
+Full Description:
+  Adobe Express Premium gives you complete creative freedom with thousands of beautiful templates, Adobe Stock photos, generative AI powered by Adobe Firefly, premium fonts, and one-click resizing for 12 full months.
+
+AVAILABLE PLANS & PRICING:
+  ----------------------------------------------------------------------------
+  Plan 1: 12 Months Access (Plan ID: adobe-express-12m)
+  Duration:             12 Months
+  Sri Lanka Price:      LKR 990/=
+  Global Price:         $3.00
+  Plan Activation:      Account Activation
+  Plan Availability:    Available
+  Plan Description:     12-Month Adobe Express Premium access with generative AI tools and full template library.
+  Plan Specific Image:  /assets/products/adobe-express-creative-studio-banner.png
+  ----------------------------------------------------------------------------
+
+Key Features & Inclusions:
+  • All Adobe Express Premium tools & 200M+ Adobe Stock assets
+  • Generative AI tools powered by Adobe Firefly
+  • One-click background remover & resize to any social size
+  • 20,000+ Adobe Fonts & custom brand kit management
+  • 12-month full access & priority support
+
+
+################################################################################
+PRODUCT #29: AMAZON PRIME VIDEO
+################################################################################
+Product ID:           prime-video
+Category:             Subscriptions (subscriptions)
+Badge / Tag:          PRIME
+Status:               AVAILABLE IN STOCK
+Featured:             Yes (Homepage Featured)
+Display Order:        38
+Image Asset:          /assets/products/prime-video.jpg
+Activation Type:      Login Credentials
+
+Short Description:
+  Stream Prime Originals, blockbuster movies & hit TV shows in 4K UHD. 1 Profile access.
+
+Full Description:
+  Amazon Prime Video gives you unlimited streaming of exclusive Amazon Originals, movies, and TV shows in crystal clear 4K Ultra HD. Choose from 1 Month or 6 Months 1-Profile access.
+
+AVAILABLE PLANS & PRICING:
+  ----------------------------------------------------------------------------
+  Plan 1: 1 Profile — 1 Month (Plan ID: prime-video-1m-1profile)
+  Duration:             1 Month
+  Sri Lanka Price:      LKR 490/=
+  Global Price:         $1.48
+  Plan Activation:      Login Credentials
+  Plan Availability:    Available
+  Plan Description:     1 Profile access for 1 Month. 4K Ultra HD streaming with personal watchlist.
+  Plan Specific Image:  /assets/products/prime-video.jpg
+  ----------------------------------------------------------------------------
+  Plan 2: 1 Profile — 6 Months Premium (Plan ID: prime-video-6m-1profile)
+  Duration:             6 Months
+  Sri Lanka Price:      LKR 1,490/=
+  Global Price:         $4.52
+  Plan Activation:      Login Credentials
+  Plan Availability:    Available
+  Plan Description:     1 Profile access for 6 Months. High stability 4K Ultra HD streaming with warranty.
+  Plan Specific Image:  /assets/products/prime-video.jpg
+  ----------------------------------------------------------------------------
+
+Key Features & Inclusions:
+  • Amazon Originals, The Boys, Rings of Power, Citadel & more
+  • 4K Ultra HD & HDR streaming quality
+  • Supported on Smart TVs, Mobile, Tablets, PC & TV Sticks
+  • Private individual profile with PIN protection
+  • Full warranty throughout the subscription duration
+
+
+################################################################################
+PRODUCT #30: HBO MAX PREMIUM (MAX)
+################################################################################
+Product ID:           hbo-max-premium
+Category:             Subscriptions (subscriptions)
+Badge / Tag:          HBO MAX
+Status:               AVAILABLE IN STOCK
+Featured:             Yes (Homepage Featured)
+Display Order:        39
+Image Asset:          /assets/products/hbo-max-premium.jpg
+Activation Type:      Login Credentials
+
+Short Description:
+  Stream HBO, Warner Bros., DC, and Discovery in 4K HDR. 1 Profile 1 Month access.
+
+Full Description:
+  Max brings together the iconic worlds of HBO, Warner Bros., the DC Universe, Cartoon Network, and HGTV. Enjoy Game of Thrones, House of the Dragon, Succession, Dune, and more in 4K Ultra HD with Dolby Atmos.
+
+AVAILABLE PLANS & PRICING:
+  ----------------------------------------------------------------------------
+  Plan 1: 1 Profile — 1 Month (Plan ID: hbo-max-1profile-1m)
+  Duration:             1 Month
+  Sri Lanka Price:      LKR 990/=
+  Global Price:         $3.00
+  Plan Activation:      Login Credentials
+  Plan Availability:    Available
+  Plan Description:     1 Profile access for 1 Month. 4K Ultra HD streaming with private profile.
+  Plan Specific Image:  /assets/products/hbo-max-premium.jpg
+  ----------------------------------------------------------------------------
+
+Key Features & Inclusions:
+  • HBO Originals: House of the Dragon, The Last of Us, Succession
+  • Warner Bros. blockbusters & entire DC Universe
+  • 4K Ultra HD, HDR10 & Dolby Atmos surround sound
+  • 1 Profile personal access with your own watchlist
+  • Full warranty & instant delivery via WhatsApp/Telegram
+
+
+################################################################################
+PRODUCT #31: DUOLINGO SUPER (PREMIUM)
+################################################################################
+Product ID:           duolingo-premium
+Category:             Education (education)
+Badge / Tag:          LANGUAGES
+Status:               AVAILABLE IN STOCK
+Featured:             Yes (Homepage Featured)
+Display Order:        40
+Image Asset:          /assets/products/duolingo-premium.jpg
+Activation Type:      Account / Family Invite Activation
+
+Short Description:
+  Learn languages faster with Unlimited Hearts, No Ads, and Mistakes Review for 12 Months.
+
+Full Description:
+  Super Duolingo eliminates all ads and gives you Unlimited Hearts so you can learn at your own pace without interruption. Includes Practice Hub, Personalized Practice, and unlimited test-outs for 12 months.
+
+AVAILABLE PLANS & PRICING:
+  ----------------------------------------------------------------------------
+  Plan 1: 12 Months Access (Plan ID: duolingo-premium-12m)
+  Duration:             12 Months
+  Sri Lanka Price:      LKR 990/=
+  Global Price:         $3.00
+  Plan Activation:      Account / Family Invite Activation
+  Plan Availability:    Available
+  Plan Description:     12 Months Super Duolingo access with Unlimited Hearts and zero ads.
+  Plan Specific Image:  /assets/products/duolingo-premium.jpg
+  ----------------------------------------------------------------------------
+
+Key Features & Inclusions:
+  • Unlimited Hearts — practice as much as you want with no limits
+  • Ad-free experience — learn without interruptions
+  • Personalized Practice Hub & Mistakes Review
+  • Unlimited test-outs to skip levels faster
+  • 12-Month full access with warranty
+
+
+################################################################################
+PRODUCT #32: NORDVPN PREMIUM
+################################################################################
+Product ID:           nord-vpn
+Category:             PS Wallet (wallet)
+Badge / Tag:          SECURITY
+Status:               AVAILABLE IN STOCK
+Featured:             Yes (Homepage Featured)
+Display Order:        41
+Image Asset:          /assets/products/nord-vpn.jpg
+Activation Type:      Account Credentials
+
+Short Description:
+  Ultra-fast VPN with Threat Protection, malware blocking & 6,000+ servers worldwide for 3 Months.
+
+Full Description:
+  NordVPN is the world leading VPN service offering top-grade encryption, lightning-fast NordLynx protocol, Threat Protection Pro against malware and phishing, and high-speed streaming server access for 3 Months.
+
+AVAILABLE PLANS & PRICING:
+  ----------------------------------------------------------------------------
+  Plan 1: 3 Months Access (Plan ID: nordvpn-3m)
+  Duration:             3 Months
+  Sri Lanka Price:      LKR 1,390/=
+  Global Price:         $4.21
+  Plan Activation:      Account Credentials
+  Plan Availability:    Available
+  Plan Description:     3-Month NordVPN Premium subscription with global high-speed servers.
+  Plan Specific Image:  /assets/products/nord-vpn.jpg
+  ----------------------------------------------------------------------------
+
+Key Features & Inclusions:
+  • 6,000+ ultra-fast servers in 110+ countries
+  • Threat Protection Pro: blocks ads, trackers & malware
+  • No-logs policy independently audited
+  • Bypass geo-restrictions for Netflix, BBC, Hulu & streaming
+  • 3-Month full warranty & support
+
+
+################################################################################
+PRODUCT #33: PERPLEXITY PRO AI
+################################################################################
+Product ID:           perplexity-pro
+Category:             AI & Productivity (ai)
+Badge / Tag:          AI RESEARCH
+Status:               AVAILABLE IN STOCK
+Featured:             Yes (Homepage Featured)
+Display Order:        42
+Image Asset:          /assets/products/perplexity-pro-ai-showcase.png
+Activation Type:      Shared Account Login
+
+Short Description:
+  Next-gen conversational search engine with unlimited Pro Searches, Claude 3.5 Sonnet & GPT-4o.
+
+Full Description:
+  Perplexity Pro combines search and conversational AI with cited sources, unlimited Pro Searches, model switching (Claude 3.5 Sonnet, GPT-4o, Sonar Large), file analysis, and image generation for 6 Months.
+
+AVAILABLE PLANS & PRICING:
+  ----------------------------------------------------------------------------
+  Plan 1: 6 Months Shared Account (Plan ID: perplexity-pro-6m-shared)
+  Duration:             6 Months
+  Sri Lanka Price:      LKR 2,500/=
+  Global Price:         $7.58
+  Plan Activation:      Shared Account Login
+  Plan Availability:    Available
+  Plan Description:     6 Months Perplexity Pro access with unlimited Pro Search and Claude 3.5 Sonnet / GPT-4o.
+  Plan Specific Image:  /assets/products/perplexity-pro.jpg
+  ----------------------------------------------------------------------------
+
+Key Features & Inclusions:
+  • Unlimited Pro Searches with step-by-step reasoning
+  • Model switching: Claude 3.5 Sonnet, GPT-4o, Sonar 32k
+  • Upload documents, PDFs & spreadsheets for instant analysis
+  • Generate images with DALL-E 3 & Flux
+  • 6 Months full subscription warranty
+
+
+################################################################################
+PRODUCT #34: STEAM GAMING ACCOUNT (RANDOM GAMES INCLUDED)
+################################################################################
+Product ID:           steam-account
+Category:             Gaming (gaming)
+Badge / Tag:          PC GAMING
+Status:               AVAILABLE IN STOCK
+Featured:             Yes (Homepage Featured)
+Display Order:        43
+Image Asset:          /assets/products/futuristic-steam-gaming-account-poster.png
+Activation Type:      Login:Password:Email Access
+
+Short Description:
+  Genuine Steam account with random premium games included. Instant delivery with full credentials.
+
+Full Description:
+  Get a genuine Steam PC gaming account loaded with random premium and popular games! Instant delivery with full account credentials and email access to jump straight into PC gaming.
+
+AVAILABLE PLANS & PRICING:
+  ----------------------------------------------------------------------------
+  Plan 1: Steam Account with Random Games (Plan ID: steam-account-random)
+  Duration:             Lifetime Access
+  Sri Lanka Price:      LKR 990/=
+  Global Price:         $3.00
+  Plan Activation:      Login:Password:Email Access
+  Plan Availability:    Available
+  Plan Description:     Original Steam account with random games included. 100% full email & password ownership.
+  Plan Specific Image:  /assets/products/futuristic-steam-gaming-account-poster.png
+  ----------------------------------------------------------------------------
+
+Key Features & Inclusions:
+  • Original Steam account with random games library
+  • Changeable password & email for 100% ownership
+  • PC gaming access on Steam client
+  • Instant delivery via WhatsApp or Telegram
+  • Full login guarantee & warranty
+
+
+################################################################################
+PRODUCT #35: CHATGPT K12 PLUS+ (STUDY BUDDY)
+################################################################################
+Product ID:           chatgpt-k12-plus
+Category:             Education (education)
+Badge / Tag:          STUDENT AI
+Status:               AVAILABLE IN STOCK
+Featured:             Yes (Homepage Featured)
+Display Order:        44
+Image Asset:          /assets/products/chatgpt-k12-plus.png
+Activation Type:      Account Login
+
+Short Description:
+  Smarter Learning. Brighter Future. Your AI Study Buddy for Homework, Math, Science & Coding.
+
+Full Description:
+  ChatGPT K12 Plus+ is tailored specifically for students and learners — from homework help, step-by-step math and science concept explanations, to coding support, study planning, writing and creative thinking.
+
+AVAILABLE PLANS & PRICING:
+  ----------------------------------------------------------------------------
+  Plan 1: 1 Month Access (Plan ID: chatgpt-k12-1m)
+  Duration:             1 Month
+  Sri Lanka Price:      LKR 1,500/=
+  Global Price:         $4.55
+  Plan Activation:      Account Login
+  Plan Availability:    Available
+  Plan Description:     ChatGPT K12 Plus+ 1-Month student & learning AI access.
+  Plan Specific Image:  /assets/products/chatgpt-k12-plus.png
+  ----------------------------------------------------------------------------
+
+Key Features & Inclusions:
+  • Homework Help with step-by-step explanations
+  • Math, Science, English & Coding support
+  • Study Planning & organized goals
+  • Writing, Editing & creative thinking
+  • Friendly, safe AI tutor interface
 
 
 ================================================================================

@@ -63,43 +63,43 @@ export default function Header() {
           scrolled ? 'shadow-md' : ''
         )}
       >
-        <div className={cn("container-main flex items-center justify-between gap-3 sm:gap-6 transition-all", scrolled ? "py-2.5" : "py-3.5")}>
+        <div className={cn("container-main flex items-center justify-between gap-3 sm:gap-6 lg:gap-8 transition-all", scrolled ? "py-3 sm:py-3.5" : "py-4 sm:py-5 lg:py-5.5")}>
           {/* 1. Brand Logo & Tagline */}
-          <Link to="/" className="flex items-center gap-2.5 flex-shrink-0" aria-label="DigitalStoreLK">
+          <Link to="/" className="flex items-center gap-3 sm:gap-3.5 flex-shrink-0" aria-label="DigitalStoreLK">
             <img
               src={getAssetUrl(storeConfig.logo)}
               alt={storeConfig.shopName}
-              className="h-9 w-9 object-contain rounded-xl"
+              className="h-11 w-11 sm:h-12 sm:w-12 object-contain rounded-xl shadow-sm"
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
               }}
             />
             <div className="flex flex-col">
-              <span className="font-extrabold text-[17px] leading-tight tracking-tight text-slate-900 dark:text-white flex items-center">
+              <span className="font-black text-xl sm:text-2xl leading-tight tracking-tight text-slate-900 dark:text-white flex items-center">
                 DigitalStore<span className="text-blue-600 dark:text-blue-400">LK</span>
               </span>
-              <span className="text-[10px] text-slate-500 dark:text-slate-400 font-medium tracking-tight">
+              <span className="text-xs sm:text-[13px] text-slate-500 dark:text-slate-400 font-medium tracking-tight">
                 Your Digital Needs, Our Priority
               </span>
             </div>
           </Link>
 
           {/* 2. Middle Navigation (Desktop) */}
-          <nav aria-label="Main Navigation" className="hidden lg:flex items-center gap-1.5">
+          <nav aria-label="Main Navigation" className="hidden lg:flex items-center gap-2">
             {/* Home (Active Blue Pill) */}
             <NavLink
               to="/"
               end
               className={({ isActive }) =>
                 cn(
-                  'flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold transition-all',
+                  'flex items-center gap-2 px-4.5 py-2.5 rounded-full text-sm font-bold transition-all',
                   isActive
-                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
+                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/25'
                     : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
                 )
               }
             >
-              <Home size={14} />
+              <Home size={17} />
               Home
             </NavLink>
 
@@ -108,14 +108,14 @@ export default function Header() {
               to="/products"
               className={({ isActive }) =>
                 cn(
-                  'flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all',
+                  'flex items-center gap-2 px-4.5 py-2.5 rounded-full text-sm font-semibold transition-all',
                   isActive
-                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
+                    ? 'bg-blue-600 text-white shadow-md shadow-blue-500/25'
                     : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
                 )
               }
             >
-              <LayoutGrid size={14} />
+              <LayoutGrid size={17} />
               All Products
             </NavLink>
 
@@ -125,15 +125,15 @@ export default function Header() {
                 onClick={() => setCatOpen(!catOpen)}
                 onMouseEnter={() => setCatOpen(true)}
                 className={cn(
-                  'flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all',
+                  'flex items-center gap-2 px-4.5 py-2.5 rounded-full text-sm font-semibold transition-all',
                   catOpen
                     ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-white/5'
                     : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
                 )}
               >
-                <Grid3X3 size={14} />
+                <Grid3X3 size={17} />
                 Categories
-                <ChevronDown size={13} className={cn('transition-transform duration-200', catOpen && 'rotate-180')} />
+                <ChevronDown size={15} className={cn('transition-transform duration-200', catOpen && 'rotate-180')} />
               </button>
 
               <AnimatePresence>
@@ -143,14 +143,14 @@ export default function Header() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 mt-1 w-52 bg-white dark:bg-[#0c1527] border border-slate-200 dark:border-white/10 rounded-2xl shadow-xl shadow-black/15 p-1.5 z-50"
+                    className="absolute top-full left-0 mt-2 w-60 bg-white dark:bg-[#0c1527] border border-slate-200 dark:border-white/10 rounded-2xl shadow-xl shadow-black/20 p-2 z-50"
                   >
                     {categoryDropdown.map((cat) => (
                       <Link
                         key={cat.label}
                         to={cat.to}
                         onClick={() => setCatOpen(false)}
-                        className="flex items-center px-3 py-2 rounded-xl text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-blue-600/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        className="flex items-center px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-blue-600/20 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                       >
                         {cat.label}
                       </Link>
@@ -165,14 +165,14 @@ export default function Header() {
               to="/contact"
               className={({ isActive }) =>
                 cn(
-                  'flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all',
+                  'flex items-center gap-2 px-4.5 py-2.5 rounded-full text-sm font-semibold transition-all',
                   isActive
                     ? 'bg-blue-600 text-white'
                     : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
                 )
               }
             >
-              <User size={14} />
+              <User size={17} />
               About
             </NavLink>
 
@@ -181,20 +181,20 @@ export default function Header() {
               to="/contact"
               className={({ isActive }) =>
                 cn(
-                  'flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all',
+                  'flex items-center gap-2 px-4.5 py-2.5 rounded-full text-sm font-semibold transition-all',
                   isActive
                     ? 'bg-blue-600 text-white'
                     : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
                 )
               }
             >
-              <Mail size={14} />
+              <Mail size={17} />
               Contact
             </NavLink>
           </nav>
 
-          {/* 3. Right Controls: Search, Cart, Theme Toggle */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          {/* 3. Right Controls: Search, Cart, Mobile Menu */}
+          <div className="flex items-center gap-2.5 sm:gap-3.5">
             {/* Search Pill Input */}
             <form onSubmit={handleSearchSubmit} className="relative hidden md:block">
               <input
@@ -202,35 +202,33 @@ export default function Header() {
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-44 lg:w-56 pl-8 pr-3.5 py-1.5 rounded-full text-xs bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500 transition-all"
+                className="w-52 lg:w-72 xl:w-80 pl-10 pr-4 py-2.5 rounded-full text-sm bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500 transition-all"
               />
               <Search
-                size={14}
-                className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"
+                size={17}
+                className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"
               />
             </form>
 
             {/* Cart Button with Count Badge */}
             <button
               onClick={openCart}
-              className="relative p-2 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
+              className="relative p-2.5 sm:p-3 rounded-2xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
               aria-label="View shopping cart"
             >
-              <ShoppingCart size={19} />
-              <span className="absolute -top-0.5 -right-0.5 min-w-[17px] h-[17px] px-1 rounded-full bg-blue-600 text-white text-[10px] font-extrabold flex items-center justify-center shadow-sm">
+              <ShoppingCart size={23} />
+              <span className="absolute -top-1 -right-1 min-w-[20px] h-[20px] px-1.5 rounded-full bg-blue-600 text-white text-[11px] font-black flex items-center justify-center shadow-md shadow-blue-600/30">
                 {cartCount}
               </span>
             </button>
 
-
-
             {/* Mobile Hamburger */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5"
+              className="lg:hidden p-2.5 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5"
               aria-label="Open mobile menu"
             >
-              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>

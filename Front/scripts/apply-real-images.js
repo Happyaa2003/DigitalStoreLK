@@ -68,8 +68,17 @@ const realImagesMap = {
   'windows-server-2025-datacenter': '/assets/products/windows-server-2025.png',
   'linkedin-premium': '/assets/products/linkedin-premium-career-boost.png',
   'netflix-premium-4k': '/assets/products/netflix.png',
-  'capcut-pro': '/assets/products/capcut.png',
+  'capcut-pro': '/assets/products/capcut-pro-bigger-creativity.png',
   'autodesk-all-apps': '/assets/products/autodesk.png',
+  'apple-tv': '/assets/products/apple-tv-streaming-experience.png',
+  'adobe-express': '/assets/products/adobe-express-creative-studio-banner.png',
+  'prime-video': '/assets/products/prime-video.jpg',
+  'hbo-max-premium': '/assets/products/hbo-max-premium.jpg',
+  'duolingo-premium': '/assets/products/duolingo-premium.jpg',
+  'nord-vpn': '/assets/products/nord-vpn.jpg',
+  'perplexity-pro': '/assets/products/perplexity-pro-ai-showcase.png',
+  'steam-account': '/assets/products/futuristic-steam-gaming-account-poster.png',
+  'chatgpt-k12-plus': '/assets/products/chatgpt-k12-plus.png',
 };
 
 // Plan-specific image maps
