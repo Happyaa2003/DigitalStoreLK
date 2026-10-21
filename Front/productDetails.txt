@@ -20,7 +20,7 @@ No.  Product Name                    Category            Starting Price (LK / GL
 5.   Microsoft 365 Family            Developer Tools     LKR 6,500/= | $19.70
 6.   Google Gemini AI Pro            AI & Productivity   LKR 790/= | $2.40
 7.   Claude Max                      AI & Productivity   LKR 16,500/= | $50.00
-8.   Claude Pro                      AI & Productivity   LKR 40,000/= | $121.21
+8.   Claude Pro                      AI & Productivity   LKR 3,200/= | $9.70
 9.   ChatGPT Pro                     AI & Productivity   LKR 16,500/= | $50.00
 10.  Cursor                          Developer Tools     LKR 3,800/= | $11.52
 11.  SuperGrok                       AI & Productivity   LKR 19,500/= | $59.09
@@ -411,35 +411,46 @@ PRODUCT #8: CLAUDE PRO
 ################################################################################
 Product ID:           claude-pro
 Category:             AI & Productivity (ai)
-Badge / Tag:          ANNUAL PLAN
+Badge / Tag:          SMART AI
 Status:               AVAILABLE IN STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        13
-Image Asset:          /assets/products/claude-pro-1-year.png
-Activation Type:      Own Email Activation
+Image Asset:          /assets/products/claude-pro-work-smarter-globally.png
+Activation Type:      Account Activation / Own Email
 
 Short Description:
-  Anthropic's Claude Pro 1-year subscription with Sonnet, Opus and Project Artifacts.
+  Anthropic's Claude Pro subscription with Sonnet, Opus and Project Artifacts.
 
 Full Description:
-  Claude Pro provides dedicated access to Anthropic's Claude AI models with extended messaging limits, project knowledge bases, and document analysis.
+  Claude Pro provides dedicated access to Anthropic's Claude AI models with extended messaging limits, project knowledge bases, and document analysis. Work smarter globally with Claude 3.5 Sonnet, 5x higher usage limits, and priority access during peak hours.
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: 1 Year (Plan ID: claude-pro-1y)
+  Plan 1: 1 Month (Plan ID: claude-pro-1m)
+  Duration:             1 Month
+  Sri Lanka Price:      LKR 3,200/=
+  Global Price:         $9.70
+  Plan Activation:      Account Activation
+  Plan Availability:    Available
+  Plan Description:     1 Month official Claude Pro subscription with Claude 3.5 Sonnet, Projects, Artifacts & 5x usage limits
+  Plan Specific Image:  /assets/products/claude-pro-work-smarter-globally.png
+  ----------------------------------------------------------------------------
+  Plan 2: 1 Year (Plan ID: claude-pro-1y)
   Duration:             1 Year
   Sri Lanka Price:      LKR 40,000/=
   Global Price:         $121.21
   Plan Activation:      Own Email Activation
+  Plan Availability:    Available
   Plan Description:     1 full year of Claude Pro subscription on your own account
   Plan Specific Image:  /assets/products/claude-pro-1-year.png
   ----------------------------------------------------------------------------
 
 Key Features & Inclusions:
-  • Full 1-year official access
-  • Own Email Activation
-  • Claude 3.5 Sonnet & Claude 3 Opus
+  • Access to Claude 3.5 Sonnet & Opus
+  • 5× higher usage limits compared to free tier
   • Create and manage Project Artifacts
+  • Priority bandwidth during peak traffic hours
+  • Global access without restrictions
 
 
 ################################################################################

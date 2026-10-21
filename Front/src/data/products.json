@@ -342,9 +342,22 @@
     "id": "claude-pro",
     "name": "Claude Pro",
     "category": "ai",
-    "shortDescription": "Anthropic's Claude Pro 1-year subscription with Sonnet, Opus and Project Artifacts.",
-    "description": "Claude Pro provides dedicated access to Anthropic's Claude AI models with extended messaging limits, project knowledge bases, and document analysis.",
+    "shortDescription": "Anthropic's Claude Pro subscription with Sonnet, Opus and Project Artifacts.",
+    "description": "Claude Pro provides dedicated access to Anthropic's Claude AI models with extended messaging limits, project knowledge bases, and document analysis. Work smarter globally with Claude 3.5 Sonnet, 5x higher usage limits, and priority access during peak hours.",
     "plans": [
+      {
+        "id": "claude-pro-1m",
+        "name": "1 Month",
+        "duration": "1 Month",
+        "price": {
+          "LK": "LKR 3,200/=",
+          "GLOBAL": "$9.70"
+        },
+        "description": "1 Month official Claude Pro subscription with Claude 3.5 Sonnet, Projects, Artifacts & 5x usage limits",
+        "activation": "Account Activation",
+        "available": true,
+        "image": "/assets/products/claude-pro-work-smarter-globally.png"
+      },
       {
         "id": "claude-pro-1y",
         "name": "1 Year",
@@ -355,18 +368,20 @@
         },
         "description": "1 full year of Claude Pro subscription on your own account",
         "activation": "Own Email Activation",
+        "available": true,
         "image": "/assets/products/claude-pro-1-year.png"
       }
     ],
-    "activation": "Own Email Activation",
+    "activation": "Account Activation / Own Email",
     "features": [
-      "Full 1-year official access",
-      "Own Email Activation",
-      "Claude 3.5 Sonnet & Claude 3 Opus",
-      "Create and manage Project Artifacts"
+      "Access to Claude 3.5 Sonnet & Opus",
+      "5× higher usage limits compared to free tier",
+      "Create and manage Project Artifacts",
+      "Priority bandwidth during peak traffic hours",
+      "Global access without restrictions"
     ],
-    "image": "/assets/products/claude-pro-1-year.png",
-    "badge": "ANNUAL PLAN",
+    "image": "/assets/products/claude-pro-work-smarter-globally.png",
+    "badge": "SMART AI",
     "featured": true,
     "available": true,
     "order": 13
