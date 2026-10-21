@@ -1084,8 +1084,8 @@ AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
   Plan 2: Own Account Career — 1 Year (Plan ID: linkedin-own-career-1y)
   Duration:             1 Year
-  Sri Lanka Price:      LKR 9,500/=
-  Global Price:         $28.79
+  Sri Lanka Price:      LKR 10,500/=
+  Global Price:         $31.82
   Plan Activation:      Own Account Activation
   Plan Availability:    Available
   Plan Description:     1 Year LinkedIn Premium Career plan activated directly on your own personal account
@@ -1093,8 +1093,8 @@ AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
   Plan 3: Own Account Business — 1 Year (Plan ID: linkedin-own-business-1y)
   Duration:             1 Year
-  Sri Lanka Price:      LKR 15,500/=
-  Global Price:         $46.97
+  Sri Lanka Price:      LKR 16,500/=
+  Global Price:         $50.00
   Plan Activation:      Own Account Activation
   Plan Availability:    Available
   Plan Description:     1 Year LinkedIn Premium Business plan activated directly on your own personal account with unlimited browsing & business insights
