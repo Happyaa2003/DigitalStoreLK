@@ -1639,5 +1639,46 @@
     "featured": true,
     "available": true,
     "order": 44
+  },
+  {
+    "id": "figma-pro-edu-1y",
+    "name": "Figma Professional Edu – 1 Year",
+    "category": "subscriptions",
+    "shortDescription": "Full access to Figma Professional features for 1 Year. Professional design & collaboration tools for PC & Web.",
+    "description": "Figma Professional Edu gives you 1 Year of unrestricted access to Figma's industry-leading design and prototyping platform. Includes unlimited design files, advanced team collaboration, version history, shared design systems, FigJam whiteboard tools, and seamless access from both PC desktop app and web browser. Ready to use with fast delivery.",
+    "plans": [
+      {
+        "id": "figma-pro-edu-1y-plan",
+        "name": "1 Year",
+        "duration": "1 Year",
+        "price": {
+          "LK": "LKR 3,900/=",
+          "GLOBAL": "$11.82"
+        },
+        "description": "1 Year Figma Professional Edu full access with professional design and collaboration features",
+        "activation": "Instant Delivery / Ready to Use",
+        "available": true,
+        "image": "/assets/products/figma-pro.jpg"
+      }
+    ],
+    "activation": "Instant Delivery / Ready to Use",
+    "features": [
+      "Full access to Figma Professional features",
+      "Professional design & collaboration tools",
+      "Ideal for designers, developers, and teams",
+      "Access from PC desktop app & Web browser",
+      "Ready to use with fast delivery",
+      "Unlimited Figma design files & FigJam boards"
+    ],
+    "notes": [
+      "Region: Global — works in all countries without restrictions",
+      "Fast delivery via WhatsApp or Telegram right after payment verification",
+      "Full replacement warranty throughout the active 1-year period"
+    ],
+    "image": "/assets/products/figma-pro.jpg",
+    "badge": "DESIGN & UI",
+    "featured": true,
+    "available": true,
+    "order": 45
   }
 ]

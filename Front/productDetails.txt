@@ -48,6 +48,7 @@ No.  Product Name                    Category            Starting Price (LK / GL
 33.  Perplexity Pro AI               AI & Productivity   LKR 2,500/= | $7.58
 34.  Steam Gaming Account (Random G  Gaming              LKR 990/= | $3.00
 35.  ChatGPT K12 Plus+ (Study Buddy  Education           LKR 2,400/= | .27
+36.  Figma Professional Edu – 1 Yea  Subscriptions       LKR 3,900/= | $11.82
 
 
 ================================================================================
@@ -1685,6 +1686,50 @@ Key Features & Inclusions:
   • Study Planning & organized goals
   • Writing, Editing & creative thinking
   • Friendly, safe AI tutor interface
+
+
+################################################################################
+PRODUCT #36: FIGMA PROFESSIONAL EDU – 1 YEAR
+################################################################################
+Product ID:           figma-pro-edu-1y
+Category:             Subscriptions (subscriptions)
+Badge / Tag:          DESIGN & UI
+Status:               AVAILABLE IN STOCK
+Featured:             Yes (Homepage Featured)
+Display Order:        45
+Image Asset:          /assets/products/figma-pro.jpg
+Activation Type:      Instant Delivery / Ready to Use
+
+Short Description:
+  Full access to Figma Professional features for 1 Year. Professional design & collaboration tools for PC & Web.
+
+Full Description:
+  Figma Professional Edu gives you 1 Year of unrestricted access to Figma's industry-leading design and prototyping platform. Includes unlimited design files, advanced team collaboration, version history, shared design systems, FigJam whiteboard tools, and seamless access from both PC desktop app and web browser. Ready to use with fast delivery.
+
+AVAILABLE PLANS & PRICING:
+  ----------------------------------------------------------------------------
+  Plan 1: 1 Year (Plan ID: figma-pro-edu-1y-plan)
+  Duration:             1 Year
+  Sri Lanka Price:      LKR 3,900/=
+  Global Price:         $11.82
+  Plan Activation:      Instant Delivery / Ready to Use
+  Plan Availability:    Available
+  Plan Description:     1 Year Figma Professional Edu full access with professional design and collaboration features
+  Plan Specific Image:  /assets/products/figma-pro.jpg
+  ----------------------------------------------------------------------------
+
+Key Features & Inclusions:
+  • Full access to Figma Professional features
+  • Professional design & collaboration tools
+  • Ideal for designers, developers, and teams
+  • Access from PC desktop app & Web browser
+  • Ready to use with fast delivery
+  • Unlimited Figma design files & FigJam boards
+
+Important Notes, Instructions & Warranty Policies:
+  * Region: Global — works in all countries without restrictions
+  * Fast delivery via WhatsApp or Telegram right after payment verification
+  * Full replacement warranty throughout the active 1-year period
 
 
 ================================================================================
