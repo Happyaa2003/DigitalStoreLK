@@ -8,20 +8,8 @@ const products = JSON.parse(fs.readFileSync(productsPath, 'utf8'));
 const gpt = products.find((p) => p.id === 'chatgpt-plus');
 if (gpt) {
   gpt.badge = 'Most Popular';
-  // Insert 1 Month plan at front if not already present
-  if (!gpt.plans.some((pl) => pl.name === '1 Month')) {
-    gpt.plans.unshift({
-      id: 'chatgpt-plus-1m',
-      name: '1 Month',
-      duration: '1 Month',
-      price: {
-        LK: 'LKR 3,200/=',
-        GLOBAL: '$9.70',
-      },
-      description: '1-Month ChatGPT Plus subscription with Private Account access',
-      activation: 'Private Account',
-    });
-  }
+  // Ensure 1 Month plan is removed
+  gpt.plans = gpt.plans.filter((pl) => pl.id !== 'chatgpt-plus-1m' && pl.name !== '1 Month');
 }
 
 // 2. Windows 11 Pro
@@ -45,19 +33,8 @@ if (win11) {
 const coursera = products.find((p) => p.id === 'coursera-plus');
 if (coursera) {
   coursera.badge = 'Popular';
-  if (!coursera.plans.some((pl) => pl.duration === '12 Months')) {
-    coursera.plans.unshift({
-      id: 'coursera-plus-12m',
-      name: '12 Months',
-      duration: '12 Months',
-      price: {
-        LK: 'LKR 1,200/=',
-        GLOBAL: '$3.60',
-      },
-      description: 'Coursera Plus 12-Month access with unlimited certificate courses',
-      activation: 'Account Activation',
-    });
-  }
+  // Ensure 1200 plan is removed
+  coursera.plans = coursera.plans.filter((pl) => pl.id !== 'coursera-plus-12m' && !pl.price?.LK?.includes('1,200'));
 }
 
 // 4. Adobe Creative Cloud

@@ -1,7 +1,7 @@
 ================================================================================
    DIGITALSTORELK - COMPLETE PRODUCT & PRICING CATALOG
    Tagline: Smart Tools. Premium Access. Better You.
-   Generated: 2026-10-20
+   Generated: 2026-10-21
    WhatsApp: +94 72 151 0654 (https://wa.me/94721510654)
    Telegram: @DigitalStoreLK (https://t.me/DigitalStoreLK)
    Facebook: https://www.facebook.com/DigitalStoreLK
@@ -13,7 +13,7 @@ TABLE OF CONTENTS & QUICK PRICE INDEX
 --------------------------------------------------------------------------------
 No.  Product Name                    Category            Starting Price (LK / GLOBAL)
 --------------------------------------------------------------------------------
-1.   ChatGPT Plus                    AI & Productivity   LKR 3,200/= | $9.70
+1.   ChatGPT Plus                    AI & Productivity   LKR 40,000/= | $121.21
 2.   Windows 11 Pro                  Developer Tools     LKR 500/= | $1.50
 3.   Coursera Plus                   Education           LKR 490/= | $1.48
 4.   Adobe Creative Cloud            Subscriptions       LKR 2,500/= | $7.50
@@ -47,7 +47,7 @@ No.  Product Name                    Category            Starting Price (LK / GL
 32.  NordVPN Premium                 PS Wallet           LKR 1,390/= | $4.21
 33.  Perplexity Pro AI               AI & Productivity   LKR 2,500/= | $7.58
 34.  Steam Gaming Account (Random G  Gaming              LKR 990/= | $3.00
-35.  ChatGPT K12 Plus+ (Study Buddy  Education           LKR 1,500/= | $4.55
+35.  ChatGPT K12 Plus+ (Study Buddy  Education           LKR 2,400/= | .27
 
 
 ================================================================================
@@ -93,15 +93,7 @@ Full Description:
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: 1 Month (Plan ID: chatgpt-plus-1m)
-  Duration:             1 Month
-  Sri Lanka Price:      LKR 3,200/=
-  Global Price:         $9.70
-  Plan Activation:      Private Account
-  Plan Description:     1-Month ChatGPT Plus subscription with Private Account access
-  Plan Specific Image:  /assets/products/chat-gpt-plus.png
-  ----------------------------------------------------------------------------
-  Plan 2: 1 Year (Plan ID: chatgpt-plus-1y)
+  Plan 1: 1 Year (Plan ID: chatgpt-plus-1y)
   Duration:             1 Year
   Sri Lanka Price:      LKR 40,000/=
   Global Price:         $121.21
@@ -1289,7 +1281,7 @@ Badge / Tag:          46+ APPS
 Status:               AVAILABLE IN STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        35
-Image Asset:          /assets/products/autodesk.png
+Image Asset:          /assets/products/autodesk-46.png
 Activation Type:      Own Email Activation (Send your registered Autodesk email)
 
 Short Description:
@@ -1307,7 +1299,7 @@ AVAILABLE PLANS & PRICING:
   Plan Activation:      Own Email Activation
   Plan Availability:    Available
   Plan Description:     3-Year official private Autodesk access for 34 apps activated directly on your personal email
-  Plan Specific Image:  /assets/products/autodesk.png
+  Plan Specific Image:  /assets/products/autodesk-46.png
   ----------------------------------------------------------------------------
   Plan 2: 1 Year Access (Plan ID: autodesk-1y)
   Duration:             1 Year
@@ -1316,7 +1308,7 @@ AVAILABLE PLANS & PRICING:
   Plan Activation:      Own Email Activation
   Plan Availability:    Available
   Plan Description:     1-Year official private Autodesk access for 46+ apps activated on your personal email
-  Plan Specific Image:  /assets/products/autodesk.png
+  Plan Specific Image:  /assets/products/autodesk-46.png
   ----------------------------------------------------------------------------
 
 Key Features & Inclusions:
@@ -1658,7 +1650,7 @@ Status:               AVAILABLE IN STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        44
 Image Asset:          /assets/products/chatgpt-k12-plus.png
-Activation Type:      Account Login
+Activation Type:      Private Account Login
 
 Short Description:
   Smarter Learning. Brighter Future. Your AI Study Buddy for Homework, Math, Science & Coding.
@@ -1668,13 +1660,22 @@ Full Description:
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: 1 Month Access (Plan ID: chatgpt-k12-1m)
+  Plan 1: 1 Month — Private Account (Plan ID: chatgpt-k12-private-1m)
   Duration:             1 Month
-  Sri Lanka Price:      LKR 1,500/=
-  Global Price:         $4.55
-  Plan Activation:      Account Login
+  Sri Lanka Price:      LKR 2,400/=
+  Global Price:         .27
+  Plan Activation:      Private Account
   Plan Availability:    Available
-  Plan Description:     ChatGPT K12 Plus+ 1-Month student & learning AI access.
+  Plan Description:     ChatGPT K12 Plus+ 1-Month Private Account. Full access to AI study buddy, math, science, homework help & coding tools.
+  Plan Specific Image:  /assets/products/chatgpt-k12-plus.png
+  ----------------------------------------------------------------------------
+  Plan 2: 3 Months — Private Account (Plan ID: chatgpt-k12-private-3m)
+  Duration:             3 Months
+  Sri Lanka Price:      LKR 5,600/=
+  Global Price:         .97
+  Plan Activation:      Private Account
+  Plan Availability:    Available
+  Plan Description:     ChatGPT K12 Plus+ 3-Month Private Account. Smarter learning and full study planning with continuous warranty.
   Plan Specific Image:  /assets/products/chatgpt-k12-plus.png
   ----------------------------------------------------------------------------
 

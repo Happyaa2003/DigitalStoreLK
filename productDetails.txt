@@ -13,7 +13,7 @@ TABLE OF CONTENTS & QUICK PRICE INDEX
 --------------------------------------------------------------------------------
 No.  Product Name                    Category            Starting Price (LK / GLOBAL)
 --------------------------------------------------------------------------------
-1.   ChatGPT Plus                    AI & Productivity   LKR 3,200/= | $9.70
+1.   ChatGPT Plus                    AI & Productivity   LKR 40,000/= | $121.21
 2.   Windows 11 Pro                  Developer Tools     LKR 500/= | $1.50
 3.   Coursera Plus                   Education           LKR 490/= | $1.48
 4.   Adobe Creative Cloud            Subscriptions       LKR 2,500/= | $7.50
@@ -93,15 +93,7 @@ Full Description:
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: 1 Month (Plan ID: chatgpt-plus-1m)
-  Duration:             1 Month
-  Sri Lanka Price:      LKR 3,200/=
-  Global Price:         $9.70
-  Plan Activation:      Private Account
-  Plan Description:     1-Month ChatGPT Plus subscription with Private Account access
-  Plan Specific Image:  /assets/products/chat-gpt-plus.png
-  ----------------------------------------------------------------------------
-  Plan 2: 1 Year (Plan ID: chatgpt-plus-1y)
+  Plan 1: 1 Year (Plan ID: chatgpt-plus-1y)
   Duration:             1 Year
   Sri Lanka Price:      LKR 40,000/=
   Global Price:         $121.21

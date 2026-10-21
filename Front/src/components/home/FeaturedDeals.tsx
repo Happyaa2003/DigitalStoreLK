@@ -9,6 +9,7 @@ import ProductModal from '../products/ProductModal';
 export default function FeaturedDeals() {
   const { products } = useProductStore();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [selectedPlanIndex, setSelectedPlanIndex] = useState<number>(0);
 
   // Get the 6 featured products (matching the screenshot)
   const featuredIds = [
@@ -62,7 +63,10 @@ export default function FeaturedDeals() {
               <ProductCard
                 key={product.id}
                 product={product}
-                onViewDetails={(p) => setSelectedProduct(p)}
+                onViewDetails={(p, idx) => {
+                  setSelectedProduct(p);
+                  setSelectedPlanIndex(idx ?? 0);
+                }}
               />
             ))}
           </div>
@@ -74,6 +78,7 @@ export default function FeaturedDeals() {
         <ProductModal
           product={selectedProduct}
           isOpen={!!selectedProduct}
+          initialPlanIndex={selectedPlanIndex}
           onClose={() => setSelectedProduct(null)}
         />
       )}

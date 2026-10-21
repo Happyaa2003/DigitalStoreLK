@@ -1,8 +1,9 @@
 import fs from 'fs';
 
-const products = JSON.parse(fs.readFileSync('./Front/src/data/products.json', 'utf8'));
-const categories = JSON.parse(fs.readFileSync('./Front/src/data/categories.json', 'utf8'));
-const storeConfig = JSON.parse(fs.readFileSync('./Front/src/config/storeConfig.json', 'utf8'));
+const basePath = fs.existsSync('./src/data/products.json') ? '.' : './Front';
+const products = JSON.parse(fs.readFileSync(`${basePath}/src/data/products.json`, 'utf8'));
+const categories = JSON.parse(fs.readFileSync(`${basePath}/src/data/categories.json`, 'utf8'));
+const storeConfig = JSON.parse(fs.readFileSync(`${basePath}/src/config/storeConfig.json`, 'utf8'));
 
 const catMap = Object.fromEntries(categories.map(c => [c.id, c.name]));
 
@@ -134,5 +135,7 @@ output += 'For orders, bulk pricing, or inquiries: WhatsApp +94 72 151 0654\n';
 output += '='.repeat(80) + '\n';
 
 fs.writeFileSync('productDetails.txt', output, 'utf8');
-fs.writeFileSync('Front/productDetails.txt', output, 'utf8');
+if (fs.existsSync('Front') && fs.statSync('Front').isDirectory()) {
+  fs.writeFileSync('Front/productDetails.txt', output, 'utf8');
+}
 console.log('✓ Successfully refreshed productDetails.txt with authentic Front/Products images');

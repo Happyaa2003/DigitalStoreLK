@@ -7,18 +7,6 @@
     "description": "ChatGPT Plus provides faster response times, priority access to new features including GPT-4o, Advanced Data Analysis, Canvas, and Custom GPTs.",
     "plans": [
       {
-        "id": "chatgpt-plus-1m",
-        "name": "1 Month",
-        "duration": "1 Month",
-        "price": {
-          "LK": "LKR 3,200/=",
-          "GLOBAL": "$9.70"
-        },
-        "description": "1-Month ChatGPT Plus subscription with Private Account access",
-        "activation": "Private Account",
-        "image": "/assets/products/chat-gpt-plus.png"
-      },
-      {
         "id": "chatgpt-plus-1y",
         "name": "1 Year",
         "duration": "1 Year",
@@ -1273,7 +1261,7 @@
         "description": "3-Year official private Autodesk access for 34 apps activated directly on your personal email",
         "activation": "Own Email Activation",
         "available": true,
-        "image": "/assets/products/autodesk.png"
+        "image": "/assets/products/autodesk-46.png"
       },
       {
         "id": "autodesk-1y",
@@ -1286,7 +1274,7 @@
         "description": "1-Year official private Autodesk access for 46+ apps activated on your personal email",
         "activation": "Own Email Activation",
         "available": true,
-        "image": "/assets/products/autodesk.png"
+        "image": "/assets/products/autodesk-46.png"
       }
     ],
     "activation": "Own Email Activation (Send your registered Autodesk email)",
@@ -1305,7 +1293,7 @@
       "After ordering, send your Autodesk email address via WhatsApp or Telegram",
       "Activation takes just 5 minutes with zero configuration needed"
     ],
-    "image": "/assets/products/autodesk.png",
+    "image": "/assets/products/autodesk-46.png",
     "badge": "46+ APPS",
     "featured": true,
     "available": true,
@@ -1612,20 +1600,33 @@
     "description": "ChatGPT K12 Plus+ is tailored specifically for students and learners — from homework help, step-by-step math and science concept explanations, to coding support, study planning, writing and creative thinking.",
     "plans": [
       {
-        "id": "chatgpt-k12-1m",
-        "name": "1 Month Access",
+        "id": "chatgpt-k12-private-1m",
+        "name": "1 Month — Private Account",
         "duration": "1 Month",
         "price": {
-          "LK": "LKR 1,500/=",
-          "GLOBAL": "$4.55"
+          "LK": "LKR 2,400/=",
+          "GLOBAL": ".27"
         },
-        "description": "ChatGPT K12 Plus+ 1-Month student & learning AI access.",
-        "activation": "Account Login",
+        "description": "ChatGPT K12 Plus+ 1-Month Private Account. Full access to AI study buddy, math, science, homework help & coding tools.",
+        "activation": "Private Account",
+        "available": true,
+        "image": "/assets/products/chatgpt-k12-plus.png"
+      },
+      {
+        "id": "chatgpt-k12-private-3m",
+        "name": "3 Months — Private Account",
+        "duration": "3 Months",
+        "price": {
+          "LK": "LKR 5,600/=",
+          "GLOBAL": ".97"
+        },
+        "description": "ChatGPT K12 Plus+ 3-Month Private Account. Smarter learning and full study planning with continuous warranty.",
+        "activation": "Private Account",
         "available": true,
         "image": "/assets/products/chatgpt-k12-plus.png"
       }
     ],
-    "activation": "Account Login",
+    "activation": "Private Account Login",
     "features": [
       "Homework Help with step-by-step explanations",
       "Math, Science, English & Coding support",
