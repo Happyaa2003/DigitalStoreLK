@@ -7,6 +7,19 @@
     "description": "ChatGPT Plus provides faster response times, priority access to new features including GPT-4o, Advanced Data Analysis, Canvas, and Custom GPTs.",
     "plans": [
       {
+        "id": "chatgpt-plus-1m",
+        "name": "1 Month",
+        "duration": "1 Month",
+        "price": {
+          "LK": "LKR 3,500/=",
+          "GLOBAL": "$10.61"
+        },
+        "description": "1-Month OpenAI ChatGPT Plus subscription with full access to GPT-4o, Advanced Voice Mode, Canvas, and DALL-E 3",
+        "activation": "Account Activation",
+        "available": true,
+        "image": "/assets/products/chat-gpt-plus.png"
+      },
+      {
         "id": "chatgpt-plus-1y",
         "name": "1 Year",
         "duration": "1 Year",
@@ -16,10 +29,11 @@
         },
         "description": "1-Year OpenAI ChatGPT Plus subscription with Own Email Activation",
         "activation": "Own Email Activation",
+        "available": true,
         "image": "/assets/products/chat-gpt-plus.png"
       }
     ],
-    "activation": "Own Email Activation",
+    "activation": "Instant Activation / Own Email",
     "features": [
       "GPT-4o & GPT-4o mini models",
       "Advanced Voice Mode",
