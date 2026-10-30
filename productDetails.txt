@@ -1,7 +1,7 @@
 ================================================================================
-   DIGITALSTORELK - COMPLETE PRODUCT & PRICING CATALOG
+   DIGITALSTORE - COMPLETE PRODUCT & PRICING CATALOG
    Tagline: Smart Tools. Premium Access. Better You.
-   Generated: 2026-10-20
+   Generated: 2026-10-30
    WhatsApp: +94 72 151 0654 (https://wa.me/94721510654)
    Telegram: @DigitalStoreLK (https://t.me/DigitalStoreLK)
    Facebook: https://www.facebook.com/DigitalStoreLK
@@ -13,14 +13,14 @@ TABLE OF CONTENTS & QUICK PRICE INDEX
 --------------------------------------------------------------------------------
 No.  Product Name                    Category            Starting Price (LK / GLOBAL)
 --------------------------------------------------------------------------------
-1.   ChatGPT Plus                    AI & Productivity   LKR 40,000/= | $121.21
+1.   ChatGPT Plus                    AI & Productivity   LKR 3,500/= | $10.61
 2.   Windows 11 Pro                  Developer Tools     LKR 500/= | $1.50
-3.   Coursera Plus                   Education           LKR 490/= | $1.48
+3.   Coursera 12 Months              Education           LKR 3,500/= | .61
 4.   Adobe Creative Cloud            Subscriptions       LKR 2,500/= | $7.50
 5.   Microsoft 365 Family            Developer Tools     LKR 6,500/= | $19.70
 6.   Google Gemini AI Pro            AI & Productivity   LKR 790/= | $2.40
 7.   Claude Max                      AI & Productivity   LKR 16,500/= | $50.00
-8.   Claude Pro                      AI & Productivity   LKR 40,000/= | $121.21
+8.   Claude Pro                      AI & Productivity   LKR 3,200/= | $9.70
 9.   ChatGPT Pro                     AI & Productivity   LKR 16,500/= | $50.00
 10.  Cursor                          Developer Tools     LKR 3,800/= | $11.52
 11.  SuperGrok                       AI & Productivity   LKR 19,500/= | $59.09
@@ -37,7 +37,7 @@ No.  Product Name                    Category            Starting Price (LK / GL
 22.  Windows Server 2025 Datacenter  Developer Tools     LKR 990/= | $3.00
 23.  LinkedIn Premium Career & Busi  Subscriptions       LKR 790/= | $2.40
 24.  Netflix Premium 4K UHD          Subscriptions       LKR 990/= | $3.00
-25.  CapCut Pro Team                 Subscriptions       LKR 700/= | $2.12
+25.  CapCut Pro — Private Account    Subscriptions       LKR 790/= | .39
 26.  Autodesk (46+ Products)         Developer Tools     LKR 2,900/= | $8.79
 27.  Apple TV+                       Subscriptions       LKR 3,900/= | $11.82
 28.  Adobe Express Premium           Subscriptions       LKR 990/= | $3.00
@@ -47,7 +47,8 @@ No.  Product Name                    Category            Starting Price (LK / GL
 32.  NordVPN Premium                 PS Wallet           LKR 1,390/= | $4.21
 33.  Perplexity Pro AI               AI & Productivity   LKR 2,500/= | $7.58
 34.  Steam Gaming Account (Random G  Gaming              LKR 990/= | $3.00
-35.  ChatGPT K12 Plus+ (Study Buddy  Education           LKR 1,500/= | $4.55
+35.  ChatGPT Plus (K12 Plus)         Education           LKR 2,500/= | .58
+36.  Figma Professional Edu – 1 Yea  Subscriptions       LKR 3,900/= | $11.82
 
 
 ================================================================================
@@ -79,11 +80,11 @@ PRODUCT #1: CHATGPT PLUS
 Product ID:           chatgpt-plus
 Category:             AI & Productivity (ai)
 Badge / Tag:          Most Popular
-Status:               AVAILABLE IN STOCK
+Status:               OUT OF STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        1
 Image Asset:          /assets/products/chat-gpt-plus.png
-Activation Type:      Own Email Activation
+Activation Type:      Instant Activation / Own Email
 
 Short Description:
   OpenAI GPT-4o, DALL-E 3 image generation, browsing, and custom GPTs.
@@ -93,11 +94,21 @@ Full Description:
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: 1 Year (Plan ID: chatgpt-plus-1y)
+  Plan 1: 1 Month (Plan ID: chatgpt-plus-1m)
+  Duration:             1 Month
+  Sri Lanka Price:      LKR 3,500/=
+  Global Price:         $10.61
+  Plan Activation:      Account Activation
+  Plan Availability:    Unavailable
+  Plan Description:     1-Month OpenAI ChatGPT Plus subscription with full access to GPT-4o, Advanced Voice Mode, Canvas, and DALL-E 3
+  Plan Specific Image:  /assets/products/chat-gpt-plus.png
+  ----------------------------------------------------------------------------
+  Plan 2: 1 Year (Plan ID: chatgpt-plus-1y)
   Duration:             1 Year
   Sri Lanka Price:      LKR 40,000/=
   Global Price:         $121.21
   Plan Activation:      Own Email Activation
+  Plan Availability:    Unavailable
   Plan Description:     1-Year OpenAI ChatGPT Plus subscription with Own Email Activation
   Plan Specific Image:  /assets/products/chat-gpt-plus.png
   ----------------------------------------------------------------------------
@@ -146,7 +157,7 @@ Key Features & Inclusions:
 
 
 ################################################################################
-PRODUCT #3: COURSERA PLUS
+PRODUCT #3: COURSERA 12 MONTHS
 ################################################################################
 Product ID:           coursera-plus
 Category:             Education (education)
@@ -154,43 +165,34 @@ Badge / Tag:          Popular
 Status:               AVAILABLE IN STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        3
-Image Asset:          /assets/products/coursera-1-year.png
+Image Asset:          /assets/products/coursera-12-months.jpg
 Activation Type:      Own Email or Ready-Made Account
 
 Short Description:
-  Unlimited access to 7,000+ world-class courses, specializations & certificates.
+  Unlimited access to 7,000+ world-class courses, specializations & accredited university certificates.
 
 Full Description:
   Coursera Plus provides full unlimited learning access to top accredited courses, professional certificates from Google, IBM, Meta, and leading global universities.
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: Ready-Made — 1 Month (Plan ID: coursera-readymade-1m)
-  Duration:             1 Month
-  Sri Lanka Price:      LKR 490/=
-  Global Price:         $1.48
-  Plan Activation:      Ready-Made Account
-  Plan Availability:    Available
-  Plan Description:     Pre-configured ready-to-learn account delivered instantly with 1-Month full access
-  Plan Specific Image:  /assets/products/coursera-1-year.png
-  ----------------------------------------------------------------------------
-  Plan 2: Ready-Made — 12 Months (Plan ID: coursera-readymade-12m)
+  Plan 1: Own Email Activation — 12 Months (Plan ID: coursera-own-email-12m)
   Duration:             12 Months
-  Sri Lanka Price:      LKR 2,500/=
-  Global Price:         $7.58
-  Plan Activation:      Ready-Made Account
-  Plan Availability:    Available
-  Plan Description:     Pre-configured ready-to-learn account delivered instantly with 12 Months warranty
-  Plan Specific Image:  /assets/products/coursera-1-year.png
-  ----------------------------------------------------------------------------
-  Plan 3: Own Email Activation — 1 Year (Plan ID: coursera-own-email-1y)
-  Duration:             1 Year
-  Sri Lanka Price:      LKR 5,000/=
-  Global Price:         $15.15
+  Sri Lanka Price:      LKR 3,500/=
+  Global Price:         .61
   Plan Activation:      Own Email Activation
   Plan Availability:    Available
-  Plan Description:     Activated directly on your own personal email address with full certificates in your name
-  Plan Specific Image:  /assets/products/coursera-1-year.png
+  Plan Description:     Activated directly on your own personal email address with full accredited certificates issued in your name.
+  Plan Specific Image:  /assets/products/coursera-12-months.jpg
+  ----------------------------------------------------------------------------
+  Plan 2: Ready-Made Account — 12 Months (Plan ID: coursera-readymade-12m)
+  Duration:             12 Months
+  Sri Lanka Price:      LKR 1,750/=
+  Global Price:         .30
+  Plan Activation:      Ready-Made Account
+  Plan Availability:    Available
+  Plan Description:     Pre-configured ready-to-learn account delivered instantly with 12 Months warranty.
+  Plan Specific Image:  /assets/products/coursera-12-months.jpg
   ----------------------------------------------------------------------------
 
 Key Features & Inclusions:
@@ -351,7 +353,7 @@ PRODUCT #7: CLAUDE MAX
 Product ID:           claude-max
 Category:             AI & Productivity (ai)
 Badge / Tag:          HOT DEAL
-Status:               AVAILABLE IN STOCK
+Status:               OUT OF STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        12
 Image Asset:          /assets/products/claude-max-5x-1-month.png
@@ -370,6 +372,7 @@ AVAILABLE PLANS & PRICING:
   Sri Lanka Price:      LKR 16,500/=
   Global Price:         $50.00
   Plan Activation:      Own Email Activation
+  Plan Availability:    Unavailable
   Plan Description:     5× usage limits — ideal for regular power users
   Plan Specific Image:  /assets/products/claude-max-5x-1-month.png
   ----------------------------------------------------------------------------
@@ -378,6 +381,7 @@ AVAILABLE PLANS & PRICING:
   Sri Lanka Price:      LKR 33,000/=
   Global Price:         $100.00
   Plan Activation:      Own Email Activation
+  Plan Availability:    Unavailable
   Plan Description:     20× usage limits — for intensive professional development
   Plan Specific Image:  /assets/products/claude-max-20x-1-month.png
   ----------------------------------------------------------------------------
@@ -386,6 +390,7 @@ AVAILABLE PLANS & PRICING:
   Sri Lanka Price:      Contact for Price
   Global Price:         Contact for Price
   Plan Activation:      Own Email Activation
+  Plan Availability:    Unavailable
   Plan Description:     Annual 5X subscription — contact on WhatsApp/Telegram for rate
   Plan Specific Image:  /assets/products/claude-max-5x-1-year.png
   ----------------------------------------------------------------------------
@@ -394,6 +399,7 @@ AVAILABLE PLANS & PRICING:
   Sri Lanka Price:      Contact for Price
   Global Price:         Contact for Price
   Plan Activation:      Own Email Activation
+  Plan Availability:    Unavailable
   Plan Description:     Annual 20X enterprise-grade tier — contact for rate
   Plan Specific Image:  /assets/products/claude-max-20x-1-year.png
   ----------------------------------------------------------------------------
@@ -410,35 +416,46 @@ PRODUCT #8: CLAUDE PRO
 ################################################################################
 Product ID:           claude-pro
 Category:             AI & Productivity (ai)
-Badge / Tag:          ANNUAL PLAN
-Status:               AVAILABLE IN STOCK
+Badge / Tag:          SMART AI
+Status:               OUT OF STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        13
-Image Asset:          /assets/products/claude-pro-1-year.png
-Activation Type:      Own Email Activation
+Image Asset:          /assets/products/claude-pro-work-smarter-globally.png
+Activation Type:      Account Activation / Own Email
 
 Short Description:
-  Anthropic's Claude Pro 1-year subscription with Sonnet, Opus and Project Artifacts.
+  Anthropic's Claude Pro subscription with Sonnet, Opus and Project Artifacts.
 
 Full Description:
-  Claude Pro provides dedicated access to Anthropic's Claude AI models with extended messaging limits, project knowledge bases, and document analysis.
+  Claude Pro provides dedicated access to Anthropic's Claude AI models with extended messaging limits, project knowledge bases, and document analysis. Work smarter globally with Claude 3.5 Sonnet, 5x higher usage limits, and priority access during peak hours.
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: 1 Year (Plan ID: claude-pro-1y)
+  Plan 1: 1 Month (Plan ID: claude-pro-1m)
+  Duration:             1 Month
+  Sri Lanka Price:      LKR 3,200/=
+  Global Price:         $9.70
+  Plan Activation:      Account Activation
+  Plan Availability:    Unavailable
+  Plan Description:     1 Month official Claude Pro subscription with Claude 3.5 Sonnet, Projects, Artifacts & 5x usage limits
+  Plan Specific Image:  /assets/products/claude-pro-work-smarter-globally.png
+  ----------------------------------------------------------------------------
+  Plan 2: 1 Year (Plan ID: claude-pro-1y)
   Duration:             1 Year
   Sri Lanka Price:      LKR 40,000/=
   Global Price:         $121.21
   Plan Activation:      Own Email Activation
+  Plan Availability:    Unavailable
   Plan Description:     1 full year of Claude Pro subscription on your own account
   Plan Specific Image:  /assets/products/claude-pro-1-year.png
   ----------------------------------------------------------------------------
 
 Key Features & Inclusions:
-  • Full 1-year official access
-  • Own Email Activation
-  • Claude 3.5 Sonnet & Claude 3 Opus
+  • Access to Claude 3.5 Sonnet & Opus
+  • 5× higher usage limits compared to free tier
   • Create and manage Project Artifacts
+  • Priority bandwidth during peak traffic hours
+  • Global access without restrictions
 
 
 ################################################################################
@@ -447,7 +464,7 @@ PRODUCT #9: CHATGPT PRO
 Product ID:           chatgpt-pro
 Category:             AI & Productivity (ai)
 Badge / Tag:          ULTIMATE COMPUTE
-Status:               AVAILABLE IN STOCK
+Status:               OUT OF STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        14
 Image Asset:          /assets/products/chatgpt-pro-5x.png
@@ -466,6 +483,7 @@ AVAILABLE PLANS & PRICING:
   Sri Lanka Price:      LKR 16,500/=
   Global Price:         $50.00
   Plan Activation:      Own Email Activation
+  Plan Availability:    Unavailable
   Plan Description:     5X power tier with extended reasoning limits
   Plan Specific Image:  /assets/products/chatgpt-pro-5x.png
   ----------------------------------------------------------------------------
@@ -474,6 +492,7 @@ AVAILABLE PLANS & PRICING:
   Sri Lanka Price:      LKR 33,000/=
   Global Price:         $100.00
   Plan Activation:      Own Email Activation
+  Plan Availability:    Unavailable
   Plan Description:     Maximum power tier with unlimited o1 reasoning compute
   Plan Specific Image:  /assets/products/chatgpt-pro-20x.png
   ----------------------------------------------------------------------------
@@ -491,7 +510,7 @@ PRODUCT #10: CURSOR
 Product ID:           cursor
 Category:             Developer Tools (developer)
 Badge / Tag:          BEST FOR DEVS
-Status:               AVAILABLE IN STOCK
+Status:               OUT OF STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        16
 Image Asset:          /assets/products/cursor-pro-1-month.png
@@ -510,6 +529,7 @@ AVAILABLE PLANS & PRICING:
   Sri Lanka Price:      LKR 3,800/=
   Global Price:         $11.52
   Plan Activation:      Own Email Activation
+  Plan Availability:    Unavailable
   Plan Description:     Unlimited completions, 500 fast requests/mo
   Plan Specific Image:  /assets/products/cursor-pro-1-month.png
   ----------------------------------------------------------------------------
@@ -518,6 +538,7 @@ AVAILABLE PLANS & PRICING:
   Sri Lanka Price:      LKR 11,700/=
   Global Price:         $35.45
   Plan Activation:      Own Email Activation
+  Plan Availability:    Unavailable
   Plan Description:     Extended request capacity for heavy development
   Plan Specific Image:  /assets/products/cursor-pro-1-month.png
   ----------------------------------------------------------------------------
@@ -526,6 +547,7 @@ AVAILABLE PLANS & PRICING:
   Sri Lanka Price:      LKR 39,000/=
   Global Price:         $118.18
   Plan Activation:      Own Email Activation
+  Plan Availability:    Unavailable
   Plan Description:     Maximum tier with highest fast-request volume
   Plan Specific Image:  /assets/products/cursor-pro-1-month.png
   ----------------------------------------------------------------------------
@@ -534,6 +556,7 @@ AVAILABLE PLANS & PRICING:
   Sri Lanka Price:      Contact for Price
   Global Price:         Contact for Price
   Plan Activation:      Own Email Activation
+  Plan Availability:    Unavailable
   Plan Description:     Annual Pro plan — contact for exclusive pricing
   Plan Specific Image:  /assets/products/cursor-pro-1-year.png
   ----------------------------------------------------------------------------
@@ -781,7 +804,7 @@ PRODUCT #16: GTA 6 — PS5
 Product ID:           gta6-ps5
 Category:             Gaming (gaming)
 Badge / Tag:          PRE-ORDER
-Status:               AVAILABLE IN STOCK
+Status:               OUT OF STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        23
 Image Asset:          /assets/products/gta6-ps5.png
@@ -798,12 +821,14 @@ AVAILABLE PLANS & PRICING:
   Plan 1: Standard Edition (Plan ID: gta6-ps5-std)
   Sri Lanka Price:      LKR 16,500/=
   Global Price:         $50.00
+  Plan Availability:    Unavailable
   Plan Description:     PS5 Standard Edition digital license
   Plan Specific Image:  /assets/products/gta6-ps5.png
   ----------------------------------------------------------------------------
   Plan 2: Unlimited Edition (Plan ID: gta6-ps5-unlimited)
   Sri Lanka Price:      LKR 24,000/=
   Global Price:         $72.73
+  Plan Availability:    Unavailable
   Plan Description:     PS5 Unlimited / Deluxe Edition with bonus perks
   Plan Specific Image:  /assets/products/gta6-ps5.png
   ----------------------------------------------------------------------------
@@ -933,7 +958,7 @@ PRODUCT #20: PS WALLET BALANCE
 Product ID:           ps-wallet-balance
 Category:             PS Wallet (wallet)
 Badge / Tag:          UP TO 40% OFF
-Status:               AVAILABLE IN STOCK
+Status:               OUT OF STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        28
 Image Asset:          /assets/products/ps-wallet.png
@@ -952,6 +977,7 @@ AVAILABLE PLANS & PRICING:
   Sri Lanka Price:      Contact for Price
   Global Price:         Contact for Price
   Plan Activation:      PSN Redeem Key
+  Plan Availability:    Unavailable
   Plan Description:     Contact us with the game title or denomination — discounts of up to 40% off
   Plan Specific Image:  /assets/products/ps-wallet.png
   ----------------------------------------------------------------------------
@@ -1084,8 +1110,8 @@ AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
   Plan 2: Own Account Career — 1 Year (Plan ID: linkedin-own-career-1y)
   Duration:             1 Year
-  Sri Lanka Price:      LKR 9,500/=
-  Global Price:         $28.79
+  Sri Lanka Price:      LKR 10,500/=
+  Global Price:         $31.82
   Plan Activation:      Own Account Activation
   Plan Availability:    Available
   Plan Description:     1 Year LinkedIn Premium Career plan activated directly on your own personal account
@@ -1093,8 +1119,8 @@ AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
   Plan 3: Own Account Business — 1 Year (Plan ID: linkedin-own-business-1y)
   Duration:             1 Year
-  Sri Lanka Price:      LKR 15,500/=
-  Global Price:         $46.97
+  Sri Lanka Price:      LKR 16,500/=
+  Global Price:         $50.00
   Plan Activation:      Own Account Activation
   Plan Availability:    Available
   Plan Description:     1 Year LinkedIn Premium Business plan activated directly on your own personal account with unlimited browsing & business insights
@@ -1210,7 +1236,7 @@ Important Notes, Instructions & Warranty Policies:
 
 
 ################################################################################
-PRODUCT #25: CAPCUT PRO TEAM
+PRODUCT #25: CAPCUT PRO — PRIVATE ACCOUNT
 ################################################################################
 Product ID:           capcut-pro
 Category:             Subscriptions (subscriptions)
@@ -1219,10 +1245,10 @@ Status:               AVAILABLE IN STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        33
 Image Asset:          /assets/products/capcut-pro-bigger-creativity.png
-Activation Type:      Team Invitation / Personal Access Details
+Activation Type:      Private Account
 
 Short Description:
-  CapCut Pro Team 1-month personal access. Watermark-free 4K export & full VIP assets.
+  Unlock premium editing tools and take your creativity to the next level! Watermark-free 4K export & full VIP assets.
 
 Full Description:
   Supercharge your video editing with CapCut Pro Team personal access for 1 month. Perfect for content creators, TikTokers, YouTubers, and video editors who need professional AI tools, watermark-free 4K export, and premium visual effects.
@@ -1231,17 +1257,17 @@ AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
   Plan 1: 1 Month — Private Account (Plan ID: capcut-private-1m)
   Duration:             1 Month
-  Sri Lanka Price:      LKR 700/=
-  Global Price:         $2.12
+  Sri Lanka Price:      LKR 790/=
+  Global Price:         .39
   Plan Activation:      Private Account
   Plan Availability:    Available
-  Plan Description:     CapCut Pro 1-Month private account. Watermark-free 4K export & full VIP assets.
+  Plan Description:     CapCut Pro 1-Month private account. Premium editing features, watermark-free 4K export & full VIP assets.
   Plan Specific Image:  /assets/products/capcut-pro-bigger-creativity.png
   ----------------------------------------------------------------------------
   Plan 2: 6 Months — Private Account (Plan ID: capcut-private-6m)
   Duration:             6 Months
-  Sri Lanka Price:      LKR 4,000/=
-  Global Price:         $12.12
+  Sri Lanka Price:      LKR 4,500/=
+  Global Price:         .64
   Plan Activation:      Private Account
   Plan Availability:    Available
   Plan Description:     CapCut Pro 6-Month private account. Full VIP effects, 4K export & AI video tools.
@@ -1249,8 +1275,8 @@ AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
   Plan 3: 12 Months — Private Account (Plan ID: capcut-private-12m)
   Duration:             12 Months
-  Sri Lanka Price:      LKR 8,000/=
-  Global Price:         $24.24
+  Sri Lanka Price:      LKR 8,500/=
+  Global Price:         .76
   Plan Activation:      Private Account
   Plan Availability:    Available
   Plan Description:     CapCut Pro 12-Month (1 Year) private account with full warranty throughout active period.
@@ -1281,7 +1307,7 @@ Badge / Tag:          46+ APPS
 Status:               AVAILABLE IN STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        35
-Image Asset:          /assets/products/autodesk.png
+Image Asset:          /assets/products/autodesk-46.png
 Activation Type:      Own Email Activation (Send your registered Autodesk email)
 
 Short Description:
@@ -1299,7 +1325,7 @@ AVAILABLE PLANS & PRICING:
   Plan Activation:      Own Email Activation
   Plan Availability:    Available
   Plan Description:     3-Year official private Autodesk access for 34 apps activated directly on your personal email
-  Plan Specific Image:  /assets/products/autodesk.png
+  Plan Specific Image:  /assets/products/autodesk-46.png
   ----------------------------------------------------------------------------
   Plan 2: 1 Year Access (Plan ID: autodesk-1y)
   Duration:             1 Year
@@ -1308,7 +1334,7 @@ AVAILABLE PLANS & PRICING:
   Plan Activation:      Own Email Activation
   Plan Availability:    Available
   Plan Description:     1-Year official private Autodesk access for 46+ apps activated on your personal email
-  Plan Specific Image:  /assets/products/autodesk.png
+  Plan Specific Image:  /assets/products/autodesk-46.png
   ----------------------------------------------------------------------------
 
 Key Features & Inclusions:
@@ -1641,7 +1667,7 @@ Key Features & Inclusions:
 
 
 ################################################################################
-PRODUCT #35: CHATGPT K12 PLUS+ (STUDY BUDDY)
+PRODUCT #35: CHATGPT PLUS (K12 PLUS)
 ################################################################################
 Product ID:           chatgpt-k12-plus
 Category:             Education (education)
@@ -1650,23 +1676,32 @@ Status:               AVAILABLE IN STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        44
 Image Asset:          /assets/products/chatgpt-k12-plus.png
-Activation Type:      Account Login
+Activation Type:      Private Account Login
 
 Short Description:
-  Smarter Learning. Brighter Future. Your AI Study Buddy for Homework, Math, Science & Coding.
+  ChatGPT Plus private account (K12 Plus — all features available like ChatGPT Plus): GPT-4o, Voice, Canvas & DALL-E.
 
 Full Description:
-  ChatGPT K12 Plus+ is tailored specifically for students and learners — from homework help, step-by-step math and science concept explanations, to coding support, study planning, writing and creative thinking.
+  ChatGPT Plus private account with all features available just like ChatGPT Plus, powered by K12 Plus infrastructure. Full access to GPT-4o, Canvas workspaces, Advanced Voice Mode, reasoning, file/image analysis, and web browsing.
 
 AVAILABLE PLANS & PRICING:
   ----------------------------------------------------------------------------
-  Plan 1: 1 Month Access (Plan ID: chatgpt-k12-1m)
+  Plan 1: 1 Month — Private Account (Plan ID: chatgpt-k12-private-1m)
   Duration:             1 Month
-  Sri Lanka Price:      LKR 1,500/=
-  Global Price:         $4.55
-  Plan Activation:      Account Login
+  Sri Lanka Price:      LKR 2,500/=
+  Global Price:         .58
+  Plan Activation:      Private Account
   Plan Availability:    Available
-  Plan Description:     ChatGPT K12 Plus+ 1-Month student & learning AI access.
+  Plan Description:     ChatGPT Plus (K12 Plus) 1-Month Private Account. Full access to GPT-4o, Advanced Voice, Canvas, reasoning & image creation.
+  Plan Specific Image:  /assets/products/chatgpt-k12-plus.png
+  ----------------------------------------------------------------------------
+  Plan 2: 3 Months — Private Account (Plan ID: chatgpt-k12-private-3m)
+  Duration:             3 Months
+  Sri Lanka Price:      LKR 6,000/=
+  Global Price:         .18
+  Plan Activation:      Private Account
+  Plan Availability:    Available
+  Plan Description:     ChatGPT Plus (K12 Plus) 3-Month Private Account. All premium features with continuous warranty.
   Plan Specific Image:  /assets/products/chatgpt-k12-plus.png
   ----------------------------------------------------------------------------
 
@@ -1676,6 +1711,50 @@ Key Features & Inclusions:
   • Study Planning & organized goals
   • Writing, Editing & creative thinking
   • Friendly, safe AI tutor interface
+
+
+################################################################################
+PRODUCT #36: FIGMA PROFESSIONAL EDU – 1 YEAR
+################################################################################
+Product ID:           figma-pro-edu-1y
+Category:             Subscriptions (subscriptions)
+Badge / Tag:          DESIGN & UI
+Status:               AVAILABLE IN STOCK
+Featured:             Yes (Homepage Featured)
+Display Order:        45
+Image Asset:          /assets/products/figma-pro.jpg
+Activation Type:      Instant Delivery / Ready to Use
+
+Short Description:
+  Full access to Figma Professional features for 1 Year. Professional design & collaboration tools for PC & Web.
+
+Full Description:
+  Figma Professional Edu gives you 1 Year of unrestricted access to Figma's industry-leading design and prototyping platform. Includes unlimited design files, advanced team collaboration, version history, shared design systems, FigJam whiteboard tools, and seamless access from both PC desktop app and web browser. Ready to use with fast delivery.
+
+AVAILABLE PLANS & PRICING:
+  ----------------------------------------------------------------------------
+  Plan 1: 1 Year (Plan ID: figma-pro-edu-1y-plan)
+  Duration:             1 Year
+  Sri Lanka Price:      LKR 3,900/=
+  Global Price:         $11.82
+  Plan Activation:      Instant Delivery / Ready to Use
+  Plan Availability:    Available
+  Plan Description:     1 Year Figma Professional Edu full access with professional design and collaboration features
+  Plan Specific Image:  /assets/products/figma-pro.jpg
+  ----------------------------------------------------------------------------
+
+Key Features & Inclusions:
+  • Full access to Figma Professional features
+  • Professional design & collaboration tools
+  • Ideal for designers, developers, and teams
+  • Access from PC desktop app & Web browser
+  • Ready to use with fast delivery
+  • Unlimited Figma design files & FigJam boards
+
+Important Notes, Instructions & Warranty Policies:
+  * Region: Global — works in all countries without restrictions
+  * Fast delivery via WhatsApp or Telegram right after payment verification
+  * Full replacement warranty throughout the active 1-year period
 
 
 ================================================================================

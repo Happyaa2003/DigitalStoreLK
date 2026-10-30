@@ -1,4 +1,5 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, ChevronDown } from 'lucide-react';
 import type { Product } from '@/types';
@@ -38,7 +39,9 @@ export default function ProductGrid({
   showHeading = true,
   limit,
 }: ProductGridProps) {
-  const [query, setQuery] = useState('');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const urlQuery = searchParams.get('q') || '';
+  const [query, setQuery] = useState(urlQuery);
   const [category, setCategory] = useState(initialCategory);
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc'>('featured');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -46,33 +49,101 @@ export default function ProductGrid({
   const { region } = usePricingStore();
   const { products } = useProductStore();
 
+  // Sync state whenever URL search param changes
+  useEffect(() => {
+    if (urlQuery !== query) {
+      setQuery(urlQuery);
+      if (urlQuery) {
+        setCategory('all');
+      }
+    }
+  }, [urlQuery]);
+
+  const handleQueryChange = (val: string) => {
+    setQuery(val);
+    const newParams = new URLSearchParams(searchParams);
+    if (val.trim()) {
+      newParams.set('q', val.trim());
+    } else {
+      newParams.delete('q');
+    }
+    setSearchParams(newParams, { replace: true });
+  };
+
+  const handleClearQuery = () => {
+    setQuery('');
+    const newParams = new URLSearchParams(searchParams);
+    newParams.delete('q');
+    setSearchParams(newParams, { replace: true });
+  };
+
   const filtered = useMemo(() => {
+    const qRaw = query.trim().toLowerCase();
+    const qClean = qRaw.replace(/[\s\-_]+/g, '');
+
     let result = products.filter((p) => {
       const matchesCategory = category === 'all' || p.category === category;
-      const q = query.toLowerCase().trim();
-      const matchesQuery =
-        !q ||
-        p.name.toLowerCase().includes(q) ||
-        p.shortDescription.toLowerCase().includes(q) ||
-        p.category.toLowerCase().includes(q) ||
-        p.plans.some((pl) => pl.name.toLowerCase().includes(q));
-      return matchesCategory && matchesQuery && p.available !== false;
+      if (!matchesCategory) return false;
+
+      if (!qRaw) return true;
+
+      const nameLower = (p.name || '').toLowerCase();
+      const nameClean = nameLower.replace(/[\s\-_]+/g, '');
+      const descLower = (p.description || '').toLowerCase();
+      const shortDescLower = (p.shortDescription || '').toLowerCase();
+      const catLower = (p.category || '').toLowerCase();
+      const subCatLower = (p.subcategory || '').toLowerCase();
+      const badgeLower = (p.badge || '').toLowerCase();
+      const activationLower = (p.activation || '').toLowerCase();
+
+      const matchesText =
+        nameLower.includes(qRaw) ||
+        nameClean.includes(qClean) ||
+        shortDescLower.includes(qRaw) ||
+        descLower.includes(qRaw) ||
+        catLower.includes(qRaw) ||
+        subCatLower.includes(qRaw) ||
+        badgeLower.includes(qRaw) ||
+        activationLower.includes(qRaw) ||
+        (p.features && p.features.some((f) => f.toLowerCase().includes(qRaw))) ||
+        (p.plans && p.plans.some((pl) => {
+          const plName = (pl.name || '').toLowerCase();
+          const plDesc = (pl.description || '').toLowerCase();
+          const plDur = (pl.duration || '').toLowerCase();
+          return (
+            plName.includes(qRaw) ||
+            plName.replace(/[\s\-_]+/g, '').includes(qClean) ||
+            plDesc.includes(qRaw) ||
+            plDur.includes(qRaw)
+          );
+        }));
+
+      return matchesText;
     });
 
-    // Sort
-    if (sortBy === 'featured') {
-      result = result.sort((a, b) => {
+    // Helper: is product out of stock?
+    const isOutOfStock = (p: Product) =>
+      p.available === false ||
+      (p.plans && p.plans.length > 0 && p.plans.every((pl) => pl.available === false));
+
+    // Sort: In EVERY ordering, in-stock products come first, out-of-stock products go to the END!
+    result = [...result].sort((a, b) => {
+      const aOOS = isOutOfStock(a) ? 1 : 0;
+      const bOOS = isOutOfStock(b) ? 1 : 0;
+      if (aOOS !== bOOS) {
+        return aOOS - bOOS; // in-stock (0) before out-of-stock (1)
+      }
+
+      if (sortBy === 'featured') {
         if (a.featured && !b.featured) return -1;
         if (!a.featured && b.featured) return 1;
         return (a.order ?? 99) - (b.order ?? 99);
-      });
-    } else {
-      result = result.sort((a, b) => {
+      } else {
         const aPrice = parsePriceNumeric(getPrice(a.plans[0]?.price, region));
         const bPrice = parsePriceNumeric(getPrice(b.plans[0]?.price, region));
         return sortBy === 'price-asc' ? aPrice - bPrice : bPrice - aPrice;
-      });
-    }
+      }
+    });
 
     if (limit) return result.slice(0, limit);
     return result;
@@ -110,12 +181,12 @@ export default function ProductGrid({
                 type="text"
                 placeholder="Search products, AI tools, licenses, subscriptions…"
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e) => handleQueryChange(e.target.value)}
                 className="w-full pl-12 pr-10 py-3 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:bg-white dark:focus:bg-white/10 transition-all"
               />
               {query && (
                 <button
-                  onClick={() => setQuery('')}
+                  onClick={handleClearQuery}
                   className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-white"
                   aria-label="Clear search"
                 >
@@ -199,7 +270,7 @@ export default function ProductGrid({
                 Try adjusting your search query or filter.
               </p>
               <button
-                onClick={() => { setQuery(''); setCategory('all'); }}
+                onClick={() => { handleClearQuery(); setCategory('all'); }}
                 className="px-4 py-2 bg-blue-600 text-white rounded-full text-xs font-bold shadow-sm"
               >
                 Clear Filters

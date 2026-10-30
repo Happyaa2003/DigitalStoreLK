@@ -16,7 +16,7 @@
         },
         "description": "1-Month OpenAI ChatGPT Plus subscription with full access to GPT-4o, Advanced Voice Mode, Canvas, and DALL-E 3",
         "activation": "Account Activation",
-        "available": true,
+        "available": false,
         "image": "/assets/products/chat-gpt-plus.png"
       },
       {
@@ -29,7 +29,7 @@
         },
         "description": "1-Year OpenAI ChatGPT Plus subscription with Own Email Activation",
         "activation": "Own Email Activation",
-        "available": true,
+        "available": false,
         "image": "/assets/products/chat-gpt-plus.png"
       }
     ],
@@ -43,7 +43,7 @@
     "image": "/assets/products/chat-gpt-plus.png",
     "badge": "Most Popular",
     "featured": true,
-    "available": true,
+    "available": false,
     "order": 1
   },
   {
@@ -81,49 +81,36 @@
   },
   {
     "id": "coursera-plus",
-    "name": "Coursera Plus",
+    "name": "Coursera 12 Months",
     "category": "education",
-    "shortDescription": "Unlimited access to 7,000+ world-class courses, specializations & certificates.",
+    "shortDescription": "Unlimited access to 7,000+ world-class courses, specializations & accredited university certificates.",
     "description": "Coursera Plus provides full unlimited learning access to top accredited courses, professional certificates from Google, IBM, Meta, and leading global universities.",
     "plans": [
       {
-        "id": "coursera-readymade-1m",
-        "name": "Ready-Made — 1 Month",
-        "duration": "1 Month",
+        "id": "coursera-own-email-12m",
+        "name": "Own Email Activation — 12 Months",
+        "duration": "12 Months",
         "price": {
-          "LK": "LKR 490/=",
-          "GLOBAL": "$1.48"
+          "LK": "LKR 3,500/=",
+          "GLOBAL": ".61"
         },
-        "description": "Pre-configured ready-to-learn account delivered instantly with 1-Month full access",
-        "activation": "Ready-Made Account",
+        "description": "Activated directly on your own personal email address with full accredited certificates issued in your name.",
+        "activation": "Own Email Activation",
         "available": true,
-        "image": "/assets/products/coursera-1-year.png"
+        "image": "/assets/products/coursera-12-months.jpg"
       },
       {
         "id": "coursera-readymade-12m",
-        "name": "Ready-Made — 12 Months",
+        "name": "Ready-Made Account — 12 Months",
         "duration": "12 Months",
         "price": {
-          "LK": "LKR 2,500/=",
-          "GLOBAL": "$7.58"
+          "LK": "LKR 1,750/=",
+          "GLOBAL": ".30"
         },
-        "description": "Pre-configured ready-to-learn account delivered instantly with 12 Months warranty",
+        "description": "Pre-configured ready-to-learn account delivered instantly with 12 Months warranty.",
         "activation": "Ready-Made Account",
         "available": true,
-        "image": "/assets/products/coursera-1-year.png"
-      },
-      {
-        "id": "coursera-own-email-1y",
-        "name": "Own Email Activation — 1 Year",
-        "duration": "1 Year",
-        "price": {
-          "LK": "LKR 5,000/=",
-          "GLOBAL": "$15.15"
-        },
-        "description": "Activated directly on your own personal email address with full certificates in your name",
-        "activation": "Own Email Activation",
-        "available": true,
-        "image": "/assets/products/coursera-1-year.png"
+        "image": "/assets/products/coursera-12-months.jpg"
       }
     ],
     "activation": "Own Email or Ready-Made Account",
@@ -138,7 +125,7 @@
       "Ready-Made Account pricing: LKR 2,500/= (3 Months Warranty) | LKR 3,200/= (12 Months Warranty).",
       "Replacement warranty guarantee covered during the selected warranty duration from date of delivery."
     ],
-    "image": "/assets/products/coursera-1-year.png",
+    "image": "/assets/products/coursera-12-months.jpg",
     "badge": "Popular",
     "featured": true,
     "available": true,
@@ -300,7 +287,8 @@
         },
         "description": "5× usage limits — ideal for regular power users",
         "activation": "Own Email Activation",
-        "image": "/assets/products/claude-max-5x-1-month.png"
+        "image": "/assets/products/claude-max-5x-1-month.png",
+        "available": false
       },
       {
         "id": "claude-max-20x-1m",
@@ -312,7 +300,8 @@
         },
         "description": "20× usage limits — for intensive professional development",
         "activation": "Own Email Activation",
-        "image": "/assets/products/claude-max-20x-1-month.png"
+        "image": "/assets/products/claude-max-20x-1-month.png",
+        "available": false
       },
       {
         "id": "claude-max-5x-1y",
@@ -324,7 +313,8 @@
         },
         "description": "Annual 5X subscription — contact on WhatsApp/Telegram for rate",
         "activation": "Own Email Activation",
-        "image": "/assets/products/claude-max-5x-1-year.png"
+        "image": "/assets/products/claude-max-5x-1-year.png",
+        "available": false
       },
       {
         "id": "claude-max-20x-1y",
@@ -336,7 +326,8 @@
         },
         "description": "Annual 20X enterprise-grade tier — contact for rate",
         "activation": "Own Email Activation",
-        "image": "/assets/products/claude-max-20x-1-year.png"
+        "image": "/assets/products/claude-max-20x-1-year.png",
+        "available": false
       }
     ],
     "activation": "Own Email Activation",
@@ -349,7 +340,7 @@
     "image": "/assets/products/claude-max-5x-1-month.png",
     "badge": "HOT DEAL",
     "featured": true,
-    "available": true,
+    "available": false,
     "order": 12
   },
   {
@@ -369,7 +360,7 @@
         },
         "description": "1 Month official Claude Pro subscription with Claude 3.5 Sonnet, Projects, Artifacts & 5x usage limits",
         "activation": "Account Activation",
-        "available": true,
+        "available": false,
         "image": "/assets/products/claude-pro-work-smarter-globally.png"
       },
       {
@@ -382,7 +373,7 @@
         },
         "description": "1 full year of Claude Pro subscription on your own account",
         "activation": "Own Email Activation",
-        "available": true,
+        "available": false,
         "image": "/assets/products/claude-pro-1-year.png"
       }
     ],
@@ -397,7 +388,7 @@
     "image": "/assets/products/claude-pro-work-smarter-globally.png",
     "badge": "SMART AI",
     "featured": true,
-    "available": true,
+    "available": false,
     "order": 13
   },
   {
@@ -417,7 +408,8 @@
         },
         "description": "5X power tier with extended reasoning limits",
         "activation": "Own Email Activation",
-        "image": "/assets/products/chatgpt-pro-5x.png"
+        "image": "/assets/products/chatgpt-pro-5x.png",
+        "available": false
       },
       {
         "id": "chatgpt-pro-20x",
@@ -429,7 +421,8 @@
         },
         "description": "Maximum power tier with unlimited o1 reasoning compute",
         "activation": "Own Email Activation",
-        "image": "/assets/products/chatgpt-pro-20x.png"
+        "image": "/assets/products/chatgpt-pro-20x.png",
+        "available": false
       }
     ],
     "activation": "Own Email Activation",
@@ -442,7 +435,7 @@
     "image": "/assets/products/chatgpt-pro-5x.png",
     "badge": "ULTIMATE COMPUTE",
     "featured": true,
-    "available": true,
+    "available": false,
     "order": 14
   },
   {
@@ -462,7 +455,8 @@
         },
         "description": "Unlimited completions, 500 fast requests/mo",
         "activation": "Own Email Activation",
-        "image": "/assets/products/cursor-pro-1-month.png"
+        "image": "/assets/products/cursor-pro-1-month.png",
+        "available": false
       },
       {
         "id": "cursor-pro-plus-1m",
@@ -474,7 +468,8 @@
         },
         "description": "Extended request capacity for heavy development",
         "activation": "Own Email Activation",
-        "image": "/assets/products/cursor-pro-1-month.png"
+        "image": "/assets/products/cursor-pro-1-month.png",
+        "available": false
       },
       {
         "id": "cursor-ultra-1m",
@@ -486,7 +481,8 @@
         },
         "description": "Maximum tier with highest fast-request volume",
         "activation": "Own Email Activation",
-        "image": "/assets/products/cursor-pro-1-month.png"
+        "image": "/assets/products/cursor-pro-1-month.png",
+        "available": false
       },
       {
         "id": "cursor-pro-1y",
@@ -498,7 +494,8 @@
         },
         "description": "Annual Pro plan — contact for exclusive pricing",
         "activation": "Own Email Activation",
-        "image": "/assets/products/cursor-pro-1-year.png"
+        "image": "/assets/products/cursor-pro-1-year.png",
+        "available": false
       }
     ],
     "activation": "Own Email Activation",
@@ -511,7 +508,7 @@
     "image": "/assets/products/cursor-pro-1-month.png",
     "badge": "BEST FOR DEVS",
     "featured": true,
-    "available": true,
+    "available": false,
     "order": 16
   },
   {
@@ -772,7 +769,8 @@
           "GLOBAL": "$50.00"
         },
         "description": "PS5 Standard Edition digital license",
-        "image": "/assets/products/gta6-ps5.png"
+        "image": "/assets/products/gta6-ps5.png",
+        "available": false
       },
       {
         "id": "gta6-ps5-unlimited",
@@ -782,7 +780,8 @@
           "GLOBAL": "$72.73"
         },
         "description": "PS5 Unlimited / Deluxe Edition with bonus perks",
-        "image": "/assets/products/gta6-ps5.png"
+        "image": "/assets/products/gta6-ps5.png",
+        "available": false
       }
     ],
     "activation": "Delivered to your PSN account",
@@ -795,7 +794,7 @@
     "image": "/assets/products/gta6-ps5.png",
     "badge": "PRE-ORDER",
     "featured": true,
-    "available": true,
+    "available": false,
     "order": 23
   },
   {
@@ -922,7 +921,8 @@
         },
         "description": "Contact us with the game title or denomination — discounts of up to 40% off",
         "activation": "PSN Redeem Key",
-        "image": "/assets/products/ps-wallet.png"
+        "image": "/assets/products/ps-wallet.png",
+        "available": false
       }
     ],
     "activation": "Redeem code provided directly on WhatsApp/Telegram",
@@ -935,7 +935,7 @@
     "image": "/assets/products/ps-wallet.png",
     "badge": "UP TO 40% OFF",
     "featured": true,
-    "available": true,
+    "available": false,
     "order": 28
   },
   {
@@ -1206,9 +1206,9 @@
   },
   {
     "id": "capcut-pro",
-    "name": "CapCut Pro Team",
+    "name": "CapCut Pro — Private Account",
     "category": "subscriptions",
-    "shortDescription": "CapCut Pro Team 1-month personal access. Watermark-free 4K export & full VIP assets.",
+    "shortDescription": "Unlock premium editing tools and take your creativity to the next level! Watermark-free 4K export & full VIP assets.",
     "description": "Supercharge your video editing with CapCut Pro Team personal access for 1 month. Perfect for content creators, TikTokers, YouTubers, and video editors who need professional AI tools, watermark-free 4K export, and premium visual effects.",
     "plans": [
       {
@@ -1216,10 +1216,10 @@
         "name": "1 Month — Private Account",
         "duration": "1 Month",
         "price": {
-          "LK": "LKR 700/=",
-          "GLOBAL": "$2.12"
+          "LK": "LKR 790/=",
+          "GLOBAL": ".39"
         },
-        "description": "CapCut Pro 1-Month private account. Watermark-free 4K export & full VIP assets.",
+        "description": "CapCut Pro 1-Month private account. Premium editing features, watermark-free 4K export & full VIP assets.",
         "activation": "Private Account",
         "available": true,
         "image": "/assets/products/capcut-pro-bigger-creativity.png"
@@ -1229,8 +1229,8 @@
         "name": "6 Months — Private Account",
         "duration": "6 Months",
         "price": {
-          "LK": "LKR 4,000/=",
-          "GLOBAL": "$12.12"
+          "LK": "LKR 4,500/=",
+          "GLOBAL": ".64"
         },
         "description": "CapCut Pro 6-Month private account. Full VIP effects, 4K export & AI video tools.",
         "activation": "Private Account",
@@ -1242,8 +1242,8 @@
         "name": "12 Months — Private Account",
         "duration": "12 Months",
         "price": {
-          "LK": "LKR 8,000/=",
-          "GLOBAL": "$24.24"
+          "LK": "LKR 8,500/=",
+          "GLOBAL": ".76"
         },
         "description": "CapCut Pro 12-Month (1 Year) private account with full warranty throughout active period.",
         "activation": "Private Account",
@@ -1251,7 +1251,7 @@
         "image": "/assets/products/capcut-pro-bigger-creativity.png"
       }
     ],
-    "activation": "Team Invitation / Personal Access Details",
+    "activation": "Private Account",
     "features": [
       "CapCut Pro Team 1-Month Personal Access",
       "Watermark-free export in up to 4K 60fps",
@@ -1623,20 +1623,20 @@
   },
   {
     "id": "chatgpt-k12-plus",
-    "name": "ChatGPT K12 Plus+ (Study Buddy)",
+    "name": "ChatGPT Plus (K12 Plus)",
     "category": "education",
-    "shortDescription": "Smarter Learning. Brighter Future. Your AI Study Buddy for Homework, Math, Science & Coding.",
-    "description": "ChatGPT K12 Plus+ is tailored specifically for students and learners — from homework help, step-by-step math and science concept explanations, to coding support, study planning, writing and creative thinking.",
+    "shortDescription": "ChatGPT Plus private account (K12 Plus — all features available like ChatGPT Plus): GPT-4o, Voice, Canvas & DALL-E.",
+    "description": "ChatGPT Plus private account with all features available just like ChatGPT Plus, powered by K12 Plus infrastructure. Full access to GPT-4o, Canvas workspaces, Advanced Voice Mode, reasoning, file/image analysis, and web browsing.",
     "plans": [
       {
         "id": "chatgpt-k12-private-1m",
         "name": "1 Month — Private Account",
         "duration": "1 Month",
         "price": {
-          "LK": "LKR 2,400/=",
-          "GLOBAL": ".27"
+          "LK": "LKR 2,500/=",
+          "GLOBAL": ".58"
         },
-        "description": "ChatGPT K12 Plus+ 1-Month Private Account. Full access to AI study buddy, math, science, homework help & coding tools.",
+        "description": "ChatGPT Plus (K12 Plus) 1-Month Private Account. Full access to GPT-4o, Advanced Voice, Canvas, reasoning & image creation.",
         "activation": "Private Account",
         "available": true,
         "image": "/assets/products/chatgpt-k12-plus.png"
@@ -1646,10 +1646,10 @@
         "name": "3 Months — Private Account",
         "duration": "3 Months",
         "price": {
-          "LK": "LKR 5,600/=",
-          "GLOBAL": ".97"
+          "LK": "LKR 6,000/=",
+          "GLOBAL": ".18"
         },
-        "description": "ChatGPT K12 Plus+ 3-Month Private Account. Smarter learning and full study planning with continuous warranty.",
+        "description": "ChatGPT Plus (K12 Plus) 3-Month Private Account. All premium features with continuous warranty.",
         "activation": "Private Account",
         "available": true,
         "image": "/assets/products/chatgpt-k12-plus.png"

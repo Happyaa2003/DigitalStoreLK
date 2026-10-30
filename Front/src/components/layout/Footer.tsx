@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* 1. Left: Brand Lockup */}
           <div className="flex items-center gap-3">
-            <Link to="/" aria-label="DigitalStoreLK Home">
+            <Link to="/" aria-label="DigitalStore Home">
               <img
                 src={getAssetUrl(storeConfig.logo)}
                 alt={storeConfig.shopName}
@@ -25,7 +25,7 @@ export default function Footer() {
             </Link>
             <div>
               <div className="text-base font-extrabold text-slate-900 dark:text-white leading-tight">
-                DigitalStore<span className="text-blue-600 dark:text-blue-400">LK</span>
+                DigitalStore
               </div>
               <div className="text-[10px] text-slate-400 dark:text-slate-500 font-medium">
                 Your Digital Needs, Our Priority

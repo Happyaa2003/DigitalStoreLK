@@ -1,5 +1,5 @@
 {
-  "shopName": "DigitalStoreLK",
+  "shopName": "DigitalStore",
   "tagline": "Smart Tools. Premium Access. Better You.",
   "logo": "/assets/brand/LOGO.png",
   "brandLockup": "/assets/brand/digitalstorelk-brand-lockup.svg",
@@ -93,12 +93,12 @@
     }
   ],
   "seo": {
-    "title": "DigitalStoreLK | AI Tools, Gaming, Courses & Digital Products",
-    "description": "DigitalStoreLK offers premium digital products including AI subscriptions, gaming products, developer tools, learning subscriptions and PS wallet top-ups. Fast delivery via WhatsApp.",
+    "title": "DigitalStore | AI Tools, Gaming, Courses & Digital Products",
+    "description": "DigitalStore offers premium digital products including AI subscriptions, gaming products, developer tools, learning subscriptions and PS wallet top-ups. Fast delivery via WhatsApp.",
     "ogImage": "/assets/brand/og-image.png"
   },
   "footer": {
-    "disclaimer": "DigitalStoreLK is an independent digital product reseller. Product availability and pricing are subject to change. Platform terms and conditions apply. Activation methods and features are as described per product listing.",
-    "copyright": "© 2026 DigitalStoreLK. All rights reserved."
+    "disclaimer": "DigitalStore is an independent digital product reseller. Product availability and pricing are subject to change. Platform terms and conditions apply. Activation methods and features are as described per product listing.",
+    "copyright": "© 2026 DigitalStore. All rights reserved."
   }
 }

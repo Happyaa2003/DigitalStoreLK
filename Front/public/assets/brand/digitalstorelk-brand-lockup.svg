@@ -12,7 +12,7 @@
 
   <g font-family="Inter, system-ui, -apple-system, sans-serif">
     <text x="545" y="270" font-size="158" font-weight="800" letter-spacing="-5">
-      <tspan fill="#FFFFFF">Digital</tspan><tspan fill="#F5A900">Store</tspan><tspan fill="#1687E8">LK</tspan>
+      <tspan fill="#FFFFFF">Digital</tspan><tspan fill="#F5A900">Store</tspan>
     </text>
 
     <rect x="548" y="314" width="1010" height="4" rx="2" fill="#38BDF8" opacity="0.6"/>

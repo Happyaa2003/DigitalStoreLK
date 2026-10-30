@@ -61,7 +61,10 @@ export default function ProductModal({
   const whatsappLink = createWhatsAppLink(product, selectedPlan, region);
   const telegramLink = createTelegramLink(product, selectedPlan, region);
 
+  const isOutOfStock = product.available === false || (selectedPlan && selectedPlan.available === false);
+
   const handleAddToCart = () => {
+    if (isOutOfStock) return;
     addItem(product, selectedPlan, 1);
   };
 
@@ -98,7 +101,7 @@ export default function ProductModal({
             <button
               onClick={onClose}
               id="product-modal-close"
-              className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-white/10 text-slate-500 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all"
+              className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-white/10 text-slate-500 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all cursor-pointer"
               aria-label="Close product details"
             >
               <X size={18} />
@@ -106,21 +109,35 @@ export default function ProductModal({
 
             {/* Header image preview — 1:1 Aspect Ratio */}
             <div className="relative flex-shrink-0 w-full flex items-center justify-center bg-slate-50 dark:bg-black/30 p-4 sm:p-5 border-b border-slate-100 dark:border-white/10">
-              <div className="w-40 h-40 sm:w-48 sm:h-48 aspect-square rounded-2xl overflow-hidden bg-slate-900/5 dark:bg-black/40 border border-slate-200/60 dark:border-white/10 shadow-inner flex items-center justify-center p-2">
+              <div className="w-40 h-40 sm:w-48 sm:h-48 aspect-square rounded-2xl overflow-hidden bg-slate-900/5 dark:bg-black/40 border border-slate-200/60 dark:border-white/10 shadow-inner flex items-center justify-center p-2 relative">
                 <img
                   src={currentImage}
                   alt={product.name}
-                  className="w-full h-full object-contain filter drop-shadow-md"
+                  className={cn("w-full h-full object-contain filter drop-shadow-md", isOutOfStock && "opacity-75 grayscale-[25%]")}
                 />
+                {isOutOfStock && (
+                  <div className="absolute inset-0 bg-slate-950/40 backdrop-blur-[1px] flex items-center justify-center p-2">
+                    <span className="px-3 py-1 rounded-full bg-rose-600 text-white font-black text-xs uppercase tracking-wider shadow-lg border border-rose-400/40">
+                      Out of Stock
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
 
             {/* Scrollable details body */}
             <div className="flex-1 overflow-y-auto p-5 sm:p-6 space-y-5">
               <div>
-                <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 uppercase tracking-wider mb-2">
-                  {product.category}
-                </span>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 uppercase tracking-wider">
+                    {product.category}
+                  </span>
+                  {isOutOfStock && (
+                    <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-black bg-rose-600 text-white uppercase tracking-wider shadow-sm">
+                      Out of Stock
+                    </span>
+                  )}
+                </div>
                 <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white leading-tight">
                   {product.name}
                 </h3>
@@ -136,23 +153,26 @@ export default function ProductModal({
                     Select Plan
                   </p>
                   <div className="grid grid-cols-2 gap-2">
-                    {product.plans.map((plan, idx) => (
-                      <button
-                        key={plan.id}
-                        onClick={() => setSelectedPlanIndex(idx)}
-                        className={cn(
-                          'p-3 rounded-2xl border text-left transition-all',
-                          selectedPlanIndex === idx
-                            ? 'border-blue-600 bg-blue-50/50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-300 shadow-sm'
-                            : 'border-slate-200 dark:border-white/10 hover:border-slate-300 text-slate-700 dark:text-slate-300'
-                        )}
-                      >
-                        <div className="font-extrabold text-xs">{plan.name}</div>
-                        <div className="text-[11px] font-bold mt-1 text-slate-900 dark:text-white">
-                          {getPrice(plan.price, region)}
-                        </div>
-                      </button>
-                    ))}
+                    {product.plans.map((plan, idx) => {
+                      const planOOS = plan.available === false || product.available === false;
+                      return (
+                        <button
+                          key={plan.id}
+                          onClick={() => setSelectedPlanIndex(idx)}
+                          className={cn(
+                            'p-3 rounded-2xl border text-left transition-all cursor-pointer',
+                            selectedPlanIndex === idx
+                              ? 'border-blue-600 bg-blue-50/50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-300 shadow-sm'
+                              : 'border-slate-200 dark:border-white/10 hover:border-slate-300 text-slate-700 dark:text-slate-300'
+                          )}
+                        >
+                          <div className="font-extrabold text-xs">{plan.name}</div>
+                          <div className="text-[11px] font-bold mt-1 text-slate-900 dark:text-white">
+                            {planOOS ? 'Out of Stock' : getPrice(plan.price, region)}
+                          </div>
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
               )}
@@ -164,7 +184,11 @@ export default function ProductModal({
                     Price
                   </span>
                   <div className="text-xl font-black text-slate-900 dark:text-white">
-                    {currentPrice}
+                    {isOutOfStock ? (
+                      <span className="text-rose-500 font-bold text-lg">Out of Stock</span>
+                    ) : (
+                      currentPrice
+                    )}
                   </div>
                 </div>
 
@@ -200,13 +224,22 @@ export default function ProductModal({
 
             {/* Action buttons footer */}
             <div className="p-4 sm:p-5 border-t border-slate-200 dark:border-white/10 bg-slate-50/50 dark:bg-[#070e1c] flex flex-col sm:flex-row gap-2.5">
-              <button
-                onClick={handleAddToCart}
-                className="flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-200 text-white dark:text-slate-900 font-extrabold text-xs shadow-sm transition-all"
-              >
-                <ShoppingCart size={15} />
-                <span>Add to Cart</span>
-              </button>
+              {isOutOfStock ? (
+                <button
+                  disabled
+                  className="flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-slate-200 dark:bg-white/10 text-slate-400 dark:text-slate-500 font-extrabold text-xs cursor-not-allowed"
+                >
+                  <span>Out of Stock</span>
+                </button>
+              ) : (
+                <button
+                  onClick={handleAddToCart}
+                  className="flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-200 text-white dark:text-slate-900 font-extrabold text-xs shadow-sm transition-all"
+                >
+                  <ShoppingCart size={15} />
+                  <span>Add to Cart</span>
+                </button>
+              )}
 
               <a
                 href={whatsappLink}
@@ -215,7 +248,7 @@ export default function ProductModal({
                 className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs shadow-md shadow-emerald-600/20 transition-all"
               >
                 <WhatsAppIcon className="w-4 h-4 fill-white flex-shrink-0" />
-                <span>Order on WhatsApp</span>
+                <span>{isOutOfStock ? 'Inquire on WhatsApp' : 'Order on WhatsApp'}</span>
               </a>
 
               <a
@@ -225,7 +258,7 @@ export default function ProductModal({
                 className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs shadow-md shadow-blue-600/20 transition-all"
               >
                 <TelegramIcon className="w-4 h-4 fill-white flex-shrink-0" />
-                <span>Order on Telegram</span>
+                <span>{isOutOfStock ? 'Inquire on Telegram' : 'Order on Telegram'}</span>
               </a>
             </div>
           </motion.div>

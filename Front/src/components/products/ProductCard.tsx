@@ -109,18 +109,33 @@ export default function ProductCard({ product, onViewDetails }: ProductCardProps
     openCart();
   };
 
-  // Determine badge text
-  const badgeText = product.badge || (product.featured ? 'Popular' : 'New');
+  // Determine badge text and stock status
+  const isOutOfStock = product.available === false || (selectedPlan && selectedPlan.available === false);
+  const badgeText = isOutOfStock
+    ? 'Out of Stock'
+    : (product.badge || (product.featured ? 'Popular' : 'New'));
 
   return (
     <div
       onClick={() => onViewDetails && onViewDetails(product, selectedPlanIndex)}
-      className="group relative rounded-3xl bg-white dark:bg-[#0c1527] border border-slate-200/90 dark:border-white/10 p-3 sm:p-3.5 shadow-sm hover:shadow-md dark:hover:border-blue-500/40 transition-all duration-200 flex flex-col cursor-pointer overflow-hidden"
+      className={cn(
+        "group relative rounded-3xl bg-white dark:bg-[#0c1527] border p-3 sm:p-3.5 shadow-sm transition-all duration-200 flex flex-col cursor-pointer overflow-hidden",
+        isOutOfStock
+          ? "border-rose-500/30 dark:border-rose-500/20 opacity-90"
+          : "border-slate-200/90 dark:border-white/10 hover:shadow-md dark:hover:border-blue-500/40"
+      )}
     >
       {/* Top Badges Row */}
       <div className="flex items-center justify-between mb-2 gap-1.5">
-        <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-600 text-white text-[10px] font-bold shadow-sm">
-          <Star size={10} className="fill-white" />
+        <div
+          className={cn(
+            "inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider shadow-sm",
+            isOutOfStock
+              ? "bg-rose-600 text-white shadow-rose-600/30"
+              : "bg-blue-600 text-white font-bold"
+          )}
+        >
+          {!isOutOfStock && <Star size={10} className="fill-white" />}
           <span>{badgeText}</span>
         </div>
         {product.plans.length > 1 && (
@@ -135,9 +150,19 @@ export default function ProductCard({ product, onViewDetails }: ProductCardProps
         <img
           src={getAssetUrl(currentImage)}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          className={cn(
+            "w-full h-full object-cover transition-transform duration-300",
+            isOutOfStock ? "opacity-70 grayscale-[25%]" : "group-hover:scale-105"
+          )}
           loading="lazy"
         />
+        {isOutOfStock && (
+          <div className="absolute inset-0 bg-slate-950/40 backdrop-blur-[1px] flex items-center justify-center p-2 pointer-events-none">
+            <span className="px-3 py-1 rounded-full bg-rose-600 text-white font-black text-xs uppercase tracking-wider shadow-lg border border-rose-400/40">
+              Out of Stock
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Product Title & Feature */}
@@ -209,26 +234,42 @@ export default function ProductCard({ product, onViewDetails }: ProductCardProps
         onClick={(e) => e.stopPropagation()}
       >
         {/* Quantity Stepper */}
-        <div className="flex items-center bg-slate-100 dark:bg-black/40 rounded-xl px-2 py-1 text-xs font-bold border border-slate-200/80 dark:border-white/10 flex-shrink-0">
-          <button
-            onClick={() => setQuantity(Math.max(1, quantity - 1))}
-            className="text-slate-500 hover:text-slate-900 dark:hover:text-white px-1 text-xs leading-none"
-            aria-label="Decrease quantity"
-          >
-            -
-          </button>
-          <span className="px-1.5 text-xs text-slate-800 dark:text-slate-200 leading-none">{quantity}</span>
-          <button
-            onClick={() => setQuantity(quantity + 1)}
-            className="text-slate-500 hover:text-slate-900 dark:hover:text-white px-1 text-xs leading-none"
-            aria-label="Increase quantity"
-          >
-            +
-          </button>
-        </div>
+        {isOutOfStock ? (
+          <div className="flex items-center bg-slate-100 dark:bg-black/40 rounded-xl px-2 py-1 text-xs font-bold border border-slate-200/80 dark:border-white/10 flex-shrink-0 opacity-40 cursor-not-allowed">
+            <span className="px-1 text-xs text-slate-400 leading-none">-</span>
+            <span className="px-1.5 text-xs text-slate-500 leading-none">0</span>
+            <span className="px-1 text-xs text-slate-400 leading-none">+</span>
+          </div>
+        ) : (
+          <div className="flex items-center bg-slate-100 dark:bg-black/40 rounded-xl px-2 py-1 text-xs font-bold border border-slate-200/80 dark:border-white/10 flex-shrink-0">
+            <button
+              onClick={() => setQuantity(Math.max(1, quantity - 1))}
+              className="text-slate-500 hover:text-slate-900 dark:hover:text-white px-1 text-xs leading-none"
+              aria-label="Decrease quantity"
+            >
+              -
+            </button>
+            <span className="px-1.5 text-xs text-slate-800 dark:text-slate-200 leading-none">{quantity}</span>
+            <button
+              onClick={() => setQuantity(quantity + 1)}
+              className="text-slate-500 hover:text-slate-900 dark:hover:text-white px-1 text-xs leading-none"
+              aria-label="Increase quantity"
+            >
+              +
+            </button>
+          </div>
+        )}
 
         {/* Dynamic Cart Button */}
-        {inCart ? (
+        {isOutOfStock ? (
+          <button
+            disabled
+            className="flex-1 min-w-0 flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-400 dark:text-slate-500 font-bold text-xs cursor-not-allowed whitespace-nowrap"
+            title="Currently Out of Stock"
+          >
+            <span className="whitespace-nowrap">Out of Stock</span>
+          </button>
+        ) : inCart ? (
           <button
             onClick={handleShowCart}
             className="flex-1 min-w-0 flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-sm shadow-blue-500/25 transition-all whitespace-nowrap"

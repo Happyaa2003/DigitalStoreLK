@@ -65,7 +65,7 @@ export default function Header() {
       >
         <div className={cn("container-main flex items-center justify-between gap-3 sm:gap-6 lg:gap-8 transition-all", scrolled ? "py-3 sm:py-3.5" : "py-4 sm:py-5 lg:py-5.5")}>
           {/* 1. Brand Logo & Tagline */}
-          <Link to="/" className="flex items-center gap-3 sm:gap-3.5 flex-shrink-0" aria-label="DigitalStoreLK">
+          <Link to="/" className="flex items-center gap-3 sm:gap-3.5 flex-shrink-0" aria-label="DigitalStore">
             <img
               src={getAssetUrl(storeConfig.logo)}
               alt={storeConfig.shopName}
@@ -76,7 +76,7 @@ export default function Header() {
             />
             <div className="flex flex-col">
               <span className="font-black text-xl sm:text-2xl leading-tight tracking-tight text-slate-900 dark:text-white flex items-center">
-                DigitalStore<span className="text-blue-600 dark:text-blue-400">LK</span>
+                DigitalStore
               </span>
               <span className="text-xs sm:text-[13px] text-slate-500 dark:text-slate-400 font-medium tracking-tight">
                 Your Digital Needs, Our Priority
