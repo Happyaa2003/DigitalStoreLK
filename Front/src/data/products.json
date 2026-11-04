@@ -1,5 +1,60 @@
 [
   {
+    "id": "coursera-plus",
+    "name": "Coursera Plus",
+    "category": "education",
+    "shortDescription": "Unlimited access to 7,000+ world-class courses, specializations & accredited university certificates. #1 Most Selling with 300+ Orders!",
+    "description": "Coursera Plus provides full unlimited learning access to top accredited courses, professional certificates from Google, IBM, Meta, and leading global universities. Over 300+ successful student orders with verified warranty.",
+    "plans": [
+      {
+        "id": "coursera-own-email-12m",
+        "name": "Own Email (12M Warranty)",
+        "duration": "12 Months",
+        "price": {
+          "LK": "LKR 3,900/=",
+          "GLOBAL": ".82"
+        },
+        "description": "Coursera Plus activated on your personal email with full 12 Months replacement warranty and accredited certificates issued in your name.",
+        "activation": "Own Email Activation",
+        "available": true,
+        "image": "/assets/products/coursera-plus-12-month-learning-bundle.png"
+      },
+      {
+        "id": "coursera-readymade-12m",
+        "name": "Ready-Made (3M Warranty)",
+        "duration": "12 Months",
+        "price": {
+          "LK": "LKR 1,900/=",
+          "GLOBAL": ".76"
+        },
+        "description": "Coursera Plus pre-configured ready-to-learn account delivered instantly with 3 Months replacement warranty.",
+        "activation": "Ready-Made Account",
+        "available": true,
+        "image": "/assets/products/coursera-plus-12-month-learning-bundle.png"
+      }
+    ],
+    "activation": "Own Email or Ready-Made Account",
+    "features": [
+      "7,000+ courses and specializations from top global universities",
+      "Earn accredited certificates issued directly in your own name",
+      "Google, Meta, IBM, Stanford professional certificates & degrees",
+      "12-month full unlimited learning access on all devices",
+      "Own Email: 12-Month full replacement warranty (LKR 3,900/=)",
+      "Ready-Made Account: 3-Month replacement warranty (LKR 1,900/=)",
+      "🔥 #1 Most Selling E-Learning Product — 300+ Successful Orders"
+    ],
+    "notes": [
+      "Own Email Activation: LKR 3,900/= with 12 Months full replacement warranty guarantee.",
+      "Ready-Made Account: LKR 1,900/= with 3 Months replacement warranty guarantee.",
+      "Instant delivery after payment confirmation with dedicated customer support."
+    ],
+    "image": "/assets/products/coursera-plus-12-month-learning-bundle.png",
+    "badge": "🔥 Most Selling • 300+ Orders",
+    "featured": true,
+    "available": true,
+    "order": 1
+  },
+  {
     "id": "chatgpt-plus",
     "name": "ChatGPT Plus",
     "category": "ai",
@@ -44,7 +99,7 @@
     "badge": "Most Popular",
     "featured": true,
     "available": false,
-    "order": 1
+    "order": 2
   },
   {
     "id": "windows-11-pro",
@@ -78,58 +133,6 @@
     "featured": true,
     "available": true,
     "order": 2
-  },
-  {
-    "id": "coursera-plus",
-    "name": "Coursera 12 Months",
-    "category": "education",
-    "shortDescription": "Unlimited access to 7,000+ world-class courses, specializations & accredited university certificates.",
-    "description": "Coursera Plus provides full unlimited learning access to top accredited courses, professional certificates from Google, IBM, Meta, and leading global universities.",
-    "plans": [
-      {
-        "id": "coursera-own-email-12m",
-        "name": "Own Email Activation — 12 Months",
-        "duration": "12 Months",
-        "price": {
-          "LK": "LKR 3,500/=",
-          "GLOBAL": ".61"
-        },
-        "description": "Activated directly on your own personal email address with full accredited certificates issued in your name.",
-        "activation": "Own Email Activation",
-        "available": true,
-        "image": "/assets/products/coursera-12-months.jpg"
-      },
-      {
-        "id": "coursera-readymade-12m",
-        "name": "Ready-Made Account — 12 Months",
-        "duration": "12 Months",
-        "price": {
-          "LK": "LKR 1,750/=",
-          "GLOBAL": ".30"
-        },
-        "description": "Pre-configured ready-to-learn account delivered instantly with 12 Months warranty.",
-        "activation": "Ready-Made Account",
-        "available": true,
-        "image": "/assets/products/coursera-12-months.jpg"
-      }
-    ],
-    "activation": "Own Email or Ready-Made Account",
-    "features": [
-      "7,000+ courses and specializations",
-      "Earn accredited certificates in your name",
-      "Google, Meta, IBM professional certificates",
-      "12-month full unlimited learning access",
-      "Warranty options: 3-Month Warranty (LKR 2,500/=) or 12-Month Warranty (LKR 3,200/=)"
-    ],
-    "notes": [
-      "Ready-Made Account pricing: LKR 2,500/= (3 Months Warranty) | LKR 3,200/= (12 Months Warranty).",
-      "Replacement warranty guarantee covered during the selected warranty duration from date of delivery."
-    ],
-    "image": "/assets/products/coursera-12-months.jpg",
-    "badge": "Popular",
-    "featured": true,
-    "available": true,
-    "order": 3
   },
   {
     "id": "adobe-creative-cloud-all-apps",

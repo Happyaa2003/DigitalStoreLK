@@ -46,7 +46,7 @@ console.log('✓ Copied all real images from Front/Products into public/assets/p
 const realImagesMap = {
   'chatgpt-plus': '/assets/products/chat-gpt-plus.png',
   'windows-11-pro': '/assets/products/win-11-pro.png',
-  'coursera-plus': '/assets/products/coursera-1-year.png',
+  'coursera-plus': '/assets/products/coursera-plus-12-month-learning-bundle.png',
   'adobe-creative-cloud-all-apps': '/assets/products/adobe-creative-cloud.png',
   'office-365-plus': '/assets/products/office-365-1-year.png',
   'google-ai-pro': '/assets/products/google-ai-pro-18-months.png',

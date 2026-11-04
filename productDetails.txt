@@ -1,7 +1,7 @@
 ================================================================================
    DIGITALSTORE - COMPLETE PRODUCT & PRICING CATALOG
    Tagline: Smart Tools. Premium Access. Better You.
-   Generated: 2026-10-30
+   Generated: 2026-11-04
    WhatsApp: +94 72 151 0654 (https://wa.me/94721510654)
    Telegram: @DigitalStoreLK (https://t.me/DigitalStoreLK)
    Facebook: https://www.facebook.com/DigitalStoreLK
@@ -13,9 +13,9 @@ TABLE OF CONTENTS & QUICK PRICE INDEX
 --------------------------------------------------------------------------------
 No.  Product Name                    Category            Starting Price (LK / GLOBAL)
 --------------------------------------------------------------------------------
-1.   ChatGPT Plus                    AI & Productivity   LKR 3,500/= | $10.61
-2.   Windows 11 Pro                  Developer Tools     LKR 500/= | $1.50
-3.   Coursera 12 Months              Education           LKR 3,500/= | .61
+1.   Coursera Plus                   Education           LKR 3,900/= | .82
+2.   ChatGPT Plus                    AI & Productivity   LKR 3,500/= | $10.61
+3.   Windows 11 Pro                  Developer Tools     LKR 500/= | $1.50
 4.   Adobe Creative Cloud            Subscriptions       LKR 2,500/= | $7.50
 5.   Microsoft 365 Family            Developer Tools     LKR 6,500/= | $19.70
 6.   Google Gemini AI Pro            AI & Productivity   LKR 790/= | $2.40
@@ -75,14 +75,68 @@ DETAILED PRODUCT INFORMATION (ALL 26 PRODUCTS)
 ================================================================================
 
 ################################################################################
-PRODUCT #1: CHATGPT PLUS
+PRODUCT #1: COURSERA PLUS
+################################################################################
+Product ID:           coursera-plus
+Category:             Education (education)
+Badge / Tag:          🔥 Most Selling • 300+ Orders
+Status:               AVAILABLE IN STOCK
+Featured:             Yes (Homepage Featured)
+Display Order:        1
+Image Asset:          /assets/products/coursera-plus-12-month-learning-bundle.png
+Activation Type:      Own Email or Ready-Made Account
+
+Short Description:
+  Unlimited access to 7,000+ world-class courses, specializations & accredited university certificates. #1 Most Selling with 300+ Orders!
+
+Full Description:
+  Coursera Plus provides full unlimited learning access to top accredited courses, professional certificates from Google, IBM, Meta, and leading global universities. Over 300+ successful student orders with verified warranty.
+
+AVAILABLE PLANS & PRICING:
+  ----------------------------------------------------------------------------
+  Plan 1: Own Email (12M Warranty) (Plan ID: coursera-own-email-12m)
+  Duration:             12 Months
+  Sri Lanka Price:      LKR 3,900/=
+  Global Price:         .82
+  Plan Activation:      Own Email Activation
+  Plan Availability:    Available
+  Plan Description:     Coursera Plus activated on your personal email with full 12 Months replacement warranty and accredited certificates issued in your name.
+  Plan Specific Image:  /assets/products/coursera-plus-12-month-learning-bundle.png
+  ----------------------------------------------------------------------------
+  Plan 2: Ready-Made (3M Warranty) (Plan ID: coursera-readymade-12m)
+  Duration:             12 Months
+  Sri Lanka Price:      LKR 1,900/=
+  Global Price:         .76
+  Plan Activation:      Ready-Made Account
+  Plan Availability:    Available
+  Plan Description:     Coursera Plus pre-configured ready-to-learn account delivered instantly with 3 Months replacement warranty.
+  Plan Specific Image:  /assets/products/coursera-plus-12-month-learning-bundle.png
+  ----------------------------------------------------------------------------
+
+Key Features & Inclusions:
+  • 7,000+ courses and specializations from top global universities
+  • Earn accredited certificates issued directly in your own name
+  • Google, Meta, IBM, Stanford professional certificates & degrees
+  • 12-month full unlimited learning access on all devices
+  • Own Email: 12-Month full replacement warranty (LKR 3,900/=)
+  • Ready-Made Account: 3-Month replacement warranty (LKR 1,900/=)
+  • 🔥 #1 Most Selling E-Learning Product — 300+ Successful Orders
+
+Important Notes, Instructions & Warranty Policies:
+  * Own Email Activation: LKR 3,900/= with 12 Months full replacement warranty guarantee.
+  * Ready-Made Account: LKR 1,900/= with 3 Months replacement warranty guarantee.
+  * Instant delivery after payment confirmation with dedicated customer support.
+
+
+################################################################################
+PRODUCT #2: CHATGPT PLUS
 ################################################################################
 Product ID:           chatgpt-plus
 Category:             AI & Productivity (ai)
 Badge / Tag:          Most Popular
 Status:               OUT OF STOCK
 Featured:             Yes (Homepage Featured)
-Display Order:        1
+Display Order:        2
 Image Asset:          /assets/products/chat-gpt-plus.png
 Activation Type:      Instant Activation / Own Email
 
@@ -121,7 +175,7 @@ Key Features & Inclusions:
 
 
 ################################################################################
-PRODUCT #2: WINDOWS 11 PRO
+PRODUCT #3: WINDOWS 11 PRO
 ################################################################################
 Product ID:           windows-11-pro
 Category:             Developer Tools (developer)
@@ -154,57 +208,6 @@ Key Features & Inclusions:
   • Permanent lifetime activation for 1 PC
   • Direct online activation via Windows Settings
   • All security updates and features enabled
-
-
-################################################################################
-PRODUCT #3: COURSERA 12 MONTHS
-################################################################################
-Product ID:           coursera-plus
-Category:             Education (education)
-Badge / Tag:          Popular
-Status:               AVAILABLE IN STOCK
-Featured:             Yes (Homepage Featured)
-Display Order:        3
-Image Asset:          /assets/products/coursera-12-months.jpg
-Activation Type:      Own Email or Ready-Made Account
-
-Short Description:
-  Unlimited access to 7,000+ world-class courses, specializations & accredited university certificates.
-
-Full Description:
-  Coursera Plus provides full unlimited learning access to top accredited courses, professional certificates from Google, IBM, Meta, and leading global universities.
-
-AVAILABLE PLANS & PRICING:
-  ----------------------------------------------------------------------------
-  Plan 1: Own Email Activation — 12 Months (Plan ID: coursera-own-email-12m)
-  Duration:             12 Months
-  Sri Lanka Price:      LKR 3,500/=
-  Global Price:         .61
-  Plan Activation:      Own Email Activation
-  Plan Availability:    Available
-  Plan Description:     Activated directly on your own personal email address with full accredited certificates issued in your name.
-  Plan Specific Image:  /assets/products/coursera-12-months.jpg
-  ----------------------------------------------------------------------------
-  Plan 2: Ready-Made Account — 12 Months (Plan ID: coursera-readymade-12m)
-  Duration:             12 Months
-  Sri Lanka Price:      LKR 1,750/=
-  Global Price:         .30
-  Plan Activation:      Ready-Made Account
-  Plan Availability:    Available
-  Plan Description:     Pre-configured ready-to-learn account delivered instantly with 12 Months warranty.
-  Plan Specific Image:  /assets/products/coursera-12-months.jpg
-  ----------------------------------------------------------------------------
-
-Key Features & Inclusions:
-  • 7,000+ courses and specializations
-  • Earn accredited certificates in your name
-  • Google, Meta, IBM professional certificates
-  • 12-month full unlimited learning access
-  • Warranty options: 3-Month Warranty (LKR 2,500/=) or 12-Month Warranty (LKR 3,200/=)
-
-Important Notes, Instructions & Warranty Policies:
-  * Ready-Made Account pricing: LKR 2,500/= (3 Months Warranty) | LKR 3,200/= (12 Months Warranty).
-  * Replacement warranty guarantee covered during the selected warranty duration from date of delivery.
 
 
 ################################################################################

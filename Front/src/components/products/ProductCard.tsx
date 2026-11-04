@@ -38,8 +38,14 @@ function getPlanShortLabel(plan: Plan): string {
 
   // Canva & Coursera Own Email / Admin Panel
   if (/admin panel/i.test(name)) return dur ? `Admin ${dur}` : 'Admin Panel';
-  if (/own email/i.test(name)) return dur ? `Own Email ${dur}` : 'Own Email';
-  if (/ready-made|readymade/i.test(name)) return dur ? `Ready ${dur}` : 'Ready-Made';
+  if (/own email/i.test(name)) {
+    if (/12\s*m/i.test(name)) return 'Own Email (12M)';
+    return dur ? `Own Email ${dur}` : 'Own Email';
+  }
+  if (/ready-made|readymade/i.test(name)) {
+    if (/3\s*m/i.test(name)) return 'Ready-Made (3M)';
+    return dur ? `Ready ${dur}` : 'Ready-Made';
+  }
 
   // Claude / ChatGPT 5X / 20X
   if (/5x/i.test(name)) return dur ? `5X ${dur}` : '5X';
@@ -132,7 +138,9 @@ export default function ProductCard({ product, onViewDetails }: ProductCardProps
             "inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider shadow-sm",
             isOutOfStock
               ? "bg-rose-600 text-white shadow-rose-600/30"
-              : "bg-blue-600 text-white font-bold"
+              : badgeText.includes('Most Selling') || badgeText.includes('Best Seller')
+                ? "bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 text-white font-black shadow-orange-500/30 ring-1 ring-amber-400/50"
+                : "bg-blue-600 text-white font-bold"
           )}
         >
           {!isOutOfStock && <Star size={10} className="fill-white" />}
