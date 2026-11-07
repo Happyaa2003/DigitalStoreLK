@@ -1,7 +1,7 @@
 ================================================================================
    DIGITALSTORE - COMPLETE PRODUCT & PRICING CATALOG
    Tagline: Smart Tools. Premium Access. Better You.
-   Generated: 2026-11-04
+   Generated: 2026-11-07
    WhatsApp: +94 72 151 0654 (https://wa.me/94721510654)
    Telegram: @DigitalStoreLK (https://t.me/DigitalStoreLK)
    Facebook: https://www.facebook.com/DigitalStoreLK
@@ -108,7 +108,7 @@ AVAILABLE PLANS & PRICING:
   Sri Lanka Price:      LKR 1,900/=
   Global Price:         .76
   Plan Activation:      Ready-Made Account
-  Plan Availability:    Available
+  Plan Availability:    Unavailable
   Plan Description:     Coursera Plus pre-configured ready-to-learn account delivered instantly with 3 Months replacement warranty.
   Plan Specific Image:  /assets/products/coursera-plus-12-month-learning-bundle.png
   ----------------------------------------------------------------------------
@@ -320,7 +320,7 @@ PRODUCT #6: GOOGLE GEMINI AI PRO
 Product ID:           google-ai-pro
 Category:             AI & Productivity (ai)
 Badge / Tag:          New
-Status:               AVAILABLE IN STOCK
+Status:               OUT OF STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        6
 Image Asset:          /assets/products/google-ai-pro-18-months.png
@@ -339,6 +339,7 @@ AVAILABLE PLANS & PRICING:
   Sri Lanka Price:      LKR 790/=
   Global Price:         $2.40
   Plan Activation:      STB Storage + Gemini
+  Plan Availability:    Unavailable
   Plan Description:     18 Months access with Gemini, 2TB Storage, and Veo 3.1 access
   Plan Specific Image:  /assets/products/google-ai-pro-18-months.png
   ----------------------------------------------------------------------------
@@ -849,7 +850,7 @@ PRODUCT #17: GTA 6 — XBOX SERIES X|S
 Product ID:           gta6-xbox
 Category:             Gaming (gaming)
 Badge / Tag:          PRE-ORDER
-Status:               AVAILABLE IN STOCK
+Status:               OUT OF STOCK
 Featured:             No
 Display Order:        24
 Image Asset:          /assets/products/gta6-xbox.png
@@ -866,12 +867,14 @@ AVAILABLE PLANS & PRICING:
   Plan 1: Standard Edition (Plan ID: gta6-xbox-std)
   Sri Lanka Price:      LKR 16,500/=
   Global Price:         $50.00
+  Plan Availability:    Unavailable
   Plan Description:     Xbox Series X|S Standard Edition digital license
   Plan Specific Image:  /assets/products/gta6-xbox.png
   ----------------------------------------------------------------------------
   Plan 2: Unlimited Edition (Plan ID: gta6-xbox-unlimited)
   Sri Lanka Price:      LKR 21,500/=
   Global Price:         $65.15
+  Plan Availability:    Unavailable
   Plan Description:     Xbox Series X|S Unlimited Edition
   Plan Specific Image:  /assets/products/gta6-xbox.png
   ----------------------------------------------------------------------------
@@ -1675,7 +1678,7 @@ PRODUCT #35: CHATGPT PLUS (K12 PLUS)
 Product ID:           chatgpt-k12-plus
 Category:             Education (education)
 Badge / Tag:          STUDENT AI
-Status:               AVAILABLE IN STOCK
+Status:               OUT OF STOCK
 Featured:             Yes (Homepage Featured)
 Display Order:        44
 Image Asset:          /assets/products/chatgpt-k12-plus.png
@@ -1694,7 +1697,7 @@ AVAILABLE PLANS & PRICING:
   Sri Lanka Price:      LKR 2,500/=
   Global Price:         .58
   Plan Activation:      Private Account
-  Plan Availability:    Available
+  Plan Availability:    Unavailable
   Plan Description:     ChatGPT Plus (K12 Plus) 1-Month Private Account. Full access to GPT-4o, Advanced Voice, Canvas, reasoning & image creation.
   Plan Specific Image:  /assets/products/chatgpt-k12-plus.png
   ----------------------------------------------------------------------------
@@ -1703,7 +1706,7 @@ AVAILABLE PLANS & PRICING:
   Sri Lanka Price:      LKR 6,000/=
   Global Price:         .18
   Plan Activation:      Private Account
-  Plan Availability:    Available
+  Plan Availability:    Unavailable
   Plan Description:     ChatGPT Plus (K12 Plus) 3-Month Private Account. All premium features with continuous warranty.
   Plan Specific Image:  /assets/products/chatgpt-k12-plus.png
   ----------------------------------------------------------------------------

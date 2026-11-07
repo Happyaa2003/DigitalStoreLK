@@ -29,7 +29,7 @@
         },
         "description": "Coursera Plus pre-configured ready-to-learn account delivered instantly with 3 Months replacement warranty.",
         "activation": "Ready-Made Account",
-        "available": true,
+        "available": false,
         "image": "/assets/products/coursera-plus-12-month-learning-bundle.png"
       }
     ],
@@ -257,7 +257,8 @@
         },
         "description": "18 Months access with Gemini, 2TB Storage, and Veo 3.1 access",
         "activation": "STB Storage + Gemini",
-        "image": "/assets/products/google-ai-pro-18-months.png"
+        "image": "/assets/products/google-ai-pro-18-months.png",
+        "available": false
       }
     ],
     "activation": "Account Activation",
@@ -270,7 +271,7 @@
     "image": "/assets/products/google-ai-pro-18-months.png",
     "badge": "New",
     "featured": true,
-    "available": true,
+    "available": false,
     "order": 6
   },
   {
@@ -815,7 +816,8 @@
           "GLOBAL": "$50.00"
         },
         "description": "Xbox Series X|S Standard Edition digital license",
-        "image": "/assets/products/gta6-xbox.png"
+        "image": "/assets/products/gta6-xbox.png",
+        "available": false
       },
       {
         "id": "gta6-xbox-unlimited",
@@ -825,7 +827,8 @@
           "GLOBAL": "$65.15"
         },
         "description": "Xbox Series X|S Unlimited Edition",
-        "image": "/assets/products/gta6-xbox.png"
+        "image": "/assets/products/gta6-xbox.png",
+        "available": false
       }
     ],
     "activation": "Delivered to your Xbox account",
@@ -838,7 +841,7 @@
     "image": "/assets/products/gta6-xbox.png",
     "badge": "PRE-ORDER",
     "featured": false,
-    "available": true,
+    "available": false,
     "order": 24
   },
   {
@@ -1641,7 +1644,7 @@
         },
         "description": "ChatGPT Plus (K12 Plus) 1-Month Private Account. Full access to GPT-4o, Advanced Voice, Canvas, reasoning & image creation.",
         "activation": "Private Account",
-        "available": true,
+        "available": false,
         "image": "/assets/products/chatgpt-k12-plus.png"
       },
       {
@@ -1654,7 +1657,7 @@
         },
         "description": "ChatGPT Plus (K12 Plus) 3-Month Private Account. All premium features with continuous warranty.",
         "activation": "Private Account",
-        "available": true,
+        "available": false,
         "image": "/assets/products/chatgpt-k12-plus.png"
       }
     ],
@@ -1669,7 +1672,7 @@
     "image": "/assets/products/chatgpt-k12-plus.png",
     "badge": "STUDENT AI",
     "featured": true,
-    "available": true,
+    "available": false,
     "order": 44
   },
   {

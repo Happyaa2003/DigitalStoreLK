@@ -11,14 +11,14 @@ export default function FeaturedDeals() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedPlanIndex, setSelectedPlanIndex] = useState<number>(0);
 
-  // Get the 6 featured products (Coursera Plus is #1 most selling)
+  // Get the 6 featured products (Coursera Plus is #1 most selling, all in-stock)
   const featuredIds = [
     'coursera-plus',
-    'chatgpt-k12-plus',
+    'capcut-pro',
     'windows-11-pro',
     'adobe-creative-cloud-all-apps',
     'office-365-plus',
-    'google-ai-pro',
+    'canva-pro',
   ];
 
   // Pick the 6 items in this order, or fall back to first 6

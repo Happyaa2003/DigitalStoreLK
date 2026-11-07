@@ -197,6 +197,7 @@ export default function ProductCard({ product, onViewDetails }: ProductCardProps
           {product.plans.map((plan, idx) => {
             const isSelected = selectedPlanIndex === idx;
             const label = getPlanShortLabel(plan);
+            const isPlanOOS = plan.available === false || product.available === false;
             return (
               <button
                 key={plan.id || idx}
@@ -205,12 +206,17 @@ export default function ProductCard({ product, onViewDetails }: ProductCardProps
                 className={cn(
                   'px-2.5 py-1 rounded-xl text-[11px] font-bold whitespace-nowrap transition-all flex-shrink-0 cursor-pointer',
                   isSelected
-                    ? 'bg-blue-600 text-white shadow-sm shadow-blue-500/25 ring-1 ring-blue-600'
-                    : 'bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border border-slate-200/80 dark:border-white/10 hover:border-blue-400 hover:text-slate-900 dark:hover:text-white'
+                    ? isPlanOOS
+                      ? 'bg-rose-600 text-white shadow-sm ring-1 ring-rose-600'
+                      : 'bg-blue-600 text-white shadow-sm shadow-blue-500/25 ring-1 ring-blue-600'
+                    : isPlanOOS
+                      ? 'bg-rose-50/50 dark:bg-rose-950/20 text-rose-500 dark:text-rose-400 border border-rose-200 dark:border-rose-900/40 opacity-70'
+                      : 'bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border border-slate-200/80 dark:border-white/10 hover:border-blue-400 hover:text-slate-900 dark:hover:text-white'
                 )}
-                title={`${plan.name}: ${getPrice(plan.price, region)}`}
+                title={`${plan.name}: ${isPlanOOS ? 'Out of Stock' : getPrice(plan.price, region)}`}
               >
-                {label}
+                <span>{label}</span>
+                {isPlanOOS && <span className="ml-1 text-[9px] font-black uppercase text-rose-500 dark:text-rose-400">(OOS)</span>}
               </button>
             );
           })}
