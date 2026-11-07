@@ -188,10 +188,10 @@ export default function ProductCard({ product, onViewDetails }: ProductCardProps
         </div>
       </div>
 
-      {/* Variant Selector Pills (if product has multiple options) */}
+      {/* Variant Selector Pills (if product has multiple options) — Wraps so all options are fully visible */}
       {product.plans.length > 1 && (
         <div
-          className="my-1.5 flex items-center gap-1.5 overflow-x-auto scrollbar-hide py-0.5 scroll-smooth"
+          className="my-1.5 flex flex-wrap items-center gap-1.5 py-0.5"
           onClick={(e) => e.stopPropagation()}
         >
           {product.plans.map((plan, idx) => {

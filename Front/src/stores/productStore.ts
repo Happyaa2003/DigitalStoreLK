@@ -4,8 +4,8 @@ import type { Product } from '@/types';
 
 const GITHUB_RAW_URL =
   'https://raw.githubusercontent.com/Happyaa2003/DigitalStoreLK/main/Front/src/data/products.json';
-const CACHE_KEY = 'digitalstore-cached-products-v6';
-const CACHE_TIME_KEY = 'digitalstore-cached-products-time-v6';
+const CACHE_KEY = 'digitalstore-cached-products-v7';
+const CACHE_TIME_KEY = 'digitalstore-cached-products-time-v7';
 
 // 1. Initial cached products from localStorage or bundled default
 function getInitialProducts(): Product[] {
